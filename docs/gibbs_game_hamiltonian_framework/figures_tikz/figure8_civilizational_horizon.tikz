@@ -1,0 +1,27 @@
+\begin{tikzpicture}[font=\small, >=Latex,
+  stage/.style={rounded corners=7pt, draw=AgiBlue!65, fill=white, minimum width=2.35cm, minimum height=0.85cm, align=center, inner sep=4pt},
+  horizon/.style={rounded corners=8pt, draw=AgiGold!80!black, fill=AgiGold!9, minimum width=2.55cm, minimum height=0.95cm, align=center, inner sep=5pt},
+  guard/.style={rounded corners=6pt, draw=AgiSlate!55, fill=AgiMist, align=center, inner sep=5pt},
+  arr/.style={->, line width=1.0pt, AgiBlue!78},
+  goldarr/.style={->, line width=1.0pt, AgiGold!80!black}]
+\fill[AgiBlue!2] (-6.6,-3.9) rectangle (6.6,3.9);
+\draw[AgiBlue!8, line width=0.3pt] (-6.4,-3.7) grid[step=0.75] (6.4,3.7);
+\node[stage] (work) at (-4.7,2.35) {Verified\\machine work};
+\node[stage] (capital) at (-1.6,2.35) {Capital\\formation};
+\node[stage] (industry) at (1.6,2.35) {Industrial\\infrastructure};
+\node[horizon] (energy) at (4.8,2.35) {Abundant\\useful energy};
+\node[stage] (science) at (-3.1,-0.55) {Scientific\\automation};
+\node[stage] (space) at (0,-0.55) {Space-scale\\engineering};
+\node[horizon] (typeii) at (3.2,-0.55) {Type-II proximity\\index $\Theta_{\mathrm{II}}$};
+\node[guard, text width=10.8cm] (gov) at (0,-2.65) {Governance corridor: audits, validators, constitutional constraints, safety cases, public accountability, anti-capture controls};
+\draw[goldarr] (work) -- (capital);
+\draw[goldarr] (capital) -- (industry);
+\draw[goldarr] (industry) -- (energy);
+\draw[arr] (energy.south west) to[bend left=10] (science.north east);
+\draw[arr] (science) -- (space);
+\draw[goldarr] (space) -- (typeii);
+\draw[->,AgiSlate!60] (gov.north west) -- (work.south);
+\draw[->,AgiSlate!60] (gov.north) -- (space.south);
+\draw[->,AgiSlate!60] (gov.north east) -- (typeii.south);
+\node[guard, fill=white, text width=10.3cm] at (0,3.35) {$\dot W_{\mathrm{verified}} \rightarrow \dot V_{\mathrm{capital}} \rightarrow \dot K_{\mathrm{infrastructure}} \rightarrow \dot E_{\mathrm{civilization}} \rightarrow \dot C_{\mathrm{compute}}$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[font=\small, >=Latex, line width=0.9pt,
+  box/.style={rounded corners=7pt, draw=AgiBlue!65, fill=white, minimum width=2.45cm, minimum height=0.85cm, align=center},
+  gate/.style={diamond, aspect=2.0, draw=AgiGold!80!black, fill=AgiGold!10, align=center, inner sep=2pt},
+  lab/.style={font=\scriptsize, text=AgiSlate}]
+\fill[AgiBlue!2] (-5.8,-2.7) rectangle (5.8,2.7);
+\node[box] (job) at (-4.2,1.35) {Job\\specification};
+\node[box] (route) at (-1.4,1.35) {Constellation\\routing};
+\node[box] (exec) at (1.4,1.35) {Bounded\\execution};
+\node[gate] (val) at (4.2,1.35) {Validator\\gate};
+\node[box] (settle) at (4.2,-1.00) {Settlement +\\reputation};
+\node[box] (mem) at (1.4,-1.00) {Memory +\\policy update};
+\node[box] (risk) at (-1.4,-1.00) {Risk\\monitor};
+\node[box] (human) at (-4.2,-1.00) {Human /\\governance};
+\draw[->,AgiBlue] (job) -- (route);
+\draw[->,AgiBlue] (route) -- (exec);
+\draw[->,AgiBlue] (exec) -- (val);
+\draw[->,AgiBlue] (val) -- node[lab,right]{accepted} (settle);
+\draw[->,AgiBlue] (settle) -- (mem);
+\draw[->,AgiBlue] (mem) -- (risk);
+\draw[->,AgiBlue] (risk) -- (human);
+\draw[->,AgiGold!80!black,rounded corners] (human.north) |- (job.west);
+\draw[->,red!70!black,rounded corners] (val.south west) -- node[lab,below]{reject / escalate} (risk.north east);
+\node[font=\scriptsize, align=center, text=AgiSlate] at (0,-2.15) {Useful autonomy is routed through proof, settlement, memory, and governance rather than unconstrained action.};
+\end{tikzpicture}

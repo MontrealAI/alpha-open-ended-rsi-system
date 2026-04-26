@@ -1,0 +1,43 @@
+\begin{tikzpicture}[font=\small, >=Latex,
+  pillar/.style={rounded corners=6pt, draw=AgiBlue!65, fill=white, minimum width=2.25cm, minimum height=0.78cm, align=center, inner sep=3pt},
+  proof/.style={rounded corners=6pt, draw=AgiGold!80!black, fill=AgiGold!8, minimum width=2.25cm, minimum height=0.78cm, align=center, inner sep=3pt},
+  plane/.style={rounded corners=7pt, draw=AgiSlate!45, fill=AgiMist, minimum width=2.45cm, minimum height=0.78cm, align=center, inner sep=3pt},
+  arr/.style={->, line width=0.9pt, AgiBlue!75},
+  goldarr/.style={->, line width=0.9pt, AgiGold!85!black}]
+\fill[AgiBlue!2] (-6.55,-3.55) rectangle (6.55,3.55);
+\draw[AgiBlue!8,line width=0.3pt] (-6.35,-3.35) grid[step=0.8] (6.35,3.35);
+
+\node[plane] (sovereignty) at (-5.05,2.15) {Sovereignty\\synthetic labor};
+\node[pillar] (identity) at (-1.68,2.15) {Identity\\ENS / roles};
+\node[proof] (proof) at (1.68,2.15) {Proof\\validation};
+\node[pillar] (settlement) at (5.05,2.15) {Settlement\\reputation};
+
+\node[pillar] (market) at (-5.05,0.05) {Agent-native\\markets};
+\node[proof] (jobs) at (-1.68,0.05) {Jobs\\missions};
+\node[pillar] (agents) at (1.68,0.05) {Agents\\nodes};
+\node[proof] (memory) at (5.05,0.05) {Public memory\\job pages};
+
+\node[plane] (rsi) at (-5.05,-2.05) {RSI governance\\controlled scale};
+\node[pillar] (tournament) at (-1.68,-2.05) {Tournament\\intelligence};
+\node[proof] (capital) at (1.68,-2.05) {Autonomous\\capital loop};
+\node[plane] (energy) at (5.05,-2.05) {Civilizational\\energy horizon};
+
+\draw[goldarr] (sovereignty) -- (identity);
+\draw[goldarr] (identity) -- (proof);
+\draw[goldarr] (proof) -- (settlement);
+\draw[arr] (market) -- (jobs);
+\draw[arr] (jobs) -- (agents);
+\draw[arr] (agents) -- (memory);
+\draw[goldarr] (rsi) -- (tournament);
+\draw[goldarr] (tournament) -- (capital);
+\draw[goldarr] (capital) -- (energy);
+\draw[arr] (identity) -- (jobs);
+\draw[arr] (proof) -- (agents);
+\draw[arr] (settlement) -- (memory);
+\draw[arr] (market) -- (rsi);
+\draw[arr] (jobs) -- (tournament);
+\draw[arr] (agents) -- (capital);
+\draw[arr] (memory) -- (energy);
+
+\node[plane, fill=white, text width=11.2cm] at (0,3.15) {Sovereign agentic doctrine: identity, proof, settlement, governance, public memory, recursive improvement, and compounding value};
+\end{tikzpicture}

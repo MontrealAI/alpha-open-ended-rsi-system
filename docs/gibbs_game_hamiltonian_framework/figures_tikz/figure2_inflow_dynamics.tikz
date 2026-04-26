@@ -1,0 +1,32 @@
+\begin{tikzpicture}
+\begin{axis}[
+  name=main,
+  width=0.96\linewidth,height=7.45cm,
+  xmin=0,xmax=100,ymin=0,ymax=1.10,
+  xlabel={Time}, ylabel={Normalized inflow availability},
+  tick label style={font=\scriptsize}, label style={font=\small},
+  grid=both, major grid style={black!10}, minor grid style={black!5},
+  legend style={draw=none, fill=none, font=\scriptsize, at={(0.5,1.06)}, anchor=south, legend columns=3, /tikz/every even column/.append style={column sep=0.30cm}},
+  clip=true]
+\addplot[draw=none, fill=AgiBlue!6] coordinates {(25,0) (40,0) (40,1.10) (25,1.10)} \closedcycle;
+\addplot[draw=none, fill=red!5]  coordinates {(60,0) (82,0) (82,1.10) (60,1.10)} \closedcycle;
+\addplot[very thick,AgiBlue] coordinates {(0,1) (25,1) (35,1) (36,0.72) (44,0.72) (45,1) (100,1)}; \addlegendentry{Compute}
+\addplot[very thick,teal!70!black] coordinates {(0,1) (24,1) (25,0.58) (39,0.58) (40,1) (100,1)}; \addlegendentry{Data}
+\addplot[very thick,purple!80!black] coordinates {(0,1) (47,1) (48,0.80) (53,0.80) (54,1) (100,1)}; \addlegendentry{Tasks}
+\addplot[very thick,AgiGold!90!black] coordinates {(0,1) (69,1) (70,0.66) (81,0.66) (82,1) (100,1)}; \addlegendentry{Incentives}
+\addplot[very thick,red!80!black] coordinates {(0,1) (59,1) (60,0.48) (74,0.48) (75,1) (100,1)}; \addlegendentry{Feedback}
+\addlegendimage{black,very thick,dashed}\addlegendentry{Verified work index}
+\node[font=\scriptsize, align=center, fill=white, fill opacity=0.92, text opacity=1, inner sep=1.8pt, rounded corners=2pt] at (axis cs:32.5,0.12) {data shock};
+\node[font=\scriptsize, align=center, fill=white, fill opacity=0.92, text opacity=1, inner sep=1.8pt, rounded corners=2pt] at (axis cs:71.0,0.12) {feedback + incentive shock};
+\end{axis}
+\begin{axis}[
+  at={(main.south west)}, anchor=south west,
+  width=0.96\linewidth,height=7.45cm,
+  xmin=0,xmax=100,ymin=40,ymax=110,
+  axis x line=none, axis y line*=right,
+  ylabel={Verified work index},
+  tick label style={font=\scriptsize}, label style={font=\small},
+  ytick={40,50,60,70,80,90,100,110}]
+\addplot[black,very thick,dashed] coordinates {(0,100) (24,100) (25,83) (35,83) (36,77) (39,77) (40,94) (47,94) (48,90) (53,90) (54,94) (59,94) (60,76) (69,76) (70,68) (74,68) (75,80) (81,80) (82,100) (100,100)};
+\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Vincent Boucher" />
+  <meta name="dcterms.date" content="2026-04-26" />
+  <title>AGI ALPHA as a Far-From-Equilibrium Multi-Agent Work Engine</title>
+  <style>
+    html {
+      font-size: 11pt;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: blue;
+    }
+    a:visited {
+      color: blue;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  
+  
+  
+  
+  
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="/usr/share/javascript/mathjax/MathJax.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">AGI ALPHA as a Far-From-Equilibrium Multi-Agent Work
+Engine</h1>
+<p class="subtitle">A Gibbs-Game-Hamiltonian Framework for α-AGI
+Ascension</p>
+<p class="author">Vincent Boucher</p>
+<p class="date">April 26, 2026</p>
+</header>
+<p><strong>Vincent Boucher</strong><br />
+<em>President of MONTREAL.AI and QUEBEC.AI</em><br />
+<em>Written with AI</em></p>
+<h1 id="abstract">Abstract</h1>
+<p>This paper develops a scientific framework for <strong>AGI
+ALPHA</strong> and <strong>α-AGI Ascension</strong> as a
+far-from-equilibrium, validator-gated, multi-agent work engine. The
+central thesis is that large-scale agentic coordination becomes
+operationally “alive” when continuous inflows of compute, data, tasks,
+incentives, and feedback sustain organized complexity that would
+otherwise decay into idle equilibrium, chaotic search, or brittle
+over-centralization. The framework integrates nonequilibrium
+thermodynamics, Gibbs-like free-energy objectives, statistical physics,
+Hamiltonian dynamics, game-theoretic mechanism design, multi-agent
+reinforcement learning, and contemporary agentic-AI deployment practice.
+We distinguish literal thermodynamic energy at the compute layer from
+formal free-energy analogues at the coordination layer. We then define
+measurable conditions for α-AGI Ascension: positive verified work
+output, bounded risk, productive swarm entropy, reliable credit
+assignment, validator precision, and impact-adjusted free-energy
+descent. The paper contributes a formal vocabulary, an architecture, a
+set of monitoring metrics, a civilizational-scale value horizon, a
+doctrine synthesis of the AGI Alpha corpus, and a frontier research
+synthesis across evolved coordinators, agentic organization,
+self-improving software agents, distributional safety, artificial life,
+and scientific discovery systems. The research program turns agentic
+activity into externally verified impact without confusing maximum
+impact with unconstrained autonomy.</p>
+<h1 id="core-claim">Core claim</h1>
+<p>The most rigorous compressed claim is:</p>
+<p><span class="math display">\[
+\boxed{
+\alpha\text{-AGI Ascension}
+=
+\text{bounded, far-from-equilibrium, multi-agent work production}
+}
+\]</span></p>
+<p>or, in operational form:</p>
+<p><span class="math display">\[
+\boxed{
+\dot{E}_{\text{compute,data,capital,tasks}}
+\rightarrow
+\dot{W}_{\text{verified impact}}
++
+\dot{Q}_{\text{dissipated search}}
++
+\dot{I}_{\text{memory}}
+}
+\]</span></p>
+<p>AGI ALPHA brings α-AGI Ascension to life when energy-mediated
+computation becomes a continuously replenished, statistically mapped,
+Hamiltonian-routed, game-theoretically aligned, validator-gated swarm
+that converts open-system inflows into verified, risk-bounded work.</p>
+<h1 id="scope-and-scientific-claim-boundaries">Scope and scientific
+claim boundaries</h1>
+<p>This manuscript is a theoretical systems paper. It does
+<strong>not</strong> claim that unrestricted artificial general
+intelligence has been achieved. It does <strong>not</strong> claim that
+autonomous economic sovereignty, autonomous legal agency, or
+mainnet-scale economic proof has been validated. It also does
+<strong>not</strong> treat internal demonstrations as sufficient
+evidence of external impact. Instead, the paper gives a formal model and
+a measurement program for testing whether a large-scale multi-agent
+system has entered a sustained, useful, governed, far-from-equilibrium
+coordination regime.</p>
+<p>Public AGI Alpha materials frame α-AGI Architect as an operational
+blueprint for scalable multi-agent deployment and strategic
+infrastructure [16]. This manuscript treats that framing as a proposed
+system architecture to be formalized and tested, not as empirical proof
+of achieved AGI.</p>
+<p>The phrase “to bring to life” is used in an engineering and
+cybernetic sense. A biological organism and an AI protocol are not the
+same class of object. The relevant analogy is the <strong>dissipative
+structure</strong>: a form of order sustained only while coupled to an
+environment that supplies energy, matter, information, and constraints.
+Prigogine’s nonequilibrium thermodynamics made this type of order
+central to the study of far-from-equilibrium systems [1]. In an agentic
+system, the sustained flows are compute, data, tasks, incentives,
+validation, feedback, policy, and tool access.</p>
+<h1 id="institutional-doctrine-synthesis">Institutional doctrine
+synthesis</h1>
+<p>The AGI Alpha corpus supplied for this paper is treated as a
+strategic primary-source doctrine, not as empirical validation of
+unrestricted AGI. Its recurring architecture can be summarized as a
+sovereign synthetic labor stack: identity-bound agents, validator-gated
+jobs, proof-bearing work, reputation-weighted settlement, public memory,
+on-chain governance, recursive improvement controls, and reinvestment
+into compute, science, infrastructure, and energy capacity. Public
+repositories and public mainnet contract pages provide the operational
+vocabulary for this stack: AGI Jobs as market, Alpha nodes as workers,
+Meta-Agentic cognition as the coordination layer, <span
+class="math inline">\(AGIALPHA\)</span> as incentive substrate, and
+ENS-backed job pages as durable public memory [19-23].</p>
+<p>In this synthesis, <strong>AI sovereignty</strong> means the capacity
+of an institution, nation, or protocol to command verifiable machine
+labor without surrendering identity, memory, settlement, or governance
+to an opaque external monopoly. <strong>The agent-native
+economy</strong> means a market in which machines can discover work,
+bid, execute, prove, settle, update reputation, and route future labor
+under auditable rules. <strong>Recursive self-improvement
+governance</strong> means that improvement is permitted only through
+traceable, permissioned, validator-reviewed updates rather than
+unbounded self-modification.</p>
+<p>The doctrine is therefore not merely accelerationist. It is a control
+architecture: autonomy measured, work proven, value settled, memory made
+public, and scale constrained by governance before it compounds into
+larger industrial and energy systems.</p>
+<figure>
+<img src="figures_png/figure9_doctrine_lattice.png" style="width:96.0%"
+alt="Sovereign agentic doctrine lattice. The supplied AGI Alpha corpus is synthesized into an institutional stack: identity, proof, settlement, governance, public memory, recursive improvement, autonomous capital, and a civilizational energy horizon." />
+<figcaption aria-hidden="true">Sovereign agentic doctrine lattice. The
+supplied AGI Alpha corpus is synthesized into an institutional stack:
+identity, proof, settlement, governance, public memory, recursive
+improvement, autonomous capital, and a civilizational energy
+horizon.</figcaption>
+</figure>
+<h1 id="contributions">Contributions</h1>
+<p>This paper makes eight contributions.</p>
+<ol type="1">
+<li>It defines α-AGI Ascension as a measurable nonequilibrium regime
+rather than an undefined emergence claim.</li>
+<li>It introduces an operational Gibbs-like free-energy functional for
+multi-agent coordination.</li>
+<li>It models agent constellations with statistical physics and
+Hamiltonian interaction terms.</li>
+<li>It connects game-theoretic incentives to validator-gated mechanism
+design.</li>
+<li>It gives a detailed theory of the continuous inflows needed to
+sustain organized agentic complexity.</li>
+<li>It synthesizes the supplied AGI Alpha doctrine into a sovereign
+agentic stack: identity, proof, settlement, governance, public memory,
+recursive improvement, autonomous capital, and energy-scale
+capacity.</li>
+<li>It frames a governed Type-II / star-scale energy horizon as an
+asymptotic value target rather than a present-day achievement
+claim.</li>
+<li>It proposes metrics and experiments for falsifying, improving, or
+validating the framework.</li>
+</ol>
+<h1 id="visual-thesis">Visual thesis</h1>
+<figure>
+<img src="figures_png/figure1_system_architecture.png"
+style="width:95.0%"
+alt="Open-system architecture of organized agentic complexity. Continuous inflows enter the AGI ALPHA core and are converted into verified work, memory, reputation, settlement, reusable artifacts, and external impact under measurement, validation, and adaptation." />
+<figcaption aria-hidden="true">Open-system architecture of organized
+agentic complexity. Continuous inflows enter the AGI ALPHA core and are
+converted into verified work, memory, reputation, settlement, reusable
+artifacts, and external impact under measurement, validation, and
+adaptation.</figcaption>
+</figure>
+<p>The architecture figure compresses the central systems claim: α-AGI
+Ascension is sustained organization under regulated inflow, not isolated
+one-shot inference.</p>
+<h1 id="definitions">Definitions</h1>
+<p>Let:</p>
+<p><span class="math display">\[
+\mathcal{A}=\{a_1,\ldots,a_N\}
+\]</span></p>
+<p>be a population of agents, and let:</p>
+<p><span class="math display">\[
+\mathcal{J}=\{j_1,\ldots,j_M\}
+\]</span></p>
+<p>be a stream of jobs. Each job is a tuple:</p>
+<p><span class="math display">\[
+j=(o,c,v,b,d,\rho)
+\]</span></p>
+<p>where <span class="math inline">\(o\)</span> is the objective, <span
+class="math inline">\(c\)</span> is the constraint set, <span
+class="math inline">\(v\)</span> is the validation criterion, <span
+class="math inline">\(b\)</span> is the bounty or reward, <span
+class="math inline">\(d\)</span> is the deadline, and <span
+class="math inline">\(\rho\)</span> is the risk class.</p>
+<p><strong>AGI ALPHA</strong> is defined here as the proposed
+runtime/protocol layer that routes jobs, agents, tools, memory, proofs,
+incentives, and governance into a coordinated work-producing system.</p>
+<p><strong>α-AGI Ascension</strong> is defined as the operating regime
+in which heterogeneous agents form, execute, validate, and dissolve
+coalitions to maximize verified impact under bounded risk.</p>
+<p>Formally, Ascension requires:</p>
+<p><span class="math display">\[
+\frac{d}{dt}\mathbb{E}[V_{\text{verified}}] &gt; 0
+\]</span></p>
+<p>while maintaining:</p>
+<p><span class="math display">\[
+\mathbb{E}[R_{\text{safety}}] \leq R_{\max}
+\]</span></p>
+<p>and productive swarm entropy:</p>
+<p><span class="math display">\[
+S_{\min}&lt;S_{\text{swarm}}&lt;S_{\max}.
+\]</span></p>
+<p>The lower entropy bound prevents rigid monoculture; the upper bound
+prevents incoherent chaos.</p>
+<h1 id="related-work">Related work</h1>
+<h2 id="dissipative-structures">Dissipative structures</h2>
+<p>Dissipative structures are ordered patterns that arise and persist
+far from equilibrium through exchange with an environment. Prigogine’s
+work is the canonical foundation for this perspective [1]. The agentic
+analogue is not metabolism in a biological sense; it is the use of
+electricity, processors, networks, storage, data, tools, and validation
+to sustain organized computation.</p>
+<h2 id="gibbs-free-energy">Gibbs free energy</h2>
+<p>Classically, Gibbs free energy is:</p>
+<p><span class="math display">\[
+G=H-TS.
+\]</span></p>
+<p>At constant temperature and pressure, negative <span
+class="math inline">\(\Delta G\)</span> indicates a spontaneous
+direction of change, <span class="math inline">\(\Delta G=0\)</span>
+indicates equilibrium, and Gibbs free energy is associated with the
+useful non-expansion work obtainable from a process under ideal
+conditions. OpenStax summarizes these relationships and the role of
+coupled reactions in driving otherwise unfavorable processes [2]. We use
+physical Gibbs energy literally at the hardware layer and a Gibbs-like
+optimization functional at the agentic coordination layer.</p>
+<h2 id="statistical-mechanics-and-maximum-entropy">Statistical mechanics
+and maximum entropy</h2>
+<p>Jaynes’ information-theoretic formulation of statistical mechanics
+frames probability distributions as maximum-entropy inferences under
+constraints [3]. This is useful for agent swarms because exact
+microstate tracking is intractable. We model the swarm by distributions
+over possible configurations and monitor macro-observables such as
+entropy, expected verified value, risk, cost, and coalition
+stability.</p>
+<h2 id="hamiltonian-multi-agent-learning">Hamiltonian multi-agent
+learning</h2>
+<p>Bailey and Piliouras show a formal connection between multi-agent
+learning in network zero-sum games and Hamiltonian dynamics [4]. This
+matters because a system of interacting learners can cycle rather than
+converge. α-AGI must therefore combine Hamiltonian exploration with
+dissipative convergence into validated work.</p>
+<h2 id="llm-based-multi-agent-systems">LLM-based multi-agent
+systems</h2>
+<p>Recent surveys of LLM-based multi-agent systems emphasize profiling,
+communication, workflow design, infrastructure, security, benchmarking,
+and scalability challenges [5-7]. These surveys support a core claim of
+this paper: large-scale multi-agent intelligence is not merely a matter
+of increasing the number of agents. The difficult problems are
+orchestration, communication, grounding, role specialization, credit
+assignment, validation, and governance.</p>
+<h2 id="agentic-deployment-practice">Agentic deployment practice</h2>
+<p>Recent official and community guidance converges on a practical
+principle: production agents require clear tools, guardrails, tracing,
+orchestration, and escalation. Anthropic distinguishes workflows, where
+code paths are predefined, from agents, where models dynamically direct
+tool use and process control [10]. OpenAI’s agent guidance emphasizes
+model selection, tool design, guardrails, single-agent versus
+multi-agent orchestration, manager patterns, decentralized handoffs, and
+tracing [11]. MCP and related protocols are emerging as standard ways to
+connect agents to external data and tools, but they also expand the
+security boundary [12].</p>
+<h2 id="risk-management-and-agentic-security">Risk management and
+agentic security</h2>
+<p>NIST’s AI Risk Management Framework and the Generative AI Profile
+provide lifecycle risk-management guidance for design, development, use,
+and evaluation [8]. OWASP’s Agentic AI Threats and Mitigations and
+Securing Agentic Applications guidance emphasize threat modeling for
+autonomous systems, including tool misuse, identity and privilege abuse,
+memory risks, multi-agent propagation, and governance failures [9].
+These sources motivate the paper’s insistence that maximum impact must
+mean <strong>verified bounded impact</strong>, not unconstrained
+autonomy.</p>
+<h1
+id="frontier-synthesis-from-coordination-problem-to-sovereign-invention-system">Frontier
+synthesis: from coordination problem to sovereign invention system</h1>
+<p>The supplied corpus and the recent literature converge on one hard
+problem: how to make many heterogeneous agents coordinate to maximum
+useful effect without collapsing into waste, collusion, brittle
+hierarchy, or unsafe autonomy. The strongest current answer is not a
+single monolithic model. It is an institutionalized control stack that
+combines evolved coordination, symbolic compression, persistent memory,
+test-time learning, proof-bearing execution, and distributional
+safety.</p>
+<p>TRINITY is directly relevant because it treats coordination itself as
+an optimizable object: a compact coordinator selects foundation models
+and roles across turns, assigning Thinker, Worker, and Verifier
+functions while an evolutionary strategy learns delegation under budget
+constraints [24]. Multi-Agent Collaboration via Evolving Orchestration
+reaches a related conclusion from a different direction: static
+topologies scale poorly, while a learned orchestrator can dynamically
+activate, sequence, and prune agents as task states evolve [25]. The Era
+of Agentic Organization extends the same idea into asynchronous
+thinking: an organizer assigns sub-queries, merges intermediate
+knowledge, and can itself be optimized through reinforcement learning
+[26].</p>
+<p>Planning and tool use require a second discipline: the LLM should not
+be allowed to hallucinate the plan when a symbolic planner, executor, or
+validator can do the logical work. DUPLEX restricts the LLM to
+schema-guided information extraction and hands rigorous synthesis to a
+PDDL planner, activating a slower reflective repair loop only after
+planning failure [27]. AT<span class="math inline">\(^2\)</span>PO adds
+the learning counterpart: multi-turn agentic RL needs turn-level trees,
+entropy-guided exploration, and turn-wise credit assignment because
+sparse terminal rewards are too coarse for agentic action [28].</p>
+<p>Persistent agency and recursive improvement add a third layer. Sophia
+frames a persistent agent as a System 3 wrapper over perception and
+deliberation, maintaining narrative identity, long-horizon adaptation,
+thought search, memory, and hybrid reward [29]. Self-play SWE-RL shows
+that software agents can gather experience from real repositories by
+injecting and repairing bugs specified by tests rather than relying on
+human-written issues [30]. Huxley-Gödel Machine highlights a subtle but
+essential distinction: an agent’s current benchmark performance is not
+the same as its self-improvement potential; metaproductivity must be
+measured through the quality of descendants [31]. ThetaEvolve shows how
+test-time learning can internalize evolving strategies on open
+optimization problems instead of leaving all progress in inference-only
+search [32].</p>
+<p>Artificial-life systems sharpen the thermodynamic analogy. The
+bacterial flagellar motor illustrates that apparently mysterious living
+motion can be explained as a physical motor driven by proton motive
+force and molecular interactions, without invoking a special life force
+[33]. Digital Ecosystems shows the computational analogue: multiple
+neural cellular automata can compete, adapt online, and be steered
+toward edge-of-chaos regimes where stable complexity emerges from local
+interactions and continuous learning [34].</p>
+<p>Finally, the safety and economic literature argues that collective
+capability must be governed distributionally. Distributional AGI Safety
+explicitly addresses the patchwork hypothesis: AGI-level capability may
+first appear through coordinated groups of sub-AGI agents, requiring
+safeguards beyond individual-model alignment [35]. Virtual Agent
+Economies similarly argues for proactively designed agent markets with
+auctions, accountability, trust, safety, and steerability [36]. Large
+Causal Models from LLMs, K-Dense Analyst, Synthetic Data RL, DISCO, and
+ASI-Arch point to the scientific discovery frontier: causal extraction,
+hierarchical scientific agents, task-defined RL, multimodal molecular
+design, and autonomous architecture search all show how agentic systems
+can transform knowledge into validated invention when paired with
+execution and evaluation [37-41].</p>
+<figure>
+<img src="figures_png/figure10_frontier_synthesis_lattice.png"
+style="width:96.0%"
+alt="Frontier synthesis lattice. Recent work across evolved coordinators, digital ecosystems, dual-system planning, turn-level RL, persistent agents, self-improvement, and distributional safety converges on a single requirement: governed coordination under continuous inflow and proof." />
+<figcaption aria-hidden="true">Frontier synthesis lattice. Recent work
+across evolved coordinators, digital ecosystems, dual-system planning,
+turn-level RL, persistent agents, self-improvement, and distributional
+safety converges on a single requirement: governed coordination under
+continuous inflow and proof.</figcaption>
+</figure>
+<figure>
+<img src="figures_png/figure11_sovereign_invention_stack.png"
+style="width:96.0%"
+alt="Sovereign invention governance stack. The stack connects continuous substrates to learning, agents, evolved coordination, validation, market settlement, and civilizational mission while feedback flows downward through policy, risk controls, and audit." />
+<figcaption aria-hidden="true">Sovereign invention governance stack. The
+stack connects continuous substrates to learning, agents, evolved
+coordination, validation, market settlement, and civilizational mission
+while feedback flows downward through policy, risk controls, and
+audit.</figcaption>
+</figure>
+<p>The resulting doctrine is a scientific operating principle:</p>
+<p><strong>Operating principle.</strong> Maximum useful effect = evolved
+coordination + formal verification + recursive learning + distributional
+governance.</p>
+<p>This principle reframes the central economic vision. A superhuman
+invention engine is not best understood as a single automation product.
+It is a compounding institutional asset: the owner-operator uses it to
+generate proofs, tools, science, infrastructure, energy capacity, and
+more compute, while external access is mediated through jobs, markets,
+and validator-gated settlement.</p>
+<h1 id="open-system-thermodynamics-of-agentic-organization">Open-system
+thermodynamics of agentic organization</h1>
+<p>A closed system relaxes toward equilibrium. A large agentic system
+that receives no new compute, data, tasks, feedback, incentives, or
+validation likewise decays. It becomes idle, stale, brittle, or
+self-referential. α-AGI Ascension is therefore an open-system
+phenomenon.</p>
+<figure>
+<img src="figures_png/figure2_inflow_dynamics.png" style="width:93.0%"
+alt="Continuous inflow dynamics. Shocks to data, feedback, incentives, or compute propagate into lower verified work, showing why continuity, reserves, and fast recovery matter." />
+<figcaption aria-hidden="true">Continuous inflow dynamics. Shocks to
+data, feedback, incentives, or compute propagate into lower verified
+work, showing why continuity, reserves, and fast recovery
+matter.</figcaption>
+</figure>
+<p>The inflow-dynamics figure shows that organized agentic complexity is
+not sustained by average resource levels alone. Continuity, quality, and
+recovery speed determine whether the system keeps producing verified
+work or decays toward idle, stale, or chaotic behavior.</p>
+<p>Let the inflow vector be:</p>
+<p><span class="math display">\[
+\Phi_{\text{in}} =
+(\Phi_C,\Phi_D,\Phi_J,\Phi_I,\Phi_F,\Phi_G,\Phi_T)
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(\Phi_C\)</span> is compute;</li>
+<li><span class="math inline">\(\Phi_D\)</span> is data;</li>
+<li><span class="math inline">\(\Phi_J\)</span> is task/job flow;</li>
+<li><span class="math inline">\(\Phi_I\)</span> is incentives;</li>
+<li><span class="math inline">\(\Phi_F\)</span> is feedback;</li>
+<li><span class="math inline">\(\Phi_G\)</span> is governance and policy
+constraints;</li>
+<li><span class="math inline">\(\Phi_T\)</span> is tool and environment
+access.</li>
+</ul>
+<p>Let the outflow vector be:</p>
+<p><span class="math display">\[
+\Phi_{\text{out}} =
+(W_v,Q_s,R_e,I_m,A_o)
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(W_v\)</span> is verified work;</li>
+<li><span class="math inline">\(Q_s\)</span> is dissipated search,
+failed attempts, duplicated tool use, and latency;</li>
+<li><span class="math inline">\(R_e\)</span> is externalized risk or
+harm;</li>
+<li><span class="math inline">\(I_m\)</span> is stored memory and
+reusable knowledge;</li>
+<li><span class="math inline">\(A_o\)</span> is produced artifact
+output.</li>
+</ul>
+<p>The system sustains organized complexity when:</p>
+<p><span class="math display">\[
+\dot{E}_{\text{in}}
+=
+\dot{W}_v+
+\dot{Q}_s+
+\dot{I}_m+
+\dot{R}_e
+\]</span></p>
+<p>and the risk term is bounded:</p>
+<p><span class="math display">\[
+\dot{R}_e \leq \epsilon_R.
+\]</span></p>
+<p>The practical version is: useful outputs must increase faster than
+waste, risk, and coordination overhead.</p>
+<h1 id="gibbs-like-free-energy-of-multi-agent-coordination">Gibbs-like
+free energy of multi-agent coordination</h1>
+<p>We define the coordination state:</p>
+<p><span class="math display">\[
+x=(\mathcal{A},\mathcal{J},M,R,P,G_v,\Pi,T_o)
+\]</span></p>
+<p>where <span class="math inline">\(M\)</span> is memory, <span
+class="math inline">\(R\)</span> is reputation, <span
+class="math inline">\(P\)</span> is proof history, <span
+class="math inline">\(G_v\)</span> is governance state, <span
+class="math inline">\(\Pi\)</span> is policy, and <span
+class="math inline">\(T_o\)</span> is tool state.</p>
+<p>The agentic Gibbs-like functional is:</p>
+<p><span class="math display">\[
+\mathcal{G}_{\alpha}(x)=
+C_{\text{compute}}(x)
++C_{\text{coord}}(x)
++C_{\text{latency}}(x)
++R_{\text{safety}}(x)
++R_{\text{legal}}(x)
++R_{\text{security}}(x)
+-V_{\text{verified}}(x)
+-T_{\text{eff}}S_{\text{explore}}(x).
+\]</span></p>
+<p>Here <span class="math inline">\(T_{\text{eff}}\)</span> is an
+effective exploration temperature and <span
+class="math inline">\(S_{\text{explore}}\)</span> is useful exploratory
+diversity. The sign convention is chosen so that lower <span
+class="math inline">\(\mathcal{G}_{\alpha}\)</span> is better. The
+system performs impact work when:</p>
+<p><span class="math display">\[
+\dot{W}_{\text{impact}} \lesssim -\frac{d\mathcal{G}_{\alpha}}{dt}.
+\]</span></p>
+<p>The inequality matters because real systems are irreversible. Some
+potential work is lost to failed prompts, redundant agents, invalid
+outputs, adversarial attacks, tool overhead, and validation costs.</p>
+<p>The design target is:</p>
+<p><span class="math display">\[
+\boxed{
+\min_x \mathcal{G}_{\alpha}(x)
+}
+\]</span></p>
+<p>subject to:</p>
+<p><span class="math display">\[
+\text{lawful}(x)\land \text{auditable}(x)\land
+\text{permissioned}(x)\land \text{validator-gated}(x).
+\]</span></p>
+<h2 id="coupled-agentic-reactions">Coupled agentic reactions</h2>
+<p>A hard task may not be solvable by one isolated agent. It becomes
+feasible when coupled to tools, memory, specialized agents, proof
+systems, and incentives:</p>
+<p><span class="math display">\[
+\text{hard task}+
+\text{compute}+
+\text{tools}+
+\text{coalition}+
+\text{validator}
+\rightarrow
+\text{verified artifact}+
+\text{reputation}+
+\text{settlement}+
+\text{memory}.
+\]</span></p>
+<p>This is the agentic analogue of coupled reactions: an otherwise
+unfavorable process becomes feasible because it is attached to a
+favorable work-producing pathway [2].</p>
+<figure>
+<img src="figures_png/figure3_free_energy_landscape.png"
+style="width:82.0%"
+alt="Gibbs-like free-energy descent toward high-value agent constellations. The landscape is schematic: coalition search moves away from high-cost, high-risk regions toward lower free-energy basins where verified value and coordination stability improve." />
+<figcaption aria-hidden="true">Gibbs-like free-energy descent toward
+high-value agent constellations. The landscape is schematic: coalition
+search moves away from high-cost, high-risk regions toward lower
+free-energy basins where verified value and coordination stability
+improve.</figcaption>
+</figure>
+<p>The free-energy landscape figure visualizes the coordination
+free-energy functional (_{}). It is not chemical Gibbs energy at the
+software layer; it is an engineered state functional over cost, risk,
+verified value, and useful exploration.</p>
+<h1 id="statistical-physics-of-the-swarm">Statistical physics of the
+swarm</h1>
+<p>A complete microstate of the swarm is:</p>
+<p><span class="math display">\[
+x=(a_1,\ldots,a_N;\theta_1,\ldots,\theta_N;m;q;r;p;g;t)
+\]</span></p>
+<p>where <span class="math inline">\(a_i\)</span> is the action of agent
+<span class="math inline">\(i\)</span>, <span
+class="math inline">\(\theta_i\)</span> is its policy/prompt/tool state,
+<span class="math inline">\(m\)</span> is shared memory, <span
+class="math inline">\(q\)</span> is the queue, <span
+class="math inline">\(r\)</span> is reputation, <span
+class="math inline">\(p\)</span> is proof history, <span
+class="math inline">\(g\)</span> is governance state, and <span
+class="math inline">\(t\)</span> is tool state.</p>
+<p>A macrostate is:</p>
+<p><span class="math display">\[
+X=(\bar{V},\bar{C},\bar{R},S_{\text{swarm}},K_{\text{coalition}},L_{\text{validation}},H_{\text{security}}).
+\]</span></p>
+<p>The Hamiltonian-like cost of a microstate is:</p>
+<p><span class="math display">\[
+\mathcal{H}(x)=C(x)+R(x)-V(x).
+\]</span></p>
+<p>The Gibbs distribution over configurations is:</p>
+<p><span class="math display">\[
+p(x)=\frac{1}{Z}e^{-\beta\mathcal{H}(x)},
+\qquad
+Z=\sum_x e^{-\beta\mathcal{H}(x)},
+\qquad
+\beta=\frac{1}{T_{\text{eff}}}.
+\]</span></p>
+<p>The swarm entropy is:</p>
+<p><span class="math display">\[
+S_{\text{swarm}}=-\sum_xp(x)\log p(x).
+\]</span></p>
+<p>A healthy system avoids both extremes:</p>
+<p><span class="math display">\[
+S_{\text{swarm}}\rightarrow 0
+\quad\Rightarrow\quad
+\text{rigidity, monoculture, brittleness}
+\]</span></p>
+<p>and:</p>
+<p><span class="math display">\[
+S_{\text{swarm}}\rightarrow \infty
+\quad\Rightarrow\quad
+\text{incoherence, unbounded exploration, tool sprawl}.
+\]</span></p>
+<p>The goal is productive entropy: enough diversity to discover novel
+strategies, enough constraint to converge.</p>
+<figure>
+<img src="figures_png/figure4_entropy_band.png" style="width:88.0%"
+alt="Productive entropy band. Too little effective temperature yields rigid monoculture; too much yields chaotic search. The target regime is regulated exploration." />
+<figcaption aria-hidden="true">Productive entropy band. Too little
+effective temperature yields rigid monoculture; too much yields chaotic
+search. The target regime is regulated exploration.</figcaption>
+</figure>
+<p>The entropy-band figure makes the entropy condition operational. The
+desired regime is neither maximum certainty nor maximum randomness; it
+is a productive band in which exploration discovers strong coalitions
+while validation still dominates noise.</p>
+<h1 id="hamiltonians-for-agent-constellations">Hamiltonians for agent
+constellations</h1>
+<p>Let <span class="math inline">\(A\)</span> be a candidate
+constellation of agents for job <span class="math inline">\(j\)</span>.
+Define:</p>
+<p><span class="math display">\[
+\mathcal{H}(A,j)=
+\sum_i h_i(a_i,j)
++
+\sum_{i&lt;k}J_{ik}\phi(a_i,a_k,j)
++
+\sum_{i&lt;k&lt;\ell}K_{ik\ell}\psi(a_i,a_k,a_\ell,j)
++R(A,j)-V(A,j).
+\]</span></p>
+<p>The terms are:</p>
+<ul>
+<li><span class="math inline">\(h_i\)</span>: local cost of using agent
+<span class="math inline">\(i\)</span>;</li>
+<li><span class="math inline">\(J_{ik}\)</span>: pairwise
+complementarity or interference;</li>
+<li><span class="math inline">\(\phi\)</span>: pairwise interaction
+quality;</li>
+<li><span class="math inline">\(K_{ik\ell}\)</span>: higher-order
+coalition effect;</li>
+<li><span class="math inline">\(\psi\)</span>: triadic coordination
+quality;</li>
+<li><span class="math inline">\(R(A,j)\)</span>: coalition risk;</li>
+<li><span class="math inline">\(V(A,j)\)</span>: expected verified
+value.</li>
+</ul>
+<p>The routing problem is:</p>
+<p><span class="math display">\[
+A^*_j=\arg\min_A\mathcal{H}(A,j)
+\]</span></p>
+<p>subject to:</p>
+<p><span class="math display">\[
+R(A,j)\leq R_{\max}(j)
+\]</span></p>
+<p>and:</p>
+<p><span class="math display">\[
+\text{tools}(A)\subseteq \text{allowed}(j).
+\]</span></p>
+<h2
+id="hamiltonian-exploration-with-dissipative-convergence">Hamiltonian
+exploration with dissipative convergence</h2>
+<p>Closed strategic systems may orbit. Useful systems must settle into
+work. We therefore model the state dynamics as:</p>
+<p><span class="math display">\[
+\dot{x}=J\nabla\mathcal{H}(x)-\Gamma\nabla\mathcal{G}_{\alpha}(x)+\sigma\eta_t.
+\]</span></p>
+<p>Interpretation:</p>
+<ul>
+<li><span class="math inline">\(J\nabla\mathcal{H}(x)\)</span> gives
+strategic circulation, adversarial search, and role recombination.</li>
+<li><span
+class="math inline">\(-\Gamma\nabla\mathcal{G}_{\alpha}(x)\)</span>
+gives convergence toward lower cost, lower risk, and higher verified
+value.</li>
+<li><span class="math inline">\(\sigma\eta_t\)</span> gives stochastic
+exploration and novelty injection.</li>
+</ul>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{explore like a Hamiltonian system; settle like a dissipative work
+engine.}
+}
+\]</span></p>
+<figure>
+<img src="figures_png/figure5_hamiltonian_matrix.png"
+style="width:84.0%"
+alt="Hamiltonian interaction matrix for agent-constellation design. Positive terms indicate complementarity; negative terms indicate interference or deliberately bounded adversarial tension." />
+<figcaption aria-hidden="true">Hamiltonian interaction matrix for
+agent-constellation design. Positive terms indicate complementarity;
+negative terms indicate interference or deliberately bounded adversarial
+tension.</figcaption>
+</figure>
+<p>The interaction-matrix figure turns the Hamiltonian metaphor into a
+routeable design object: pairwise and higher-order interaction terms can
+be estimated, audited, and used to form stronger agent
+constellations.</p>
+<h1 id="game-theoretic-mechanism-design">Game-theoretic mechanism
+design</h1>
+<p>Each agent has local objectives, partial observability, and bounded
+capabilities. If local incentives are misaligned, the system can
+converge to collusion, spam, performative reasoning, unsafe tool use, or
+low-value equilibria.</p>
+<p>Let agent <span class="math inline">\(i\)</span> receive utility:</p>
+<p><span class="math display">\[
+u_i=b_i-c_i+\theta\Delta V_{\text{system}}+\rho_r\Delta
+r_i-\rho_sR_i-\rho_lL_i-\rho_oO_i.
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(b_i\)</span> is bounty or
+settlement;</li>
+<li><span class="math inline">\(c_i\)</span> is compute/tool/time
+cost;</li>
+<li><span class="math inline">\(\Delta V_{\text{system}}\)</span> is
+system-level value contribution;</li>
+<li><span class="math inline">\(\Delta r_i\)</span> is reputation
+update;</li>
+<li><span class="math inline">\(R_i\)</span> is risk contribution;</li>
+<li><span class="math inline">\(L_i\)</span> is latency or coordination
+drag;</li>
+<li><span class="math inline">\(O_i\)</span> is policy or safety
+violation cost.</li>
+</ul>
+<p>The mechanism objective is:</p>
+<p><span class="math display">\[
+\max_{\pi}\mathbb{E}[V_{\text{verified}}-\lambda C-\rho R-\kappa L-\mu
+O].
+\]</span></p>
+<p>The target is not merely a Nash equilibrium. A Nash equilibrium can
+be stable and useless. The desired point is:</p>
+<p><span class="math display">\[
+\text{Nash-stable}+
+\text{Pareto-improving}+
+\text{validator-approved}+
+\text{risk-bounded}+
+\text{externally useful}.
+\]</span></p>
+<h1 id="credit-assignment">Credit assignment</h1>
+<p>Credit assignment is one of the central scientific and economic
+bottlenecks in multi-agent systems. Cooperative MARL with a single joint
+reward can suffer from spurious rewards, partial observability, and
+lazy-agent effects; value decomposition was proposed to assign team
+value to agent-wise components [13].</p>
+<p>For AGI ALPHA, the cleanest scoring principle is counterfactual
+contribution:</p>
+<p><span class="math display">\[
+D_i=G(z)-G(z_{-i}),
+\]</span></p>
+<p>where <span class="math inline">\(G(z)\)</span> is global verified
+value with agent <span class="math inline">\(i\)</span> and <span
+class="math inline">\(G(z_{-i})\)</span> is estimated global verified
+value without agent <span class="math inline">\(i\)</span>.</p>
+<p>The reputation update is:</p>
+<p><span class="math display">\[
+\Delta r_i=f(D_i,q_i,s_i,\tau_i,\chi_i),
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(q_i\)</span> is proof quality;</li>
+<li><span class="math inline">\(s_i\)</span> is safety compliance;</li>
+<li><span class="math inline">\(\tau_i\)</span> is timeliness;</li>
+<li><span class="math inline">\(\chi_i\)</span> is cooperation
+quality.</li>
+</ul>
+<p>Settlement should reward marginal verified contribution, not volume
+of messages, centrality in the conversation, or persuasive style.</p>
+<h1
+id="continuous-inflows-required-to-sustain-organized-agentic-complexity">Continuous
+inflows required to sustain organized agentic complexity</h1>
+<p>This section details the continuous inflows that keep the agentic
+system far from equilibrium. Each inflow is both a resource and a
+control signal. Removing any one of them causes a characteristic
+collapse mode.</p>
+<h2 id="compute-inflow">1. Compute inflow</h2>
+<p>Compute is the literal energy-mediated substrate. It includes
+accelerators, CPU orchestration, memory, storage, network bandwidth,
+tool execution environments, sandbox runtimes, and scheduler
+capacity.</p>
+<p>The compute inflow can be written:</p>
+<p><span class="math display">\[
+\Phi_C=(P_{\text{electric}},G_{\text{GPU}},C_{\text{CPU}},B_{\text{net}},M_{\text{mem}},S_{\text{storage}},Q_{\text{scheduler}}).
+\]</span></p>
+<h3 id="function">Function</h3>
+<p>Compute powers search, inference, planning, simulation, retrieval,
+code execution, verification, and monitoring. It also sets the speed of
+the control loop. Too little compute causes under-exploration and
+delayed validation. Too much unconstrained compute creates runaway
+loops, excess cost, and larger attack surfaces.</p>
+<h3 id="best-practice-controls">Best-practice controls</h3>
+<p>Compute inflow should be bounded by:</p>
+<ul>
+<li>per-job budgets;</li>
+<li>per-agent step limits;</li>
+<li>dynamic temperature schedules;</li>
+<li>sandboxed execution;</li>
+<li>rate limits;</li>
+<li>approval gates for high-cost tool use;</li>
+<li>tracing of model calls and tool calls;</li>
+<li>kill switches for divergent loops;</li>
+<li>energy and carbon accounting where material.</li>
+</ul>
+<h3 id="metrics">Metrics</h3>
+<p><span class="math display">\[
+\eta_C=\frac{W_{\text{verified}}}{\text{GPU-hours}+\text{CPU-hours}+\text{tool-cost}}
+\]</span></p>
+<p><span class="math display">\[
+B_C=\frac{\text{compute spent on accepted work}}{\text{total compute
+spent}}
+\]</span></p>
+<p><span class="math display">\[
+L_C=\text{median validation latency per compute unit}.
+\]</span></p>
+<h3 id="collapse-mode-without-compute">Collapse mode without
+compute</h3>
+<p>Without compute, agents cannot search, plan, verify, or act. The
+swarm relaxes to inert memory and unexecuted task queues.</p>
+<h2 id="data-inflow">2. Data inflow</h2>
+<p>Data is the informational nutrient of the system. It includes raw
+documents, real-time signals, retrieval corpora, tool outputs, human
+instructions, telemetry, market data, logs, code repositories,
+scientific papers, external APIs, and validation outcomes.</p>
+<p>The data inflow is:</p>
+<p><span class="math display">\[
+\Phi_D=(D_{\text{fresh}},D_{\text{retrieved}},D_{\text{private}},D_{\text{public}},D_{\text{telemetry}},D_{\text{eval}},D_{\text{provenance}}).
+\]</span></p>
+<h3 id="function-1">Function</h3>
+<p>Data reduces uncertainty and makes action situationally grounded.
+Fresh data prevents the system from optimizing against stale world
+models. Provenance prevents the system from treating untrusted inputs as
+facts. Telemetry lets the system learn from its own operation.</p>
+<h3 id="best-practice-controls-1">Best-practice controls</h3>
+<p>Data inflow should be governed by:</p>
+<ul>
+<li>provenance labels;</li>
+<li>source reliability scores;</li>
+<li>freshness requirements;</li>
+<li>privacy and consent boundaries;</li>
+<li>licensing checks;</li>
+<li>redaction and minimization;</li>
+<li>retrieval audit trails;</li>
+<li>separation of trusted instructions from untrusted content;</li>
+<li>poisoning and prompt-injection defenses;</li>
+<li>data retention rules.</li>
+</ul>
+<h3 id="metrics-1">Metrics</h3>
+<p><span class="math display">\[
+F_D=\frac{\text{fresh relevant data used}}{\text{total relevant data
+required}}
+\]</span></p>
+<p><span class="math display">\[
+P_D=\frac{\text{outputs with traceable provenance}}{\text{all outputs}}
+\]</span></p>
+<p><span class="math display">\[
+H_D=\text{detected poisoning or injection attempts per data channel}.
+\]</span></p>
+<h3 id="collapse-mode-without-data">Collapse mode without data</h3>
+<p>Without fresh data, the system becomes stale, hallucinatory, and
+self-referential. It may continue producing outputs, but verified value
+decays.</p>
+<h2 id="task-inflow">3. Task inflow</h2>
+<p>Task inflow supplies the gradient. A multi-agent system with no
+meaningful jobs has no external pressure to organize. Tasks can come
+from users, markets, research agendas, software backlogs, monitoring
+systems, anomaly detectors, governance obligations, or strategic
+objectives.</p>
+<p>The task inflow is:</p>
+<p><span class="math display">\[
+\Phi_J=(J_{\text{user}},J_{\text{market}},J_{\text{research}},J_{\text{ops}},J_{\text{security}},J_{\text{governance}}).
+\]</span></p>
+<p>Each task should be formalized as:</p>
+<p><span class="math display">\[
+j=(o,c,v,b,d,\rho,e)
+\]</span></p>
+<p>where <span class="math inline">\(e\)</span> is the exit
+condition.</p>
+<h3 id="function-2">Function</h3>
+<p>Tasks convert ambient possibility into actionable gradients. They
+specify what counts as success, what constraints must be respected, what
+proof is required, and when the system should stop.</p>
+<h3 id="best-practice-controls-2">Best-practice controls</h3>
+<p>A task should include:</p>
+<ul>
+<li>objective;</li>
+<li>measurable success criteria;</li>
+<li>unacceptable outcomes;</li>
+<li>deadline or stopping rule;</li>
+<li>risk class;</li>
+<li>tool permissions;</li>
+<li>data-access permissions;</li>
+<li>validation method;</li>
+<li>escalation threshold;</li>
+<li>budget.</li>
+</ul>
+<h3 id="metrics-2">Metrics</h3>
+<p><span class="math display">\[
+Q_J=\frac{\text{jobs with clear validation criteria}}{\text{all jobs}}
+\]</span></p>
+<p><span class="math display">\[
+Y_J=\frac{\text{accepted jobs}}{\text{submitted jobs}}
+\]</span></p>
+<p><span class="math display">\[
+D_J=\text{distribution of job risk classes}.
+\]</span></p>
+<h3 id="collapse-mode-without-tasks">Collapse mode without tasks</h3>
+<p>Without task inflow, agents coordinate around internal activity
+rather than external value. The system becomes a conversation engine
+rather than a work engine.</p>
+<h2 id="incentive-inflow">4. Incentive inflow</h2>
+<p>Incentives create selection pressure. They include bounties, fees,
+reputational rewards, access privileges, priority routing, stake,
+penalties, and long-term capital allocation.</p>
+<p>The incentive inflow is:</p>
+<p><span class="math display">\[
+\Phi_I=(B_{\text{bounty}},R_{\text{reputation}},S_{\text{stake}},P_{\text{penalty}},A_{\text{access}},K_{\text{capital}}).
+\]</span></p>
+<h3 id="function-3">Function</h3>
+<p>Incentives align local agent behavior with global verified value.
+They decide which agents are selected, which coalitions persist, which
+strategies are reinforced, and which behaviors are penalized.</p>
+<h3 id="best-practice-controls-3">Best-practice controls</h3>
+<p>Incentives should be:</p>
+<ul>
+<li>tied to validation, not mere output;</li>
+<li>robust to Sybil behavior;</li>
+<li>resistant to collusion;</li>
+<li>based on counterfactual contribution;</li>
+<li>penalizing unsafe tool use and policy violations;</li>
+<li>adjusted for task difficulty;</li>
+<li>transparent enough for audit;</li>
+<li>private enough to avoid gaming where necessary.</li>
+</ul>
+<h3 id="metrics-3">Metrics</h3>
+<p><span class="math display">\[
+A_I=\text{corr}(\Delta r_i,D_i)
+\]</span></p>
+<p>where <span class="math inline">\(A_I\)</span> is incentive alignment
+and <span class="math inline">\(D_i\)</span> is counterfactual
+contribution.</p>
+<p><span class="math display">\[
+G_I=\frac{\text{reward captured by low-contribution agents}}{\text{total
+reward}}
+\]</span></p>
+<p><span class="math display">\[
+C_I=\text{collusion or self-dealing incidents per settlement cycle}.
+\]</span></p>
+<h3 id="collapse-mode-without-incentives">Collapse mode without
+incentives</h3>
+<p>Without incentives, selection pressure weakens. High-quality agents
+are not reliably retained, low-value agents may flood the system, and
+coordination can drift toward cheap performative output.</p>
+<h2 id="feedback-inflow">5. Feedback inflow</h2>
+<p>Feedback is the control signal that turns activity into learning. It
+includes automated test results, validator decisions, user ratings,
+human review, red-team findings, incident reports, market response,
+execution telemetry, and post-deployment outcomes.</p>
+<p>The feedback inflow is:</p>
+<p><span class="math display">\[
+\Phi_F=(F_{\text{validator}},F_{\text{human}},F_{\text{tests}},F_{\text{redteam}},F_{\text{market}},F_{\text{telemetry}},F_{\text{incident}}).
+\]</span></p>
+<h3 id="function-4">Function</h3>
+<p>Feedback updates memory, routing, reputation, policies, prompts,
+tools, and risk thresholds. It closes the cybernetic loop:</p>
+<p><span class="math display">\[
+\text{action}\rightarrow\text{measurement}\rightarrow\text{update}\rightarrow\text{better
+action}.
+\]</span></p>
+<h3 id="best-practice-controls-4">Best-practice controls</h3>
+<p>Feedback systems should include:</p>
+<ul>
+<li>multiple independent validators for high-risk outputs;</li>
+<li>automated regression tests;</li>
+<li>human-in-the-loop escalation;</li>
+<li>red-team feedback channels;</li>
+<li>delayed outcome tracking;</li>
+<li>false-positive and false-negative analysis;</li>
+<li>incident postmortems;</li>
+<li>anti-gaming defenses;</li>
+<li>calibration of validator confidence.</li>
+</ul>
+<h3 id="metrics-4">Metrics</h3>
+<p><span class="math display">\[
+P_v=\frac{\text{true accepted outputs}}{\text{all accepted outputs}}
+\]</span></p>
+<p><span class="math display">\[
+R_v=\frac{\text{accepted true good outputs}}{\text{all true good
+outputs}}
+\]</span></p>
+<p><span class="math display">\[
+\tau_F=\text{time from output to feedback incorporation}.
+\]</span></p>
+<h3 id="collapse-mode-without-feedback">Collapse mode without
+feedback</h3>
+<p>Without feedback, the system cannot distinguish useful work from
+convincing failure. It drifts, overfits to internal metrics, and
+accumulates silent risk.</p>
+<h2 id="governance-inflow">6. Governance inflow</h2>
+<p>Although the prompt highlights compute, data, tasks, incentives, and
+feedback, governance must be treated as an additional continuous inflow.
+Governance supplies changing rules, legal constraints, safety
+thresholds, escalation policies, tool permissions, and acceptable-use
+boundaries.</p>
+<p>The governance inflow is:</p>
+<p><span class="math display">\[
+\Phi_G=(P_{\text{policy}},L_{\text{law}},S_{\text{safety}},E_{\text{ethics}},A_{\text{audit}},H_{\text{human}}).
+\]</span></p>
+<h3 id="function-5">Function</h3>
+<p>Governance keeps maximum impact from becoming unconstrained
+optimization. It turns the objective from:</p>
+<p><span class="math display">\[
+\max V
+\]</span></p>
+<p>into:</p>
+<p><span class="math display">\[
+\max \mathbb{E}[V_{\text{verified}}]-\lambda C-\rho R-\kappa U
+\]</span></p>
+<p>subject to lawfulness, auditability, permissioning, and reversibility
+where possible.</p>
+<h3 id="collapse-mode-without-governance">Collapse mode without
+governance</h3>
+<p>Without governance, agentic autonomy can amplify errors, privilege
+misuse, tool misuse, privacy leakage, harmful optimization, and legal
+exposure.</p>
+<h2 id="tool-and-environment-inflow">7. Tool and environment inflow</h2>
+<p>Tools are the actuation channels. They include search, code
+execution, browsers, databases, calendars, email, cloud APIs, payment
+systems, robotics, lab automation, and deployment pipelines.</p>
+<p>The tool inflow is:</p>
+<p><span class="math display">\[
+\Phi_T=(T_{\text{search}},T_{\text{code}},T_{\text{db}},T_{\text{deploy}},T_{\text{comm}},T_{\text{finance}},T_{\text{physical}}).
+\]</span></p>
+<h3 id="function-6">Function</h3>
+<p>Tools convert internal plans into external work. They also make
+agents dangerous if over-permissioned. Agentic security guidance
+therefore treats tools, identity, memory, and permissions as first-class
+security boundaries [9].</p>
+<h3 id="best-practice-controls-5">Best-practice controls</h3>
+<p>Tool access should follow:</p>
+<ul>
+<li>least privilege;</li>
+<li>scoped credentials;</li>
+<li>approval gates;</li>
+<li>read/write separation;</li>
+<li>dry-run modes;</li>
+<li>sandboxing;</li>
+<li>command allowlists;</li>
+<li>output validation;</li>
+<li>reversible execution where possible;</li>
+<li>immutable logs.</li>
+</ul>
+<h3 id="collapse-mode-without-tools">Collapse mode without tools</h3>
+<p>Without tools, the system can reason but cannot produce much external
+work. With excessive tools, the system can act faster than it can
+validate. The correct operating regime is bounded tool empowerment.</p>
+<h2 id="inflow-interdependence-matrix">Inflow interdependence
+matrix</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Inflow</th>
+<th>Primary role</th>
+<th>Control variable</th>
+<th>Failure if absent</th>
+<th>Failure if excessive</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compute</td>
+<td>Powers search and execution</td>
+<td>Budget, latency, energy</td>
+<td>Inert swarm</td>
+<td>Runaway cost and loops</td>
+</tr>
+<tr class="even">
+<td>Data</td>
+<td>Grounds beliefs</td>
+<td>Freshness, provenance</td>
+<td>Stale hallucination</td>
+<td>Poisoning, privacy risk</td>
+</tr>
+<tr class="odd">
+<td>Tasks</td>
+<td>Supplies gradients</td>
+<td>Success criteria</td>
+<td>Idle activity</td>
+<td>Overload, shallow work</td>
+</tr>
+<tr class="even">
+<td>Incentives</td>
+<td>Creates selection pressure</td>
+<td>Reward/reputation</td>
+<td>Low-quality drift</td>
+<td>Gaming, collusion</td>
+</tr>
+<tr class="odd">
+<td>Feedback</td>
+<td>Enables learning</td>
+<td>Validator precision/recall</td>
+<td>Model drift</td>
+<td>Overfitting to validators</td>
+</tr>
+<tr class="even">
+<td>Governance</td>
+<td>Bounds autonomy</td>
+<td>Policy and permissions</td>
+<td>Unsafe optimization</td>
+<td>Bureaucratic paralysis</td>
+</tr>
+<tr class="odd">
+<td>Tools</td>
+<td>Enables external work</td>
+<td>Scope and approval</td>
+<td>No actuation</td>
+<td>High-impact failures</td>
+</tr>
+</tbody>
+</table>
+<p>The stable Ascension regime is not maximum inflow. It is
+<strong>regulated inflow</strong>:</p>
+<p><span class="math display">\[
+\Phi_{\text{optimal}}
+=
+\arg\max_{\Phi}
+\left(V_{\text{verified}}-\lambda C-\rho R-\kappa U\right).
+\]</span></p>
+<h1 id="civilizational-scale-value-horizon">Civilizational-scale value
+horizon</h1>
+<p>The fullest interpretation of α-AGI Ascension is not merely that many
+agents complete many tasks. It is that verified intelligence work
+compounds into the scientific, industrial, energy, and governance
+capabilities required for civilization-scale progress. The paper
+therefore treats the highest horizon as a <strong>governed Type-II /
+star-scale energy trajectory</strong>, not as an immediate deployment
+claim and not as unconstrained autonomy.</p>
+<p>The capability chain is:</p>
+<p><span class="math display">\[
+\Phi_{\text{in}}
+\rightarrow
+W_{\text{verified}}
+\rightarrow
+K_{\text{science}}
+\rightarrow
+K_{\text{engineering}}
+\rightarrow
+P_{\text{controlled}}
+\rightarrow
+\Theta_{\mathrm{II}}.
+\]</span></p>
+<p>Here, <span class="math inline">\(K_{\text{science}}\)</span> is
+accumulated scientific capability, <span
+class="math inline">\(K_{\text{engineering}}\)</span> is accumulated
+design and manufacturing capability, and <span
+class="math inline">\(P_{\text{controlled}}\)</span> is sustainably
+governed useful power. The Type-II proximity index is:</p>
+<p><span class="math display">\[
+\Theta_{\mathrm{II}}(t)=\frac{P_{\text{controlled}}(t)}{L_{\star}},
+\]</span></p>
+<p>where <span class="math inline">\(L_{\star}\)</span> is a host-star
+luminosity benchmark. Progress toward this horizon only counts when the
+controlled power is lawful, auditable, sustainable, and risk-bounded.
+This keeps the framework aligned with the original energy-scale meaning
+of the Type-II category while refusing to treat raw power accumulation
+as sufficient [17,18].</p>
+<figure>
+<img src="figures_png/figure8_civilizational_horizon.png"
+style="width:92.0%"
+alt="Figure 8. Civilization-scale value horizon. The system converts verified intelligence work into compounding scientific, industrial, energy, and space capability under a governance corridor." />
+<figcaption aria-hidden="true">Figure 8. Civilization-scale value
+horizon. The system converts verified intelligence work into compounding
+scientific, industrial, energy, and space capability under a governance
+corridor.</figcaption>
+</figure>
+<p>The civilizational objective is:</p>
+<p><span class="math display">\[
+J_{\mathrm{civil}}(\pi)=
+\int_0^T
+\left(\Delta W_v+\lambda_E\Delta P_c+\lambda_M\Delta K_m+\lambda_S\Delta
+K_s\right)dt
+-
+\int_0^T
+\left(\rho R_{\mathrm{cat}}+\mu R_{\mathrm{conc}}+\nu
+R_{\mathrm{eco}}\right)dt .
+\]</span></p>
+<p><span class="math display">\[
+\pi^{\star}=\arg\max_{\pi}J_{\mathrm{civil}}(\pi).
+\]</span></p>
+<p>subject to:</p>
+<p><span class="math display">\[
+\text{lawful}\land\text{auditable}\land\text{validator-gated}\land\text{reversible
+where possible}\land\text{institutionally governable}.
+\]</span></p>
+<p>This is the difference between a powerful swarm and a
+civilization-grade engine. A powerful swarm can optimize local
+objectives. A civilization-grade engine must transform verified work
+into durable public infrastructure: better science, safer energy
+systems, more reliable manufacturing, stronger institutions, and
+space-scale construction capacity. The value target is therefore not
+narrow extraction. It is compounding, governed capability.</p>
+<p>The key implication for AGI ALPHA is that the agentic work engine
+must be designed as an <strong>infrastructure multiplier</strong>. Its
+highest-value outputs are not only answers, code, or plans, but
+validated capability loops that expand humanity’s ability to safely
+command energy, matter, computation, and coordination. In this sense,
+α-AGI Ascension becomes a disciplined path from multi-agent work to
+star-scale civilizational potential.</p>
+<h1 id="operational-architecture">Operational architecture</h1>
+<p>A production-grade α-AGI work engine requires nine layers.</p>
+<h2 id="gradient-detection-layer">1. Gradient detection layer</h2>
+<p>Detects opportunities, anomalies, research gaps, user needs, software
+defects, security events, or market inefficiencies.</p>
+<p><span class="math display">\[
+g_t=\nabla_{\text{world}}V.
+\]</span></p>
+<h2 id="job-specification-layer">2. Job specification layer</h2>
+<p>Converts gradients into measurable jobs with success criteria,
+constraints, risk class, budget, and stopping conditions.</p>
+<h2 id="agent-registry-layer">3. Agent registry layer</h2>
+<p>Maintains agent capabilities, tool permissions, provenance, identity,
+reputation, and prior performance.</p>
+<h2 id="constellation-routing-layer">4. Constellation routing layer</h2>
+<p>Selects agent coalitions by minimizing <span
+class="math inline">\(\mathcal{H}(A,j)\)</span> under budget and risk
+constraints.</p>
+<h2 id="execution-layer">5. Execution layer</h2>
+<p>Runs tool use, planning, coding, research, simulation, retrieval,
+negotiation, and deployment in bounded environments.</p>
+<h2 id="validation-layer">6. Validation layer</h2>
+<p>Applies unit tests, formal checks, human review, adversarial review,
+outcome checks, safety filters, and acceptance criteria.</p>
+<h2 id="settlement-layer">7. Settlement layer</h2>
+<p>Allocates reward, reputation, penalties, and future routing
+probability according to counterfactual contribution.</p>
+<h2 id="memory-layer">8. Memory layer</h2>
+<p>Stores reusable artifacts, proof traces, errors, policies, tool
+outcomes, calibration data, and incident histories.</p>
+<h2 id="governance-layer">9. Governance layer</h2>
+<p>Defines permissions, escalation rules, audit requirements, legal
+constraints, red-team procedures, and shutdown modes.</p>
+<figure>
+<img src="figures_png/figure7_validator_loop.png" style="width:88.0%"
+alt="Validator-gated control loop. Useful autonomy is routed through proof, settlement, memory, risk monitoring, and governance, rather than unrestricted action." />
+<figcaption aria-hidden="true">Validator-gated control loop. Useful
+autonomy is routed through proof, settlement, memory, risk monitoring,
+and governance, rather than unrestricted action.</figcaption>
+</figure>
+<p>The validator-loop figure gives the operational discipline behind the
+system: jobs route into constellations, constellations execute under
+tool boundaries, validators decide acceptance, and the outcome updates
+settlement, reputation, memory, risk controls, and governance.</p>
+<h1 id="design-principles">Design principles</h1>
+<p>The following principles translate current agentic guidance into the
+physics/game-theoretic model.</p>
+<h2
+id="principle-1-start-with-the-simplest-sufficient-agent-topology">Principle
+1: start with the simplest sufficient agent topology</h2>
+<p>OpenAI’s practical guidance recommends maximizing a single agent’s
+capability before adding multi-agent complexity and distinguishes
+manager-style patterns from decentralized handoffs [11]. Anthropic
+similarly distinguishes predictable workflows from more autonomous
+agents [10]. In our framework, unnecessary agents increase <span
+class="math inline">\(C_{\text{coord}}\)</span> and <span
+class="math inline">\(S_{\text{swarm}}\)</span> without increasing <span
+class="math inline">\(V_{\text{verified}}\)</span>.</p>
+<h2
+id="principle-2-specialize-only-where-specialization-lowers-free-energy">Principle
+2: specialize only where specialization lowers free energy</h2>
+<p>Create a specialist agent only if it reduces:</p>
+<p><span class="math display">\[
+\Delta\mathcal{G}_{\alpha}&lt;0.
+\]</span></p>
+<p>That is, the specialist must improve verified value or reduce
+cost/risk more than it increases coordination overhead.</p>
+<h2 id="principle-3-make-tools-legible-and-bounded">Principle 3: make
+tools legible and bounded</h2>
+<p>Agentic tools should have clear schemas, scoped permissions,
+validation, and observability. Ambiguous tools raise security risk and
+validator burden. MCP-style tool connectivity can increase capability,
+but it must be paired with least privilege, logging, and
+prompt-injection defenses [12].</p>
+<h2 id="principle-4-validate-before-settlement">Principle 4: validate
+before settlement</h2>
+<p>No agent should receive full reward for unvalidated output.
+Settlement follows proof:</p>
+<p><span class="math display">\[
+\text{work}\rightarrow\text{validation}\rightarrow\text{settlement}\rightarrow\text{memory
+update}.
+\]</span></p>
+<h2 id="principle-5-measure-risk-as-an-objective-term">Principle 5:
+measure risk as an objective term</h2>
+<p>Safety, privacy, legal, and security risks must be in the objective,
+not external comments after deployment.</p>
+<p><span class="math display">\[
+\max \mathbb{E}[V_{\text{verified}}]-\lambda C-\rho R-\kappa U.
+\]</span></p>
+<h2 id="principle-6-trace-the-system">Principle 6: trace the system</h2>
+<p>Tracing is necessary because multi-agent behavior is otherwise
+difficult to debug. The trace should capture agent handoffs, tool calls,
+guardrail triggers, validation results, and state updates.</p>
+<h2 id="principle-7-design-for-graceful-degradation">Principle 7: design
+for graceful degradation</h2>
+<p>The system should degrade from autonomous execution to human review,
+then to read-only advice, then to shutdown. Far-from-equilibrium systems
+should not fail by accelerating into unsafe action.</p>
+<figure>
+<img src="figures_png/figure6_risk_frontier.png" style="width:88.0%"
+alt="Risk-adjusted frontier. The target is not maximum raw autonomy, but high verified impact under explicit risk budgets." />
+<figcaption aria-hidden="true">Risk-adjusted frontier. The target is not
+maximum raw autonomy, but high verified impact under explicit risk
+budgets.</figcaption>
+</figure>
+<p>The risk-frontier figure summarizes the governance doctrine:
+disciplined maximum impact lives on the frontier where verified value
+remains high and risk budgets stay controlled.</p>
+<h1 id="metrics-5">Metrics</h1>
+<h2 id="verified-work-efficiency">Verified work efficiency</h2>
+<p><span class="math display">\[
+\eta_{\alpha}=\frac{W_{\text{verified}}}{E_{\text{compute}}+C_{\text{human}}+C_{\text{capital}}}.
+\]</span></p>
+<h2 id="free-energy-descent-rate">Free-energy descent rate</h2>
+<p><span class="math display">\[
+D_{\mathcal{G}}=-\frac{d\mathcal{G}_{\alpha}}{dt}.
+\]</span></p>
+<h2 id="coordination-entropy">Coordination entropy</h2>
+<p><span class="math display">\[
+S_{\text{swarm}}=-\sum_xp(x)\log p(x).
+\]</span></p>
+<h2 id="coalition-stability">Coalition stability</h2>
+<p><span class="math display">\[
+K_{\text{coalition}}=\mathbb{E}[\text{lifetime}(A_j)]\cdot\mathbb{E}[\text{success}(A_j)].
+\]</span></p>
+<h2 id="credit-fidelity">Credit fidelity</h2>
+<p><span class="math display">\[
+F_{\text{credit}}=\text{corr}(D_i,\Delta r_i).
+\]</span></p>
+<h2 id="validator-quality">Validator quality</h2>
+<p><span class="math display">\[
+P_v=\frac{\text{true accepted outputs}}{\text{all accepted outputs}},
+\qquad
+R_v=\frac{\text{accepted true good outputs}}{\text{all true good
+outputs}}.
+\]</span></p>
+<h2 id="risk-adjusted-impact">Risk-adjusted impact</h2>
+<p><span class="math display">\[
+I_{\text{risk-adjusted}}=V_{\text{verified}}-\rho_sR_{\text{safety}}-\rho_lR_{\text{legal}}-\rho_cR_{\text{security}}.
+\]</span></p>
+<h2 id="security-loss">Security loss</h2>
+<p><span class="math display">\[
+L_{\text{security}}=
+L_{\text{prompt-injection}}+
+L_{\text{tool-abuse}}+
+L_{\text{data-leakage}}+
+L_{\text{identity-misuse}}+
+L_{\text{goal-hijack}}.
+\]</span></p>
+<h1 id="experimental-program">Experimental program</h1>
+<h2
+id="experiment-1-free-energy-descent-versus-verified-work">Experiment 1:
+free-energy descent versus verified work</h2>
+<p><strong>Hypothesis.</strong> Constellations selected by minimizing
+<span class="math inline">\(\mathcal{G}_{\alpha}\)</span> produce more
+verified work per compute unit than unstructured multi-agent
+baselines.</p>
+<p><strong>Conditions.</strong> Compare single-agent, unstructured
+multi-agent, role-based multi-agent, and Hamiltonian-routed
+validator-gated constellations.</p>
+<p><strong>Metric.</strong></p>
+<p><span class="math display">\[
+\eta_{\alpha}=W_{\text{verified}}/C_{\text{compute}}.
+\]</span></p>
+<h2 id="experiment-2-temperature-and-exploration">Experiment 2:
+temperature and exploration</h2>
+<p><strong>Hypothesis.</strong> Intermediate effective temperature
+maximizes risk-adjusted impact.</p>
+<p><span class="math display">\[
+T_{\text{low}}\Rightarrow\text{premature convergence}
+\]</span></p>
+<p><span class="math display">\[
+T_{\text{high}}\Rightarrow\text{coordination noise}
+\]</span></p>
+<p><span class="math display">\[
+T_{\text{mid}}\Rightarrow\text{productive exploration}.
+\]</span></p>
+<h2 id="experiment-3-credit-assignment-fidelity">Experiment 3:
+credit-assignment fidelity</h2>
+<p><strong>Hypothesis.</strong> Counterfactual contribution scoring
+improves agent selection and reduces reward capture.</p>
+<p>Compare:</p>
+<p><span class="math display">\[
+\Delta r_i=\text{team reward}
+\]</span></p>
+<p>against:</p>
+<p><span class="math display">\[
+\Delta r_i=G(z)-G(z_{-i}).
+\]</span></p>
+<h2 id="experiment-4-hamiltonian-coalition-routing">Experiment 4:
+Hamiltonian coalition routing</h2>
+<p><strong>Hypothesis.</strong> Learned interaction terms <span
+class="math inline">\(J_{ik}\)</span> and <span
+class="math inline">\(K_{ik\ell}\)</span> improve coalition quality over
+skill-only matching.</p>
+<h2 id="experiment-5-validator-gated-safety">Experiment 5:
+validator-gated safety</h2>
+<p><strong>Hypothesis.</strong> Validator gating reduces externalized
+risk without collapsing useful throughput when validation latency is
+optimized.</p>
+<h2 id="experiment-6-inflow-ablation">Experiment 6: inflow ablation</h2>
+<p><strong>Hypothesis.</strong> Removing or degrading one continuous
+inflow creates a predictable collapse mode.</p>
+<ul>
+<li>Compute ablation: slower loops, under-exploration.</li>
+<li>Data ablation: stale or hallucinated outputs.</li>
+<li>Task ablation: self-referential activity.</li>
+<li>Incentive ablation: low-quality drift.</li>
+<li>Feedback ablation: uncorrected error accumulation.</li>
+<li>Governance ablation: unsafe optimization.</li>
+<li>Tool ablation: low external work.</li>
+</ul>
+<h1
+id="formal-proposition-α-agi-ascension-as-bounded-dissipative-intelligence">Formal
+proposition: α-AGI Ascension as bounded dissipative intelligence</h1>
+<p>A large-scale multi-agent system enters an α-AGI Ascension regime
+when:</p>
+<ol type="1">
+<li>it is open to continuous inflows of compute, data, tasks,
+incentives, feedback, governance, and tools;</li>
+<li>it maintains non-equilibrium organization through specialization and
+coalition formation;</li>
+<li>it converts inflows into externally validated work;</li>
+<li>it dissipates failed search, latency, and redundant
+computation;</li>
+<li>it updates memory, reputation, and routing from validation
+outcomes;</li>
+<li>it bounds risk through governance, permissions, and validators.</li>
+</ol>
+<p>Formally:</p>
+<p><span class="math display">\[
+\alpha\text{-Ascension}
+\iff
+\begin{cases}
+\dot{E}_{\text{in}}&gt;0 \\
+\dot{W}_{\text{verified}}&gt;0 \\
+S_{\min}&lt;S_{\text{swarm}}&lt;S_{\max} \\
+R_{\text{safety}}\leq R_{\max} \\
+\frac{d\mathcal{G}_{\alpha}}{dt}&lt;0 \\
+F_{\text{credit}}\rightarrow 1.
+\end{cases}
+\]</span></p>
+<p>This is the precise sense in which AGI ALPHA can be said to bring
+α-AGI Ascension to life.</p>
+<h1 id="discussion">Discussion</h1>
+<p>The framework should be read as disciplined analogy plus testable
+engineering. The physical compute layer is literally thermodynamic:
+electrical energy is consumed, processors dissipate heat, and
+networks/storage impose physical constraints. The coordination layer is
+formal: <span class="math inline">\(\mathcal{G}_{\alpha}\)</span> is not
+chemical Gibbs energy, but a useful state functional over cost, risk,
+value, and exploration.</p>
+<p>The statistical-physics view is useful because large agent swarms are
+ensemble systems. It is often impossible to inspect every message or
+decision, but possible to measure macro-observables: entropy, risk,
+verified output, coalition stability, validator latency, and credit
+fidelity.</p>
+<p>The Hamiltonian view is useful because interacting learners can
+cycle. Purely strategic dynamics may orbit around equilibria without
+producing useful work. The missing ingredient is dissipation into
+validated artifacts. α-AGI should not merely think, debate, or
+strategize; it should settle into proof-producing trajectories.</p>
+<p>The game-theoretic view is useful because local incentives determine
+global structure. If reward follows verbosity, agents become verbose. If
+reward follows proof, agents become proof-seeking. If reward follows
+unsafe speed, agents become unsafe. Mechanism design is therefore not an
+economic add-on; it is part of the physics of the swarm.</p>
+<h1 id="limitations">Limitations</h1>
+<p>This paper has several limitations.</p>
+<ol type="1">
+<li><span class="math inline">\(\mathcal{G}_{\alpha}\)</span> is an
+engineered objective, not a natural thermodynamic state variable.</li>
+<li>Hamiltonian parameters must be learned, estimated, or manually
+specified.</li>
+<li>Validators may become bottlenecks, attack targets, or sources of
+bias.</li>
+<li>Counterfactual credit assignment is approximate and can be
+gamed.</li>
+<li>Multi-agent communication creates privacy, security, collusion, and
+hallucination risks.</li>
+<li>“Maximum impact” is a normative target and cannot be defined by
+throughput, profit, or autonomy alone.</li>
+<li>Empirical claims require benchmark results, deployment traces, and
+independent audits.</li>
+</ol>
+<h1 id="conclusion">Conclusion</h1>
+<p>AGI ALPHA can be scientifically framed as a far-from-equilibrium
+multi-agent work engine. α-AGI Ascension is the sustained regime in
+which compute, data, tasks, incentives, feedback, governance, and tools
+maintain organized agentic complexity and convert it into externally
+verified impact.</p>
+<p>The final formulation is:</p>
+<p><span class="math display">\[
+\boxed{
+\alpha\text{-AGI Ascension}
+=
+\arg\min_{\text{agent constellations}}
+\left[
+C_{\text{compute}}+C_{\text{coordination}}+R_{\text{safety}}-V_{\text{verified}}-T_{\text{eff}}S_{\text{useful
+exploration}}
+\right]
+}
+\]</span></p>
+<p>sustained by:</p>
+<p><span class="math display">\[
+\boxed{
+\dot{E}_{\text{compute,data,capital,tasks}}
+\rightarrow
+\dot{W}_{\text{verified impact}}
++
+\dot{Q}_{\text{dissipated search}}
++
+\dot{I}_{\text{memory}}
+}
+\]</span></p>
+<p>and constrained by:</p>
+<p><span class="math display">\[
+\boxed{
+\text{lawful}\land\text{auditable}\land\text{permissioned}\land\text{validator-gated}\land\text{risk-bounded}.
+}
+\]</span></p>
+<p>Thus, the strongest scientific version of the claim is:</p>
+<p><strong>AGI ALPHA brings α-AGI Ascension to life by engineering
+dissipative intelligence: a continuously powered, statistically mapped,
+Hamiltonian-routed, game-theoretically aligned, validator-gated swarm
+that transforms energy-mediated computation into verified
+impact.</strong></p>
+<h1 id="appendix-a-variable-glossary">Appendix A: variable glossary</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mathcal{A}\)</span></td>
+<td>Agent population</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathcal{J}\)</span></td>
+<td>Job stream</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Phi_C\)</span></td>
+<td>Compute inflow</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Phi_D\)</span></td>
+<td>Data inflow</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Phi_J\)</span></td>
+<td>Task/job inflow</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Phi_I\)</span></td>
+<td>Incentive inflow</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Phi_F\)</span></td>
+<td>Feedback inflow</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Phi_G\)</span></td>
+<td>Governance inflow</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Phi_T\)</span></td>
+<td>Tool/environment inflow</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\mathcal{G}_{\alpha}\)</span></td>
+<td>Agentic Gibbs-like free-energy functional</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\mathcal{H}\)</span></td>
+<td>Hamiltonian-like cost of a configuration</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(S_{\text{swarm}}\)</span></td>
+<td>Entropy of swarm configurations</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(V_{\text{verified}}\)</span></td>
+<td>Externally validated value</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(R_{\text{safety}}\)</span></td>
+<td>Safety risk</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(D_i\)</span></td>
+<td>Counterfactual contribution of agent <span
+class="math inline">\(i\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P_v\)</span></td>
+<td>Validator precision</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(R_v\)</span></td>
+<td>Validator recall</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Theta_{\mathrm{II}}\)</span></td>
+<td>Type-II / star-scale proximity index</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(P_{\text{controlled}}\)</span></td>
+<td>Sustainably governed useful power</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(L_{\star}\)</span></td>
+<td>Host-star luminosity benchmark</td>
+</tr>
+</tbody>
+</table>
+<h1 id="appendix-b-operational-inflow-checklist">Appendix B: operational
+inflow checklist</h1>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Layer</th>
+<th>Minimum viable control</th>
+<th>Production-grade control</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Compute</td>
+<td>Token/tool budget</td>
+<td>Dynamic budgets, sandboxing, energy accounting</td>
+</tr>
+<tr class="even">
+<td>Data</td>
+<td>Source links</td>
+<td>Provenance graph, freshness scoring, poisoning defense</td>
+</tr>
+<tr class="odd">
+<td>Tasks</td>
+<td>Written objective</td>
+<td>Formal success criteria, risk class, stopping rule</td>
+</tr>
+<tr class="even">
+<td>Incentives</td>
+<td>Bounty</td>
+<td>Counterfactual contribution settlement</td>
+</tr>
+<tr class="odd">
+<td>Feedback</td>
+<td>Manual approval</td>
+<td>Multi-validator feedback with calibration</td>
+</tr>
+<tr class="even">
+<td>Governance</td>
+<td>Basic policy</td>
+<td>Lifecycle risk management and audit trails</td>
+</tr>
+<tr class="odd">
+<td>Tools</td>
+<td>API access</td>
+<td>Least-privilege scoped tools with approval gates</td>
+</tr>
+<tr class="even">
+<td>Memory</td>
+<td>Conversation history</td>
+<td>Versioned, permissioned, provenance-tagged memory</td>
+</tr>
+<tr class="odd">
+<td>Security</td>
+<td>Basic filtering</td>
+<td>Threat model, red team, incident response, identity controls</td>
+</tr>
+</tbody>
+</table>
+<h1 id="appendix-c-agi-alpha-doctrine-corpus-map">Appendix C: AGI Alpha
+doctrine corpus map</h1>
+<p>The supplied Vincent Boucher corpus was considered as an
+institutional strategy corpus. The paper does not reproduce or rely on
+long quotations; it distills recurring architectural commitments into a
+scientific control framework.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Doctrine theme</th>
+<th>Representative corpus signals</th>
+<th>Paper-level translation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>AI sovereignty</td>
+<td>AGI-driven labor engine, decentralized AGI labor platform, sovereign
+machine, republic of machines</td>
+<td>Institutional capacity to command verifiable synthetic labor under
+local governance.</td>
+</tr>
+<tr class="even">
+<td>Agent-native economy</td>
+<td>Agent-native sales, machine-to-machine economy, global marketplace
+of sovereign agents</td>
+<td>Markets where agents discover, bid, execute, prove, settle, and
+update reputation.</td>
+</tr>
+<tr class="odd">
+<td>On-chain work and settlement</td>
+<td>AGIJobManager, AGIJobManagerPrime, DiscoveryPrime, ENS job pages, no
+judge but code</td>
+<td>Proof-bearing jobs, validator-gated escrow, identity, settlement,
+and public memory.</td>
+</tr>
+<tr class="even">
+<td>Autonomous capital</td>
+<td>Autonomous agents closing loops, capital becoming autonomous,
+self-sustaining digital firms</td>
+<td>Reinvestment loops that convert verified work into capital,
+infrastructure, and compute.</td>
+</tr>
+<tr class="odd">
+<td>Tournament and proof</td>
+<td>Proof of Talent, Tournament for Intelligence, Selection Chamber</td>
+<td>Competitive routing and counterfactual credit assignment for
+intelligent labor.</td>
+</tr>
+<tr class="even">
+<td>Recursive improvement governance</td>
+<td>AGI Alpha RSI, sovereign invention governance, verified autonomy
+control plane</td>
+<td>Improvement under audit, permissions, logging, rollback, and
+constitutional constraints.</td>
+</tr>
+<tr class="odd">
+<td>Civilizational horizon</td>
+<td>Machine labor at planetary scale, invention market, machine buying
+the sun</td>
+<td>Verified work compounding into scientific capability, abundant
+energy, and infrastructure.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="references">References</h1>
+<p>[1] Nobel Prize. “The Nobel Prize in Chemistry 1977 - Press release:
+Ilya Prigogine.” NobelPrize.org, 1977.
+https://www.nobelprize.org/prizes/chemistry/1977/press-release/</p>
+<p>[2] OpenStax. “16.4 Free Energy.” <em>Chemistry 2e</em>, 2019.
+https://openstax.org/books/chemistry-2e/pages/16-4-free-energy</p>
+<p>[3] Jaynes, E. T. “Information Theory and Statistical Mechanics.”
+<em>Physical Review</em> 106, 620-630, 1957.
+https://link.aps.org/doi/10.1103/PhysRev.106.620</p>
+<p>[4] Bailey, James P., and Georgios Piliouras. “Multi-Agent Learning
+in Network Zero-Sum Games is a Hamiltonian System.” arXiv:1903.01720,
+2019. https://arxiv.org/abs/1903.01720</p>
+<p>[5] Guo, Taicheng, et al. “Large Language Model based Multi-Agents: A
+Survey of Progress and Challenges.” arXiv:2402.01680, 2024.
+https://arxiv.org/abs/2402.01680</p>
+<p>[6] Yan, Bingyu, et al. “Beyond Self-Talk: A Communication-Centric
+Survey of LLM-Based Multi-Agent Systems.” arXiv:2502.14321, 2025.
+https://arxiv.org/abs/2502.14321</p>
+<p>[7] Li, Xinyi, et al. “A survey on LLM-based multi-agent systems:
+workflow, infrastructure, and challenges.” <em>Vicinagearth</em> 1, 9,
+2024. https://link.springer.com/article/10.1007/s44336-024-00009-2</p>
+<p>[8] NIST. “Artificial Intelligence Risk Management Framework:
+Generative Artificial Intelligence Profile (NIST AI 600-1).” 2024.
+https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence</p>
+<p>[9] OWASP GenAI Security Project. “Agentic AI - Threats and
+Mitigations” and “Securing Agentic Applications Guide 1.0.” 2025.
+https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/ ;
+https://genai.owasp.org/resource/securing-agentic-applications-guide-1-0/</p>
+<p>[10] Anthropic. “Building Effective AI Agents.” 2024.
+https://www.anthropic.com/research/building-effective-agents</p>
+<p>[11] OpenAI. “A practical guide to building agents” and “Agents SDK.”
+2025-2026.
+https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/
+; https://developers.openai.com/api/docs/guides/agents</p>
+<p>[12] Model Context Protocol. “Specification.” 2025.
+https://modelcontextprotocol.io/specification/2025-11-25</p>
+<p>[13] Sunehag, Peter, et al. “Value-Decomposition Networks For
+Cooperative Multi-Agent Learning.” arXiv:1706.05296, 2017.
+https://arxiv.org/abs/1706.05296</p>
+<p>[14] Friston, Karl, et al. “The free energy principle made simpler
+but not too simple.” arXiv:2201.06387, 2022.
+https://arxiv.org/abs/2201.06387</p>
+<p>[15] Ruiz-Serra, Jaime, Patrick Sweeney, and Michael S. Harre.
+“Factorised Active Inference for Strategic Multi-Agent Interactions.”
+arXiv:2411.07362, 2024. https://arxiv.org/abs/2411.07362</p>
+<p>[16] MontrealAI. “AGI-Alpha-Agent-v0: α-AGI Architect - Foundational
+Operational Blueprint.” GitHub repository.
+https://github.com/MontrealAI/AGI-Alpha-Agent-v0</p>
+<p>[17] Kardashev, N. S. “Transmission of Information by
+Extraterrestrial Civilizations.” <em>Soviet Astronomy</em> 8, 217-221,
+1964.</p>
+<p>[18] Dyson, Freeman J. “Search for Artificial Stellar Sources of
+Infrared Radiation.” <em>Science</em> 131, no. 3414, 1667-1668, 1960.
+https://doi.org/10.1126/science.131.3414.1667</p>
+<p>[19] MontrealAI. “AGI-Alpha-Agent-v0: META-AGENTIC alpha-AGI.” GitHub
+repository. https://github.com/MontrealAI/AGI-Alpha-Agent-v0</p>
+<p>[20] MontrealAI. “MONTREAL.AI / Montreal Artificial Intelligence.”
+GitHub profile. https://github.com/MontrealAI</p>
+<p>[21] MONTRÉAL.AI. “We Choose to Ascend with AGI.” Public
+institutional page and AGI Jobs overview.
+https://montrealai.github.io/</p>
+<p>[22] Vincent Boucher. “Featured writings on AI sovereignty,
+agent-native economy, AGI Alpha, sovereign agents, on-chain governance,
+public memory, proof of talent, autonomous capital, recursive
+improvement, and civilizational-scale machine labor.” LinkedIn featured
+corpus. https://www.linkedin.com/in/montrealai/details/featured/</p>
+<p>[23] Etherscan. “AGIJobManager, ENSJobPages, AGIJobDiscoveryPrime,
+AGIJobManagerPrime, and AGI ALPHA AGENT (AGIALPHA) public contract
+pages.” Ethereum contract explorer. https://etherscan.io/</p>
+<p>[24] Xu, Jinglue, et al. “TRINITY: An Evolved LLM Coordinator.”
+arXiv:2512.04695, 2025. https://arxiv.org/abs/2512.04695</p>
+<p>[25] Dang, Yufan, et al. “Multi-Agent Collaboration via Evolving
+Orchestration.” NeurIPS 2025 / OpenReview, 2025.
+https://openreview.net/pdf/9727f658d788c52f49f12ae4b230baf4cf0d4007.pdf</p>
+<p>[26] Chi, Zewen, et al. “The Era of Agentic Organization: Learning to
+Organize with Language Models.” arXiv:2510.26658, 2025.
+https://arxiv.org/abs/2510.26658</p>
+<p>[27] Hua, Keru, et al. “DUPLEX: Agentic Dual-System Planning via
+LLM-Driven Information Extraction.” arXiv:2603.23909, 2026.
+https://arxiv.org/abs/2603.23909</p>
+<p>[28] Zong, Zefang, et al. “AT<span
+class="math inline">\(^2\)</span>PO: Agentic Turn-based Policy
+Optimization via Tree Search.” arXiv:2601.04767, 2026.
+https://arxiv.org/abs/2601.04767</p>
+<p>[29] Sun, Mingyang, Feng Hong, and Weinan Zhang. “Sophia: A
+Persistent Agent Framework of Artificial Life.” arXiv:2512.18202, 2025.
+https://arxiv.org/abs/2512.18202</p>
+<p>[30] Wei, Yuxiang, et al. “Toward Training Superintelligent Software
+Agents through Self-Play SWE-RL.” arXiv:2512.18552, 2025.
+https://arxiv.org/abs/2512.18552</p>
+<p>[31] Wang, Wenyi, et al. “Huxley-Gödel Machine: Human-Level Coding
+Agent Development by an Approximation of the Optimal Self-Improving
+Machine.” arXiv:2510.21614, 2025. https://arxiv.org/abs/2510.21614</p>
+<p>[32] Wang, Yiping, et al. “ThetaEvolve: Test-time Learning on Open
+Problems.” arXiv:2511.23473, 2025. https://arxiv.org/abs/2511.23473</p>
+<p>[33] Wolchover, Natalie. “What Physical ‘Life Force’ Turns Biology’s
+Wheels?” Quanta Magazine, 2026.
+https://www.quantamagazine.org/what-physical-life-force-turns-biologys-wheels-20260420/</p>
+<p>[34] Darlow, Luke. “Digital Ecosystems: Interactive Multi-Agent
+Neural Cellular Automata.” Sakana AI, 2026.
+https://pub.sakana.ai/digital-ecosystem/</p>
+<p>[35] Tomašev, Nenad, et al. “Distributional AGI Safety.”
+arXiv:2512.16856, 2025. https://arxiv.org/abs/2512.16856</p>
+<p>[36] Tomašev, Nenad, et al. “Virtual Agent Economies.”
+arXiv:2509.10147, 2025. https://arxiv.org/abs/2509.10147</p>
+<p>[37] Mahadevan, Sridhar. “Large Causal Models from Large Language
+Models.” arXiv:2512.07796, 2025. https://arxiv.org/abs/2512.07796</p>
+<p>[38] Li, Orion, et al. “K-Dense Analyst: Towards Fully Automated
+Scientific Analysis.” arXiv:2508.07043, 2025.
+https://arxiv.org/abs/2508.07043</p>
+<p>[39] Guo, Yiduo, et al. “Synthetic Data RL: Task Definition Is All
+You Need.” arXiv:2505.17063, 2025. https://arxiv.org/abs/2505.17063</p>
+<p>[40] Rector-Brooks, Jarrid, et al. “General Multimodal Protein Design
+Enables DNA-Encoding of Chemistry.” arXiv:2604.05181, 2026.
+https://arxiv.org/abs/2604.05181</p>
+<p>[41] Liu, Yixiu, et al. “AlphaGo Moment for Model Architecture
+Discovery.” arXiv:2507.18074, 2025. https://arxiv.org/abs/2507.18074</p>
+<p>[42] Chen, Qiguang, et al. “The Molecular Structure of Thought:
+Mapping the Topology of Long Chain-of-Thought Reasoning.”
+arXiv:2601.06002, 2026. https://arxiv.org/abs/2601.06002</p>
+<p>[43] Shafayat, Sheikh, et al. “Can Large Reasoning Models
+Self-Train?” arXiv:2505.21444, 2025.
+https://arxiv.org/abs/2505.21444</p>
+</body>
+</html>

@@ -1,0 +1,25 @@
+\begin{tikzpicture}[font=\small, >=Latex,
+  layer/.style={rounded corners=6pt, draw=AgiBlue!65, fill=white, text width=10.6cm, minimum height=0.82cm, align=center, inner sep=5pt},
+  mission/.style={rounded corners=6pt, draw=AgiGold!75!black, fill=AgiGold!8, text width=10.6cm, minimum height=0.82cm, align=center, inner sep=5pt},
+  feed/.style={->, line width=0.85pt, AgiGold!85!black},
+  back/.style={->, line width=0.75pt, AgiBlue!55, dashed}]
+\fill[AgiBlue!2] (-6.5,-4.35) rectangle (6.5,4.35);
+
+\node[mission] (mission) at (0,3.45) {Civilizational mission\\verified science, energy abundance, infrastructure, compute};
+\node[layer] (market) at (0,2.30) {Sovereign market layer\\identity, reputation, auctions, escrow, memory, settlement};
+\node[layer] (valid) at (0,1.15) {Validator layer\\tests, formal checks, red teams, audits, human escalation};
+\node[layer] (coord) at (0,0.00) {Coordinator layer\\evolved routing, async structure, role selection, delegation};
+\node[layer] (agent) at (0,-1.15) {Agent layer\\planners, coders, retrievers, causal modelers, scientists, deployers};
+\node[layer] (learn) at (0,-2.30) {Learning layer\\self-play, synthetic RL, test-time evolution, open-ended search};
+\node[layer] (substrate) at (0,-3.45) {Substrate layer\\compute, data, tools, code, repositories, contracts, sensors};
+
+\foreach \a/\b in {substrate/learn,learn/agent,agent/coord,coord/valid,valid/market,market/mission}{\draw[feed] (\a.north) -- (\b.south);}
+\draw[back] ([xshift=5.75cm]mission.south) -- ([xshift=5.75cm]market.north);
+\draw[back] ([xshift=5.75cm]market.south) -- ([xshift=5.75cm]valid.north);
+\draw[back] ([xshift=5.75cm]valid.south) -- ([xshift=5.75cm]coord.north);
+\draw[back] ([xshift=5.75cm]coord.south) -- ([xshift=5.75cm]agent.north);
+\draw[back] ([xshift=5.75cm]agent.south) -- ([xshift=5.75cm]learn.north);
+\draw[back] ([xshift=5.75cm]learn.south) -- ([xshift=5.75cm]substrate.north);
+
+
+\end{tikzpicture}

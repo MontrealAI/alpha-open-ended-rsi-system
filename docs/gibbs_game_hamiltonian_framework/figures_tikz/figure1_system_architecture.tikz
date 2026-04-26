@@ -1,0 +1,47 @@
+
+\begin{tikzpicture}[font=\small, >=Latex, line width=0.85pt,
+  inflow/.style={rounded corners=5pt, draw=AgiBlue!62, fill=AgiBlue!4, minimum width=2.2cm, minimum height=0.76cm, align=center},
+  outflow/.style={rounded corners=5pt, draw=green!45!black, fill=green!4, minimum width=2.22cm, minimum height=0.76cm, align=center},
+  core/.style={rounded corners=12pt, draw=AgiBlue!70, fill=white, minimum width=5.4cm, minimum height=4.25cm, align=center},
+  chip/.style={rounded corners=4pt, draw=AgiGold!65, fill=AgiGold!8, align=center, inner sep=5pt}]
+
+\fill[AgiBlue!2] (-6.7,-3.75) rectangle (6.8,3.95);
+\draw[AgiBlue!16, line width=0.4pt] (-6.6,-3.6) grid[step=0.8] (6.6,3.8);
+
+\node[core] (core) at (0,0) {};
+\node[font=\bfseries\Large, text=AgiBlue] at (0,1.18) {AGI ALPHA};
+\node[font=\large] at (0,0.48) {$\alpha$-AGI Ascension};
+\node[align=center, text=AgiSlate] at (0,-0.36) {far-from-equilibrium\\validator-gated\\multi-agent work engine};
+\node[chip] at (0,-1.58) {$\dot E \rightarrow \dot W_{\mathrm{verified}}+\dot Q_{\mathrm{search}}+\dot I_{\mathrm{memory}}$};
+
+\node[inflow] (c) at (-5.5,2.45) {Compute};
+\node[inflow] (d) at (-5.5,1.62) {Data};
+\node[inflow] (j) at (-5.5,0.79) {Tasks};
+\node[inflow] (i) at (-5.5,-0.04) {Incentives};
+\node[inflow] (f) at (-5.5,-0.87) {Feedback};
+\node[inflow] (g) at (-5.5,-1.70) {Governance};
+\node[inflow] (t) at (-5.5,-2.53) {Tools / APIs};
+\draw[->,AgiBlue!75] (c.east) -- (-2.75,1.55);
+\draw[->,AgiBlue!75] (d.east) -- (-2.75,1.10);
+\draw[->,AgiBlue!75] (j.east) -- (-2.75,0.55);
+\draw[->,AgiBlue!75] (i.east) -- (-2.75,-0.05);
+\draw[->,AgiBlue!75] (f.east) -- (-2.75,-0.65);
+\draw[->,AgiBlue!75] (g.east) -- (-2.75,-1.15);
+\draw[->,AgiBlue!75] (t.east) -- (-2.75,-1.55);
+
+\node[outflow] (w) at (5.55,2.10) {Verified Work};
+\node[outflow] (m) at (5.55,1.25) {Memory};
+\node[outflow] (r) at (5.55,0.40) {Reputation};
+\node[outflow] (s) at (5.55,-0.45) {Settlement};
+\node[outflow] (a) at (5.55,-1.30) {Reusable Artifacts};
+\node[outflow] (x) at (5.55,-2.15) {External Impact};
+\draw[->,green!45!black] (2.75,1.45) -- (w.west);
+\draw[->,green!45!black] (2.75,0.98) -- (m.west);
+\draw[->,green!45!black] (2.75,0.38) -- (r.west);
+\draw[->,green!45!black] (2.75,-0.35) -- (s.west);
+\draw[->,green!45!black] (2.75,-0.95) -- (a.west);
+\draw[->,green!45!black] (2.75,-1.50) -- (x.west);
+
+\draw[->,line width=1.1pt,AgiGold!80!black,rounded corners] (5.55,2.55) -- (5.55,3.22) -- (-5.5,3.22) -- (-5.5,2.86);
+\node[chip, fill=white] at (0,3.22) {measurement, validation, adaptation};
+\end{tikzpicture}

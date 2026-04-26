@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.88\linewidth,height=7.0cm,
+  xmin=0,xmax=1,ymin=0,ymax=1.35,
+  xlabel={Effective swarm temperature $T_{\mathrm{eff}}$}, ylabel={Normalized outcome},
+  tick label style={font=\scriptsize}, label style={font=\small},
+  legend style={draw=none, fill=none, font=\scriptsize, at={(0.03,0.97)}, anchor=north west},
+  grid=both, minor grid style={black!5}, major grid style={black!10}]
+\addplot[draw=none, fill=AgiGold!12] coordinates {(0.38,0) (0.68,0) (0.68,1.35) (0.38,1.35)} \closedcycle;
+\addplot[very thick,AgiBlue, samples=160, domain=0:1] {max(0,1.08*exp(-((x-0.55)^2)/0.055)+0.08*sin(deg(8*x)))}; \addlegendentry{Verified impact}
+\addplot[very thick,dashed,red!80!black, samples=160, domain=0:1] {0.20 + 0.9*x^1.8}; \addlegendentry{Coordination risk / noise}
+\node[font=\scriptsize, align=center] at (axis cs:0.53,1.06) {productive\\entropy band};
+\node[font=\scriptsize] at (axis cs:0.12,0.14) {rigid monoculture};
+\node[font=\scriptsize] at (axis cs:0.82,0.96) {chaotic search};
+\end{axis}
+\end{tikzpicture}

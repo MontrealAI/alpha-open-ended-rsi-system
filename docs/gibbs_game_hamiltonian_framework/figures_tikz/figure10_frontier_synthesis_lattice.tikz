@@ -1,0 +1,26 @@
+\begin{tikzpicture}[font=\small, >=Latex, line width=0.75pt,
+  pillar/.style={rounded corners=6pt, draw=AgiBlue!62, fill=white, text width=2.65cm, minimum height=1.05cm, align=center, inner sep=5pt},
+  core/.style={rounded corners=9pt, draw=AgiGold!75!black, fill=AgiGold!7, text width=4.35cm, minimum height=1.25cm, align=center, inner sep=7pt},
+  note/.style={rounded corners=5pt, draw=AgiSlate!45, fill=AgiMist, text width=5.3cm, align=center, inner sep=4pt, font=\scriptsize}]
+
+\fill[AgiBlue!2] (-6.8,-4.7) rectangle (6.8,4.7);
+\draw[AgiBlue!8,line width=0.35pt] (-6.55,-4.45) grid[step=0.8] (6.55,4.45);
+
+\node[core] (core) at (0,0) {\textbf{AGI ALPHA}\\evolved coordination under\\validator-gated governance};
+
+\node[pillar] (bio) at (-5.05,2.55) {Energy-flow biology\\far-from-equilibrium\\motors};
+\node[pillar] (eco) at (-1.70,2.55) {Digital ecosystems\\edge-of-chaos\\learning};
+\node[pillar] (coord) at (1.70,2.55) {Evolved LLM\\coordinators\\delegation + verification};
+\node[pillar] (org) at (5.05,2.55) {Agentic organization\\asynchronous\\work graphs};
+
+\node[pillar] (plan) at (-5.05,-2.55) {Dual-system planning\\symbolic\\synthesis};
+\node[pillar] (learn) at (-1.70,-2.55) {Turn-level RL\\credit assignment\\+ exploration};
+\node[pillar] (rsi) at (1.70,-2.55) {Self-improvement\\test-time\\evolution};
+\node[pillar] (safety) at (5.05,-2.55) {Distributional safety\\agent economies\\+ oversight};
+
+\foreach \n in {bio,eco,coord,org,plan,learn,rsi,safety}{\draw[->,AgiBlue!75] (\n) -- (core);}
+
+\node[note] at (-3.35,4.10) {Sustained order requires energy, feedback, gradients, and constraints.};
+\node[note] at (3.35,4.10) {Maximum effect requires proof, settlement, audit, and rollback.};
+\node[note, text width=10.8cm] at (0,-4.10) {The scientific object is not a crowd of agents, but a governed coordination policy that continuously selects, validates, learns, and reallocates work.};
+\end{tikzpicture}
