@@ -1,0 +1,14 @@
+{
+  "job_id": "job_001",
+  "receipt_id": "job_001_receipt",
+  "status": "pending_validation",
+  "settlement_unit": "LOCAL_UNIT",
+  "bounty_units": 60,
+  "expected_artifact_hashes": {
+    "jobs/job_001_spec.json": "75c0a78bb63898689df96d0510a86625bcd6c50bbf10d379a09c2af78f5ec499",
+    "jobs/job_001_completion.json": "aa5fa06423ec73f29a01be5eb25590c592ffbadfae49216445d8415e43a79158",
+    "jobs/job_001_event_log.json": "e96eec495d652ebb58e8a7252716c1cdf10751ae53eb13cad53ee67161dcbb90"
+  },
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness.",
+  "receipt_integrity_hash": "46d6dc7aa9a7176ac49fbe9918f064ba9b3c68e8c236e976ea5cac3f112f1fe7"
+}

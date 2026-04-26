@@ -1,0 +1,22 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "epoch": "epoch-001",
+  "unit": "LOCAL_CREDIT",
+  "validated_work_units": [
+    {
+      "job_id": "job-001",
+      "credited": 55
+    }
+  ],
+  "rejected_work_units": [],
+  "fee_burn_placeholders": {
+    "fee": 2,
+    "burn": 1
+  },
+  "balance": 52,
+  "reinvestment_recommendation": {
+    "target_seed": "seed-indexer-reorg-b",
+    "allocation_units": 30
+  },
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

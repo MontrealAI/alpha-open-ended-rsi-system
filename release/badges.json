@@ -1,0 +1,155 @@
+{
+  "version": 2,
+  "release_target": "v3.0.0",
+  "style": "flat-square",
+  "readme": {
+    "required_badges": [
+      "release-posture",
+      "ci",
+      "contracts-security",
+      "release-provenance",
+      "proof-boundary",
+      "verifiable-rc",
+      "flagship-demo",
+      "demo-ladder",
+      "ascension-runtime",
+      "doctrine-stack"
+    ],
+    "rows": [
+      {
+        "label": "Operational trust rail",
+        "badges": [
+          "release-posture",
+          "ci",
+          "contracts-security",
+          "release-provenance"
+        ]
+      },
+      {
+        "label": "Orientation rail",
+        "badges": [
+          "proof-boundary",
+          "verifiable-rc",
+          "flagship-demo",
+          "demo-ladder",
+          "ascension-runtime",
+          "doctrine-stack"
+        ]
+      }
+    ],
+    "badges": [
+      {
+        "id": "release-posture",
+        "kind": "static",
+        "label": "release",
+        "message": "v3.0.0",
+        "color": "1f6feb",
+        "link": "./RELEASES.md",
+        "alt": "Release posture: v3.0.0"
+      },
+      {
+        "id": "ci",
+        "kind": "workflow",
+        "workflow": "ci.yml",
+        "label": "CI",
+        "link": "https://github.com/MontrealAI/alpha-nova-seeds/actions/workflows/ci.yml",
+        "alt": "CI workflow status"
+      },
+      {
+        "id": "contracts-security",
+        "kind": "workflow",
+        "workflow": "contracts-security.yml",
+        "label": "Contracts security",
+        "link": "https://github.com/MontrealAI/alpha-nova-seeds/actions/workflows/contracts-security.yml",
+        "alt": "Contracts security workflow status"
+      },
+      {
+        "id": "release-provenance",
+        "kind": "workflow",
+        "workflow": "release-provenance.yml",
+        "label": "Release provenance",
+        "link": "https://github.com/MontrealAI/alpha-nova-seeds/actions/workflows/release-provenance.yml",
+        "alt": "Release provenance workflow status"
+      },
+      {
+        "id": "proof-boundary",
+        "kind": "static",
+        "label": "claim boundary",
+        "message": "bounded local/devnet posture",
+        "color": "6f42c1",
+        "link": "./docs/FRONTIER_LAB_POSTURE.md",
+        "alt": "Proof-first bounded local/devnet posture"
+      },
+      {
+        "id": "verifiable-rc",
+        "kind": "static",
+        "label": "posture",
+        "message": "verifiable trust rail",
+        "color": "0969da",
+        "link": "./RELEASES.md",
+        "alt": "Verifiable trust rail posture"
+      },
+      {
+        "id": "flagship-demo",
+        "kind": "static",
+        "label": "flagship demo",
+        "message": "protocol correctness",
+        "color": "0e8a16",
+        "link": "./demos/protocol_smart_contract_correctness_demo/README.md",
+        "alt": "Flagship protocol correctness demo"
+      },
+      {
+        "id": "demo-ladder",
+        "kind": "static",
+        "label": "demo ladder",
+        "message": "entry",
+        "color": "0e8a16",
+        "link": "./demos/README.md",
+        "alt": "Demo ladder index"
+      },
+      {
+        "id": "ascension-runtime",
+        "kind": "static",
+        "label": "ascension runtime",
+        "message": "local/devnet MVA",
+        "color": "0e8a16",
+        "link": "./demos/ascension-runtime/README.md",
+        "alt": "Ascension runtime local/devnet demo"
+      },
+      {
+        "id": "doctrine-stack",
+        "kind": "static",
+        "label": "doctrine",
+        "message": "stack",
+        "color": "8250df",
+        "link": "./docs/DOCTRINE_STACK.md",
+        "alt": "Doctrine stack"
+      }
+    ]
+  },
+  "demos_readme": {
+    "rows": [
+      {
+        "label": "Demo ladder strip",
+        "badges": [
+          {
+            "id": "release-posture",
+            "link": "../RELEASES.md"
+          },
+          {
+            "id": "flagship-demo",
+            "link": "./protocol_smart_contract_correctness_demo/README.md"
+          },
+          {
+            "id": "ascension-runtime",
+            "link": "./ascension-runtime/README.md"
+          },
+          {
+            "id": "proof-boundary",
+            "link": "../docs/FRONTIER_LAB_POSTURE.md"
+          }
+        ]
+      }
+    ]
+  }
+}

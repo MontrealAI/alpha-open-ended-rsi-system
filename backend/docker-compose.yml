@@ -1,0 +1,31 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nova
+    ports: ["5432:5432"]
+    volumes:
+      - ./migrations:/docker-entrypoint-initdb.d
+
+  redis:
+    image: redis:7
+    ports: ["6379:6379"]
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    env_file: .env.example
+    ports: ["8000:8000"]
+    depends_on: [postgres, redis]
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python -m app.indexer
+    env_file: .env.example
+    depends_on: [postgres, redis]

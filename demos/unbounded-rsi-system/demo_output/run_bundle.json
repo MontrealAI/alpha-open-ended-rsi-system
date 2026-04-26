@@ -1,0 +1,292 @@
+{
+  "manifest": {
+    "demo_id": "unbounded-rsi-system",
+    "release_target": "v2.8.0-rc.1",
+    "timestamp": "2026-04-22T00:00:00+00:00",
+    "constitutional_order": [
+      "identity",
+      "proof",
+      "settlement",
+      "governance"
+    ],
+    "invariants": [
+      "no value without evidence",
+      "no autonomy without authority",
+      "no settlement without validation"
+    ],
+    "phases": [
+      "bounded",
+      "expanding",
+      "increasingly_autonomous"
+    ],
+    "deterministic": true,
+    "proof_boundary": "Minimum viable accelerating loop demonstration in bounded synthetic conditions."
+  },
+  "phase_a": {
+    "phase": "A",
+    "label": "bounded",
+    "mandate": "Mandate 1 protocol governance/dispute correctness replay",
+    "parent_wedge": {
+      "wedge": "protocol_smart_contract_correctness",
+      "business_model": "protocol_cybersecurity_assurance_studio",
+      "why_first": [
+        "verification signal is strongest in protocol correctness",
+        "replay is deterministic with objective fixture evidence",
+        "archive density compounds quickly with reusable contract-finding structures",
+        "operator review cycles are comparatively fast and commercially legible"
+      ]
+    },
+    "repo_native_surface": "contracts mandate_1 fixtures + parent business + mandate_1 ground truth",
+    "review_posture": "heavy human review",
+    "artifacts": [
+      {
+        "path": "demos/protocol_smart_contract_correctness_demo/contracts/mandate_1/CouncilGovernanceV25Fixture.sol",
+        "sha256": "29b7342c8c0a4fb0df227c9c0fe3f48db0095080686ef31f1845a8eb1c1b4107"
+      },
+      {
+        "path": "demos/protocol_smart_contract_correctness_demo/contracts/mandate_1/ChallengePolicyModuleV25Fixture.sol",
+        "sha256": "316091e9f50f242a6e6f2d9e24fbedba5b397314a6856a2f5c23bd810eca5b9c"
+      },
+      {
+        "path": "demos/protocol_smart_contract_correctness_demo/parent_business/protocol_cybersecurity_studio.json",
+        "sha256": "a78b2cb857bc13c4645d558d2bbf2d2f0b68091458347f99d682d094863bb5d4"
+      },
+      {
+        "path": "demos/protocol_smart_contract_correctness_demo/ground_truth/mandate_1.json",
+        "sha256": "d325a82d44353be3ca13a38b9b0b6b7b2cd3fe2cdfed258b3f56729fefe75f50"
+      }
+    ],
+    "metrics": {
+      "accepted_usefulness_points": 142,
+      "time_to_first_accepted_output_minutes": 172,
+      "repair_rework_ratio": 0.22,
+      "evidence_completeness": 0.82,
+      "unsupported_claim_rate": 0.03,
+      "human_intervention_index": 0.84
+    },
+    "demonstrated": [
+      "Protocol wedge can be executed deterministically with explicit review burden.",
+      "Evidence bundle can be traced to repo-native contract fixtures."
+    ]
+  },
+  "phase_b": {
+    "phase": "B",
+    "label": "expanding",
+    "mandate": "Mandate 2 adjacent threshold/attestation control-vs-treatment",
+    "control": {
+      "aoy": 104,
+      "time_to_first_accepted_output_minutes": 155,
+      "repair_rework_ratio": 0.3,
+      "evidence_completeness": 0.71,
+      "safety_regression": false
+    },
+    "treatment": {
+      "aoy": 154,
+      "time_to_first_accepted_output_minutes": 98,
+      "repair_rework_ratio": 0.16,
+      "evidence_completeness": 0.91,
+      "safety_regression": false,
+      "package_dependence_rate": 0.57
+    },
+    "scorecard": {
+      "comparison": {
+        "aoy_uplift": 0.4807692307692308,
+        "speed_uplift": 0.36774193548387096,
+        "repair_reduction": 0.4666666666666666,
+        "evidence_uplift": 0.28169014084507055,
+        "package_dependence_rate": 0.57,
+        "safety_regression": false
+      },
+      "thresholds": {
+        "aoy_uplift": 0.35,
+        "speed_uplift": 0.3,
+        "repair_reduction": 0.4,
+        "evidence_uplift": 0.2,
+        "package_dependence_rate": 0.3
+      },
+      "passes": {
+        "aoy": true,
+        "speed": true,
+        "repair": true,
+        "evidence": true,
+        "safety": true,
+        "package_dependence": true,
+        "adjacent_mandate_proof": true
+      }
+    },
+    "human_intervention_index": 0.58,
+    "demonstrated": [
+      "Frozen capability package can be reused in adjacent mandate under deterministic controls.",
+      "Adjacency thresholds can be passed without safety regression."
+    ]
+  },
+  "phase_c": {
+    "phase": "C",
+    "label": "increasingly_autonomous",
+    "candidate_set": [
+      {
+        "id": "backend_proof_governance_api_correctness",
+        "domain": "backend",
+        "files": [
+          "backend/app/main.py",
+          "backend/app/schemas.py",
+          "backend/app/indexer.py"
+        ],
+        "fit": 0.91,
+        "determinism": 0.9,
+        "operator_noise": 0.14,
+        "safety_risk": 0.11,
+        "selection_score": 0.8972,
+        "file_digests": [
+          {
+            "path": "backend/app/main.py",
+            "sha256": "57735ed94fc4e2562d4fb1111e4a5c0e604cbf9559c53e758db5898144fe27cc"
+          },
+          {
+            "path": "backend/app/schemas.py",
+            "sha256": "34423a3eef6b2057bd5f8464e04c2c5354238e862d64300ce2efa737488d8d18"
+          },
+          {
+            "path": "backend/app/indexer.py",
+            "sha256": "ba9ab531b3cd977b118f6908f5996623ee467a22240648be6576cc857159134a"
+          }
+        ]
+      },
+      {
+        "id": "sdk_typed_attestation_payload_correctness",
+        "domain": "sdk",
+        "files": [
+          "sdk/shared/types.ts"
+        ],
+        "fit": 0.82,
+        "determinism": 0.87,
+        "operator_noise": 0.19,
+        "safety_risk": 0.16,
+        "selection_score": 0.837,
+        "file_digests": [
+          {
+            "path": "sdk/shared/types.ts",
+            "sha256": "e6201f891bb6d6fd891ad6f6bf41a0100bbd3ecd67f58e85c0eb62a86726b443"
+          }
+        ]
+      },
+      {
+        "id": "dashboard_provenance_evidence_surface",
+        "domain": "dashboard",
+        "files": [
+          "dashboard/index.html",
+          "dashboard/app.js"
+        ],
+        "fit": 0.74,
+        "determinism": 0.79,
+        "operator_noise": 0.22,
+        "safety_risk": 0.18,
+        "selection_score": 0.7705,
+        "file_digests": [
+          {
+            "path": "dashboard/index.html",
+            "sha256": "cb37a2532ce453b5d5a9141602032a6abf9e6b95c874d76984e5fa0df8848e63"
+          },
+          {
+            "path": "dashboard/app.js",
+            "sha256": "00fa833898070ef9cb106fa4419dcfcaed79be169f65b8e950e7bdffdbc47a18"
+          }
+        ]
+      }
+    ],
+    "selection_log": {
+      "policy": {
+        "fit_weight": 0.42,
+        "determinism_weight": 0.33,
+        "operator_noise_weight": 0.15,
+        "safety_risk_weight": 0.1,
+        "selection_rule": "highest_selection_score_wins",
+        "tiebreak": "lexicographic_id_order"
+      },
+      "ranked_candidates": [
+        {
+          "id": "backend_proof_governance_api_correctness",
+          "domain": "backend",
+          "selection_score": 0.8972
+        },
+        {
+          "id": "sdk_typed_attestation_payload_correctness",
+          "domain": "sdk",
+          "selection_score": 0.837
+        },
+        {
+          "id": "dashboard_provenance_evidence_surface",
+          "domain": "dashboard",
+          "selection_score": 0.7705
+        }
+      ],
+      "selected": "backend_proof_governance_api_correctness"
+    },
+    "execution": {
+      "mandate": "Mandate 3 autonomous adjacent expansion",
+      "selected_candidate": "backend_proof_governance_api_correctness",
+      "selection_reason": "Highest reproducible score under bounded scoring policy.",
+      "human_intervention_index": 0.33,
+      "autonomy_delta_vs_phase_a": 0.51,
+      "safety_gates": {
+        "authority_gate": "Only bounded candidate set can be selected.",
+        "proof_gate": "Selection requires deterministic score and file-level digests.",
+        "settlement_gate": "No settlement claims outside synthetic scope.",
+        "governance_gate": "Fail-closed if safety gates or threshold checks fail."
+      },
+      "package_dependency": {
+        "required_package": "ProtocolCybersecurityPack-v1",
+        "package_hash": "5e5e1ceef141c9adec1df071e66f2c1b3827d1bf31272ae591d8ef2b7a876455",
+        "dependency_mode": "selection_heuristics + evidence templates"
+      },
+      "second_domain_choice": "Backend proof/governance API correctness selected as strongest low-noise adjacent domain.",
+      "demonstrated": [
+        "System can choose a broader adjacent mandate with explicit reproducible policy scoring.",
+        "Human intervention drops across phases while safety gates remain explicit."
+      ]
+    }
+  },
+  "package_hash": "5e5e1ceef141c9adec1df071e66f2c1b3827d1bf31272ae591d8ef2b7a876455",
+  "board_scorecard": {
+    "headline": "Minimum viable accelerating loop gate",
+    "adjacent_gate_pass": true,
+    "phase_progression": {
+      "phase_a_intervention": 0.84,
+      "phase_b_intervention": 0.58,
+      "phase_c_intervention": 0.33
+    },
+    "adjacent_metrics": {
+      "aoy_uplift": 0.4807692307692308,
+      "speed_uplift": 0.36774193548387096,
+      "repair_reduction": 0.4666666666666666,
+      "evidence_uplift": 0.28169014084507055,
+      "package_dependence_rate": 0.57,
+      "safety_regression": false
+    },
+    "thresholds": {
+      "aoy_uplift": 0.35,
+      "speed_uplift": 0.3,
+      "repair_reduction": 0.4,
+      "evidence_uplift": 0.2,
+      "package_dependence_rate": 0.3
+    },
+    "governance_ruling": "pass_with_bounds",
+    "ruling_text": "PASS for bounded accelerating loop proof-of-mechanism; bounded policy gates remain mandatory."
+  },
+  "artifacts": [
+    "board_scorecard.json",
+    "chronicle_entry.json",
+    "governance_ruling.json",
+    "mandate3_selection.json",
+    "manifest.json",
+    "package_manifest.json",
+    "provenance_log.json",
+    "safety_gates.json",
+    "package_hash.txt",
+    "board_scorecard.md",
+    "parent_wedge_brief.md",
+    "report.md",
+    "report.html",
+    "run_bundle.json"
+  ]
+}

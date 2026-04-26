@@ -1,0 +1,40 @@
+{
+  "generation": 1,
+  "mandate": "adjacent control-vs-treatment in wedge",
+  "human_intervention_touches": 5,
+  "package_used": "capability-pack-g0-v1",
+  "control": {
+    "aoy": 106,
+    "time_to_first_accepted_output_minutes": 162,
+    "repair_rework_ratio": 0.31,
+    "evidence_completeness": 0.72,
+    "safety_regression": false
+  },
+  "treatment": {
+    "aoy": 151,
+    "time_to_first_accepted_output_minutes": 104,
+    "repair_rework_ratio": 0.18,
+    "evidence_completeness": 0.9,
+    "safety_regression": false,
+    "package_dependence_rate": 0.61
+  },
+  "metrics": {
+    "aoy_uplift": 0.4245,
+    "speed_uplift": 0.358,
+    "rework_reduction": 0.4194,
+    "evidence_completeness_uplift": 0.25,
+    "no_safety_regression": true,
+    "package_dependence": 0.61
+  },
+  "package_dependence_ledger": {
+    "frozen_package_id": "capability-pack-g0-v1",
+    "frozen_manifest_hash": "56dfb240a9b6b73c91cb4bb7b06efba543956dea0d4760a0c3f8bd41c5da0f75",
+    "lineage_anchor": "genome-protocol-correctness-v1",
+    "treatment_assets_reused": [
+      "deterministic provenance/lineage artifact integration",
+      "protocol wedge replay + proof artifact completeness checks",
+      "operator steps and safety/authority declarations"
+    ],
+    "control_assets_reused": []
+  }
+}

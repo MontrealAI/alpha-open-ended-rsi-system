@@ -1,0 +1,12 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "business_id": "business-protocol-runtime-001",
+  "sovereign_id": "sovereign-protocol-correctness-001",
+  "mandates": [
+    "prove-correctness-replay"
+  ],
+  "job_batch": [
+    "job-001"
+  ],
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

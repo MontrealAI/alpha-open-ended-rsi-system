@@ -1,0 +1,83 @@
+{
+  "assignment_status": "BLINDING_OFFICER_REQUIRED",
+  "filenames": [
+    "ontology.json",
+    "query_bundle.json",
+    "workflow_template.md",
+    "mechanism_library.json",
+    "safety_routing_rules.md",
+    "scoring_rubric.md",
+    "extraction_schema.json"
+  ],
+  "generated_at": "2026-04-25T20:37:15+00:00",
+  "kit_labels": [
+    "kit_blue",
+    "kit_gold"
+  ],
+  "note": "Manifest does not reveal which lane received treatment package and suppresses hash-linking until private assignment exists.",
+  "parity_checks": {
+    "extraction_schema.json": {
+      "blue_exists": true,
+      "blue_sha256": "BLINDING_OFFICER_REQUIRED",
+      "gold_exists": true,
+      "gold_sha256": "BLINDING_OFFICER_REQUIRED",
+      "pair_integrity_sha256": "955c2b899d7aefe0ae95061a2229c3dd378d510a400f23f2d35d935053f75f8a",
+      "same_filename": true,
+      "surface_form_parity": true
+    },
+    "mechanism_library.json": {
+      "blue_exists": true,
+      "blue_sha256": "BLINDING_OFFICER_REQUIRED",
+      "gold_exists": true,
+      "gold_sha256": "BLINDING_OFFICER_REQUIRED",
+      "pair_integrity_sha256": "b8d67afe1a8fc2efd9024e50f05a94cd334837cb64a126fa233101a8ee8a7d1a",
+      "same_filename": true,
+      "surface_form_parity": true
+    },
+    "ontology.json": {
+      "blue_exists": true,
+      "blue_sha256": "BLINDING_OFFICER_REQUIRED",
+      "gold_exists": true,
+      "gold_sha256": "BLINDING_OFFICER_REQUIRED",
+      "pair_integrity_sha256": "80f4912b713c886d99ec68507709f60ae244d2f8137504f64a7f69a9cfe9b15d",
+      "same_filename": true,
+      "surface_form_parity": true
+    },
+    "query_bundle.json": {
+      "blue_exists": true,
+      "blue_sha256": "BLINDING_OFFICER_REQUIRED",
+      "gold_exists": true,
+      "gold_sha256": "BLINDING_OFFICER_REQUIRED",
+      "pair_integrity_sha256": "a58cca0dcde16f6d891e22b24e1f14247a3ddf0999039c7bfab21fa33e85a239",
+      "same_filename": true,
+      "surface_form_parity": true
+    },
+    "safety_routing_rules.md": {
+      "blue_exists": true,
+      "blue_sha256": "BLINDING_OFFICER_REQUIRED",
+      "gold_exists": true,
+      "gold_sha256": "BLINDING_OFFICER_REQUIRED",
+      "pair_integrity_sha256": "cd734fdf7bef0df93930b7602868a4ef768890c200ca1cbd1a7bad043739ba26",
+      "same_filename": true,
+      "surface_form_parity": true
+    },
+    "scoring_rubric.md": {
+      "blue_exists": true,
+      "blue_sha256": "BLINDING_OFFICER_REQUIRED",
+      "gold_exists": true,
+      "gold_sha256": "BLINDING_OFFICER_REQUIRED",
+      "pair_integrity_sha256": "cd734fdf7bef0df93930b7602868a4ef768890c200ca1cbd1a7bad043739ba26",
+      "same_filename": true,
+      "surface_form_parity": true
+    },
+    "workflow_template.md": {
+      "blue_exists": true,
+      "blue_sha256": "BLINDING_OFFICER_REQUIRED",
+      "gold_exists": true,
+      "gold_sha256": "BLINDING_OFFICER_REQUIRED",
+      "pair_integrity_sha256": "cd734fdf7bef0df93930b7602868a4ef768890c200ca1cbd1a7bad043739ba26",
+      "same_filename": true,
+      "surface_form_parity": true
+    }
+  }
+}

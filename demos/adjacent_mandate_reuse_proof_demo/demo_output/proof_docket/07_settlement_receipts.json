@@ -1,0 +1,128 @@
+{
+  "mandate_1": {
+    "job_id": "JOB-M1-001",
+    "mode": "mandate_1",
+    "lifecycle": [
+      {
+        "state": "REQUEST",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "ESCROW",
+        "at": "2026-01-01T00:00:00Z",
+        "escrow_amount_agialpha": 1000
+      },
+      {
+        "state": "EXECUTE",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "PROOF",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "VALIDATE",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "SETTLE",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "CHRONICLE",
+        "at": "2026-01-01T00:00:00Z"
+      }
+    ],
+    "receipt": {
+      "accepted_findings": 4,
+      "aoy": 0.25,
+      "package_hash": "b9365fcdaff0141af0c27aa20a458c20ea25582220887735438d645144accef0",
+      "validated": true,
+      "settled": true
+    }
+  },
+  "mandate_2_control": {
+    "job_id": "JOB-M2-CTRL-001",
+    "mode": "control",
+    "lifecycle": [
+      {
+        "state": "REQUEST",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "ESCROW",
+        "at": "2026-01-01T00:00:00Z",
+        "escrow_amount_agialpha": 1000
+      },
+      {
+        "state": "EXECUTE",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "PROOF",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "VALIDATE",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "SETTLE",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "CHRONICLE",
+        "at": "2026-01-01T00:00:00Z"
+      }
+    ],
+    "receipt": {
+      "accepted_findings": 1,
+      "aoy": 0.05,
+      "package_hash": null,
+      "validated": true,
+      "settled": true
+    }
+  },
+  "mandate_2_treatment": {
+    "job_id": "JOB-M2-TREAT-001",
+    "mode": "treatment",
+    "lifecycle": [
+      {
+        "state": "REQUEST",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "ESCROW",
+        "at": "2026-01-01T00:00:00Z",
+        "escrow_amount_agialpha": 1000
+      },
+      {
+        "state": "EXECUTE",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "PROOF",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "VALIDATE",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "SETTLE",
+        "at": "2026-01-01T00:00:00Z"
+      },
+      {
+        "state": "CHRONICLE",
+        "at": "2026-01-01T00:00:00Z"
+      }
+    ],
+    "receipt": {
+      "accepted_findings": 5,
+      "aoy": 0.25,
+      "package_hash": "b9365fcdaff0141af0c27aa20a458c20ea25582220887735438d645144accef0",
+      "validated": true,
+      "settled": true
+    }
+  }
+}

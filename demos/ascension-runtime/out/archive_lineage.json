@@ -1,0 +1,57 @@
+{
+  "seed_lineage": [
+    "invariant_library_seed",
+    "audit_factory_seed"
+  ],
+  "package_lineage": [
+    "capability_pkg_protocol_a",
+    "capability_pkg_invariant_b"
+  ],
+  "job_receipt_lineage": [
+    "job_001_receipt",
+    "job_002_receipt"
+  ],
+  "score_history": [
+    {
+      "seed_id": "invariant_library_seed",
+      "score": 0.5878
+    },
+    {
+      "seed_id": "audit_factory_seed",
+      "score": 0.5748
+    },
+    {
+      "seed_id": "fuzz_harness_seed",
+      "score": 0.5464
+    },
+    {
+      "seed_id": "governance_parameter_simulator_seed",
+      "score": 0.53
+    },
+    {
+      "seed_id": "exploit_replay_seed",
+      "score": 0.496
+    }
+  ],
+  "reusable_assets": [
+    "job specs",
+    "validation attestations",
+    "scorecard"
+  ],
+  "promotion_rejection_history": [
+    {
+      "seed_id": "invariant_library_seed",
+      "state": "promoted"
+    },
+    {
+      "seed_id": "exploit_replay_seed",
+      "state": "pending"
+    }
+  ],
+  "next_recommended_mutations": [
+    "increase fuzz corpus diversity",
+    "tighten governance simulation envelope"
+  ],
+  "status": "implemented as local lineage artifacts",
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

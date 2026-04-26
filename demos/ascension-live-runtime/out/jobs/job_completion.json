@@ -1,0 +1,10 @@
+{
+  "job_id": "job-001",
+  "agent_id": "agent-evidence",
+  "completion_notes": "Deterministic proof docket links generated and hash-linked for validator replay.",
+  "output_artifacts": [
+    "job_completion.json",
+    "job_event_log.json"
+  ],
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

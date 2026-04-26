@@ -1,0 +1,26 @@
+{
+  "network": "sepolia",
+  "release": "2.6.0-rc.1",
+  "roles": {
+    "adminOwner": "0x0000000000000000000000000000000000000001",
+    "pauser": "0x0000000000000000000000000000000000000002",
+    "emergencyGuardian": "0x0000000000000000000000000000000000000003",
+    "treasury": "0x0000000000000000000000000000000000000004",
+    "reviewerRewardTreasury": "0x0000000000000000000000000000000000000005",
+    "councilAdmin": "0x0000000000000000000000000000000000000006"
+  },
+  "dependencies": {
+    "agiToken": "0x0000000000000000000000000000000000000010",
+    "agiJobManager": "0x0000000000000000000000000000000000000011"
+  },
+  "defaults": {
+    "trustedSigners": [],
+    "creatorAllowlist": [],
+    "thresholdProfiles": [],
+    "challengePolicies": []
+  },
+  "notes": [
+    "Use this profile for rehearsal and manifest validation.",
+    "Mirror production-safe posture before any mainnet attempt."
+  ]
+}

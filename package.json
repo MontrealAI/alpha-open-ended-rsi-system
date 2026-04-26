@@ -1,0 +1,22 @@
+{
+  "name": "alpha-nova-seeds",
+  "private": true,
+  "scripts": {
+    "contracts:build": "npm --prefix contracts run build",
+    "contracts:test": "npm --prefix contracts run test",
+    "contracts:test:fork": "npm --prefix contracts run test:fork",
+    "deploy:checklist": "npm --prefix contracts run deploy:checklist",
+    "deploy:fork": "npm --prefix contracts run deploy:fork",
+    "deploy:sepolia": "npm --prefix contracts run deploy:sepolia",
+    "deploy:mainnet": "node scripts/contracts/deploy_mainnet_proxy.js",
+    "deploy:verify": "npm --prefix contracts run deploy:verify",
+    "deploy:postcheck": "npm --prefix contracts run deploy:postcheck",
+    "deploy:handoff": "npm --prefix contracts run deploy:handoff",
+    "test:contracts": "npm --prefix contracts run test:contracts",
+    "test:contracts:unit": "npm --prefix contracts run test:contracts:unit",
+    "test:contracts:fuzz": "npm --prefix contracts run test:contracts:fuzz",
+    "test:contracts:invariant": "npm --prefix contracts run test:contracts:invariant",
+    "test:contracts:echidna": "npm --prefix contracts run test:contracts:echidna",
+    "analyze:slither": "npm --prefix contracts run analyze:slither"
+  }
+}

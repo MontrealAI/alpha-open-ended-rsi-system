@@ -1,0 +1,14 @@
+{
+  "runtime_id": "ascension-runtime-local-001",
+  "selected_bundle": [
+    "invariant_library_seed",
+    "audit_factory_seed"
+  ],
+  "risk_controls": [
+    "validation-before-settlement",
+    "authority boundary checks",
+    "quarantine path on claim drift"
+  ],
+  "highest_risk_seed": "exploit_replay_seed",
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

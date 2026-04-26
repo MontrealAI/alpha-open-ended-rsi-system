@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MontrealAI/alpha-nova-seeds/schemas/v2.6/threshold-binding-profile.schema.json",
+  "title": "Nova-Seeds Threshold Binding Profile v2.6",
+  "type": "object",
+  "required": ["schemaVersion", "profileId", "seedId", "network", "policy", "createdAt"],
+  "properties": {
+    "schemaVersion": {"const": "2.6"},
+    "profileId": {"type": "string", "pattern": "^0x[0-9a-fA-F]{64}$"},
+    "seedId": {"type": "string", "pattern": "^0x[0-9a-fA-F]{64}$"},
+    "network": {"type": "string", "minLength": 2},
+    "policy": {
+      "type": "object",
+      "required": ["requiredShares", "totalShares", "authorizedViewersRoot"],
+      "properties": {
+        "requiredShares": {"type": "integer", "minimum": 1},
+        "totalShares": {"type": "integer", "minimum": 1},
+        "authorizedViewersRoot": {"type": "string", "pattern": "^0x[0-9a-fA-F]{64}$"}
+      }
+    },
+    "createdAt": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": false
+}

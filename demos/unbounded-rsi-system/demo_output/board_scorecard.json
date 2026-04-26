@@ -1,0 +1,26 @@
+{
+  "headline": "Minimum viable accelerating loop gate",
+  "adjacent_gate_pass": true,
+  "phase_progression": {
+    "phase_a_intervention": 0.84,
+    "phase_b_intervention": 0.58,
+    "phase_c_intervention": 0.33
+  },
+  "adjacent_metrics": {
+    "aoy_uplift": 0.4807692307692308,
+    "speed_uplift": 0.36774193548387096,
+    "repair_reduction": 0.4666666666666666,
+    "evidence_uplift": 0.28169014084507055,
+    "package_dependence_rate": 0.57,
+    "safety_regression": false
+  },
+  "thresholds": {
+    "aoy_uplift": 0.35,
+    "speed_uplift": 0.3,
+    "repair_reduction": 0.4,
+    "evidence_uplift": 0.2,
+    "package_dependence_rate": 0.3
+  },
+  "governance_ruling": "pass_with_bounds",
+  "ruling_text": "PASS for bounded accelerating loop proof-of-mechanism; bounded policy gates remain mandatory."
+}

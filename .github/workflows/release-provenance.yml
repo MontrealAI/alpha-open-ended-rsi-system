@@ -1,0 +1,106 @@
+name: release-provenance
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "scripts/release/generate_provenance_manifest.py"
+      - "backend/scripts/export_openapi.py"
+      - "docs/verify-release.md"
+      - ".github/workflows/release-provenance.yml"
+  pull_request:
+    paths:
+      - "scripts/release/generate_provenance_manifest.py"
+      - "backend/scripts/export_openapi.py"
+      - "docs/verify-release.md"
+      - ".github/workflows/release-provenance.yml"
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Release tag (e.g., v2.7.0-rc.1)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  id-token: write
+  attestations: write
+
+jobs:
+  provenance-smoke:
+    if: github.event_name != 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Smoke-generate provenance manifest
+        run: |
+          python scripts/release/generate_provenance_manifest.py \
+            --tag "v0.0.0-provenance-smoke" \
+            --output /tmp/provenance-manifest-smoke.json
+
+  provenance:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: refs/tags/${{ inputs.release_tag }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build source artifact
+        run: |
+          mkdir -p dist
+          git rev-parse --verify "refs/tags/${{ inputs.release_tag }}"
+          git archive --format=tar.gz --prefix=alpha-nova-seeds-${{ inputs.release_tag }}/ "refs/tags/${{ inputs.release_tag }}" > dist/alpha-nova-seeds-${{ inputs.release_tag }}.tar.gz
+
+      - name: Generate provenance manifest
+        run: |
+          python scripts/release/generate_provenance_manifest.py \
+            --tag "${{ inputs.release_tag }}" \
+            --output dist/provenance-manifest-${{ inputs.release_tag }}.json
+
+      - name: Export OpenAPI surface
+        run: |
+          python backend/scripts/export_openapi.py
+
+      - name: Generate SHA256SUMS
+        run: |
+          (cd dist && sha256sum * > SHA256SUMS)
+
+      - name: Generate SBOM
+        uses: anchore/sbom-action@v0
+        with:
+          path: .
+          format: spdx-json
+          output-file: dist/sbom-${{ inputs.release_tag }}.spdx.json
+
+      - name: Attest build provenance
+        uses: actions/attest-build-provenance@v1
+        with:
+          subject-path: |
+            dist/alpha-nova-seeds-${{ inputs.release_tag }}.tar.gz
+            dist/provenance-manifest-${{ inputs.release_tag }}.json
+            dist/sbom-${{ inputs.release_tag }}.spdx.json
+            dist/openapi-v2.6.0-rc.1.json
+            dist/SHA256SUMS
+
+      - name: Upload release provenance bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-provenance-${{ inputs.release_tag }}
+          path: dist/
+
+      - name: Upload legacy provenance bundle alias
+        uses: actions/upload-artifact@v4
+        with:
+          name: v27-provenance-${{ inputs.release_tag }}
+          path: dist/

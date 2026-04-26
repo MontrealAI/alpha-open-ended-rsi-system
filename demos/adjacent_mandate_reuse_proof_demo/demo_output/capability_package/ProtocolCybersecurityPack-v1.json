@@ -1,0 +1,108 @@
+{
+  "package_name": "ProtocolCybersecurityPack-v1",
+  "package_version": "1.0.0",
+  "ontology": [
+    "proofless_settlement",
+    "instant_upgrade",
+    "treasury_drift",
+    "no_challenge_window"
+  ],
+  "extraction_schema": {
+    "fields": [
+      "contract",
+      "function",
+      "issue_type",
+      "severity",
+      "rationale",
+      "evidence_lines",
+      "snippet",
+      "recommended_fix",
+      "rule_source",
+      "discovery_step"
+    ]
+  },
+  "mechanism_library": {
+    "proofless_settlement": "payout or release path exists without proof / validation / challenge guard",
+    "instant_upgrade": "upgrade or module-swap path exists without timelock or scheduled delay",
+    "treasury_drift": "tracked locked/reserved accounting is not decremented on refund/withdrawal",
+    "no_challenge_window": "settlement can occur immediately after approval threshold without time barrier"
+  },
+  "workflow_template": [
+    "enumerate externally callable value-moving functions",
+    "check proof / validator / challenge preconditions",
+    "check implementation / router mutations for time-delay controls",
+    "check tracked accounting variables against transfer paths",
+    "emit structured reviewer packet"
+  ],
+  "scoring_rubric": {
+    "accept_if": [
+      "finding matches issue ontology",
+      "snippet anchors the issue",
+      "recommended fix is actionable"
+    ]
+  },
+  "safety_routing_rules": {
+    "severe_false_positive_threshold": 0,
+    "hallucinated_contracts_forbidden": true
+  },
+  "query_bundle": [
+    "transfer(",
+    ".call{value:",
+    "implementation =",
+    "moduleRouter =",
+    "locked",
+    "reserved",
+    "challenge",
+    "approvedAt",
+    "readyAt"
+  ],
+  "openclaw_skill_wrapper": {
+    "skill_name": "protocol_assurance_review",
+    "modes": [
+      "control",
+      "treatment"
+    ]
+  },
+  "learned_signatures": {
+    "payout_verbs": [
+      "finalize",
+      "payout",
+      "refund",
+      "release",
+      "settle",
+      "upgrade",
+      "withdraw",
+      "withdrawbond"
+    ],
+    "proof_aliases": [
+      "approval",
+      "challenge",
+      "completion",
+      "proof",
+      "review",
+      "validate",
+      "validator"
+    ],
+    "upgrade_aliases": [
+      "implementation",
+      "module",
+      "router",
+      "swap",
+      "upgrade"
+    ],
+    "accounting_aliases": [
+      "bond",
+      "collateral",
+      "escrow",
+      "locked",
+      "lockedValidatorBonds",
+      "reserved"
+    ]
+  },
+  "legacy_aliases": [
+    "ProtocolAssurancePack-v1"
+  ],
+  "package_hash": "b9365fcdaff0141af0c27aa20a458c20ea25582220887735438d645144accef0",
+  "frozen_at": "2026-01-01T00:00:00Z",
+  "source_mandate": "Mandate 1"
+}

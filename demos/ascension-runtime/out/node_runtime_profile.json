@@ -1,0 +1,21 @@
+{
+  "worker_node_profile": {
+    "runtime": "python3",
+    "role": "job execution"
+  },
+  "validator_node_profile": {
+    "runtime": "python3",
+    "role": "artifact and claim checks"
+  },
+  "sentinel_profile": {
+    "runtime": "python3",
+    "role": "claim-boundary monitoring"
+  },
+  "local_runtime_constraints": [
+    "no external API calls",
+    "deterministic config",
+    "local filesystem only"
+  ],
+  "authority_boundary": "local/devnet profile, not live node network",
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

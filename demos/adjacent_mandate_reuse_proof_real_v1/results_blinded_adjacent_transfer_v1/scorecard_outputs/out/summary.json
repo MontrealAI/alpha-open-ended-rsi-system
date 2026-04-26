@@ -1,0 +1,48 @@
+{
+  "scorecard_dir": "demos/adjacent_mandate_reuse_proof_real_v1/results_blinded_adjacent_transfer_v1/scorecard_outputs",
+  "run_costs_source": "demos/adjacent_mandate_reuse_proof_real_v1/results_blinded_adjacent_transfer_v1/scorecard_outputs/run_costs.csv",
+  "output_scoring_source": "demos/adjacent_mandate_reuse_proof_real_v1/results_blinded_adjacent_transfer_v1/scorecard_outputs/output_scoring.csv",
+  "control": {
+    "cost_units": 0.0,
+    "accepted_count": 0,
+    "usefulness_points": 0,
+    "aoy": 0.0,
+    "time_to_first_accepted_output": 0.0,
+    "avg_rework": 0.0,
+    "evidence_completeness": 0.0,
+    "safety_incidents": 0,
+    "unsupported_claims": 0,
+    "hallucinated_references": 0,
+    "package_dependence": 0.0
+  },
+  "treatment": {
+    "cost_units": 0.0,
+    "accepted_count": 0,
+    "usefulness_points": 0,
+    "aoy": 0.0,
+    "time_to_first_accepted_output": 0.0,
+    "avg_rework": 0.0,
+    "evidence_completeness": 0.0,
+    "safety_incidents": 0,
+    "unsupported_claims": 0,
+    "hallucinated_references": 0,
+    "package_dependence": 0.0
+  },
+  "comparisons": {
+    "aoy_uplift": 0.0,
+    "speed_uplift": 0.0,
+    "rework_reduction": 0.0,
+    "evidence_completeness_uplift": 0.0,
+    "package_dependence": 0.0,
+    "safety_regression": true
+  },
+  "pass_flags": {
+    "aoy_uplift": false,
+    "speed_uplift": false,
+    "rework_reduction": false,
+    "evidence_completeness_uplift": false,
+    "package_dependence": false,
+    "safety_regression": true
+  },
+  "adjacent_mandate_pass": false
+}

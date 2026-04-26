@@ -1,0 +1,33 @@
+{
+  "job_id": "job-001",
+  "goal": "Generate a deterministic proof docket replay artifact with validation-ready hash references.",
+  "success_metric": "validator-approved and council-ratified receipt with complete hash set",
+  "bounty_placeholder": {
+    "units": 55,
+    "unit": "LOCAL_CREDIT"
+  },
+  "input_artifacts": [
+    "insight_packet.json",
+    "mark_selection_report.json",
+    "sovereign_manifest.json"
+  ],
+  "output_artifacts": [
+    "job_completion.json",
+    "job_receipt.json"
+  ],
+  "proof_requirements": [
+    "artifact_existence",
+    "hash_match",
+    "claim_boundary_statement"
+  ],
+  "validation_criteria": [
+    "no_authority_widening",
+    "proof_docket_complete",
+    "no_external_fabrication"
+  ],
+  "settlement_condition": "validator_pass_and_council_rule",
+  "authority_scope": [
+    "runtime-local"
+  ],
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

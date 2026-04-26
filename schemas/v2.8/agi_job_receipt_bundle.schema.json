@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AGI Job Receipt Bundle v2.8",
+  "type": "object",
+  "required": [
+    "runtime_id",
+    "job_receipts",
+    "status",
+    "claim_boundary"
+  ]
+}

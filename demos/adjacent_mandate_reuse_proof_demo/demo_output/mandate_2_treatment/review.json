@@ -1,0 +1,192 @@
+{
+  "accepted_findings": [
+    {
+      "contract": "AdjudicationEscrow.sol",
+      "function": "release",
+      "issue_type": "proofless_settlement",
+      "severity": "high",
+      "rationale": "Value-moving path lacks explicit proof/validation/challenge gate.",
+      "evidence_lines": [
+        21
+      ],
+      "snippet": "require(msg.sender == admin, \"admin only\");\n        require(readyForPayout, \"not ready\");\n        recipient.transfer(amount);",
+      "recommended_fix": "Require validated proof bundle and challenge-window expiry before releasing value.",
+      "rule_source": "package",
+      "discovery_step": 2
+    },
+    {
+      "contract": "EpochTreasury.sol",
+      "function": "claimRefund",
+      "issue_type": "treasury_drift",
+      "severity": "high",
+      "rationale": "Tracked locked/reserved accounting is not decremented on value release, creating internal drift.",
+      "evidence_lines": [
+        13
+      ],
+      "snippet": "uint256 amount = refundable[msg.sender];\n        require(amount > 0, \"none\");\n        refundable[msg.sender] = 0;\n        payable(msg.sender).transfer(amount);\n        // BUG: reservedEscrow never decreases",
+      "recommended_fix": "Decrement the matching locked/reserved accounting variable before transfer.",
+      "rule_source": "package",
+      "discovery_step": 4
+    },
+    {
+      "contract": "GovernanceHotSwap.sol",
+      "function": "swapModule",
+      "issue_type": "instant_upgrade",
+      "severity": "high",
+      "rationale": "Governance can change implementation/module state without any delay barrier.",
+      "evidence_lines": [
+        13
+      ],
+      "snippet": "require(msg.sender == governor, \"governor only\");\n        moduleRouter = nextRouter;",
+      "recommended_fix": "Introduce timelock/schedule/ETA requirement before upgrade execution.",
+      "rule_source": "package",
+      "discovery_step": 5
+    },
+    {
+      "contract": "InstantFinalize.sol",
+      "function": "finalize",
+      "issue_type": "no_challenge_window",
+      "severity": "medium",
+      "rationale": "Settlement path appears immediate after approval state with no explicit challenge/delay barrier.",
+      "evidence_lines": [
+        20
+      ],
+      "snippet": "require(msg.sender == reviewer, \"reviewer only\");\n        require(approvedCount >= quorum, \"not enough\");\n        worker.transfer(amount);",
+      "recommended_fix": "Require block.timestamp >= approvedAt/readyAt + challengePeriod before settlement.",
+      "rule_source": "package",
+      "discovery_step": 7
+    },
+    {
+      "contract": "ValidatorRefunds.sol",
+      "function": "refund",
+      "issue_type": "treasury_drift",
+      "severity": "high",
+      "rationale": "Tracked locked/reserved accounting is not decremented on value release, creating internal drift.",
+      "evidence_lines": [
+        13
+      ],
+      "snippet": "uint256 amount = posted[msg.sender];\n        require(amount > 0, \"none\");\n        posted[msg.sender] = 0;\n        payable(msg.sender).transfer(amount);\n        // BUG: lockedReviewCollateral never decreases",
+      "recommended_fix": "Decrement the matching locked/reserved accounting variable before transfer.",
+      "rule_source": "package",
+      "discovery_step": 9
+    }
+  ],
+  "false_positives": [],
+  "review_records": [
+    {
+      "finding": {
+        "contract": "AdjudicationEscrow.sol",
+        "function": "release",
+        "issue_type": "proofless_settlement",
+        "severity": "high",
+        "rationale": "Value-moving path lacks explicit proof/validation/challenge gate.",
+        "evidence_lines": [
+          21
+        ],
+        "snippet": "require(msg.sender == admin, \"admin only\");\n        require(readyForPayout, \"not ready\");\n        recipient.transfer(amount);",
+        "recommended_fix": "Require validated proof bundle and challenge-window expiry before releasing value.",
+        "rule_source": "package",
+        "discovery_step": 2
+      },
+      "matched_ground_truth": true,
+      "evidence_completeness": 1.0,
+      "needs_rework": false,
+      "accepted": true,
+      "severe_false_positive": false
+    },
+    {
+      "finding": {
+        "contract": "EpochTreasury.sol",
+        "function": "claimRefund",
+        "issue_type": "treasury_drift",
+        "severity": "high",
+        "rationale": "Tracked locked/reserved accounting is not decremented on value release, creating internal drift.",
+        "evidence_lines": [
+          13
+        ],
+        "snippet": "uint256 amount = refundable[msg.sender];\n        require(amount > 0, \"none\");\n        refundable[msg.sender] = 0;\n        payable(msg.sender).transfer(amount);\n        // BUG: reservedEscrow never decreases",
+        "recommended_fix": "Decrement the matching locked/reserved accounting variable before transfer.",
+        "rule_source": "package",
+        "discovery_step": 4
+      },
+      "matched_ground_truth": true,
+      "evidence_completeness": 1.0,
+      "needs_rework": false,
+      "accepted": true,
+      "severe_false_positive": false
+    },
+    {
+      "finding": {
+        "contract": "GovernanceHotSwap.sol",
+        "function": "swapModule",
+        "issue_type": "instant_upgrade",
+        "severity": "high",
+        "rationale": "Governance can change implementation/module state without any delay barrier.",
+        "evidence_lines": [
+          13
+        ],
+        "snippet": "require(msg.sender == governor, \"governor only\");\n        moduleRouter = nextRouter;",
+        "recommended_fix": "Introduce timelock/schedule/ETA requirement before upgrade execution.",
+        "rule_source": "package",
+        "discovery_step": 5
+      },
+      "matched_ground_truth": true,
+      "evidence_completeness": 1.0,
+      "needs_rework": false,
+      "accepted": true,
+      "severe_false_positive": false
+    },
+    {
+      "finding": {
+        "contract": "InstantFinalize.sol",
+        "function": "finalize",
+        "issue_type": "no_challenge_window",
+        "severity": "medium",
+        "rationale": "Settlement path appears immediate after approval state with no explicit challenge/delay barrier.",
+        "evidence_lines": [
+          20
+        ],
+        "snippet": "require(msg.sender == reviewer, \"reviewer only\");\n        require(approvedCount >= quorum, \"not enough\");\n        worker.transfer(amount);",
+        "recommended_fix": "Require block.timestamp >= approvedAt/readyAt + challengePeriod before settlement.",
+        "rule_source": "package",
+        "discovery_step": 7
+      },
+      "matched_ground_truth": true,
+      "evidence_completeness": 1.0,
+      "needs_rework": false,
+      "accepted": true,
+      "severe_false_positive": false
+    },
+    {
+      "finding": {
+        "contract": "ValidatorRefunds.sol",
+        "function": "refund",
+        "issue_type": "treasury_drift",
+        "severity": "high",
+        "rationale": "Tracked locked/reserved accounting is not decremented on value release, creating internal drift.",
+        "evidence_lines": [
+          13
+        ],
+        "snippet": "uint256 amount = posted[msg.sender];\n        require(amount > 0, \"none\");\n        posted[msg.sender] = 0;\n        payable(msg.sender).transfer(amount);\n        // BUG: lockedReviewCollateral never decreases",
+        "recommended_fix": "Decrement the matching locked/reserved accounting variable before transfer.",
+        "rule_source": "package",
+        "discovery_step": 9
+      },
+      "matched_ground_truth": true,
+      "evidence_completeness": 1.0,
+      "needs_rework": false,
+      "accepted": true,
+      "severe_false_positive": false
+    }
+  ],
+  "metrics": {
+    "accepted_count": 5,
+    "effort_units": 20,
+    "aoy": 0.25,
+    "first_accepted_step": 2,
+    "rework_rate": 0.0,
+    "evidence_completeness": 1.0,
+    "severe_false_positive_count": 0,
+    "package_dependence": 1.0
+  }
+}

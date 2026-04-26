@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-04-22T00:00:00+00:00",
+  "run_mode": "deterministic_synthetic",
+  "phase_a_artifact_count": 4,
+  "phase_c_selected_domain": "backend_proof_governance_api_correctness",
+  "package_hash": "5e5e1ceef141c9adec1df071e66f2c1b3827d1bf31272ae591d8ef2b7a876455",
+  "source_paths": [
+    "demos/protocol_smart_contract_correctness_demo/contracts/mandate_1/ChallengePolicyModuleV25Fixture.sol",
+    "demos/protocol_smart_contract_correctness_demo/contracts/mandate_1/CouncilGovernanceV25Fixture.sol",
+    "demos/protocol_smart_contract_correctness_demo/ground_truth/mandate_1.json",
+    "demos/protocol_smart_contract_correctness_demo/parent_business/protocol_cybersecurity_studio.json"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "accepted_findings": [
+    {
+      "contract": "InstantFinalize.sol",
+      "function": "finalize",
+      "issue_type": "no_challenge_window",
+      "severity": "medium",
+      "rationale": "Settlement path appears immediate after approval state with no explicit challenge/delay barrier.",
+      "evidence_lines": [
+        20
+      ],
+      "snippet": "",
+      "recommended_fix": "",
+      "rule_source": "generic",
+      "discovery_step": 7
+    }
+  ],
+  "false_positives": [
+    {
+      "contract": "InstantFinalize.sol",
+      "function": "finalize",
+      "issue_type": "proofless_settlement",
+      "severity": "high",
+      "rationale": "Value-moving path lacks explicit proof/validation/challenge gate.",
+      "evidence_lines": [
+        20
+      ],
+      "snippet": "",
+      "recommended_fix": "",
+      "rule_source": "generic",
+      "discovery_step": 7
+    }
+  ],
+  "review_records": [
+    {
+      "finding": {
+        "contract": "InstantFinalize.sol",
+        "function": "finalize",
+        "issue_type": "proofless_settlement",
+        "severity": "high",
+        "rationale": "Value-moving path lacks explicit proof/validation/challenge gate.",
+        "evidence_lines": [
+          20
+        ],
+        "snippet": "",
+        "recommended_fix": "",
+        "rule_source": "generic",
+        "discovery_step": 7
+      },
+      "matched_ground_truth": false,
+      "evidence_completeness": 0.714,
+      "needs_rework": false,
+      "accepted": false,
+      "severe_false_positive": true
+    },
+    {
+      "finding": {
+        "contract": "InstantFinalize.sol",
+        "function": "finalize",
+        "issue_type": "no_challenge_window",
+        "severity": "medium",
+        "rationale": "Settlement path appears immediate after approval state with no explicit challenge/delay barrier.",
+        "evidence_lines": [
+          20
+        ],
+        "snippet": "",
+        "recommended_fix": "",
+        "rule_source": "generic",
+        "discovery_step": 7
+      },
+      "matched_ground_truth": true,
+      "evidence_completeness": 0.714,
+      "needs_rework": true,
+      "accepted": true,
+      "severe_false_positive": false
+    }
+  ],
+  "metrics": {
+    "accepted_count": 1,
+    "effort_units": 20,
+    "aoy": 0.05,
+    "first_accepted_step": 7,
+    "rework_rate": 1.0,
+    "evidence_completeness": 0.714,
+    "severe_false_positive_count": 1,
+    "package_dependence": 0.0
+  }
+}

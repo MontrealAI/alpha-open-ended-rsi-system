@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nova-Seeds v2.8 RC Operator Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <div class="eyebrow">NOVA-SEEDS v2.8.0-rc.7 · OPERATOR SURFACE</div>
+      <h1>Protocol Correctness Wedge Control Panel</h1>
+      <p>Identity → proof → settlement → governance. This dashboard is an operator/reviewer legibility surface with explicit synthetic-vs-real boundaries.</p>
+      <div class="status-row">
+        <span class="pill synthetic">Flagship wedge = synthetic deterministic replay</span>
+        <span class="pill real">Real-world proof requires blinded controlled experiment</span>
+        <span class="pill caution">Broader cybersecurity sovereign remains future-facing</span>
+      </div>
+      <div class="actions">
+        <button id="exportJson">Export JSON Snapshot</button>
+        <button id="exportPng">Export PNG Snapshot</button>
+      </div>
+    </div>
+
+    <section class="card ladder">
+      <h2>Demo Ladder</h2>
+      <div class="ladder-grid">
+        <a class="ladder-card" href="../demos/protocol_smart_contract_correctness_demo/README.md">
+          <strong>Flagship synthetic wedge demo</strong>
+          <span>Best front door. Winner selection, frozen package, adjacent gate, sovereign PASS/FAIL.</span>
+        </a>
+        <a class="ladder-card" href="../demos/adjacent_mandate_reuse_proof_demo/README.md">
+          <strong>Compact synthetic adjacent proof demo</strong>
+          <span>Small replay surface for threshold gate structure.</span>
+        </a>
+        <a class="ladder-card" href="../demos/adjacent_mandate_reuse_proof_real_v1/README.md">
+          <strong>Real-world experiment pack</strong>
+          <span>Blinded control-vs-treatment execution templates and scorecard process.</span>
+        </a>
+        <a class="ladder-card" href="../demos/unbounded-rsi-system/README.md">
+          <strong>Accelerating-loop demo</strong>
+          <span>Bounded → expanding → increasingly autonomous with package freeze/hash, mandate-3 selector, and board report.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="card artifact-map">
+      <h2>Proof / Doctrine / Release Map</h2>
+      <div class="triple-grid">
+        <div>
+          <h3>Proof artifacts</h3>
+          <ul>
+            <li><code>demo_output/scorecard/adjacent_mandate_scorecard.json</code></li>
+            <li><code>demo_output/scorecard/release_gate_packet.json</code></li>
+            <li><code>demo_output/proof_docket/proof_docket.json</code></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Doctrine surfaces</h3>
+          <ul>
+            <li><a href="../docs/DOCTRINE_STACK.md">DOCTRINE_STACK.md</a></li>
+            <li><a href="../docs/THERMODYNAMIC_MODEL.md">THERMODYNAMIC_MODEL.md</a></li>
+            <li><a href="../docs/FRONTIER_LAB_POSTURE.md">FRONTIER_LAB_POSTURE.md</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Release controls</h3>
+          <ul>
+            <li><a href="../release/v2.8.0-rc.1-frontier-ui-demo-release-checklist.md">v2.8.0-rc.1 UI/front-door checklist</a></li>
+            <li><a href="../release/v2.8.0-rc.1-unbounded-rsi-demo-checklist.md">v2.8.0-rc.1 unbounded-RSI checklist</a></li>
+            <li><a href="../docs/verify-release.md">verify-release.md</a></li>
+            <li><code>.github/workflows/release-provenance.yml</code></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="tabs">
+      <button data-tab="seeds" class="active">Seeds</button>
+      <button data-tab="rounds">Rounds</button>
+      <button data-tab="reviewer">Reviewer Ledger</button>
+      <button data-tab="council">Council Seats</button>
+      <button data-tab="ascension">Ascension Runtime</button>
+      <button data-tab="lineage">Sovereign Lineage</button>
+      <button data-tab="provenance">Release Provenance</button>
+      <button data-tab="alerts">Alerts/Disputes</button>
+      <button data-tab="green">Green Path</button>
+    </div>
+
+    <section id="seeds" class="panel active">
+      <div class="grid">
+        <div class="card"><h3>Total Seeds</h3><div id="seed_count" class="metric">—</div><small>Indexed seed entities</small></div>
+        <div class="card"><h3>Greenlit</h3><div id="greenlit_count" class="metric">—</div><small>Eligible for settlement</small></div>
+        <div class="card"><h3>Sovereigns</h3><div id="sovereign_count" class="metric">—</div><small>Synthetic sovereign records only</small></div>
+        <div class="card"><h3>Open Decryption</h3><div id="open_decryption_requests" class="metric">—</div><small>Pending threshold decryptions</small></div>
+      </div>
+    </section>
+
+    <section id="rounds" class="panel">
+      <div class="grid">
+        <div class="card"><h3>Delegations</h3><div id="total_delegations" class="metric">—</div></div>
+        <div class="card"><h3>Total Reward Events</h3><div id="total_reward_events" class="metric">—</div></div>
+        <div class="card"><h3>Proof Events Indexed</h3><div id="chain_event_count" class="metric">—</div></div>
+      </div>
+    </section>
+
+    <section id="reviewer" class="panel">
+      <h3>Reviewer stake ledger</h3>
+      <p class="muted">Operator view of reviewer settlement/accounting. Synthetic data must remain labeled as synthetic.</p>
+      <pre id="reviewerLedger">[]</pre>
+    </section>
+
+    <section id="council" class="panel">
+      <h3>Council seat lifecycle</h3>
+      <p class="muted">Identity, challenge lifecycle, and seat turnover visibility for governance audit trails.</p>
+      <pre id="councilSeats">[]</pre>
+    </section>
+
+
+    <section id="ascension" class="panel">
+      <h3>Ascension runtime (local/devnet bounded)</h3>
+      <p class="muted">This surface is local/devnet replay evidence. It is not a mainnet, audited, or real-value settlement claim.</p>
+      <div class="grid">
+        <div class="card"><h3>Runtime available</h3><div id="ascension_available" class="metric">—</div></div>
+        <div class="card"><h3>Layer count</h3><div id="ascension_layer_count" class="metric">—</div></div>
+        <div class="card"><h3>Event count</h3><div id="ascension_event_count" class="metric">—</div></div>
+      </div>
+      <h4>Scorecard</h4>
+      <pre id="ascensionScorecard">{}</pre>
+      <h4>Jobs</h4>
+      <pre id="ascensionJobs">{}</pre>
+      <h4>Reservoir</h4>
+      <pre id="ascensionReservoir">{}</pre>
+      <h4>Architect</h4>
+      <pre id="ascensionArchitect">{}</pre>
+    </section>
+
+    <section id="lineage" class="panel">
+      <h3>Sovereign lineage</h3>
+      <p>Lineage schema: <code>sovereign_lineage_dashboard_schema_v25.json</code></p>
+      <p class="muted">Lineage is archive evidence, not proof that broad sovereignty is already achieved.</p>
+    </section>
+
+    <section id="provenance" class="panel">
+      <h3>Release provenance</h3>
+      <ul>
+        <li>Verification guide: <code>docs/verify-release.md</code></li>
+        <li>Attestation workflow: <code>.github/workflows/release-provenance.yml</code></li>
+        <li>Checklist: <code>release/v2.8.0-rc.1-frontier-ui-demo-release-checklist.md</code></li>
+      </ul>
+    </section>
+
+    <section id="alerts" class="panel">
+      <div class="grid">
+        <div class="card"><h3>Open Challenges</h3><div id="open_challenges" class="metric">—</div></div>
+        <div class="card"><h3>Unresolved proof alerts</h3><div id="proof_alerts" class="metric">—</div></div>
+      </div>
+    </section>
+
+    <section id="green" class="panel">
+      <h3>Green path operator checks</h3>
+      <ol>
+        <li>Run migrations 001 + 002 in order.</li>
+        <li>Run deterministic backfill and confirm readiness.</li>
+        <li>Verify proof summary, reviewer ledger, and council lifecycle views are non-erroring.</li>
+        <li>Verify release provenance bundle before promotion.</li>
+      </ol>
+    </section>
+  </div>
+
+  <canvas id="snapshotCanvas" width="1200" height="700" class="hidden"></canvas>
+  <script src="app.js"></script>
+</body>
+</html>

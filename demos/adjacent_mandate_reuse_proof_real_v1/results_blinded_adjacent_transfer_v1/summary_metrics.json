@@ -1,0 +1,31 @@
+{
+  "status": "operationalized_to_honest_human_boundary",
+  "stage_a": {
+    "execution_state": "pending_real_blinded_human_execution",
+    "score_lock": "not_started",
+    "result": "undetermined"
+  },
+  "stage_b": {
+    "execution_state": "blocked_on_stage_a_real_pass",
+    "result": "not_run"
+  },
+  "demonstrated": [
+    "preregistration and environment freeze artifacts",
+    "public-safe output structure",
+    "private local-only blinding path",
+    "scorecard input and calculation wiring"
+  ],
+  "pending_human_execution": [
+    "role-separated assignment and blinding",
+    "stage_a lane execution and packet normalization",
+    "independent blinded adjudication",
+    "score lock and reveal",
+    "conditional stage_b execution"
+  ],
+  "simulated": [],
+  "unproven": [
+    "stage_a pass criteria",
+    "stage_b cross-domain transfer",
+    "bounded recursive self-improvement claim"
+  ]
+}

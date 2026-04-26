@@ -1,0 +1,47 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "selected_seed": "seed-protocol-correctness-a",
+  "ranked": [
+    {
+      "seed_id": "seed-protocol-correctness-a",
+      "expected_aoy": 1.21,
+      "evidence_density": 0.9,
+      "verification_strength": 0.91,
+      "archive_reuse_potential": 0.88,
+      "safety_authority_risk": 0.17,
+      "operator_cost": 0.41,
+      "adjacent_transfer_potential": 0.77,
+      "proof_burden": 0.39,
+      "score": 0.86
+    },
+    {
+      "seed_id": "seed-indexer-reorg-b",
+      "expected_aoy": 1.08,
+      "evidence_density": 0.8,
+      "verification_strength": 0.8,
+      "archive_reuse_potential": 0.8,
+      "safety_authority_risk": 0.26,
+      "operator_cost": 0.48,
+      "adjacent_transfer_potential": 0.69,
+      "proof_burden": 0.5,
+      "score": 0.77
+    },
+    {
+      "seed_id": "seed-governance-c",
+      "expected_aoy": 0.95,
+      "evidence_density": 0.7,
+      "verification_strength": 0.69,
+      "archive_reuse_potential": 0.72,
+      "safety_authority_risk": 0.35,
+      "operator_cost": 0.55,
+      "adjacent_transfer_potential": 0.61,
+      "proof_burden": 0.61,
+      "score": 0.68
+    }
+  ],
+  "allocation_simulation": {
+    "selected_seed_units": 65,
+    "reserve_units": 35
+  },
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

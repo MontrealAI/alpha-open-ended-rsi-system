@@ -1,0 +1,24 @@
+{
+  "id": "fuzz_harness",
+  "title": "Fuzz Harness Seed",
+  "mutation_thesis": "Use seeded property fuzzing to find edge-case transition failures quickly.",
+  "operator_workflow_delta": "Generate deterministic fuzz harnesses before manual deep-dive.",
+  "expected_metric_impact": {
+    "accepted_usefulness_points": "medium_high",
+    "time_to_first_accepted_output": "moderate",
+    "repair_rework": "moderate",
+    "evidence_completeness": "medium"
+  },
+  "likely_strengths": [
+    "edge-case discovery",
+    "regression harness value"
+  ],
+  "likely_weaknesses": [
+    "triage burden",
+    "weaker narrative evidence if not curated"
+  ],
+  "admissible_risk": "medium",
+  "evidence_strategy": "failing seed traces plus minimized repro",
+  "replayability_expectations": "high",
+  "likely_archive_contribution": "deterministic failing seeds, minimization recipes, regression harness templates"
+}

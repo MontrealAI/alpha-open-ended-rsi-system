@@ -1,0 +1,42 @@
+{
+  "runtime_id": "ascension-runtime-local-001",
+  "sovereign_id": "alpha-agi-protocol-cybersecurity-sovereign",
+  "scope": "bounded local/devnet operating lineage formed from selected seed bundle",
+  "authority_boundary": [
+    "local deterministic artifacts only",
+    "no autonomous authority widening",
+    "no mainnet settlement authority"
+  ],
+  "mandate_families": [
+    "protocol-correctness",
+    "verification-infrastructure"
+  ],
+  "allowed_jobs": [
+    "audit package",
+    "invariant expansion",
+    "fuzz replay"
+  ],
+  "prohibited_claims": [
+    "audited final deployment",
+    "mainnet production readiness",
+    "completed live Ascension"
+  ],
+  "governance_gates": [
+    "validator approval",
+    "council ruling",
+    "claim boundary check"
+  ],
+  "archive_policy": "hash-linked lineage required for promotion",
+  "proof_requirements": [
+    "artifact completeness",
+    "hash integrity",
+    "docket completeness"
+  ],
+  "settlement_ruling_policy": "placeholder-unit settlement only after validation",
+  "selected_seed_bundle": [
+    "invariant_library_seed",
+    "audit_factory_seed"
+  ],
+  "status": "local/devnet/synthetic sovereign candidate",
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

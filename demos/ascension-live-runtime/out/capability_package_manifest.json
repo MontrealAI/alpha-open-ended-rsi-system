@@ -1,0 +1,6 @@
+{
+  "package_id": "capability-protocol-correctness-v1",
+  "source_job": "job-001",
+  "receipt": "receipt-job-001",
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

@@ -1,0 +1,187 @@
+{
+  "release_target": "v2.8.0-rc.2",
+  "manifest_hash": "95dd1fea8ee5f0e829c601724e07f1dc4465dc246c8c7a88d9b6ecd3a42bf799",
+  "config_hash": "e1f2ffa2ee7b577a22367ce070349db47e02b373cd7a4b71add61a68c5dfe95f",
+  "scorecard_hash": "f3f2db44bb61b1e2880b21fc7ec6286fd7ae58cbe178c6eea938d0b893352d91",
+  "proof_docket_hash": "0ab9ac954ff90d3f8c80c2fc89cea93c411b24940fa82efbeabb1435ecc6b0d6",
+  "frozen_package_manifest_hash": "56dfb240a9b6b73c91cb4bb7b06efba543956dea0d4760a0c3f8bd41c5da0f75",
+  "determinism_guards": {
+    "network_calls": "disabled",
+    "external_apis": "disabled",
+    "training": "disabled",
+    "synthetic_adjudication_labeled": true
+  },
+  "schema_validation": {
+    "capability_genome": {
+      "schema_id": "https://alpha-nova-seeds.local/schemas/v2.8/capability_genome.schema.json",
+      "status": "pass"
+    },
+    "assay_bundle": {
+      "schema_id": "https://alpha-nova-seeds.local/schemas/v2.8/assay_bundle.schema.json",
+      "status": "pass"
+    },
+    "lineage": {
+      "schema_id": "https://alpha-nova-seeds.local/schemas/v2.8/lineage.schema.json",
+      "status": "pass"
+    }
+  },
+  "determinism_fingerprint_hash": "c8f19d051133ea158227f37e6b5b15ea763e62b2c706527edd4c469f72e2e81e",
+  "files": [
+    {
+      "path": "demos/open-ended-rsi-system/00_manifest/manifest.json",
+      "sha256": "2c3ae2cad2d9ee3143778ba6fa74e2405cdaa2f2d3f19a61e1ddf551be47edf9"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/01_frontier_queue/frontier_queue.json",
+      "sha256": "a3371ecb4a49e5245e9e7b8a16b46b2f5a03314e3469b5046d405f0a576dbc74"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/02_seed_genome/capability_genome.json",
+      "sha256": "1b25ba581e957b45687dfbbe205ed1d8d552bb2f2ee73cad8ac4b8f958239c17"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/03_generation/generation_0.json",
+      "sha256": "f75a6f8f7cc1d42d05c2c0cac26159c21c85782cb8ae0b1afc5d88c5a604f19e"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/03_generation/generation_1.json",
+      "sha256": "fd7150dc2148ed50944a80f7dd75c85ca54b7914732f98df4e864b228609fb53"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/03_generation/generation_2.json",
+      "sha256": "1f882b8bac5fdc5ad56566b21d45eba086f01aa7c7c95fb578c4529021f99c47"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/03_generation/mandate3_execution.json",
+      "sha256": "e9410db87024062a5f3474b200ff3dcf7b83d86bdcbf0347791ddd383cec14af"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/04_assays/assay_bundle.json",
+      "sha256": "479dce614b18968e05e38165410f10056abf1a37375379d26e0a01855ed2223a"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/05_selection/lineage.json",
+      "sha256": "634e0dbd96d3cc51cc6494a2b04a76cfe8eec022eb9cd862415f1c165ed6d9c6"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/06_archive/intervention_log.json",
+      "sha256": "4765ff9ef33eb5f6d75631bcb275f207ba7e5176fcdf37a2d768d820d8feb617"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/07_scorecard/board_scorecard.json",
+      "sha256": "77f9e989f83b5e908dc77ee76abdb0ac23806611f20116d285ed72952027dcc2"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/07_scorecard/chronicle_entry.json",
+      "sha256": "b0ba90e770668d3fe2a05d34775834cfd7a1454818c83f6cb6fa7cd60037cb02"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/07_scorecard/governance_ruling.json",
+      "sha256": "197524801080cd20f3f1c83564b5bc9b666bad4b94d67263197ee48cdc0fb7b5"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/07_scorecard/safety_gates.json",
+      "sha256": "689164f1a396d62d204824b3d7d5e6a7b82519bd32e30817cc68de313ad047c2"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/07_scorecard/scorecard.json",
+      "sha256": "f3f2db44bb61b1e2880b21fc7ec6286fd7ae58cbe178c6eea938d0b893352d91"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/08_proof_docket/board_scorecard.md",
+      "sha256": "00c63c8bc264a75f8eabe758a9a283c935156ad7ce1108567f65a69eb5fe0146"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/08_proof_docket/proof_docket.md",
+      "sha256": "0ab9ac954ff90d3f8c80c2fc89cea93c411b24940fa82efbeabb1435ecc6b0d6"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/08_proof_docket/summary.md",
+      "sha256": "d41f1f51da22cea41554b47c8585171b504aa5e9e2e7340d84eff489d48e608c"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/assay_bundle.json",
+      "sha256": "479dce614b18968e05e38165410f10056abf1a37375379d26e0a01855ed2223a"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/board_report.html",
+      "sha256": "5d85363824813fc613633238d9f77ed4f1bb48b1ed42b879a867f732bbed2176"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/board_scorecard.json",
+      "sha256": "77f9e989f83b5e908dc77ee76abdb0ac23806611f20116d285ed72952027dcc2"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/board_scorecard.md",
+      "sha256": "00c63c8bc264a75f8eabe758a9a283c935156ad7ce1108567f65a69eb5fe0146"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/capability_genome.json",
+      "sha256": "1b25ba581e957b45687dfbbe205ed1d8d552bb2f2ee73cad8ac4b8f958239c17"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/chronicle_entry.json",
+      "sha256": "b0ba90e770668d3fe2a05d34775834cfd7a1454818c83f6cb6fa7cd60037cb02"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/claim_boundary.json",
+      "sha256": "6f2070d67c5286e8f7e762f9b76c5950233c81b580d9a84836dbc90fc7a8d247"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/determinism_fingerprint.json",
+      "sha256": "c8f19d051133ea158227f37e6b5b15ea763e62b2c706527edd4c469f72e2e81e"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/frontier_queue.json",
+      "sha256": "a3371ecb4a49e5245e9e7b8a16b46b2f5a03314e3469b5046d405f0a576dbc74"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/generation_0.json",
+      "sha256": "f75a6f8f7cc1d42d05c2c0cac26159c21c85782cb8ae0b1afc5d88c5a604f19e"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/generation_1.json",
+      "sha256": "fd7150dc2148ed50944a80f7dd75c85ca54b7914732f98df4e864b228609fb53"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/generation_2.json",
+      "sha256": "1f882b8bac5fdc5ad56566b21d45eba086f01aa7c7c95fb578c4529021f99c47"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/governance_ruling.json",
+      "sha256": "197524801080cd20f3f1c83564b5bc9b666bad4b94d67263197ee48cdc0fb7b5"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/intervention_log.json",
+      "sha256": "4765ff9ef33eb5f6d75631bcb275f207ba7e5176fcdf37a2d768d820d8feb617"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/lineage.json",
+      "sha256": "634e0dbd96d3cc51cc6494a2b04a76cfe8eec022eb9cd862415f1c165ed6d9c6"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/mandate3_execution.json",
+      "sha256": "e9410db87024062a5f3474b200ff3dcf7b83d86bdcbf0347791ddd383cec14af"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/manifest.json",
+      "sha256": "2c3ae2cad2d9ee3143778ba6fa74e2405cdaa2f2d3f19a61e1ddf551be47edf9"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/proof_docket.md",
+      "sha256": "0ab9ac954ff90d3f8c80c2fc89cea93c411b24940fa82efbeabb1435ecc6b0d6"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/safety_gates.json",
+      "sha256": "689164f1a396d62d204824b3d7d5e6a7b82519bd32e30817cc68de313ad047c2"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/scorecard.json",
+      "sha256": "f3f2db44bb61b1e2880b21fc7ec6286fd7ae58cbe178c6eea938d0b893352d91"
+    },
+    {
+      "path": "demos/open-ended-rsi-system/out/summary.md",
+      "sha256": "d41f1f51da22cea41554b47c8585171b504aa5e9e2e7340d84eff489d48e608c"
+    }
+  ]
+}

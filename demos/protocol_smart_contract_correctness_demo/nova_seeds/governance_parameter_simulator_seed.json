@@ -1,0 +1,23 @@
+{
+  "id": "governance_parameter_simulator",
+  "title": "Governance Parameter Simulator Seed",
+  "mutation_thesis": "Stress governance outcomes under parameter shifts (quorum, challenge windows, role thresholds).",
+  "operator_workflow_delta": "Run deterministic parameter sweep before line-level issue extraction.",
+  "expected_metric_impact": {
+    "accepted_usefulness_points": "medium",
+    "time_to_first_accepted_output": "slower",
+    "repair_rework": "moderate",
+    "evidence_completeness": "medium_high"
+  },
+  "likely_strengths": [
+    "policy clarity",
+    "governance explainability"
+  ],
+  "likely_weaknesses": [
+    "can underperform on low-level contract anti-patterns"
+  ],
+  "admissible_risk": "medium",
+  "evidence_strategy": "parameter trace + adjudication rationale",
+  "replayability_expectations": "high",
+  "likely_archive_contribution": "parameter-sweep matrices, governance sensitivity traces, policy stress-test notebooks"
+}

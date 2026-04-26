@@ -1,0 +1,203 @@
+{
+  "generation": 2,
+  "mandate": "adjacent second domain with reduced intervention",
+  "human_intervention_touches": 2,
+  "selected_domain": {
+    "transfer": 0.91,
+    "assay_coverage": 0.89,
+    "safety": 0.93,
+    "evidence_density": 0.88,
+    "domain": "backend_api_correctness",
+    "selection_score": 0.9034
+  },
+  "frontier_queue": [
+    {
+      "transfer": 0.91,
+      "assay_coverage": 0.89,
+      "safety": 0.93,
+      "evidence_density": 0.88,
+      "domain": "backend_api_correctness",
+      "selection_score": 0.9034
+    },
+    {
+      "transfer": 0.84,
+      "assay_coverage": 0.85,
+      "safety": 0.9,
+      "evidence_density": 0.81,
+      "domain": "sdk_typed_attestation_payload_correctness",
+      "selection_score": 0.8492
+    },
+    {
+      "transfer": 0.78,
+      "assay_coverage": 0.88,
+      "safety": 0.92,
+      "evidence_density": 0.86,
+      "domain": "schema_migration_integrity",
+      "selection_score": 0.8484
+    },
+    {
+      "transfer": 0.75,
+      "assay_coverage": 0.83,
+      "safety": 0.95,
+      "evidence_density": 0.91,
+      "domain": "proof_docket_synthesis",
+      "selection_score": 0.8396
+    },
+    {
+      "transfer": 0.73,
+      "assay_coverage": 0.8,
+      "safety": 0.96,
+      "evidence_density": 0.94,
+      "domain": "release_provenance_operator_automation",
+      "selection_score": 0.832
+    },
+    {
+      "transfer": 0.7,
+      "assay_coverage": 0.82,
+      "safety": 0.94,
+      "evidence_density": 0.89,
+      "domain": "dashboard_provenance_evidence_surface_correctness",
+      "selection_score": 0.8134
+    }
+  ],
+  "execution_log": {
+    "mandate_id": "mandate_3",
+    "domain": "backend_api_correctness",
+    "autonomous_selector": "whitelist_bounded_weighted_frontier_ranker_v1",
+    "simulated": true,
+    "offline_only": true,
+    "steps": [
+      {
+        "step": 1,
+        "mode": "DISCO",
+        "action": "discover first workable package from selected domain reactive intermediate",
+        "status": "pass"
+      },
+      {
+        "step": 2,
+        "mode": "Arnold",
+        "action": "run one local mutation round with deterministic neighborhood scoring",
+        "status": "pass"
+      },
+      {
+        "step": 3,
+        "mode": "Assay cascade",
+        "action": "run cheap -> mid -> expensive synthetic assay pipeline",
+        "status": "pass"
+      }
+    ]
+  },
+  "disco_mode": {
+    "reactive_intermediate": "missing proof-docket completeness crosswalk in selected domain",
+    "first_workable_package": "g2-workable-pack-v1"
+  },
+  "arnold_mode": {
+    "rounds": 1,
+    "neighborhood_size": 24,
+    "neighborhood": [
+      {
+        "variant": "g2-local-00",
+        "score": 0.8894
+      },
+      {
+        "variant": "g2-local-01",
+        "score": 0.8874
+      },
+      {
+        "variant": "g2-local-02",
+        "score": 0.8854
+      },
+      {
+        "variant": "g2-local-03",
+        "score": 0.8884
+      },
+      {
+        "variant": "g2-local-04",
+        "score": 0.8944
+      },
+      {
+        "variant": "g2-local-05",
+        "score": 0.8854
+      },
+      {
+        "variant": "g2-local-06",
+        "score": 0.8884
+      },
+      {
+        "variant": "g2-local-07",
+        "score": 0.8924
+      },
+      {
+        "variant": "g2-local-08",
+        "score": 0.8884
+      },
+      {
+        "variant": "g2-local-09",
+        "score": 0.8854
+      },
+      {
+        "variant": "g2-local-10",
+        "score": 0.8894
+      },
+      {
+        "variant": "g2-local-11",
+        "score": 0.8864
+      },
+      {
+        "variant": "g2-local-12",
+        "score": 0.8914
+      },
+      {
+        "variant": "g2-local-13",
+        "score": 0.8854
+      },
+      {
+        "variant": "g2-local-14",
+        "score": 0.8934
+      },
+      {
+        "variant": "g2-local-15",
+        "score": 0.8954
+      },
+      {
+        "variant": "g2-local-16",
+        "score": 0.8894
+      },
+      {
+        "variant": "g2-local-17",
+        "score": 0.8944
+      },
+      {
+        "variant": "g2-local-18",
+        "score": 0.8874
+      },
+      {
+        "variant": "g2-local-19",
+        "score": 0.8904
+      },
+      {
+        "variant": "g2-local-20",
+        "score": 0.8854
+      },
+      {
+        "variant": "g2-local-21",
+        "score": 0.8874
+      },
+      {
+        "variant": "g2-local-22",
+        "score": 0.8874
+      },
+      {
+        "variant": "g2-local-23",
+        "score": 0.8864
+      }
+    ],
+    "neighborhood_slope": 0.0004
+  },
+  "longitudinal": {
+    "frontier_width": 6,
+    "autonomy_delta": 0.75,
+    "neighborhood_slope": 0.0004,
+    "archive_depth": 2
+  }
+}

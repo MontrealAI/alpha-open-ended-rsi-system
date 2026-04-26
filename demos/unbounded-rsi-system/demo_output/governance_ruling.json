@@ -1,0 +1,17 @@
+{
+  "id": "governance_ruling.json",
+  "status": "pass_with_bounds",
+  "constitutional_order": [
+    "identity",
+    "proof",
+    "settlement",
+    "governance"
+  ],
+  "decision": "promote_bounded_accelerating_loop_demo",
+  "does_not_claim": [
+    "unrestricted autonomy",
+    "fully realized sovereign system",
+    "literal unbounded recursive self-improvement"
+  ],
+  "timestamp": "2026-04-22T00:00:00+00:00"
+}

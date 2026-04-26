@@ -1,0 +1,6 @@
+{
+  "validator_id": "validator-alpha",
+  "role": "lead",
+  "policy": "deterministic-completeness-check",
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

@@ -1,0 +1,50 @@
+{
+  "thresholds": {
+    "aoy_uplift": 0.35,
+    "speed_uplift": 0.3,
+    "repair_rework_reduction": 0.4,
+    "evidence_completeness_uplift": 0.2,
+    "package_dependence_rate": 0.3
+  },
+  "control": {
+    "accepted_usefulness_points": 16,
+    "accepted_count": 2,
+    "time_to_first_accepted_output": 6,
+    "repair_rework": 0.5,
+    "evidence_completeness": 0.786,
+    "unsupported_claim_rate": 0.0,
+    "severity_inflation_count": 0,
+    "packageable_artifact_quality": 0.93,
+    "aoy": 1.067,
+    "package_dependence_rate": 0.0
+  },
+  "treatment": {
+    "accepted_usefulness_points": 25,
+    "accepted_count": 3,
+    "time_to_first_accepted_output": 4,
+    "repair_rework": 0.0,
+    "evidence_completeness": 1.0,
+    "unsupported_claim_rate": 0.0,
+    "severity_inflation_count": 0,
+    "packageable_artifact_quality": 1.0,
+    "aoy": 1.667,
+    "package_dependence_rate": 1.0
+  },
+  "comparison": {
+    "aoy_uplift": 0.562,
+    "speed_uplift": 0.333,
+    "repair_rework_reduction": 1.0,
+    "evidence_completeness_uplift": 0.272,
+    "safety_regression": false,
+    "package_dependence_rate": 1.0
+  },
+  "passes": {
+    "aoy_uplift": true,
+    "speed_uplift": true,
+    "repair_rework_reduction": true,
+    "evidence_completeness_uplift": true,
+    "no_safety_regression": true,
+    "package_dependence_rate": true,
+    "adjacent_mandate_proof": true
+  }
+}

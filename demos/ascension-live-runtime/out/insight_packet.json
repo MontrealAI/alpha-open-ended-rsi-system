@@ -1,0 +1,19 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "opportunity_id": "opp-protocol-correctness-001",
+  "wedge": "protocol-smart-contract-correctness",
+  "rationale": "Protocol and smart-contract correctness maximizes deterministic verification strength in this bounded RC runtime.",
+  "evidence_surface": [
+    "demos/protocol_smart_contract_correctness_demo/run_demo.py",
+    "contracts/",
+    "backend/app/indexer.py"
+  ],
+  "verification_strength": "high-local",
+  "archive_density": "high",
+  "risk_level": "medium",
+  "next_possible_seeds": [
+    "seed-validator-observability",
+    "seed-reorg-indexer-hardening"
+  ],
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

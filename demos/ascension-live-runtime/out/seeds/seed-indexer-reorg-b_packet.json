@@ -1,0 +1,19 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "seed_id": "seed-indexer-reorg-b",
+  "state": "green_flame",
+  "fusion_plan": "Indexer replay determinism and cursor safety hardening",
+  "proof_requirements": [
+    "replay-log",
+    "indexing-consistency-report"
+  ],
+  "promotion_criteria": [
+    "no_reorg_drift",
+    "api_consistency"
+  ],
+  "lifecycle": [
+    "draft",
+    "green_flame"
+  ],
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

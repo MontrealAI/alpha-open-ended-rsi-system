@@ -1,0 +1,23 @@
+{
+  "demo_id": "unbounded-rsi-system",
+  "release_target": "v2.8.0-rc.1",
+  "timestamp": "2026-04-22T00:00:00+00:00",
+  "constitutional_order": [
+    "identity",
+    "proof",
+    "settlement",
+    "governance"
+  ],
+  "invariants": [
+    "no value without evidence",
+    "no autonomy without authority",
+    "no settlement without validation"
+  ],
+  "phases": [
+    "bounded",
+    "expanding",
+    "increasingly_autonomous"
+  ],
+  "deterministic": true,
+  "proof_boundary": "Minimum viable accelerating loop demonstration in bounded synthetic conditions."
+}

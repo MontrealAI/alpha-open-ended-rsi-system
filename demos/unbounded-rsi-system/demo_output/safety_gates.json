@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "policy_bounded_autonomy": true,
+  "gates": {
+    "authority_gate": "Only bounded candidate set can be selected.",
+    "proof_gate": "Selection requires deterministic score and file-level digests.",
+    "settlement_gate": "No settlement claims outside synthetic scope.",
+    "governance_gate": "Fail-closed if safety gates or threshold checks fail."
+  },
+  "regression_checks": {
+    "no_safety_regression": true,
+    "threshold_gate_passed": true
+  }
+}

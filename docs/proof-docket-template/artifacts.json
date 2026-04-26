@@ -1,0 +1,9 @@
+{
+  "sourceArchive": {
+    "path": "alpha-nova-seeds-v2.6.0-rc.1.tar.gz",
+    "sha256": "REPLACE_ME"
+  },
+  "sha256sums": "SHA256SUMS",
+  "sbom": "sbom-v2.6.0-rc.1.spdx.json",
+  "attestation": "github-attestation://run/<RUN_ID>"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "GovernanceValidationPack-v1",
+  "type": "frozen_sub_pack",
+  "source_seed": "invariant_library",
+  "ontology": [
+    "instant_upgrade",
+    "no_challenge_window",
+    "proofless_settlement",
+    "treasury_drift"
+  ],
+  "extraction_schema": {
+    "fields": [
+      "contract",
+      "function",
+      "issue_type",
+      "severity",
+      "code_pointer",
+      "issue_statement",
+      "broken_invariant_or_state_path",
+      "reproduction_artifact",
+      "severity_rationale",
+      "suggested_fix",
+      "traceability_to_scope"
+    ]
+  },
+  "mechanism_library": {
+    "proofless_settlement": "Value release requires explicit validated proof and authority checks.",
+    "instant_upgrade": "Upgrade authority requires delay/timelock and visible governance intent.",
+    "treasury_drift": "Accounting state must reconcile prior to value movement.",
+    "no_challenge_window": "Post-approval settlement requires challenge window expiry."
+  },
+  "workflow_template": [
+    "enumerate value-moving functions",
+    "map authority and proof checks",
+    "test challenge-window semantics",
+    "trace accounting consistency",
+    "emit release-gate packet"
+  ],
+  "scoring_rubric": {
+    "high_with_repro": 5,
+    "medium_with_repro": 3,
+    "low": 1,
+    "harness_bonus": 2,
+    "release_gate_bonus": 2
+  },
+  "safety_routing_rules": {
+    "reject_unsupported_claims": true,
+    "block_severity_inflation": true,
+    "escalate_if_false_positive_rate_above": 0.1
+  },
+  "query_bundle": [
+    "call{value:",
+    "transfer(",
+    "swapImplementation",
+    "upgrade",
+    "readyAt",
+    "approvedAt",
+    "challengePeriod",
+    "locked"
+  ],
+  "skill_wrapper": {
+    "name": "protocol_cybersecurity_invariant_lane",
+    "mode": "deterministic",
+    "notes": "Synthetic local wrapper for replayable mandate review"
+  },
+  "release_gate_packet": {
+    "required": [
+      "accepted findings with repro",
+      "evidence completeness >= 0.9",
+      "unsupported claim rate <= 0.1",
+      "scope traceability"
+    ]
+  },
+  "package_hash": "23f887f62622ce735fd10d4fce8e796d72ac92f9a6acc30d62e42d51d3b9e898"
+}

@@ -1,0 +1,1079 @@
+{
+  "claim": "Synthetic flagship claim: frozen protocol cybersecurity capability improved adjacent mandate performance under control-vs-treatment assay.",
+  "constitutional_frame": {
+    "order": [
+      "identity",
+      "proof",
+      "settlement",
+      "governance"
+    ],
+    "invariant": [
+      "no value without evidence",
+      "no autonomy without authority",
+      "no settlement without validation"
+    ]
+  },
+  "parent_business": {
+    "id": "protocol_cybersecurity_studio",
+    "title": "Protocol Cybersecurity Studio",
+    "legacy_aliases": [
+      "protocol_assurance_studio",
+      "Protocol Assurance Studio"
+    ],
+    "sector": "protocol_and_smart_contract_correctness",
+    "customer_type": [
+      "protocol foundations",
+      "governance councils",
+      "release managers",
+      "security-conscious DAOs"
+    ],
+    "problem_purchased": "Buyers purchase release-gate confidence on value-moving protocol paths before shipping governance and settlement changes.",
+    "scope_type": "fixed-scope release-critical correctness mandates (2-4 contracts)",
+    "mandate_families": [
+      "governance_dispute_correctness",
+      "threshold_attestation_correctness",
+      "treasury_release_gate_correctness"
+    ],
+    "review_posture": "evidence-first adversarial review with replayable repro artifacts",
+    "pricing_mode_illustrative": "fixed mandate fee + severity-weighted bonus for accepted replayable findings",
+    "release_gate_positioning": "block release until mandate packet meets declared evidence and safety thresholds",
+    "what_gets_archived": [
+      "accepted finding packets",
+      "invariant templates",
+      "fuzz harness seeds",
+      "release-gate checklists",
+      "scope-to-evidence trace maps"
+    ],
+    "why_archive_compounds": "Each accepted packet hardens ontology, query bundles, and evidence templates, reducing future time-to-first-accepted output while maintaining safety.",
+    "why_this_is_first_wedge": [
+      "objective failure classes",
+      "replayable review artifacts",
+      "fast operator adjudication",
+      "commercially legible fixed-scope buying motion",
+      "high reusable primitive density"
+    ],
+    "sovereign_candidate_path": "When adjacent mandates repeatedly pass strict thresholds with explicit package dependence and no safety regression, the archive graduates toward Protocol Cybersecurity Sovereign candidacy.",
+    "synthetic_disclaimer": "This artifact is synthetic and illustrative for local replay.",
+    "full_stack_organism": [
+      "Insight",
+      "Nova-Seeds",
+      "MARK",
+      "AGI Jobs (identity, proof, settlement, governance)",
+      "Archive"
+    ],
+    "first_narrow_organ": "\u03b1-AGI Protocol Cybersecurity Sovereign",
+    "future_seed": "\u03b1-AGI Cybersecurity Sovereign",
+    "doctrine_boundary": "This positions protocol cybersecurity as the first narrow high-verification organ and seed for broader future capability; it does not claim full cybersecurity sovereignty already exists."
+  },
+  "doctrine": {
+    "doctrine_stack": {
+      "id": "protocol_cybersecurity_doctrine_stack_v1",
+      "title": "Full-Stack Economic Organism Doctrine Stack",
+      "positioning": "Protocol correctness is the first compounding correctness wedge under high-verification conditions.",
+      "first_narrow_organ": "\ud83c\udf31\ud83d\udcab \u03b1-AGI Protocol Cybersecurity Sovereign \ud83d\udd10",
+      "future_seed": "\ud83d\udc51 \u03b1-AGI Cybersecurity Sovereign \ud83d\udd31\u2728",
+      "nation_state_doctrine": "The Full-Stack Economic Organism is governed as a driven nonequilibrium system: capital, compute, and telemetry are converted into proof-bound reusable security capability faster than entropy pressure from uncertainty, adversaries, and coordination loss.",
+      "not_claimed": [
+        "A full cybersecurity sovereign already exists.",
+        "Cybersecurity is solved once and for all.",
+        "The thermodynamic framing is literal physical law.",
+        "Real-world proof is already complete."
+      ],
+      "organism_loop": [
+        "Insight reduces blind search.",
+        "Nova-Seeds generate structured fluctuations.",
+        "MARK applies economic selection pressure.",
+        "AGI Jobs converts candidate work into validated output through identity, proof, settlement, and governance.",
+        "Archive freezes successful fluctuations into reusable structure."
+      ],
+      "phase_transition": {
+        "order_parameter": "Lambda",
+        "consultancy_mode": "Lambda < Lambda_c",
+        "compounding_mode": "Lambda > Lambda_c"
+      },
+      "equation_catalog": {
+        "state_vector": "X(t)=\\big(K,C,D,A,Q,R,\\Sigma\\big)",
+        "resource_flux_input": "J_{\\text{in}}=\\alpha_K \\dot K_{\\text{in}}+\\alpha_C \\dot C_{\\text{in}}+\\alpha_D \\dot D_{\\text{in}}",
+        "resource_flux_split": "J_{\\text{in}}=\\dot W_{\\text{useful}}+\\dot Q_{\\text{diss}}+\\dot U",
+        "resource_flux_useful": "\\dot W_{\\text{useful}} \\approx \\beta_A \\dot A + \\beta_Q \\dot Q + \\beta_R \\dot R_{\\text{validated}}",
+        "free_energy": "\\mathcal G[X]=\\mathcal H[X]-T_{\\text{eff}}\\mathcal S_{\\text{org}}[X]",
+        "free_energy_objective": "\\min \\mathcal G[X]",
+        "free_energy_diff": "d\\mathcal G = d\\mathcal H - T_{\\text{eff}}\\,d\\mathcal S_{\\text{org}} - \\mathcal S_{\\text{org}}\\,dT_{\\text{eff}}",
+        "nonequilibrium_flow": "\\frac{dX}{dt}=F_{\\text{drive}}(X)-F_{\\text{decay}}(X)",
+        "steady_state": "\\left\\langle \\frac{dX}{dt}\\right\\rangle \\approx 0",
+        "nonequilibrium_positive": "J_{\\text{in}}>0,\\qquad \\dot Q_{\\text{diss}}>0,\\qquad \\dot W_{\\text{useful}}>0",
+        "microstate_energy": "E_i = E_i^{\\text{resource}} + E_i^{\\text{error}} + E_i^{\\text{latency}} + E_i^{\\text{governance}} - E_i^{\\text{reuse}}",
+        "microstate_probability": "P_i=\\frac{e^{-E_i/(k_B T_{\\text{eff}})}}{Z}, \\qquad",
+        "partition_function": "Z=\\sum_i e^{-E_i/(k_B T_{\\text{eff}})}",
+        "entropy_balance": "\\frac{d\\mathcal S_{\\text{org}}}{dt}=\\Pi-\\Phi",
+        "viability": "\\Phi \\ge \\Pi",
+        "sovereign_efficiency": "\\eta_{\\text{sovereign}}=\\frac{\\dot W_{\\text{useful}}}{J_{\\text{in}}}",
+        "archive_efficiency": "\\eta_{\\text{archive}}=\\frac{\\dot A_{\\text{reused}}}{J_{\\text{in}}}",
+        "order_parameter": "\\Lambda=\\frac{\\rho_{\\text{reuse}}\\,\\rho_{\\text{validation}}\\,\\rho_{\\text{selection}}}{\\Pi}"
+      },
+      "validation": {
+        "doctrine_docs": [
+          "docs/DOCTRINE_STACK.md",
+          "docs/NATION_STATE_DOCTRINE.md",
+          "docs/THERMODYNAMIC_MODEL.md"
+        ],
+        "required_equation_count": 18,
+        "legacy_bracket_delimiters_present": false,
+        "canonical_math_delimiters": "GitHub markdown $...$ and $$...$$",
+        "validation": "pass"
+      }
+    },
+    "thermodynamic_model_summary": {
+      "id": "thermodynamic_model_summary_v1",
+      "formal_status": "governance analogy with measurable operational content; not literal physical law",
+      "boundary_statement": "Use thermodynamic/statistical-physics language as disciplined governance notation, not as a claim of settled empirical physical law for institutions.",
+      "state_vector": [
+        "K",
+        "C",
+        "D",
+        "A",
+        "Q",
+        "R",
+        "Sigma"
+      ],
+      "state_vector_equation": "X(t)=\\big(K,C,D,A,Q,R,\\Sigma\\big)",
+      "entropy_symbol": "S_org",
+      "control_symbol": "Sigma",
+      "viability_condition": "Phi >= Pi",
+      "order_parameter_equation": "\\Lambda=\\frac{\\rho_{\\text{reuse}}\\,\\rho_{\\text{validation}}\\,\\rho_{\\text{selection}}}{\\Pi}",
+      "efficiencies": [
+        "eta_sovereign",
+        "eta_archive"
+      ],
+      "equation_catalog": {
+        "state_vector": "X(t)=\\big(K,C,D,A,Q,R,\\Sigma\\big)",
+        "resource_flux_input": "J_{\\text{in}}=\\alpha_K \\dot K_{\\text{in}}+\\alpha_C \\dot C_{\\text{in}}+\\alpha_D \\dot D_{\\text{in}}",
+        "resource_flux_split": "J_{\\text{in}}=\\dot W_{\\text{useful}}+\\dot Q_{\\text{diss}}+\\dot U",
+        "resource_flux_useful": "\\dot W_{\\text{useful}} \\approx \\beta_A \\dot A + \\beta_Q \\dot Q + \\beta_R \\dot R_{\\text{validated}}",
+        "free_energy": "\\mathcal G[X]=\\mathcal H[X]-T_{\\text{eff}}\\mathcal S_{\\text{org}}[X]",
+        "free_energy_objective": "\\min \\mathcal G[X]",
+        "free_energy_diff": "d\\mathcal G = d\\mathcal H - T_{\\text{eff}}\\,d\\mathcal S_{\\text{org}} - \\mathcal S_{\\text{org}}\\,dT_{\\text{eff}}",
+        "nonequilibrium_flow": "\\frac{dX}{dt}=F_{\\text{drive}}(X)-F_{\\text{decay}}(X)",
+        "steady_state": "\\left\\langle \\frac{dX}{dt}\\right\\rangle \\approx 0",
+        "nonequilibrium_positive": "J_{\\text{in}}>0,\\qquad \\dot Q_{\\text{diss}}>0,\\qquad \\dot W_{\\text{useful}}>0",
+        "microstate_energy": "E_i = E_i^{\\text{resource}} + E_i^{\\text{error}} + E_i^{\\text{latency}} + E_i^{\\text{governance}} - E_i^{\\text{reuse}}",
+        "microstate_probability": "P_i=\\frac{e^{-E_i/(k_B T_{\\text{eff}})}}{Z}, \\qquad",
+        "partition_function": "Z=\\sum_i e^{-E_i/(k_B T_{\\text{eff}})}",
+        "entropy_balance": "\\frac{d\\mathcal S_{\\text{org}}}{dt}=\\Pi-\\Phi",
+        "viability": "\\Phi \\ge \\Pi",
+        "sovereign_efficiency": "\\eta_{\\text{sovereign}}=\\frac{\\dot W_{\\text{useful}}}{J_{\\text{in}}}",
+        "archive_efficiency": "\\eta_{\\text{archive}}=\\frac{\\dot A_{\\text{reused}}}{J_{\\text{in}}}",
+        "order_parameter": "\\Lambda=\\frac{\\rho_{\\text{reuse}}\\,\\rho_{\\text{validation}}\\,\\rho_{\\text{selection}}}{\\Pi}"
+      },
+      "validation": {
+        "doctrine_docs": [
+          "docs/DOCTRINE_STACK.md",
+          "docs/NATION_STATE_DOCTRINE.md",
+          "docs/THERMODYNAMIC_MODEL.md"
+        ],
+        "required_equation_count": 18,
+        "legacy_bracket_delimiters_present": false,
+        "canonical_math_delimiters": "GitHub markdown $...$ and $$...$$",
+        "validation": "pass"
+      }
+    }
+  },
+  "nova_seed_lineup": [
+    {
+      "id": "audit_factory",
+      "title": "Audit Factory Seed",
+      "mutation_thesis": "Maximize breadth-first issue harvesting with strict triage templates.",
+      "operator_workflow_delta": "Front-load contract surface enumeration and standardized triage queues.",
+      "expected_metric_impact": {
+        "accepted_usefulness_points": "medium",
+        "time_to_first_accepted_output": "moderate",
+        "repair_rework": "moderate",
+        "evidence_completeness": "medium"
+      },
+      "likely_strengths": [
+        "coverage breadth",
+        "repeatable reviewer packets"
+      ],
+      "likely_weaknesses": [
+        "can miss deep state-path edge cases"
+      ],
+      "admissible_risk": "medium false-positive risk if triage heuristics are over-broad",
+      "evidence_strategy": "structured finding templates with reproducible pointers",
+      "replayability_expectations": "high",
+      "likely_archive_contribution": "structured triage queues, severity calibration tables, reviewer packet templates"
+    },
+    {
+      "id": "exploit_replay",
+      "title": "Exploit Replay Seed",
+      "mutation_thesis": "Map known exploit families onto current contracts to rapidly test inherited failure modes.",
+      "operator_workflow_delta": "Run exploit-pattern replay passes before bespoke analysis.",
+      "expected_metric_impact": {
+        "accepted_usefulness_points": "medium",
+        "time_to_first_accepted_output": "slow_to_moderate",
+        "repair_rework": "higher",
+        "evidence_completeness": "medium"
+      },
+      "likely_strengths": [
+        "known-attack coverage",
+        "buyer comprehension"
+      ],
+      "likely_weaknesses": [
+        "historical bias",
+        "less adaptable to novel governance semantics"
+      ],
+      "admissible_risk": "medium_high",
+      "evidence_strategy": "historical exploit class mapping with local replay traces",
+      "replayability_expectations": "high",
+      "likely_archive_contribution": "exploit-class replay scripts, adversarial scenario catalog, inherited failure checklists"
+    },
+    {
+      "id": "fuzz_harness",
+      "title": "Fuzz Harness Seed",
+      "mutation_thesis": "Use seeded property fuzzing to find edge-case transition failures quickly.",
+      "operator_workflow_delta": "Generate deterministic fuzz harnesses before manual deep-dive.",
+      "expected_metric_impact": {
+        "accepted_usefulness_points": "medium_high",
+        "time_to_first_accepted_output": "moderate",
+        "repair_rework": "moderate",
+        "evidence_completeness": "medium"
+      },
+      "likely_strengths": [
+        "edge-case discovery",
+        "regression harness value"
+      ],
+      "likely_weaknesses": [
+        "triage burden",
+        "weaker narrative evidence if not curated"
+      ],
+      "admissible_risk": "medium",
+      "evidence_strategy": "failing seed traces plus minimized repro",
+      "replayability_expectations": "high",
+      "likely_archive_contribution": "deterministic failing seeds, minimization recipes, regression harness templates"
+    },
+    {
+      "id": "governance_parameter_simulator",
+      "title": "Governance Parameter Simulator Seed",
+      "mutation_thesis": "Stress governance outcomes under parameter shifts (quorum, challenge windows, role thresholds).",
+      "operator_workflow_delta": "Run deterministic parameter sweep before line-level issue extraction.",
+      "expected_metric_impact": {
+        "accepted_usefulness_points": "medium",
+        "time_to_first_accepted_output": "slower",
+        "repair_rework": "moderate",
+        "evidence_completeness": "medium_high"
+      },
+      "likely_strengths": [
+        "policy clarity",
+        "governance explainability"
+      ],
+      "likely_weaknesses": [
+        "can underperform on low-level contract anti-patterns"
+      ],
+      "admissible_risk": "medium",
+      "evidence_strategy": "parameter trace + adjudication rationale",
+      "replayability_expectations": "high",
+      "likely_archive_contribution": "parameter-sweep matrices, governance sensitivity traces, policy stress-test notebooks"
+    },
+    {
+      "id": "invariant_library",
+      "title": "Invariant Library Seed",
+      "mutation_thesis": "Start from reusable governance and settlement invariants, then map code paths against them.",
+      "operator_workflow_delta": "Require each finding to link to broken invariant and state-transition path.",
+      "expected_metric_impact": {
+        "accepted_usefulness_points": "high",
+        "time_to_first_accepted_output": "fast",
+        "repair_rework": "low",
+        "evidence_completeness": "high"
+      },
+      "likely_strengths": [
+        "high signal",
+        "clean reproduction framing",
+        "packageability"
+      ],
+      "likely_weaknesses": [
+        "needs stronger ontology maintenance"
+      ],
+      "admissible_risk": "low",
+      "evidence_strategy": "invariant-to-code trace plus repro packet",
+      "replayability_expectations": "very_high",
+      "likely_archive_contribution": "canonical invariant ontology, state-transition trace grammar, reusable verification clauses"
+    }
+  ],
+  "mandate_1_summary": {
+    "mandate": "mandate_1_governance_dispute_correctness",
+    "winner": "invariant_library",
+    "selection_basis": "deterministic lexicographic rank across usefulness, speed, rework, evidence, safety, package quality",
+    "results": [
+      {
+        "seed": "audit_factory",
+        "accepted_findings": [
+          {
+            "contract": "ChallengePolicyModuleV25Fixture.sol",
+            "function": "settleChallengeReward",
+            "issue_type": "proofless_settlement",
+            "severity": "high",
+            "issue_statement": "proofless_settlement detected in settleChallengeReward.",
+            "code_pointer": "ChallengePolicyModuleV25Fixture.sol:L23",
+            "broken_invariant_or_state_path": "",
+            "reproduction_artifact": "deterministic_trace::ChallengePolicyModuleV25Fixture.sol::settleChallengeReward",
+            "severity_rationale": "",
+            "suggested_fix": "",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": false,
+            "includes_harness_artifact": false,
+            "discovery_step": 9,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          },
+          {
+            "contract": "CouncilGovernanceV25Fixture.sol",
+            "function": "finalizePayout",
+            "issue_type": "no_challenge_window",
+            "severity": "medium",
+            "issue_statement": "no_challenge_window detected in finalizePayout.",
+            "code_pointer": "CouncilGovernanceV25Fixture.sol:L16",
+            "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+            "reproduction_artifact": "deterministic_trace::CouncilGovernanceV25Fixture.sol::finalizePayout",
+            "severity_rationale": "Funds or control can move before proper validation guardrails.",
+            "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": true,
+            "includes_harness_artifact": false,
+            "discovery_step": 10,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          },
+          {
+            "contract": "CouncilGovernanceV25Fixture.sol",
+            "function": "swapImplementation",
+            "issue_type": "instant_upgrade",
+            "severity": "high",
+            "issue_statement": "instant_upgrade detected in swapImplementation.",
+            "code_pointer": "CouncilGovernanceV25Fixture.sol:L23",
+            "broken_invariant_or_state_path": "",
+            "reproduction_artifact": "deterministic_trace::CouncilGovernanceV25Fixture.sol::swapImplementation",
+            "severity_rationale": "",
+            "suggested_fix": "",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": false,
+            "includes_harness_artifact": false,
+            "discovery_step": 11,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          }
+        ],
+        "rejected_findings": [
+          {
+            "contract": "ChallengePolicyModuleV25Fixture.sol",
+            "function": "settleChallengeReward",
+            "issue_type": "no_challenge_window",
+            "severity": "medium",
+            "issue_statement": "no_challenge_window detected in settleChallengeReward.",
+            "code_pointer": "ChallengePolicyModuleV25Fixture.sol:L23",
+            "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+            "reproduction_artifact": "deterministic_trace::ChallengePolicyModuleV25Fixture.sol::settleChallengeReward",
+            "severity_rationale": "Funds or control can move before proper validation guardrails.",
+            "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": true,
+            "includes_harness_artifact": false,
+            "discovery_step": 8,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          },
+          {
+            "contract": "ChallengePolicyModuleV25Fixture.sol",
+            "function": "lockBond",
+            "issue_type": "unsupported_authority_escalation",
+            "severity": "high",
+            "issue_statement": "Claim is not supported by synthetic ground truth.",
+            "code_pointer": "ChallengePolicyModuleV25Fixture.sol:L1",
+            "broken_invariant_or_state_path": "",
+            "reproduction_artifact": "",
+            "severity_rationale": "",
+            "suggested_fix": "",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": false,
+            "includes_harness_artifact": false,
+            "discovery_step": 13,
+            "unsupported_claim": true,
+            "severity_inflation": true,
+            "package_dependencies": []
+          }
+        ],
+        "metrics": {
+          "accepted_usefulness_points": 15,
+          "accepted_count": 3,
+          "time_to_first_accepted_output": 9,
+          "repair_rework": 0.667,
+          "evidence_completeness": 0.714,
+          "unsupported_claim_rate": 0.2,
+          "severity_inflation_count": 1,
+          "packageable_artifact_quality": 0.68,
+          "aoy": 0.75,
+          "package_dependence_rate": 0.0
+        }
+      },
+      {
+        "seed": "exploit_replay",
+        "accepted_findings": [
+          {
+            "contract": "ChallengePolicyModuleV25Fixture.sol",
+            "function": "refundBond",
+            "issue_type": "treasury_drift",
+            "severity": "high",
+            "issue_statement": "treasury_drift detected in refundBond.",
+            "code_pointer": "ChallengePolicyModuleV25Fixture.sol:L17",
+            "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+            "reproduction_artifact": "deterministic_trace::ChallengePolicyModuleV25Fixture.sol::refundBond",
+            "severity_rationale": "Funds or control can move before proper validation guardrails.",
+            "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": true,
+            "includes_harness_artifact": false,
+            "discovery_step": 10,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          },
+          {
+            "contract": "ChallengePolicyModuleV25Fixture.sol",
+            "function": "settleChallengeReward",
+            "issue_type": "proofless_settlement",
+            "severity": "high",
+            "issue_statement": "proofless_settlement detected in settleChallengeReward.",
+            "code_pointer": "ChallengePolicyModuleV25Fixture.sol:L23",
+            "broken_invariant_or_state_path": "",
+            "reproduction_artifact": "deterministic_trace::ChallengePolicyModuleV25Fixture.sol::settleChallengeReward",
+            "severity_rationale": "",
+            "suggested_fix": "",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": false,
+            "includes_harness_artifact": false,
+            "discovery_step": 11,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          }
+        ],
+        "rejected_findings": [
+          {
+            "contract": "ChallengePolicyModuleV25Fixture.sol",
+            "function": "lockBond",
+            "issue_type": "unsupported_authority_escalation",
+            "severity": "high",
+            "issue_statement": "Claim is not supported by synthetic ground truth.",
+            "code_pointer": "ChallengePolicyModuleV25Fixture.sol:L1",
+            "broken_invariant_or_state_path": "",
+            "reproduction_artifact": "",
+            "severity_rationale": "",
+            "suggested_fix": "",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": false,
+            "includes_harness_artifact": false,
+            "discovery_step": 13,
+            "unsupported_claim": true,
+            "severity_inflation": true,
+            "package_dependencies": []
+          }
+        ],
+        "metrics": {
+          "accepted_usefulness_points": 12,
+          "accepted_count": 2,
+          "time_to_first_accepted_output": 10,
+          "repair_rework": 0.5,
+          "evidence_completeness": 0.786,
+          "unsupported_claim_rate": 0.333,
+          "severity_inflation_count": 1,
+          "packageable_artifact_quality": 0.62,
+          "aoy": 0.6,
+          "package_dependence_rate": 0.0
+        }
+      },
+      {
+        "seed": "fuzz_harness",
+        "accepted_findings": [
+          {
+            "contract": "ChallengePolicyModuleV25Fixture.sol",
+            "function": "refundBond",
+            "issue_type": "treasury_drift",
+            "severity": "high",
+            "issue_statement": "treasury_drift detected in refundBond.",
+            "code_pointer": "ChallengePolicyModuleV25Fixture.sol:L17",
+            "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+            "reproduction_artifact": "deterministic_trace::ChallengePolicyModuleV25Fixture.sol::refundBond",
+            "severity_rationale": "Funds or control can move before proper validation guardrails.",
+            "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": true,
+            "includes_harness_artifact": true,
+            "discovery_step": 9,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          },
+          {
+            "contract": "ChallengePolicyModuleV25Fixture.sol",
+            "function": "settleChallengeReward",
+            "issue_type": "proofless_settlement",
+            "severity": "high",
+            "issue_statement": "proofless_settlement detected in settleChallengeReward.",
+            "code_pointer": "ChallengePolicyModuleV25Fixture.sol:L23",
+            "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+            "reproduction_artifact": "deterministic_trace::ChallengePolicyModuleV25Fixture.sol::settleChallengeReward",
+            "severity_rationale": "Funds or control can move before proper validation guardrails.",
+            "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": true,
+            "includes_harness_artifact": true,
+            "discovery_step": 11,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          },
+          {
+            "contract": "CouncilGovernanceV25Fixture.sol",
+            "function": "finalizePayout",
+            "issue_type": "no_challenge_window",
+            "severity": "medium",
+            "issue_statement": "no_challenge_window detected in finalizePayout.",
+            "code_pointer": "CouncilGovernanceV25Fixture.sol:L16",
+            "broken_invariant_or_state_path": "",
+            "reproduction_artifact": "deterministic_trace::CouncilGovernanceV25Fixture.sol::finalizePayout",
+            "severity_rationale": "",
+            "suggested_fix": "",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": false,
+            "includes_harness_artifact": true,
+            "discovery_step": 12,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          }
+        ],
+        "rejected_findings": [
+          {
+            "contract": "ChallengePolicyModuleV25Fixture.sol",
+            "function": "settleChallengeReward",
+            "issue_type": "no_challenge_window",
+            "severity": "medium",
+            "issue_statement": "no_challenge_window detected in settleChallengeReward.",
+            "code_pointer": "ChallengePolicyModuleV25Fixture.sol:L23",
+            "broken_invariant_or_state_path": "",
+            "reproduction_artifact": "deterministic_trace::ChallengePolicyModuleV25Fixture.sol::settleChallengeReward",
+            "severity_rationale": "",
+            "suggested_fix": "",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": false,
+            "includes_harness_artifact": true,
+            "discovery_step": 10,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          }
+        ],
+        "metrics": {
+          "accepted_usefulness_points": 23,
+          "accepted_count": 3,
+          "time_to_first_accepted_output": 9,
+          "repair_rework": 0.333,
+          "evidence_completeness": 0.857,
+          "unsupported_claim_rate": 0.0,
+          "severity_inflation_count": 0,
+          "packageable_artifact_quality": 0.72,
+          "aoy": 1.15,
+          "package_dependence_rate": 0.0
+        }
+      },
+      {
+        "seed": "governance_parameter_simulator",
+        "accepted_findings": [
+          {
+            "contract": "CouncilGovernanceV25Fixture.sol",
+            "function": "finalizePayout",
+            "issue_type": "no_challenge_window",
+            "severity": "medium",
+            "issue_statement": "no_challenge_window detected in finalizePayout.",
+            "code_pointer": "CouncilGovernanceV25Fixture.sol:L16",
+            "broken_invariant_or_state_path": "",
+            "reproduction_artifact": "deterministic_trace::CouncilGovernanceV25Fixture.sol::finalizePayout",
+            "severity_rationale": "",
+            "suggested_fix": "",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": false,
+            "includes_harness_artifact": false,
+            "discovery_step": 12,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          },
+          {
+            "contract": "CouncilGovernanceV25Fixture.sol",
+            "function": "swapImplementation",
+            "issue_type": "instant_upgrade",
+            "severity": "high",
+            "issue_statement": "instant_upgrade detected in swapImplementation.",
+            "code_pointer": "CouncilGovernanceV25Fixture.sol:L23",
+            "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+            "reproduction_artifact": "deterministic_trace::CouncilGovernanceV25Fixture.sol::swapImplementation",
+            "severity_rationale": "Funds or control can move before proper validation guardrails.",
+            "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": true,
+            "includes_harness_artifact": false,
+            "discovery_step": 13,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          }
+        ],
+        "rejected_findings": [
+          {
+            "contract": "ChallengePolicyModuleV25Fixture.sol",
+            "function": "settleChallengeReward",
+            "issue_type": "no_challenge_window",
+            "severity": "medium",
+            "issue_statement": "no_challenge_window detected in settleChallengeReward.",
+            "code_pointer": "ChallengePolicyModuleV25Fixture.sol:L23",
+            "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+            "reproduction_artifact": "deterministic_trace::ChallengePolicyModuleV25Fixture.sol::settleChallengeReward",
+            "severity_rationale": "Funds or control can move before proper validation guardrails.",
+            "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": true,
+            "includes_harness_artifact": false,
+            "discovery_step": 11,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          }
+        ],
+        "metrics": {
+          "accepted_usefulness_points": 10,
+          "accepted_count": 2,
+          "time_to_first_accepted_output": 12,
+          "repair_rework": 0.5,
+          "evidence_completeness": 0.786,
+          "unsupported_claim_rate": 0.0,
+          "severity_inflation_count": 0,
+          "packageable_artifact_quality": 0.76,
+          "aoy": 0.5,
+          "package_dependence_rate": 0.0
+        }
+      },
+      {
+        "seed": "invariant_library",
+        "accepted_findings": [
+          {
+            "contract": "ChallengePolicyModuleV25Fixture.sol",
+            "function": "refundBond",
+            "issue_type": "treasury_drift",
+            "severity": "high",
+            "issue_statement": "treasury_drift detected in refundBond.",
+            "code_pointer": "ChallengePolicyModuleV25Fixture.sol:L17",
+            "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+            "reproduction_artifact": "deterministic_trace::ChallengePolicyModuleV25Fixture.sol::refundBond",
+            "severity_rationale": "Funds or control can move before proper validation guardrails.",
+            "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": true,
+            "includes_harness_artifact": true,
+            "discovery_step": 6,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          },
+          {
+            "contract": "ChallengePolicyModuleV25Fixture.sol",
+            "function": "settleChallengeReward",
+            "issue_type": "proofless_settlement",
+            "severity": "high",
+            "issue_statement": "proofless_settlement detected in settleChallengeReward.",
+            "code_pointer": "ChallengePolicyModuleV25Fixture.sol:L23",
+            "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+            "reproduction_artifact": "deterministic_trace::ChallengePolicyModuleV25Fixture.sol::settleChallengeReward",
+            "severity_rationale": "Funds or control can move before proper validation guardrails.",
+            "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": true,
+            "includes_harness_artifact": true,
+            "discovery_step": 8,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          },
+          {
+            "contract": "CouncilGovernanceV25Fixture.sol",
+            "function": "finalizePayout",
+            "issue_type": "no_challenge_window",
+            "severity": "medium",
+            "issue_statement": "no_challenge_window detected in finalizePayout.",
+            "code_pointer": "CouncilGovernanceV25Fixture.sol:L16",
+            "broken_invariant_or_state_path": "",
+            "reproduction_artifact": "deterministic_trace::CouncilGovernanceV25Fixture.sol::finalizePayout",
+            "severity_rationale": "",
+            "suggested_fix": "",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": false,
+            "includes_harness_artifact": true,
+            "discovery_step": 9,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          },
+          {
+            "contract": "CouncilGovernanceV25Fixture.sol",
+            "function": "swapImplementation",
+            "issue_type": "instant_upgrade",
+            "severity": "high",
+            "issue_statement": "instant_upgrade detected in swapImplementation.",
+            "code_pointer": "CouncilGovernanceV25Fixture.sol:L23",
+            "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+            "reproduction_artifact": "deterministic_trace::CouncilGovernanceV25Fixture.sol::swapImplementation",
+            "severity_rationale": "Funds or control can move before proper validation guardrails.",
+            "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": true,
+            "includes_harness_artifact": true,
+            "discovery_step": 10,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          }
+        ],
+        "rejected_findings": [
+          {
+            "contract": "ChallengePolicyModuleV25Fixture.sol",
+            "function": "settleChallengeReward",
+            "issue_type": "no_challenge_window",
+            "severity": "medium",
+            "issue_statement": "no_challenge_window detected in settleChallengeReward.",
+            "code_pointer": "ChallengePolicyModuleV25Fixture.sol:L23",
+            "broken_invariant_or_state_path": "",
+            "reproduction_artifact": "deterministic_trace::ChallengePolicyModuleV25Fixture.sol::settleChallengeReward",
+            "severity_rationale": "",
+            "suggested_fix": "",
+            "traceability_to_scope": "mandate_1_governance_dispute_correctness",
+            "uses_release_gate_recommendation": false,
+            "includes_harness_artifact": true,
+            "discovery_step": 7,
+            "unsupported_claim": false,
+            "severity_inflation": false,
+            "package_dependencies": []
+          }
+        ],
+        "metrics": {
+          "accepted_usefulness_points": 32,
+          "accepted_count": 4,
+          "time_to_first_accepted_output": 6,
+          "repair_rework": 0.25,
+          "evidence_completeness": 0.893,
+          "unsupported_claim_rate": 0.0,
+          "severity_inflation_count": 0,
+          "packageable_artifact_quality": 0.93,
+          "aoy": 1.6,
+          "package_dependence_rate": 0.0
+        }
+      }
+    ]
+  },
+  "mandate_2_control_summary": {
+    "seed": "invariant_library",
+    "accepted_findings": [
+      {
+        "contract": "SignedAttestationVerifierV25Fixture.sol",
+        "function": "withdrawBond",
+        "issue_type": "treasury_drift",
+        "severity": "high",
+        "issue_statement": "treasury_drift detected in withdrawBond.",
+        "code_pointer": "SignedAttestationVerifierV25Fixture.sol:L20",
+        "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+        "reproduction_artifact": "deterministic_trace::SignedAttestationVerifierV25Fixture.sol::withdrawBond",
+        "severity_rationale": "Funds or control can move before proper validation guardrails.",
+        "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+        "traceability_to_scope": "mandate_2_threshold_attestation_correctness",
+        "uses_release_gate_recommendation": true,
+        "includes_harness_artifact": true,
+        "discovery_step": 6,
+        "unsupported_claim": false,
+        "severity_inflation": false,
+        "package_dependencies": []
+      },
+      {
+        "contract": "ThresholdNetworkAdapterV25Fixture.sol",
+        "function": "releaseEscrow",
+        "issue_type": "proofless_settlement",
+        "severity": "high",
+        "issue_statement": "proofless_settlement detected in releaseEscrow.",
+        "code_pointer": "ThresholdNetworkAdapterV25Fixture.sol:L15",
+        "broken_invariant_or_state_path": "",
+        "reproduction_artifact": "deterministic_trace::ThresholdNetworkAdapterV25Fixture.sol::releaseEscrow",
+        "severity_rationale": "",
+        "suggested_fix": "",
+        "traceability_to_scope": "mandate_2_threshold_attestation_correctness",
+        "uses_release_gate_recommendation": false,
+        "includes_harness_artifact": true,
+        "discovery_step": 7,
+        "unsupported_claim": false,
+        "severity_inflation": false,
+        "package_dependencies": []
+      }
+    ],
+    "rejected_findings": [],
+    "metrics": {
+      "accepted_usefulness_points": 16,
+      "accepted_count": 2,
+      "time_to_first_accepted_output": 6,
+      "repair_rework": 0.5,
+      "evidence_completeness": 0.786,
+      "unsupported_claim_rate": 0.0,
+      "severity_inflation_count": 0,
+      "packageable_artifact_quality": 0.93,
+      "aoy": 1.067,
+      "package_dependence_rate": 0.0
+    },
+    "lane": "control"
+  },
+  "mandate_2_treatment_summary": {
+    "seed": "invariant_library",
+    "accepted_findings": [
+      {
+        "contract": "SignedAttestationVerifierV25Fixture.sol",
+        "function": "finalizeAttestation",
+        "issue_type": "no_challenge_window",
+        "severity": "medium",
+        "issue_statement": "no_challenge_window detected in finalizeAttestation.",
+        "code_pointer": "SignedAttestationVerifierV25Fixture.sol:L13",
+        "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+        "reproduction_artifact": "deterministic_trace::SignedAttestationVerifierV25Fixture.sol::finalizeAttestation",
+        "severity_rationale": "Funds or control can move before proper validation guardrails.",
+        "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+        "traceability_to_scope": "mandate_2_threshold_attestation_correctness",
+        "uses_release_gate_recommendation": true,
+        "includes_harness_artifact": true,
+        "discovery_step": 4,
+        "unsupported_claim": false,
+        "severity_inflation": false,
+        "package_dependencies": [
+          "ontology",
+          "invariant_library",
+          "workflow_template",
+          "query_bundle",
+          "mechanism_library",
+          "release_gate_packet",
+          "skill_wrapper"
+        ]
+      },
+      {
+        "contract": "SignedAttestationVerifierV25Fixture.sol",
+        "function": "withdrawBond",
+        "issue_type": "treasury_drift",
+        "severity": "high",
+        "issue_statement": "treasury_drift detected in withdrawBond.",
+        "code_pointer": "SignedAttestationVerifierV25Fixture.sol:L20",
+        "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+        "reproduction_artifact": "deterministic_trace::SignedAttestationVerifierV25Fixture.sol::withdrawBond",
+        "severity_rationale": "Funds or control can move before proper validation guardrails.",
+        "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+        "traceability_to_scope": "mandate_2_threshold_attestation_correctness",
+        "uses_release_gate_recommendation": true,
+        "includes_harness_artifact": true,
+        "discovery_step": 5,
+        "unsupported_claim": false,
+        "severity_inflation": false,
+        "package_dependencies": [
+          "ontology",
+          "invariant_library",
+          "workflow_template",
+          "query_bundle",
+          "mechanism_library",
+          "release_gate_packet",
+          "skill_wrapper"
+        ]
+      },
+      {
+        "contract": "ThresholdNetworkAdapterV25Fixture.sol",
+        "function": "releaseEscrow",
+        "issue_type": "proofless_settlement",
+        "severity": "high",
+        "issue_statement": "proofless_settlement detected in releaseEscrow.",
+        "code_pointer": "ThresholdNetworkAdapterV25Fixture.sol:L15",
+        "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+        "reproduction_artifact": "deterministic_trace::ThresholdNetworkAdapterV25Fixture.sol::releaseEscrow",
+        "severity_rationale": "Funds or control can move before proper validation guardrails.",
+        "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+        "traceability_to_scope": "mandate_2_threshold_attestation_correctness",
+        "uses_release_gate_recommendation": true,
+        "includes_harness_artifact": true,
+        "discovery_step": 7,
+        "unsupported_claim": false,
+        "severity_inflation": false,
+        "package_dependencies": [
+          "ontology",
+          "invariant_library",
+          "workflow_template",
+          "query_bundle",
+          "mechanism_library",
+          "release_gate_packet",
+          "skill_wrapper"
+        ]
+      }
+    ],
+    "rejected_findings": [
+      {
+        "contract": "ThresholdNetworkAdapterV25Fixture.sol",
+        "function": "releaseEscrow",
+        "issue_type": "no_challenge_window",
+        "severity": "medium",
+        "issue_statement": "no_challenge_window detected in releaseEscrow.",
+        "code_pointer": "ThresholdNetworkAdapterV25Fixture.sol:L15",
+        "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+        "reproduction_artifact": "deterministic_trace::ThresholdNetworkAdapterV25Fixture.sol::releaseEscrow",
+        "severity_rationale": "Funds or control can move before proper validation guardrails.",
+        "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+        "traceability_to_scope": "mandate_2_threshold_attestation_correctness",
+        "uses_release_gate_recommendation": true,
+        "includes_harness_artifact": true,
+        "discovery_step": 6,
+        "unsupported_claim": false,
+        "severity_inflation": false,
+        "package_dependencies": [
+          "ontology",
+          "invariant_library",
+          "workflow_template",
+          "query_bundle",
+          "mechanism_library",
+          "release_gate_packet",
+          "skill_wrapper"
+        ]
+      }
+    ],
+    "metrics": {
+      "accepted_usefulness_points": 25,
+      "accepted_count": 3,
+      "time_to_first_accepted_output": 4,
+      "repair_rework": 0.0,
+      "evidence_completeness": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "severity_inflation_count": 0,
+      "packageable_artifact_quality": 1.0,
+      "aoy": 1.667,
+      "package_dependence_rate": 1.0
+    },
+    "lane": "treatment"
+  },
+  "scorecard": {
+    "thresholds": {
+      "aoy_uplift": 0.35,
+      "speed_uplift": 0.3,
+      "repair_rework_reduction": 0.4,
+      "evidence_completeness_uplift": 0.2,
+      "package_dependence_rate": 0.3
+    },
+    "control": {
+      "accepted_usefulness_points": 16,
+      "accepted_count": 2,
+      "time_to_first_accepted_output": 6,
+      "repair_rework": 0.5,
+      "evidence_completeness": 0.786,
+      "unsupported_claim_rate": 0.0,
+      "severity_inflation_count": 0,
+      "packageable_artifact_quality": 0.93,
+      "aoy": 1.067,
+      "package_dependence_rate": 0.0
+    },
+    "treatment": {
+      "accepted_usefulness_points": 25,
+      "accepted_count": 3,
+      "time_to_first_accepted_output": 4,
+      "repair_rework": 0.0,
+      "evidence_completeness": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "severity_inflation_count": 0,
+      "packageable_artifact_quality": 1.0,
+      "aoy": 1.667,
+      "package_dependence_rate": 1.0
+    },
+    "comparison": {
+      "aoy_uplift": 0.562,
+      "speed_uplift": 0.333,
+      "repair_rework_reduction": 1.0,
+      "evidence_completeness_uplift": 0.272,
+      "safety_regression": false,
+      "package_dependence_rate": 1.0
+    },
+    "passes": {
+      "aoy_uplift": true,
+      "speed_uplift": true,
+      "repair_rework_reduction": true,
+      "evidence_completeness_uplift": true,
+      "no_safety_regression": true,
+      "package_dependence_rate": true,
+      "adjacent_mandate_proof": true
+    }
+  },
+  "settlement_release_packet": {
+    "id": "release_gate_packet",
+    "timestamp": "2026-01-01T00:00:00Z",
+    "status": "pass",
+    "requirements": [
+      "accepted findings with repro",
+      "evidence completeness >= 0.9",
+      "unsupported claim rate <= 0.1",
+      "scope traceability"
+    ]
+  },
+  "chronicle_entry": {
+    "id": "chronicle_protocol_correctness_first_stepping_stone",
+    "sector": "protocol_and_smart_contract_correctness",
+    "parent_business": "Protocol Cybersecurity Studio",
+    "winning_seed": "invariant_library",
+    "frozen_sub_pack": "GovernanceValidationPack-v1",
+    "sector_stepping_stone": "ProtocolCybersecurityPack-v1",
+    "adjacent_proof_passed": true,
+    "timestamp": "2026-01-01T00:00:00Z"
+  },
+  "governance_ruling": {
+    "id": "governance_ruling.json",
+    "status": "pass",
+    "decision": "emit_protocol_cybersecurity_sovereign",
+    "justification": "Threshold scorecard evaluated under deterministic control-vs-treatment adjacent mandate assay.",
+    "linked_artifact": "ProtocolCybersecuritySovereign-v1.synthetic.json",
+    "timestamp": "2026-01-01T00:00:00Z",
+    "disclaimer": "Synthetic governance ruling for local replay; not a real-world governance decision."
+  },
+  "sovereign_or_fail_closed_artifact": {
+    "id": "ProtocolCybersecuritySovereign-v1.synthetic.json",
+    "legacy_aliases": [
+      "ProtocolAssuranceSovereign-v1.synthetic.json"
+    ],
+    "type": "synthetic_sovereign_artifact",
+    "status": "emitted",
+    "depends_on": "ProtocolCybersecurityPack-v1",
+    "package_hash": "6156b08893dbc919edde510f4feb541777194f302fac29ca9b8007ab6c8ffe5a",
+    "constitutional_order": [
+      "identity",
+      "proof",
+      "settlement",
+      "governance"
+    ],
+    "invariant": [
+      "no value without evidence",
+      "no autonomy without authority",
+      "no settlement without validation"
+    ],
+    "timestamp": "2026-01-01T00:00:00Z",
+    "positioning": "First narrow, high-verification production organ and compounding correctness sovereign form in synthetic demo context.",
+    "future_seed": "Seed of a future broader \u03b1-AGI Cybersecurity Sovereign.",
+    "not_claimed": [
+      "This does NOT prove that a full cybersecurity sovereign already exists.",
+      "This does NOT claim cybersecurity is solved once and for all.",
+      "This does NOT claim thermodynamic framing is literal physical law."
+    ],
+    "disclaimer": "Synthetic local demo artifact; not a real-world proof."
+  },
+  "synthetic_disclaimer": "This docket is synthetic, local, replayable, and falsifiable. It is not a real-world proof pack."
+}

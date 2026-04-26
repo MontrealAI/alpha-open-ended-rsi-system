@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Architect Recommendation v2.8",
+  "type": "object",
+  "required": [
+    "recommendation_id",
+    "next_seed",
+    "next_job",
+    "blocked_proof_requirements",
+    "basis",
+    "claim_boundary"
+  ]
+}

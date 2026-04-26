@@ -1,0 +1,6 @@
+{
+  "file": "extraction_schema.json",
+  "note": "Transparent scaffold. No reviewer-approved mandate-1 content committed yet.",
+  "package": "GovernanceValidationPack-v1",
+  "status": "PENDING_MANDATE_1_HUMAN_ADJUDICATION"
+}

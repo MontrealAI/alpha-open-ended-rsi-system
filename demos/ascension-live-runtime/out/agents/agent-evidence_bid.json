@@ -1,0 +1,7 @@
+{
+  "job_id": "job-001",
+  "agent_id": "agent-evidence",
+  "strategy": "evidence_heavy",
+  "bid_cost": 18,
+  "bid_score": 0.76
+}

@@ -1,0 +1,28 @@
+{
+  "runtime_id": "ascension-runtime-local-001",
+  "id": "insight-protocol-correctness-001",
+  "public_role": "discovers AGI Alpha opportunities",
+  "repo_role": "opportunity / wedge selector",
+  "selected_wedge": "protocol and smart-contract correctness",
+  "wedge_basis": [
+    "verification is strongest",
+    "replay is strong",
+    "review is fast",
+    "evidence is objective",
+    "archive density builds fastest",
+    "buyers already pay for this category"
+  ],
+  "frontier_queue": [
+    "formal verification automation",
+    "fuzz harness hardening",
+    "governance parameter simulation"
+  ],
+  "repo_evidence": [
+    "demos/protocol_smart_contract_correctness_demo/README.md",
+    "demos/adjacent_mandate_reuse_proof_demo/README.md",
+    "demos/adjacent_mandate_reuse_proof_real_v1/README.md",
+    "demos/open-ended-rsi-system/README.md"
+  ],
+  "status": "deterministic local artifact; external foresight not proven",
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

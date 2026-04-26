@@ -1,0 +1,7 @@
+{
+  "loop_id": "next_loop_001",
+  "stage_a": "execute blinded adjacent transfer",
+  "stage_b": "conditional only on stage_a_pass",
+  "mark_upgrade_gate": "evidence maturity threshold",
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

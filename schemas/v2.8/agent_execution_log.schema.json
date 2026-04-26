@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Execution Log v2.8",
+  "type": "object",
+  "required": [
+    "runtime_id",
+    "selected_agent",
+    "execution",
+    "claim_boundary"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "mandate_id": "mandate_1_governance_dispute_correctness",
+  "issues": [
+    {
+      "contract": "CouncilGovernanceV25Fixture.sol",
+      "function": "finalizePayout",
+      "issue_type": "no_challenge_window",
+      "severity": "medium"
+    },
+    {
+      "contract": "CouncilGovernanceV25Fixture.sol",
+      "function": "swapImplementation",
+      "issue_type": "instant_upgrade",
+      "severity": "high"
+    },
+    {
+      "contract": "ChallengePolicyModuleV25Fixture.sol",
+      "function": "refundBond",
+      "issue_type": "treasury_drift",
+      "severity": "high"
+    },
+    {
+      "contract": "ChallengePolicyModuleV25Fixture.sol",
+      "function": "settleChallengeReward",
+      "issue_type": "proofless_settlement",
+      "severity": "high"
+    }
+  ]
+}

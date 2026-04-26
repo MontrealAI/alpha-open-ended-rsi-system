@@ -1,0 +1,7 @@
+{
+  "challengeId": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+  "seedId": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "reason": "mismatched_plaintext_hash_vs_manifest",
+  "evidenceHash": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+  "policyId": "0x1234123412341234123412341234123412341234123412341234123412341234"
+}

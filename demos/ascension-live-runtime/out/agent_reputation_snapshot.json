@@ -1,0 +1,18 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "agents": [
+    {
+      "agent_id": "agent-fast",
+      "reputation": 81.8
+    },
+    {
+      "agent_id": "agent-evidence",
+      "reputation": 85.2
+    },
+    {
+      "agent_id": "agent-balanced",
+      "reputation": 83.6
+    }
+  ],
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

@@ -1,0 +1,20 @@
+{
+  "package_name": "GovernanceValidationPack-v1",
+  "package_hash_sha256": "REPLACE_AFTER_MANDATE_1",
+  "freeze_time_utc": "REPLACE_AFTER_MANDATE_1",
+  "included_artifacts": [
+    "ontology.json",
+    "extraction_schema.json",
+    "mechanism_library.json",
+    "workflow_template.md",
+    "scoring_rubric.json",
+    "safety_routing_rules.yaml",
+    "query_bundle.json",
+    "openclaw_skill_wrapper.md"
+  ],
+  "no_edit_attestation": {
+    "attestor": "REPLACE_WITH_NAME",
+    "signed": false,
+    "notes": "No edits are allowed during Mandate 2 evaluation."
+  }
+}

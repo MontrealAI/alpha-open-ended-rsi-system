@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NovaSeedsV25DashboardSummary",
+  "type": "object",
+  "properties": {
+    "seed_count": {
+      "type": "integer"
+    },
+    "greenlit_count": {
+      "type": "integer"
+    },
+    "sovereign_count": {
+      "type": "integer"
+    },
+    "open_decryption_requests": {
+      "type": "integer"
+    },
+    "open_challenges": {
+      "type": "integer"
+    },
+    "total_delegations": {
+      "type": "integer"
+    },
+    "total_reward_events": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "seed_count",
+    "greenlit_count",
+    "sovereign_count",
+    "open_decryption_requests",
+    "open_challenges",
+    "total_delegations",
+    "total_reward_events"
+  ]
+}

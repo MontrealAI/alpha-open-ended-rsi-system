@@ -1,0 +1,49 @@
+{
+  "name": "@montrealai/alpha-nova-seeds-contracts",
+  "version": "2.6.0-rc.1",
+  "private": true,
+  "description": "Hardhat deployment and verification workspace for alpha-nova-seeds contracts",
+  "engines": {
+    "node": ">=22.10.0"
+  },
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test",
+    "test:fork": "tsx scripts/deploy/assert-fork-env.ts && hardhat test --network hardhat test/deployment.smoke.ts test/mainnet-fork.posture.ts",
+    "lint:config": "tsx scripts/deploy/checklist.ts --validate-only",
+    "deploy:checklist": "tsx scripts/deploy/checklist.ts",
+    "deploy:fork": "hardhat run scripts/deploy/dryrun-mainnet-fork.ts --network hardhat",
+    "deploy:sepolia": "hardhat run scripts/deploy/deploy-sepolia.ts --network sepolia",
+    "deploy:mainnet": "hardhat run scripts/deploy/deploy-mainnet.ts --network mainnet",
+    "deploy:verify": "hardhat run scripts/deploy/verify-mainnet.ts --network mainnet",
+    "deploy:postcheck": "hardhat run scripts/deploy/postcheck-mainnet.ts --network mainnet",
+    "deploy:handoff": "hardhat run scripts/deploy/transfer-ownership.ts --network mainnet",
+    "deploy:ens": "hardhat run scripts/deploy/publish-ens-records.ts --network mainnet",
+    "test:unit": "hardhat test test/alpha-seed.lifecycle.ts test/registry.lifecycle.ts test/challenge.policy.ts test/governance.lifecycle.ts test/treasury.accounting.ts test/attestation.verifier.ts test/threshold.adapter.ts test/workflow.adapter.ts",
+    "test:contracts": "npm run test:contracts:unit && npm run test:contracts:fuzz && npm run test:contracts:invariant",
+    "test:contracts:unit": "forge test --match-path foundry-test/ContractsSecurity.t.sol",
+    "test:contracts:fuzz": "forge test --match-path foundry-test/FuzzAndInvariant.t.sol --match-test testFuzz_",
+    "test:contracts:invariant": "forge test --match-path foundry-test/FuzzAndInvariant.t.sol --match-test invariant_",
+    "test:contracts:echidna": "./scripts/security/run-echidna.sh",
+    "analyze:slither": "slither . --config-file slither.config.json --fail-high"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^4.0.2",
+    "@nomicfoundation/hardhat-ignition": "^3.0.3",
+    "@nomicfoundation/hardhat-ignition-ethers": "^3.0.3",
+    "@nomicfoundation/hardhat-verify": "^3.0.5",
+    "@types/node": "^22.7.6",
+    "hardhat": "^3.0.7",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "chai": "^5.1.1",
+    "@types/chai": "^5.0.0",
+    "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.0"
+  },
+  "type": "module"
+}

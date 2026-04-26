@@ -1,0 +1,5 @@
+{
+  "file": "extraction_schema.json",
+  "note": "Run build-kits locally with filled private assignment map to materialize control/treatment kits.",
+  "status": "BLINDING_OFFICER_REQUIRED"
+}

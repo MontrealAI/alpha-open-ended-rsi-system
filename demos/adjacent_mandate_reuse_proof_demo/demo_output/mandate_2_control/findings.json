@@ -1,0 +1,30 @@
+[
+  {
+    "contract": "InstantFinalize.sol",
+    "function": "finalize",
+    "issue_type": "proofless_settlement",
+    "severity": "high",
+    "rationale": "Value-moving path lacks explicit proof/validation/challenge gate.",
+    "evidence_lines": [
+      20
+    ],
+    "snippet": "",
+    "recommended_fix": "",
+    "rule_source": "generic",
+    "discovery_step": 7
+  },
+  {
+    "contract": "InstantFinalize.sol",
+    "function": "finalize",
+    "issue_type": "no_challenge_window",
+    "severity": "medium",
+    "rationale": "Settlement path appears immediate after approval state with no explicit challenge/delay barrier.",
+    "evidence_lines": [
+      20
+    ],
+    "snippet": "",
+    "recommended_fix": "",
+    "rule_source": "generic",
+    "discovery_step": 7
+  }
+]

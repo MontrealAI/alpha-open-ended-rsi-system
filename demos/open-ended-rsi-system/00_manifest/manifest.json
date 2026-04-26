@@ -1,0 +1,24 @@
+{
+  "demo": "open-ended-rsi-system",
+  "release_target": "v2.8.0-rc.2",
+  "timestamp": "2026-04-22T00:00:00+00:00",
+  "deterministic_seed": 2802,
+  "modes": [
+    "DISCO",
+    "Arnold"
+  ],
+  "phases": [
+    "bounded",
+    "expanding",
+    "increasingly_autonomous"
+  ],
+  "real_mandate_1": {
+    "definition": "repo-native code/docs/schema/proof surfaces with deterministic local probes; synthetic adjudication only where external validation is unavailable",
+    "probe_count": 5
+  },
+  "determinism_contract": {
+    "candidate_pool_size": 48,
+    "neighborhood_size": 24,
+    "frontier_whitelist_size": 6
+  }
+}

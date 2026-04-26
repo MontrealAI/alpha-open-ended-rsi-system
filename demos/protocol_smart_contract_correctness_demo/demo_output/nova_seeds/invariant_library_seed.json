@@ -1,0 +1,24 @@
+{
+  "id": "invariant_library",
+  "title": "Invariant Library Seed",
+  "mutation_thesis": "Start from reusable governance and settlement invariants, then map code paths against them.",
+  "operator_workflow_delta": "Require each finding to link to broken invariant and state-transition path.",
+  "expected_metric_impact": {
+    "accepted_usefulness_points": "high",
+    "time_to_first_accepted_output": "fast",
+    "repair_rework": "low",
+    "evidence_completeness": "high"
+  },
+  "likely_strengths": [
+    "high signal",
+    "clean reproduction framing",
+    "packageability"
+  ],
+  "likely_weaknesses": [
+    "needs stronger ontology maintenance"
+  ],
+  "admissible_risk": "low",
+  "evidence_strategy": "invariant-to-code trace plus repro packet",
+  "replayability_expectations": "very_high",
+  "likely_archive_contribution": "canonical invariant ontology, state-transition trace grammar, reusable verification clauses"
+}

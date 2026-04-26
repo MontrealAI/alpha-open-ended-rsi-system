@@ -1,0 +1,34 @@
+{
+  "aggregate_package_hash": "0307d764e409c486a013e3794c2c8c7b1b5e2bc8b93834aebc20ffc07d6b472d",
+  "file_sha256": {
+    "extraction_schema.json": "166cbd930b7e455cac8e9fc6739a324a19daaab98180456071e642c3dfa2a74c",
+    "mechanism_library.json": "72d71d687b7d3cbd639cc55a4743fc8f65e70adc88aa5d1ecaa0e86255321cad",
+    "ontology.json": "c40a8fdcc0f6f953498e6639c67d00b51921572f0e38d6cf4e4b3c001ecb91b5",
+    "query_bundle.json": "8a3b84dbb7ef928b7134ccab68cac8b32a2a3d0955eb9d292bf2cfc88ff0098f",
+    "safety_routing_rules.md": "03ad63c11004b3e591f5d608f783b8d99f6f63d97814dea24402d21afb1b2a0b",
+    "scoring_rubric.md": "03ad63c11004b3e591f5d608f783b8d99f6f63d97814dea24402d21afb1b2a0b",
+    "workflow_template.md": "03ad63c11004b3e591f5d608f783b8d99f6f63d97814dea24402d21afb1b2a0b"
+  },
+  "freeze_timestamp": "2026-04-25T19:57:19+00:00",
+  "human_adjudication_status": "PENDING_HUMAN_ADJUDICATION",
+  "included_files": [
+    "ontology.json",
+    "query_bundle.json",
+    "workflow_template.md",
+    "mechanism_library.json",
+    "safety_routing_rules.md",
+    "scoring_rubric.md",
+    "extraction_schema.json"
+  ],
+  "lineage_note": "Frozen package intended for blinded kit construction only.",
+  "materialization_determination": {
+    "content_scan_result": "PENDING_MANDATE_1_HUMAN_ADJUDICATION",
+    "used_pending_scaffold_in_this_run": false
+  },
+  "materialization_status": "PENDING_MANDATE_1_HUMAN_ADJUDICATION",
+  "no_edit_attestation": "No edits permitted after freeze without new freeze event.",
+  "package_id": "GovernanceValidationPack-v1",
+  "parentage_note": "Mandate 1 freeze lineage input to Stage A adjacent transfer.",
+  "source_mandate": "Mandate 1 (governance/dispute correctness)",
+  "version": "v1"
+}

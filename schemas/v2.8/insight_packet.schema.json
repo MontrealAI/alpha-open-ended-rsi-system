@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Insight Packet v2.8",
+  "type": "object",
+  "required": [
+    "runtime_id",
+    "claim_boundary"
+  ]
+}

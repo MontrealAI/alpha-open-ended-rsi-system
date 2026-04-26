@@ -1,0 +1,7 @@
+{
+  "agent_id": "agent-evidence",
+  "strategy": "evidence_heavy",
+  "base_cost": 18,
+  "evidence_strength": 0.94,
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

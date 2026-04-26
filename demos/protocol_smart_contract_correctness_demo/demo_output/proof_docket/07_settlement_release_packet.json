@@ -1,0 +1,11 @@
+{
+  "id": "release_gate_packet",
+  "timestamp": "2026-01-01T00:00:00Z",
+  "status": "pass",
+  "requirements": [
+    "accepted findings with repro",
+    "evidence completeness >= 0.9",
+    "unsupported claim rate <= 0.1",
+    "scope traceability"
+  ]
+}

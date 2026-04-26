@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MontrealAI/alpha-nova-seeds/schemas/v2.6/decryption-attestation.schema.json",
+  "title": "Nova-Seeds Decryption Attestation v2.6",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "seedId",
+    "requestId",
+    "profileId",
+    "ciphertextHash",
+    "plaintextHash",
+    "threshold",
+    "signers",
+    "completedAt"
+  ],
+  "properties": {
+    "schemaVersion": {"const": "2.6"},
+    "seedId": {"type": "string", "pattern": "^0x[0-9a-fA-F]{64}$"},
+    "requestId": {"type": "string", "pattern": "^0x[0-9a-fA-F]{64}$"},
+    "profileId": {"type": "string", "pattern": "^0x[0-9a-fA-F]{64}$"},
+    "ciphertextHash": {"type": "string", "pattern": "^0x[0-9a-fA-F]{64}$"},
+    "plaintextHash": {"type": "string", "pattern": "^0x[0-9a-fA-F]{64}$"},
+    "threshold": {
+      "type": "object",
+      "required": ["requiredShares", "collectedShares"],
+      "properties": {
+        "requiredShares": {"type": "integer", "minimum": 1},
+        "collectedShares": {"type": "integer", "minimum": 1}
+      }
+    },
+    "signers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["nodeId", "signature"],
+        "properties": {
+          "nodeId": {"type": "string"},
+          "signature": {"type": "string", "minLength": 16}
+        }
+      }
+    },
+    "completedAt": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,23 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "lineage_id": "archive-001",
+  "seed_lineage": [
+    {
+      "seed_id": "seed-protocol-correctness-a",
+      "state": "validated"
+    }
+  ],
+  "job_receipts": [
+    "receipt-job-001"
+  ],
+  "capability_packages": [
+    "capability-protocol-correctness-v1"
+  ],
+  "promotion_history": [
+    {
+      "seed_id": "seed-protocol-correctness-a",
+      "event": "promoted-to-sovereign"
+    }
+  ],
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

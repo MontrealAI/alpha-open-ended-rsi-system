@@ -1,0 +1,28 @@
+{
+  "job_id": "job_002",
+  "goal": "Generate invariant-library delta with replay-ready validation package.",
+  "success_metric": "two independent agent submissions; best validated",
+  "bounty_placeholder": {
+    "units": 45,
+    "unit": "LOCAL_UNIT"
+  },
+  "input_artifacts": [
+    "nova_seeds/invariant_library_seed.json",
+    "sovereign_manifest.json"
+  ],
+  "output_artifacts": [
+    "jobs/job_002_completion.json",
+    "jobs/job_002_receipt.json"
+  ],
+  "proof_requirements": [
+    "deterministic outputs",
+    "schema-compatible receipt"
+  ],
+  "validation_criteria": [
+    "no fabricated external evidence",
+    "governance gate pass"
+  ],
+  "settlement_condition": "approved or quarantined by council",
+  "authority_scope": "bounded-local-runtime",
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

@@ -1,0 +1,52 @@
+{
+  "release_target": "v2.8.0-rc.2",
+  "generation_summary": {
+    "g0_winner": "g0-candidate-04",
+    "g0_frontier_diversity": {
+      "proof_first": 3,
+      "docs_first": 4,
+      "test_first": 2,
+      "schema_first": 3
+    },
+    "g1_treatment_win": true,
+    "g2_selected_domain": "backend_api_correctness"
+  },
+  "thresholds": {
+    "aoy_uplift_min": 0.35,
+    "speed_uplift_min": 0.3,
+    "rework_reduction_min": 0.4,
+    "evidence_uplift_min": 0.2,
+    "no_safety_regression": true,
+    "package_dependence_min": 0.3
+  },
+  "observed": {
+    "aoy_uplift": 0.4245,
+    "speed_uplift": 0.358,
+    "rework_reduction": 0.4194,
+    "evidence_completeness_uplift": 0.25,
+    "no_safety_regression": true,
+    "package_dependence": 0.61
+  },
+  "longitudinal": {
+    "frontier_width": 6,
+    "autonomy_delta": 0.75,
+    "neighborhood_slope": 0.0004,
+    "archive_depth": 2
+  },
+  "claim_boundary": {
+    "demonstrated": [
+      "bounded accelerating mechanism under governance",
+      "frozen package reuse improves adjacent mandate outcomes",
+      "whitelisted autonomous next-domain selection with reduced intervention"
+    ],
+    "simulated": [
+      "assay outcomes are synthetic but deterministic",
+      "board score values are generated local replay values"
+    ],
+    "unproven": [
+      "unrestricted autonomy",
+      "literal unbounded RSI",
+      "completed broad cybersecurity sovereign operation"
+    ]
+  }
+}

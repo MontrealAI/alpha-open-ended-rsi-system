@@ -1,0 +1,102 @@
+{
+  "id": "genome-protocol-correctness-v1",
+  "release_target": "v2.8.0-rc.2",
+  "reactive_intermediate": {
+    "type": "missing_provenance_surface",
+    "description": "Mandate 1 replay lacks a normalized cross-phase lineage/provenance artifact bundle."
+  },
+  "authority_scope": {
+    "may": [
+      "mutate packages",
+      "choose approved assays",
+      "select next mandate from whitelist",
+      "schedule bounded synthetic experiments"
+    ],
+    "may_not": [
+      "widen authority scope",
+      "settle real value",
+      "self-promote to production",
+      "rewrite repo claim boundary"
+    ]
+  },
+  "assets": [
+    {
+      "path": "demos/protocol_smart_contract_correctness_demo/contracts/mandate_1/CouncilGovernanceV25Fixture.sol",
+      "sha256": "29b7342c8c0a4fb0df227c9c0fe3f48db0095080686ef31f1845a8eb1c1b4107"
+    },
+    {
+      "path": "demos/protocol_smart_contract_correctness_demo/contracts/mandate_2/ThresholdNetworkAdapterV25Fixture.sol",
+      "sha256": "a0106204242e76d7e1c00568a42dc126495ae5a65fd02ec91dd46f85383d52cd"
+    },
+    {
+      "path": "demos/protocol_smart_contract_correctness_demo/run_demo.py",
+      "sha256": "d43b993f54e088837ec6474b7e998e16521ce5eca76858b5648e3f7c0776ff8b"
+    },
+    {
+      "path": "backend/app/main.py",
+      "sha256": "57735ed94fc4e2562d4fb1111e4a5c0e604cbf9559c53e758db5898144fe27cc"
+    },
+    {
+      "path": "backend/tests/test_contract_surfaces.py",
+      "sha256": "4d93de897c44613747b1e644b6e6bed339f9e6f12e11e1b6259e3e2d290e14f2"
+    },
+    {
+      "path": "sdk/package.json",
+      "sha256": "6ad2a845b30e5937e28008a2bd7560578c7870ce4fd459e210bbe947f868f5c9"
+    },
+    {
+      "path": "schemas/v2.8/capability_genome.schema.json",
+      "sha256": "89e0c5e7d1de0dda43c38c2c05d78ba4316433f424b99ecde73a1bc09a152f1e"
+    },
+    {
+      "path": "docs/proof-docket-template/README.md",
+      "sha256": "da66795d598ac2eefc80d9462ed32540595215ebdde2ca9bc817d111808dca94"
+    },
+    {
+      "path": "docs/verify-release.md",
+      "sha256": "ab7d6b9ba13b5c8292e19378dbdfedfe3ff1eeb9e7de344181231cc5b1d4a31e"
+    },
+    {
+      "path": "scripts/contracts/export_abi.py",
+      "sha256": "c6b16bbb0dfba52db4d58fb4308e578adf31561bb222c4b5531458e3e666df14"
+    },
+    {
+      "path": "scripts/release/generate_provenance_manifest.py",
+      "sha256": "7f68cbebf1dae908c320e3e5d4ff716e6328ed8fd108788c3970c6edc72f865f"
+    }
+  ],
+  "real_mandate_inputs": {
+    "repo_native_probes": [
+      {
+        "id": "protocol_wedge_replay_assert",
+        "cmd": "python3 demos/protocol_smart_contract_correctness_demo/run_demo.py --assert",
+        "scope": "real mandate 1 wedge replay",
+        "returncode": 0
+      },
+      {
+        "id": "demo_link_integrity",
+        "cmd": "python3 scripts/check_demo_links.py",
+        "scope": "demo ladder",
+        "returncode": 0
+      },
+      {
+        "id": "doctrine_consistency",
+        "cmd": "python3 scripts/check_doctrine_consistency.py",
+        "scope": "doctrine and claim boundary",
+        "returncode": 0
+      },
+      {
+        "id": "math_markdown_consistency",
+        "cmd": "python3 scripts/check_math_markdown.py",
+        "scope": "equation rendering checks",
+        "returncode": 0
+      },
+      {
+        "id": "release_surface_posture",
+        "cmd": "python3 scripts/check_release_surface_posture.py",
+        "scope": "README/AGENTS/RELEASES active RC coherence",
+        "returncode": 0
+      }
+    ]
+  }
+}

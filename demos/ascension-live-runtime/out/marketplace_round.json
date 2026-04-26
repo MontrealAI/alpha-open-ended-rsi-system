@@ -1,0 +1,42 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "round_id": "market-001",
+  "job_id": "job-001",
+  "bids": [
+    {
+      "job_id": "job-001",
+      "agent_id": "agent-fast",
+      "strategy": "fast_low_cost",
+      "bid_cost": 12,
+      "bid_score": 0.59
+    },
+    {
+      "job_id": "job-001",
+      "agent_id": "agent-evidence",
+      "strategy": "evidence_heavy",
+      "bid_cost": 18,
+      "bid_score": 0.76
+    },
+    {
+      "job_id": "job-001",
+      "agent_id": "agent-balanced",
+      "strategy": "balanced",
+      "bid_cost": 15,
+      "bid_score": 0.68
+    }
+  ],
+  "selected_agent": "agent-evidence",
+  "validator_requirements": {
+    "minimum_validators": 1,
+    "council_on_dispute": true
+  },
+  "escrow_placeholder": {
+    "status": "locked-simulated",
+    "units": 55
+  },
+  "settlement_conditions": [
+    "validator_attestation",
+    "council_ruling"
+  ],
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

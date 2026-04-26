@@ -1,0 +1,88 @@
+{
+  "runtime_id": "ascension-runtime-local-001",
+  "round_id": "marketplace-round-001",
+  "jobs_posted": [
+    "job_001",
+    "job_002"
+  ],
+  "rounds": [
+    {
+      "job_id": "job_001",
+      "candidate_agents": [
+        "fast_low_cost",
+        "evidence_heavy",
+        "balanced"
+      ],
+      "bids_scores": [
+        {
+          "job_id": "job_001",
+          "agent_id": "fast_low_cost",
+          "bid_score": 0.45
+        },
+        {
+          "job_id": "job_001",
+          "agent_id": "evidence_heavy",
+          "bid_score": 0.795
+        },
+        {
+          "job_id": "job_001",
+          "agent_id": "balanced",
+          "bid_score": 0.655
+        }
+      ],
+      "selected_agent": "evidence_heavy",
+      "validator_requirements": [
+        "artifact hash check",
+        "claim boundary check"
+      ],
+      "escrow_placeholder": {
+        "unit": "LOCAL_UNIT",
+        "status": "locked-simulated"
+      },
+      "settlement_conditions": [
+        "validator approved",
+        "council ruling"
+      ]
+    },
+    {
+      "job_id": "job_002",
+      "candidate_agents": [
+        "fast_low_cost",
+        "evidence_heavy",
+        "balanced"
+      ],
+      "bids_scores": [
+        {
+          "job_id": "job_002",
+          "agent_id": "fast_low_cost",
+          "bid_score": 0.45
+        },
+        {
+          "job_id": "job_002",
+          "agent_id": "evidence_heavy",
+          "bid_score": 0.795
+        },
+        {
+          "job_id": "job_002",
+          "agent_id": "balanced",
+          "bid_score": 0.655
+        }
+      ],
+      "selected_agent": "evidence_heavy",
+      "validator_requirements": [
+        "artifact hash check",
+        "claim boundary check"
+      ],
+      "escrow_placeholder": {
+        "unit": "LOCAL_UNIT",
+        "status": "locked-simulated"
+      },
+      "settlement_conditions": [
+        "validator approved",
+        "council ruling"
+      ]
+    }
+  ],
+  "status": "local/devnet simulation unless contracts/events are fully implemented",
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

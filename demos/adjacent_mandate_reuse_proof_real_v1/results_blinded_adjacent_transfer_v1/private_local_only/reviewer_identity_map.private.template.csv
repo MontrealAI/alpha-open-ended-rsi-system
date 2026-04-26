@@ -1,0 +1,4 @@
+reviewer_label,real_identity,role_conflict_check
+Reviewer 1,REPLACE_LOCAL_ONLY,pending
+Reviewer 2,REPLACE_LOCAL_ONLY,pending
+Reviewer 3,REPLACE_LOCAL_ONLY,pending

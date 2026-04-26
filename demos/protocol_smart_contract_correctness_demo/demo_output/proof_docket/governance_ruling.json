@@ -1,0 +1,9 @@
+{
+  "id": "governance_ruling.json",
+  "status": "pass",
+  "decision": "emit_protocol_cybersecurity_sovereign",
+  "justification": "Threshold scorecard evaluated under deterministic control-vs-treatment adjacent mandate assay.",
+  "linked_artifact": "ProtocolCybersecuritySovereign-v1.synthetic.json",
+  "timestamp": "2026-01-01T00:00:00Z",
+  "disclaimer": "Synthetic governance ruling for local replay; not a real-world governance decision."
+}

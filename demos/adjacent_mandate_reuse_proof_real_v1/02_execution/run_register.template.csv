@@ -1,0 +1,6 @@
+stage,lane,run_id,repo_sha,scope_hash_set,start_time_utc,end_time_utc,operator_id,reviewer_pool_id,machine_class,time_budget_minutes,max_test_runs,max_command_count,status
+stage_a,mandate_1,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,180,REPLACE,REPLACE,planned
+stage_a,lane_blue,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,180,REPLACE,REPLACE,planned
+stage_a,lane_gold,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,180,REPLACE,REPLACE,planned
+stage_b,lane_blue,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,180,REPLACE,REPLACE,conditional
+stage_b,lane_gold,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,REPLACE,180,REPLACE,REPLACE,conditional

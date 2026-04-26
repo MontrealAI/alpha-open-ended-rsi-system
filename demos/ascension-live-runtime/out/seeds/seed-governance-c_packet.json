@@ -1,0 +1,19 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "seed_id": "seed-governance-c",
+  "state": "draft",
+  "fusion_plan": "Council dispute loop and attestation completeness hardening",
+  "proof_requirements": [
+    "council-ruling",
+    "dispute-path"
+  ],
+  "promotion_criteria": [
+    "authority_scope_constrained",
+    "validation_completeness"
+  ],
+  "lifecycle": [
+    "draft",
+    "draft"
+  ],
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

@@ -1,0 +1,6 @@
+{
+  "branch": "work",
+  "generated_at": "2026-04-25T20:37:02+00:00",
+  "notes": "Public-safe provenance only. Private mappings remain local. Re-run prepare/freeze/build to refresh branch-local provenance pointers.",
+  "result_path": "demos/adjacent_mandate_reuse_proof_real_v1/results_blinded_adjacent_transfer_v1"
+}

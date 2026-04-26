@@ -1,0 +1,3 @@
+lane,run_id,operator_hours,reviewer_hours,compute_usd,cost_units,notes
+control,REPLACE,0,0,0,0,REPLACE
+treatment,REPLACE,0,0,0,0,REPLACE

@@ -1,0 +1,21 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "seed_id": "seed-protocol-correctness-a",
+  "state": "incubating",
+  "fusion_plan": "Contract invariant replay + assay evidence refresh",
+  "proof_requirements": [
+    "job-receipt",
+    "validator-attestation",
+    "hash-linked-artifacts"
+  ],
+  "promotion_criteria": [
+    "mark_top_rank",
+    "validator_pass",
+    "claim_boundary_preserved"
+  ],
+  "lifecycle": [
+    "draft",
+    "incubating"
+  ],
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

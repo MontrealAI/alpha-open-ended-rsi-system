@@ -1,0 +1,139 @@
+name: contracts-security
+
+on:
+  pull_request:
+    paths:
+      - "contracts/**"
+      - ".github/workflows/contracts-security.yml"
+  push:
+    branches: ["**"]
+    paths:
+      - "contracts/**"
+      - ".github/workflows/contracts-security.yml"
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+jobs:
+  contracts-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.10.0"
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.3.1
+      - name: Install contracts dependencies
+        working-directory: contracts
+        run: npm ci
+      - name: Compile contracts
+        working-directory: contracts
+        run: npm run build
+      - name: Foundry unit/fuzz/invariant tests
+        working-directory: contracts
+        run: npm run test:contracts
+
+  slither-gate:
+    runs-on: ubuntu-latest
+    needs: contracts-gates
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.10.0"
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.3.1
+      - name: Install Slither
+        run: pip install slither-analyzer
+      - name: Install contracts dependencies
+        working-directory: contracts
+        run: npm ci
+      - name: Run static analysis (high severity is blocking)
+        working-directory: contracts
+        run: npm run analyze:slither
+
+  echidna-smoke:
+    runs-on: ubuntu-latest
+    needs: contracts-gates
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    strategy:
+      matrix:
+        include:
+          - harness: contracts/echidna/harnesses/EchidnaTreasuryHarness.sol
+            contract: EchidnaTreasuryHarness
+            smoke_config: contracts/echidna/config/treasury.smoke.yaml
+          - harness: contracts/echidna/harnesses/EchidnaGovernanceHarness.sol
+            contract: EchidnaGovernanceHarness
+            smoke_config: contracts/echidna/config/governance.smoke.yaml
+          - harness: contracts/echidna/harnesses/EchidnaThresholdHarness.sol
+            contract: EchidnaThresholdHarness
+            smoke_config: contracts/echidna/config/threshold.smoke.yaml
+          - harness: contracts/echidna/harnesses/EchidnaRegistryHarness.sol
+            contract: EchidnaRegistryHarness
+            smoke_config: contracts/echidna/config/registry.smoke.yaml
+          - harness: contracts/echidna/harnesses/EchidnaWorkflowHarness.sol
+            contract: EchidnaWorkflowHarness
+            smoke_config: contracts/echidna/config/workflow.smoke.yaml
+          - harness: contracts/echidna/harnesses/EchidnaAttestationHarness.sol
+            contract: EchidnaAttestationHarness
+            smoke_config: contracts/echidna/config/attestation.smoke.yaml
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.10.0"
+      - name: Install contracts dependencies
+        working-directory: contracts
+        run: npm ci
+      - name: Run Echidna smoke campaign
+        uses: crytic/echidna-action@v2
+        with:
+          files: ${{ matrix.harness }}
+          contract: ${{ matrix.contract }}
+          config: ${{ matrix.smoke_config }}
+
+  echidna-campaigns:
+    runs-on: ubuntu-latest
+    needs: contracts-gates
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
+    strategy:
+      matrix:
+        include:
+          - harness: contracts/echidna/harnesses/EchidnaTreasuryHarness.sol
+            contract: EchidnaTreasuryHarness
+            config: contracts/echidna/config/treasury.yaml
+          - harness: contracts/echidna/harnesses/EchidnaGovernanceHarness.sol
+            contract: EchidnaGovernanceHarness
+            config: contracts/echidna/config/governance.yaml
+          - harness: contracts/echidna/harnesses/EchidnaThresholdHarness.sol
+            contract: EchidnaThresholdHarness
+            config: contracts/echidna/config/threshold.yaml
+          - harness: contracts/echidna/harnesses/EchidnaRegistryHarness.sol
+            contract: EchidnaRegistryHarness
+            config: contracts/echidna/config/registry.yaml
+          - harness: contracts/echidna/harnesses/EchidnaWorkflowHarness.sol
+            contract: EchidnaWorkflowHarness
+            config: contracts/echidna/config/workflow.yaml
+          - harness: contracts/echidna/harnesses/EchidnaAttestationHarness.sol
+            contract: EchidnaAttestationHarness
+            config: contracts/echidna/config/attestation.yaml
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.10.0"
+      - name: Install contracts dependencies
+        working-directory: contracts
+        run: npm ci
+      - name: Run Echidna campaign
+        uses: crytic/echidna-action@v2
+        with:
+          files: ${{ matrix.harness }}
+          contract: ${{ matrix.contract }}
+          config: ${{ matrix.config }}

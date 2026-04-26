@@ -1,0 +1,200 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "events": [
+    {
+      "event_id": "evt-001",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "InsightEmitted",
+      "payload": {
+        "opportunity_id": "opp-protocol-correctness-001",
+        "wedge": "protocol-smart-contract-correctness"
+      },
+      "payload_sha256": "461d9f7909c502989638831e22ca952d300f3c0484115fd7b987663dd1f3592f"
+    },
+    {
+      "event_id": "evt-002",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "NovaSeedRegistered",
+      "payload": {
+        "seed_id": "seed-protocol-correctness-a",
+        "state": "incubating"
+      },
+      "payload_sha256": "cc8fcee93222652ab3d87b40034bf271cf27d7fecaf3add7e670af41662be707"
+    },
+    {
+      "event_id": "evt-003",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "NovaSeedRegistered",
+      "payload": {
+        "seed_id": "seed-indexer-reorg-b",
+        "state": "green_flame"
+      },
+      "payload_sha256": "c74713abbe7d6c19e72dbcb6a7a533b3ccd6c924dad2bb41131a47db5296383a"
+    },
+    {
+      "event_id": "evt-004",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "NovaSeedRegistered",
+      "payload": {
+        "seed_id": "seed-governance-c",
+        "state": "draft"
+      },
+      "payload_sha256": "1ded127e3af55efccccd18bd3932925214855e812e249b5866717e09f58a3fe4"
+    },
+    {
+      "event_id": "evt-005",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "MarkScored",
+      "payload": {
+        "seed_id": "seed-protocol-correctness-a",
+        "score": 0.86
+      },
+      "payload_sha256": "cba5a87e1a8599affcd3a26a7bce52d2668783fb36db7b7332bc843bccb5d15d"
+    },
+    {
+      "event_id": "evt-006",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "MarkScored",
+      "payload": {
+        "seed_id": "seed-indexer-reorg-b",
+        "score": 0.77
+      },
+      "payload_sha256": "e9c0cb00188a0a704f34d1cb4b3e3612ed6307d7052e0dbfb47bf6eecade5cf6"
+    },
+    {
+      "event_id": "evt-007",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "MarkScored",
+      "payload": {
+        "seed_id": "seed-governance-c",
+        "score": 0.68
+      },
+      "payload_sha256": "e9ab5582774f1a60209fe9f2c188c3a1579d7cfa07282b3794bb7f50549772da"
+    },
+    {
+      "event_id": "evt-008",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "SovereignFormed",
+      "payload": {
+        "sovereign_id": "sovereign-protocol-correctness-001",
+        "seed_id": "seed-protocol-correctness-a"
+      },
+      "payload_sha256": "f6d70bfd4e9d000f8e3cfd58bc13dc4f6c6f061b92e59eb559c4bd62d2f74402"
+    },
+    {
+      "event_id": "evt-009",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "JobCreated",
+      "payload": {
+        "job_id": "job-001",
+        "sovereign_id": "sovereign-protocol-correctness-001"
+      },
+      "payload_sha256": "107ba01a49d48ca313f856fbe60ad9ebbafcabfcf31fe08a51426c826d1c2d99"
+    },
+    {
+      "event_id": "evt-010",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "AgentApplied",
+      "payload": {
+        "job_id": "job-001",
+        "agent_id": "agent-fast",
+        "score": 0.59
+      },
+      "payload_sha256": "47c90812bcc5c12bd4ce07d132c8ab42993cafd52ef35455d7d20e2273c8596a"
+    },
+    {
+      "event_id": "evt-011",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "AgentApplied",
+      "payload": {
+        "job_id": "job-001",
+        "agent_id": "agent-evidence",
+        "score": 0.76
+      },
+      "payload_sha256": "23503e2c420043fecd1c04cce9e01a9bce66f0f743ee228902c6e36579e02517"
+    },
+    {
+      "event_id": "evt-012",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "AgentApplied",
+      "payload": {
+        "job_id": "job-001",
+        "agent_id": "agent-balanced",
+        "score": 0.68
+      },
+      "payload_sha256": "56e33a73e25079a307313278173f22a17c2b17996354dfefb69a5a0b54fd0b0c"
+    },
+    {
+      "event_id": "evt-013",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "AgentSelected",
+      "payload": {
+        "job_id": "job-001",
+        "agent_id": "agent-evidence"
+      },
+      "payload_sha256": "9ab5537a50e1898e49d8dfb92d590d4292146b771e20422b68eb43aae14c6dcc"
+    },
+    {
+      "event_id": "evt-014",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "CompletionRequested",
+      "payload": {
+        "job_id": "job-001",
+        "agent_id": "agent-evidence"
+      },
+      "payload_sha256": "9ab5537a50e1898e49d8dfb92d590d4292146b771e20422b68eb43aae14c6dcc"
+    },
+    {
+      "event_id": "evt-015",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "ValidationSubmitted",
+      "payload": {
+        "job_id": "job-001",
+        "round_id": "validation-001",
+        "result": "approved"
+      },
+      "payload_sha256": "47384222beabf4eea63abf17b00b6556ae48dc1697e1474eddce9d6b8519bee2"
+    },
+    {
+      "event_id": "evt-016",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "JobFinalized",
+      "payload": {
+        "job_id": "job-001",
+        "receipt_id": "receipt-job-001"
+      },
+      "payload_sha256": "3b66b3221e3ca123e2708105c9bf39f69cf772307b9dcaf1badabe26f7c68c7a"
+    },
+    {
+      "event_id": "evt-017",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "ReservoirCredited",
+      "payload": {
+        "job_id": "job-001",
+        "credited": 55
+      },
+      "payload_sha256": "da4dc760c898d81985199881aae17d620c00c2f5122b58a8e5282cce48f6d691"
+    },
+    {
+      "event_id": "evt-018",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "ArchiveUpdated",
+      "payload": {
+        "lineage_id": "archive-001",
+        "receipt_id": "receipt-job-001"
+      },
+      "payload_sha256": "0479df96f2f8a37b5a150baf892a8aceaa3b4fa57469c88d17c1c7b339592bb2"
+    },
+    {
+      "event_id": "evt-019",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "ArchitectRecommended",
+      "payload": {
+        "recommendation_id": "architect-001",
+        "next_seed": "seed-indexer-reorg-b"
+      },
+      "payload_sha256": "0d6a689975445e5236c71dcec46b4c62dc76654fb73c5774f2ae69ffa1328f44"
+    }
+  ],
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

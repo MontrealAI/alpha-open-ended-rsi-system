@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MARK Bundle Selection Report v2.8",
+  "type": "object",
+  "required": [
+    "runtime_id",
+    "ranked",
+    "selected_bundle",
+    "selection_reason",
+    "status",
+    "claim_boundary"
+  ]
+}

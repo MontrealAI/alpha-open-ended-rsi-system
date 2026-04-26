@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Validation Round v2.8",
+  "type": "object",
+  "required": [
+    "round_id",
+    "attestations",
+    "result",
+    "claim_boundary"
+  ]
+}

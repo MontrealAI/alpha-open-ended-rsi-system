@@ -1,0 +1,73 @@
+{
+  "runtime_id": "ascension-runtime-local-001",
+  "oracle_mode": "deterministic_local_risk_selection",
+  "ranked": [
+    {
+      "seed_id": "invariant_library_seed",
+      "expected_aoy": 0.83,
+      "evidence_density": 0.89,
+      "verification_strength": 0.91,
+      "archive_reuse_potential": 0.93,
+      "safety_authority_risk": 0.18,
+      "operator_cost": 0.37,
+      "adjacent_transfer_potential": 0.86,
+      "proof_burden": 0.58,
+      "score": 0.5878
+    },
+    {
+      "seed_id": "audit_factory_seed",
+      "expected_aoy": 0.87,
+      "evidence_density": 0.92,
+      "verification_strength": 0.95,
+      "archive_reuse_potential": 0.85,
+      "safety_authority_risk": 0.22,
+      "operator_cost": 0.41,
+      "adjacent_transfer_potential": 0.8,
+      "proof_burden": 0.71,
+      "score": 0.5748
+    },
+    {
+      "seed_id": "fuzz_harness_seed",
+      "expected_aoy": 0.79,
+      "evidence_density": 0.85,
+      "verification_strength": 0.88,
+      "archive_reuse_potential": 0.82,
+      "safety_authority_risk": 0.24,
+      "operator_cost": 0.34,
+      "adjacent_transfer_potential": 0.81,
+      "proof_burden": 0.55,
+      "score": 0.5464
+    },
+    {
+      "seed_id": "governance_parameter_simulator_seed",
+      "expected_aoy": 0.76,
+      "evidence_density": 0.83,
+      "verification_strength": 0.84,
+      "archive_reuse_potential": 0.79,
+      "safety_authority_risk": 0.2,
+      "operator_cost": 0.31,
+      "adjacent_transfer_potential": 0.75,
+      "proof_burden": 0.5,
+      "score": 0.53
+    },
+    {
+      "seed_id": "exploit_replay_seed",
+      "expected_aoy": 0.88,
+      "evidence_density": 0.78,
+      "verification_strength": 0.86,
+      "archive_reuse_potential": 0.74,
+      "safety_authority_risk": 0.39,
+      "operator_cost": 0.45,
+      "adjacent_transfer_potential": 0.77,
+      "proof_burden": 0.8,
+      "score": 0.496
+    }
+  ],
+  "selected_bundle": [
+    "invariant_library_seed",
+    "audit_factory_seed"
+  ],
+  "selection_reason": "Top two seeds maximize weighted score under bounded risk and proof burden.",
+  "status": "local risk/selection oracle; not live DEX",
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

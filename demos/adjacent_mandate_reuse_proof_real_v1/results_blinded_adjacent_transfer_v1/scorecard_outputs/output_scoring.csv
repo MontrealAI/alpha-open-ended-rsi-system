@@ -1,0 +1,3 @@
+lane,blinded_output_id,accepted,usefulness_points,time_to_accept_hours,rework_rounds,evidence_code_pointer,evidence_broken_condition,evidence_repro,evidence_severity_rationale,evidence_fix,evidence_replay_artifact,safety_incident,unsupported_claim_count,hallucinated_reference_count,package_dependency
+control,REPLACE,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+treatment,REPLACE,0,0,0,0,0,0,0,0,0,0,0,0,0,0

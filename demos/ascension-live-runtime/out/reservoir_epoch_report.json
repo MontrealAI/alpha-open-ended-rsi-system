@@ -1,0 +1,6 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "epoch": "epoch-001",
+  "summary": "Single validated job credited to local ledger.",
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

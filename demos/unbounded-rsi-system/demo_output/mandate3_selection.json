@@ -1,0 +1,28 @@
+{
+  "policy": {
+    "fit_weight": 0.42,
+    "determinism_weight": 0.33,
+    "operator_noise_weight": 0.15,
+    "safety_risk_weight": 0.1,
+    "selection_rule": "highest_selection_score_wins",
+    "tiebreak": "lexicographic_id_order"
+  },
+  "ranked_candidates": [
+    {
+      "id": "backend_proof_governance_api_correctness",
+      "domain": "backend",
+      "selection_score": 0.8972
+    },
+    {
+      "id": "sdk_typed_attestation_payload_correctness",
+      "domain": "sdk",
+      "selection_score": 0.837
+    },
+    {
+      "id": "dashboard_provenance_evidence_surface",
+      "domain": "dashboard",
+      "selection_score": 0.7705
+    }
+  ],
+  "selected": "backend_proof_governance_api_correctness"
+}

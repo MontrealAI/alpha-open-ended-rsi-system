@@ -1,0 +1,18 @@
+{
+  "experiment_id": "adjacent-mandate-reuse-real-v1",
+  "mandate_1": {
+    "receipt_id": "REPLACE",
+    "settled": false,
+    "notes": ""
+  },
+  "mandate_2_control": {
+    "receipt_id": "REPLACE",
+    "settled": false,
+    "notes": ""
+  },
+  "mandate_2_treatment": {
+    "receipt_id": "REPLACE",
+    "settled": false,
+    "notes": ""
+  }
+}

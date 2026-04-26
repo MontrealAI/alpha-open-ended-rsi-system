@@ -1,0 +1,8 @@
+{
+  "thresholdBindingProfiles": [],
+  "decryptionAttestations": [],
+  "schemaRefs": [
+    "../../schemas/v2.6/threshold-binding-profile.schema.json",
+    "../../schemas/v2.6/decryption-attestation.schema.json"
+  ]
+}

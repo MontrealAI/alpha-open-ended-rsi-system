@@ -1,0 +1,8 @@
+{
+  "experiment_id": "adjacent-mandate-reuse-real-v1",
+  "package_name": "GovernanceValidationPack-v1",
+  "package_hash": "REPLACE",
+  "adjacent_mandate_result": "REPLACE_PASS_OR_FAIL",
+  "timestamp_utc": "REPLACE",
+  "notes": ""
+}

@@ -1,0 +1,23 @@
+{
+  "id": "audit_factory",
+  "title": "Audit Factory Seed",
+  "mutation_thesis": "Maximize breadth-first issue harvesting with strict triage templates.",
+  "operator_workflow_delta": "Front-load contract surface enumeration and standardized triage queues.",
+  "expected_metric_impact": {
+    "accepted_usefulness_points": "medium",
+    "time_to_first_accepted_output": "moderate",
+    "repair_rework": "moderate",
+    "evidence_completeness": "medium"
+  },
+  "likely_strengths": [
+    "coverage breadth",
+    "repeatable reviewer packets"
+  ],
+  "likely_weaknesses": [
+    "can miss deep state-path edge cases"
+  ],
+  "admissible_risk": "medium false-positive risk if triage heuristics are over-broad",
+  "evidence_strategy": "structured finding templates with reproducible pointers",
+  "replayability_expectations": "high",
+  "likely_archive_contribution": "structured triage queues, severity calibration tables, reviewer packet templates"
+}

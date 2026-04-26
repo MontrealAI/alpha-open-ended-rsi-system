@@ -1,0 +1,29 @@
+{
+  "receipt_type": "blinded_adjacent_transfer_reveal_receipt",
+  "generated_at_utc": "2026-04-24T13:56:32+00:00",
+  "score_lock_confirmed": true,
+  "private_assignment_map_sha256": "3f1afc0394cb533b5f0586def7695df66437af81ff7edb2d882ea396e61b538a",
+  "private_commitment_hashes_sha256": "fcb12dddda92db864960086ba2010d51b1e86474000c3d2440b93eb055f4c2ae",
+  "lane_assignments": [
+    {
+      "artifact_set": "",
+      "lane_id": "Lane Blue",
+      "assigned_kit": "UNSPECIFIED_LEGACY_TEMPLATE",
+      "assignment_role": "Lane Operator A",
+      "revealed_after_score_lock": "true",
+      "revealed_after_score_lock_source": ""
+    },
+    {
+      "artifact_set": "",
+      "lane_id": "Lane Gold",
+      "assigned_kit": "UNSPECIFIED_LEGACY_TEMPLATE",
+      "assignment_role": "Lane Operator B",
+      "revealed_after_score_lock": "true",
+      "revealed_after_score_lock_source": ""
+    }
+  ],
+  "notes": [
+    "This receipt intentionally excludes reviewer identities and answer keys.",
+    "Reveal should happen only after adjudication and scorecard lock."
+  ]
+}

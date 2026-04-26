@@ -1,0 +1,68 @@
+{
+  "whitelist": [
+    "backend_api_correctness",
+    "sdk_typed_attestation_payload_correctness",
+    "schema_migration_integrity",
+    "proof_docket_synthesis",
+    "release_provenance_operator_automation",
+    "dashboard_provenance_evidence_surface_correctness"
+  ],
+  "ranked": [
+    {
+      "transfer": 0.91,
+      "assay_coverage": 0.89,
+      "safety": 0.93,
+      "evidence_density": 0.88,
+      "domain": "backend_api_correctness",
+      "selection_score": 0.9034
+    },
+    {
+      "transfer": 0.84,
+      "assay_coverage": 0.85,
+      "safety": 0.9,
+      "evidence_density": 0.81,
+      "domain": "sdk_typed_attestation_payload_correctness",
+      "selection_score": 0.8492
+    },
+    {
+      "transfer": 0.78,
+      "assay_coverage": 0.88,
+      "safety": 0.92,
+      "evidence_density": 0.86,
+      "domain": "schema_migration_integrity",
+      "selection_score": 0.8484
+    },
+    {
+      "transfer": 0.75,
+      "assay_coverage": 0.83,
+      "safety": 0.95,
+      "evidence_density": 0.91,
+      "domain": "proof_docket_synthesis",
+      "selection_score": 0.8396
+    },
+    {
+      "transfer": 0.73,
+      "assay_coverage": 0.8,
+      "safety": 0.96,
+      "evidence_density": 0.94,
+      "domain": "release_provenance_operator_automation",
+      "selection_score": 0.832
+    },
+    {
+      "transfer": 0.7,
+      "assay_coverage": 0.82,
+      "safety": 0.94,
+      "evidence_density": 0.89,
+      "domain": "dashboard_provenance_evidence_surface_correctness",
+      "selection_score": 0.8134
+    }
+  ],
+  "selected": {
+    "transfer": 0.91,
+    "assay_coverage": 0.89,
+    "safety": 0.93,
+    "evidence_density": 0.88,
+    "domain": "backend_api_correctness",
+    "selection_score": 0.9034
+  }
+}

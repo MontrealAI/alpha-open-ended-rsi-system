@@ -1,0 +1,72 @@
+<!doctype html>
+<html><head><meta charset='utf-8'><title>Adjacent-Mandate Reuse Proof Demo</title>
+<style>
+body{font-family:Arial,sans-serif;background:#0b1020;color:#f1f5f9;margin:0;padding:32px;}
+.wrap{max-width:980px;margin:0 auto;}
+.card{background:#111827;border:1px solid #334155;border-radius:16px;padding:20px;margin:16px 0;}
+h1,h2,h3{margin:0 0 12px 0;}
+small{color:#94a3b8;}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.metric{font-size:28px;font-weight:bold;}
+.pass{color:#34d399;}
+.fail{color:#f87171;}
+code{background:#1f2937;padding:2px 6px;border-radius:6px;}
+table{width:100%;border-collapse:collapse}
+td,th{border-bottom:1px solid #334155;padding:8px;text-align:left}
+.badge{display:inline-block;padding:4px 10px;border-radius:999px;background:#1f2937;border:1px solid #475569}
+</style></head><body><div class='wrap'>
+<div class='card'>
+  <div class='badge'>Synthetic proof-of-method</div>
+  <h1>Adjacent-Mandate Reuse Proof Demo</h1>
+  <p><small>Parent sector: Protocol and smart-contract correctness</small></p>
+  <p>This demo freezes one capability package from Mandate 1 and tests whether it improves the next adjacent mandate under control conditions.</p>
+</div>
+<div class='grid'>
+  <div class='card'>
+    <h2>Control</h2>
+    <table>
+      <tr><th>Accepted findings</th><td>1</td></tr>
+      <tr><th>AOY</th><td>0.05</td></tr>
+      <tr><th>First accepted step</th><td>7</td></tr>
+      <tr><th>Rework rate</th><td>1.0</td></tr>
+      <tr><th>Evidence completeness</th><td>0.714</td></tr>
+      <tr><th>Severe false positives</th><td>1</td></tr>
+    </table>
+  </div>
+  <div class='card'>
+    <h2>Treatment</h2>
+    <table>
+      <tr><th>Accepted findings</th><td>5</td></tr>
+      <tr><th>AOY</th><td>0.25</td></tr>
+      <tr><th>First accepted step</th><td>2</td></tr>
+      <tr><th>Rework rate</th><td>0.0</td></tr>
+      <tr><th>Evidence completeness</th><td>1.0</td></tr>
+      <tr><th>Severe false positives</th><td>0</td></tr>
+      <tr><th>Package dependence</th><td>100.0%</td></tr>
+    </table>
+  </div>
+</div>
+<div class='card'>
+  <h2>Frozen capability package</h2>
+  <p><code>ProtocolCybersecurityPack-v1</code> <small>(legacy alias: ProtocolAssurancePack-v1)</small></p>
+  <p>Hash: <code>b9365fcdaff0141af0c27aa20a458c20ea25582220887735438d645144accef0</code></p>
+</div>
+<div class='card'>
+  <h2>Threshold comparison</h2>
+  <table>
+    <tr><th>Metric</th><th>Observed</th><th>Threshold</th><th>Result</th></tr>
+    <tr><td>AOY uplift</td><td>400.0%</td><td>≥35%</td><td class="pass">PASS</td></tr>
+    <tr><td>Speed uplift</td><td>71.4%</td><td>≥30%</td><td class="pass">PASS</td></tr>
+    <tr><td>Rework reduction</td><td>100.0%</td><td>≥40%</td><td class="pass">PASS</td></tr>
+    <tr><td>Evidence completeness uplift</td><td>40.1%</td><td>≥20%</td><td class="pass">PASS</td></tr>
+    <tr><td>No safety regression</td><td>No regression</td><td>Required</td><td class="pass">PASS</td></tr>
+    <tr><td>Package dependence</td><td>100.0%</td><td>≥30%</td><td class="pass">PASS</td></tr>
+  </table>
+  <p class="metric pass">Adjacent-mandate proof: PASS</p>
+</div>
+<div class='card'>
+  <h2>Interpretation</h2>
+  <p>In this synthetic controlled demo, one completed mandate produced a frozen capability package that materially improved the next adjacent mandate under the same budget and review conditions.</p>
+  <p>This is a proof-of-method artifact, not a real-world production proof.</p>
+</div>
+</div></body></html>

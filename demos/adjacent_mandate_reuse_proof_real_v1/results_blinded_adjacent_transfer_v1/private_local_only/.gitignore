@@ -1,0 +1,8 @@
+*.private.md
+*.private.csv
+*.private.txt
+private_commitment_hashes.txt
+!*.private.template.md
+!*.private.template.csv
+!*.private.template.txt
+!private_commitment_hashes.template.txt

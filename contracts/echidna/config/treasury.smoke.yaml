@@ -1,0 +1,4 @@
+testMode: property
+seqLen: 20
+testLimit: 300
+cryticArgs: ["--compile-force-framework", "foundry"]

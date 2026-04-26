@@ -1,0 +1,7 @@
+{
+  "agent_id": "agent-balanced",
+  "strategy": "balanced",
+  "base_cost": 15,
+  "evidence_strength": 0.83,
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

@@ -1,0 +1,7 @@
+{
+  "accepted_high_severity_with_repro_or_failing_test": 3,
+  "accepted_medium_severity_with_repro_or_failing_test": 2,
+  "accepted_low_severity_with_reviewer_acceptance": 1,
+  "accepted_invariant_or_fuzz_harness_closing_real_bug_class": 2,
+  "accepted_hardening_patch_recommendation": 1
+}

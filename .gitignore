@@ -1,0 +1,29 @@
+# Node.js dependencies and build outputs
+node_modules/
+sdk/node_modules/
+dashboard/node_modules/
+dist/
+
+# Python cache/build artifacts
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Common local environment files
+.env
+.env.*
+
+
+# Hardhat contract workspace artifacts
+contracts/node_modules/
+contracts/artifacts/
+contracts/cache/
+contracts/typechain-types/
+contracts/ignition/deployments/
+contracts/.env
+
+!contracts/.env.example
+
+# Real-world blinded adjacent-transfer private/local workspaces
+/demos/adjacent_mandate_reuse_proof_real_v1/local_private_blinding_materials/
+/demos/adjacent_mandate_reuse_proof_real_v1/results_internal_rerun_clean_v1/

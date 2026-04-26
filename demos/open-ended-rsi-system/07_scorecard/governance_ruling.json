@@ -1,0 +1,12 @@
+{
+  "ruling_id": "gov-rsi-open-ended-v1",
+  "release_target": "v2.8.0-rc.2",
+  "status": "approved_for_rc_demo_replay",
+  "authority_scope_locked": true,
+  "settlement_authorized": false,
+  "justification": [
+    "quality thresholds pass under deterministic replay",
+    "domain selection remained within whitelist authority",
+    "synthetic adjudication explicitly labeled"
+  ]
+}

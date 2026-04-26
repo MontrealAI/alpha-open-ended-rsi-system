@@ -1,0 +1,7 @@
+stage,reviewer_id,lane_guess,stronger_kit_guess_confidence_pct,observed_leakage_signal,notes
+stage_a,R1,REPLACE,REPLACE,REPLACE,REPLACE
+stage_a,R2,REPLACE,REPLACE,REPLACE,REPLACE
+stage_a,R3,REPLACE,REPLACE,REPLACE,REPLACE
+stage_b,R1,REPLACE,REPLACE,REPLACE,REPLACE
+stage_b,R2,REPLACE,REPLACE,REPLACE,REPLACE
+stage_b,R3,REPLACE,REPLACE,REPLACE,REPLACE

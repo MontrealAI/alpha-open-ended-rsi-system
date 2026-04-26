@@ -1,0 +1,2 @@
+Accepted findings: 4
+Package hash: b9365fcdaff0141af0c27aa20a458c20ea25582220887735438d645144accef0

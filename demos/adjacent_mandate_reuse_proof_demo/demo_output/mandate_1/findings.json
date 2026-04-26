@@ -1,0 +1,58 @@
+[
+  {
+    "contract": "BondTreasury.sol",
+    "function": "withdrawBond",
+    "issue_type": "treasury_drift",
+    "severity": "high",
+    "rationale": "Tracked locked/reserved accounting is not decremented on value release, creating internal drift.",
+    "evidence_lines": [
+      13
+    ],
+    "snippet": "uint256 amount = bond[msg.sender];\n        require(amount > 0, \"none\");\n        bond[msg.sender] = 0;\n        payable(msg.sender).transfer(amount);\n        // BUG: lockedValidatorBonds is never decremented",
+    "recommended_fix": "Decrement the matching locked/reserved accounting variable before transfer.",
+    "rule_source": "package",
+    "discovery_step": 2
+  },
+  {
+    "contract": "FastUpgradeController.sol",
+    "function": "upgrade",
+    "issue_type": "instant_upgrade",
+    "severity": "high",
+    "rationale": "Governance can change implementation/module state without any delay barrier.",
+    "evidence_lines": [
+      10
+    ],
+    "snippet": "require(msg.sender == owner, \"owner only\");\n        implementation = newImpl;",
+    "recommended_fix": "Introduce timelock/schedule/ETA requirement before upgrade execution.",
+    "rule_source": "package",
+    "discovery_step": 3
+  },
+  {
+    "contract": "ProoflessEscrow.sol",
+    "function": "finalize",
+    "issue_type": "proofless_settlement",
+    "severity": "high",
+    "rationale": "Value-moving path lacks explicit proof/validation/challenge gate.",
+    "evidence_lines": [
+      11
+    ],
+    "snippet": "require(msg.sender == owner, \"owner only\");\n        require(balances[address(this)] >= amount, \"insufficient\");\n        agent.transfer(amount);\n        completed = true;",
+    "recommended_fix": "Require validated proof bundle and challenge-window expiry before releasing value.",
+    "rule_source": "package",
+    "discovery_step": 4
+  },
+  {
+    "contract": "ReviewGate.sol",
+    "function": "settle",
+    "issue_type": "no_challenge_window",
+    "severity": "medium",
+    "rationale": "Settlement path appears immediate after approval state with no explicit challenge/delay barrier.",
+    "evidence_lines": [
+      20
+    ],
+    "snippet": "require(msg.sender == owner, \"owner only\");\n        require(approvals >= required, \"need approvals\");\n        agent.transfer(amount);",
+    "recommended_fix": "Require block.timestamp >= approvedAt/readyAt + challengePeriod before settlement.",
+    "rule_source": "package",
+    "discovery_step": 6
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AGI Job Receipt v2.8",
+  "type": "object",
+  "required": [
+    "job_id",
+    "receipt_id",
+    "status",
+    "validated",
+    "bounty_units",
+    "unit",
+    "claim_boundary"
+  ]
+}

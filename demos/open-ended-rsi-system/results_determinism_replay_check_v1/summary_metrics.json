@@ -1,0 +1,59 @@
+{
+  "artifact_type": "determinism_replay_check",
+  "version": "v1",
+  "demo_path": "demos/open-ended-rsi-system",
+  "run_command": "python3 demos/open-ended-rsi-system/run_demo.py --assert",
+  "second_pass_result": "PASS",
+  "fingerprint_diff_empty": true,
+  "sha256_identical": true,
+  "fingerprint": {
+    "release_target": "v2.8.0-rc.2",
+    "seed": 2802,
+    "candidate_pool_size": 48,
+    "selected_domain": "backend_api_correctness",
+    "frozen_package_manifest_hash": "56dfb240a9b6b73c91cb4bb7b06efba543956dea0d4760a0c3f8bd41c5da0f75",
+    "scorecard_hash": "f3f2db44bb61b1e2880b21fc7ec6286fd7ae58cbe178c6eea938d0b893352d91",
+    "lineage_hash": "634e0dbd96d3cc51cc6494a2b04a76cfe8eec022eb9cd862415f1c165ed6d9c6"
+  },
+  "scorecard_observed": {
+    "aoy_uplift": 0.4245,
+    "speed_uplift": 0.358,
+    "rework_reduction": 0.4194,
+    "evidence_completeness_uplift": 0.25,
+    "no_safety_regression": true,
+    "package_dependence": 0.61
+  },
+  "scorecard_longitudinal": {
+    "frontier_width": 6,
+    "autonomy_delta": 0.75,
+    "neighborhood_slope": 0.0004,
+    "archive_depth": 2
+  },
+  "generation_summary": {
+    "g0_winner": "g0-candidate-04",
+    "g0_frontier_diversity": {
+      "proof_first": 3,
+      "docs_first": 4,
+      "test_first": 2,
+      "schema_first": 3
+    },
+    "g1_treatment_win": true,
+    "g2_selected_domain": "backend_api_correctness"
+  },
+  "claim_boundary": {
+    "demonstrated": [
+      "bounded accelerating mechanism under governance",
+      "frozen package reuse improves adjacent mandate outcomes",
+      "whitelisted autonomous next-domain selection with reduced intervention"
+    ],
+    "simulated": [
+      "assay outcomes are synthetic but deterministic",
+      "board score values are generated local replay values"
+    ],
+    "unproven": [
+      "unrestricted autonomy",
+      "literal unbounded RSI",
+      "completed broad cybersecurity sovereign operation"
+    ]
+  }
+}

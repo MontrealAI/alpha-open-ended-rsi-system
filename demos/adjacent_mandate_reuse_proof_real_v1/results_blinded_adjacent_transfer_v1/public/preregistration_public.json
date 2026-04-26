@@ -1,0 +1,85 @@
+{
+  "allowed_commands": [
+    "python3 07_scripts/run_blinded_adjacent_transfer.py <command>",
+    "python3 07_scripts/calculate_q2_scorecard.py --scorecard-dir results_blinded_adjacent_transfer_v1/scorecard_outputs"
+  ],
+  "allowed_tools": [
+    "local shell",
+    "python3",
+    "repo scripts"
+  ],
+  "branch": "work",
+  "claim_boundary": "No Stage A pass claim without real blinded reviewer data and locked scorecard inputs.",
+  "environment_lock": {
+    "allowed_human_interventions": [
+      "budget approval",
+      "policy clarification",
+      "exception handling only"
+    ],
+    "branch": "work",
+    "os": "Linux-6.12.47-x86_64-with-glibc2.39",
+    "python_version": "3.12.12",
+    "repo_sha": "2bce789d5f60a2085b39db15e99b7137ff4cefeb",
+    "scope_hashes": {
+      "backend/app/indexer.py": "ba9ab531b3cd977b118f6908f5996623ee467a22240648be6576cc857159134a",
+      "backend/app/main.py": "6c702d17d7ca30ac8ca1e53f137a9a4346b775c83b55e391bb76cc649e22e28b",
+      "backend/app/schemas.py": "34423a3eef6b2057bd5f8464e04c2c5354238e862d64300ce2efa737488d8d18",
+      "contracts/ChallengePolicyModuleV25.sol": "59d75d889005e1e061aa63244e7fa94a8d7ece16ba3489e67a5659787b84a386",
+      "contracts/CouncilGovernanceV25.sol": "d84e35039bb318b9ada1b77eb9135022948aef3bb356d8c10536c46a605cffe3",
+      "contracts/SignedAttestationVerifierV25.sol": "c117ec03c1d9044ebbde152d6c29c83a2c0a1bf9ad3c01144bee51aaf27b096f",
+      "contracts/ThresholdNetworkAdapterV25.sol": "3d9cd7a6373d704d2e261d2cdc5d038068eb9960a8fa63ed84ff1e554def5e0e"
+    },
+    "timestamp_generated": "2026-04-25T20:37:02+00:00"
+  },
+  "experiment_id": "adjacent-mandate-reuse-real-v1-blinded-adjacent-transfer",
+  "intervention_policy": "All interventions logged with lane symmetry constraints.",
+  "max_command_count": "set by sponsor before lane start",
+  "max_test_runs": "set by sponsor before lane start",
+  "out_of_scope_issue_types": [
+    "architecture redesign outside scoped mandates",
+    "claims widening beyond bounded release posture",
+    "non-deterministic changes unrelated to experiment protocol"
+  ],
+  "publication_rule": "publish regardless of pass/fail",
+  "repo_sha": "2bce789d5f60a2085b39db15e99b7137ff4cefeb",
+  "reviewer_rubric_reference": [
+    "03_review/reviewer_form_mandate_2_control.template.md",
+    "03_review/reviewer_form_mandate_2_treatment.template.md",
+    "03_review/adjudication_form.template.md"
+  ],
+  "score_thresholds": {
+    "aoy_uplift_min_pct": 35,
+    "evidence_completeness_uplift_min_pct": 20,
+    "package_dependence_min_pct": 30,
+    "repair_rework_reduction_min_pct": 40,
+    "safety_regression_allowed": false,
+    "time_to_first_accepted_output_faster_min_pct": 30
+  },
+  "stage_a_budget_per_lane": {
+    "allowed_repo_docs": "same_predeclared_set",
+    "compute_budget": "same_machine_class",
+    "local_tools": "same",
+    "machine_class": "same",
+    "max_command_count": "same_predeclared_limit",
+    "max_test_runs": "same_predeclared_limit",
+    "network": "disallowed",
+    "repo_sha": "2bce789d5f60a2085b39db15e99b7137ff4cefeb",
+    "wall_clock_budget_minutes": 180
+  },
+  "stage_a_mandate_1_scope": [
+    "contracts/CouncilGovernanceV25.sol",
+    "contracts/ChallengePolicyModuleV25.sol"
+  ],
+  "stage_a_mandate_2_scope": [
+    "contracts/ThresholdNetworkAdapterV25.sol",
+    "contracts/SignedAttestationVerifierV25.sol"
+  ],
+  "stage_b_budget_per_lane": "conditional_same_as_stage_a_unless_symmetrically_documented",
+  "stage_b_mandate_3_scope": [
+    "backend/app/main.py",
+    "backend/app/indexer.py",
+    "backend/app/schemas.py"
+  ],
+  "stopping_rule": "Stop at READY_FOR_HUMAN_EXECUTION if required human inputs are missing.",
+  "timestamp_generated": "2026-04-25T20:37:02+00:00"
+}

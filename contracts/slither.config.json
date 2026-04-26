@@ -1,0 +1,7 @@
+{
+  "filter_paths": "(^|/)(node_modules|test|foundry-test|echidna)(/|$)",
+  "solc_remaps": [
+    "@openzeppelin/=node_modules/@openzeppelin/"
+  ],
+  "json": "slither-report.json"
+}

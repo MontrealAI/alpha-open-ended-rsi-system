@@ -1,0 +1,26 @@
+{
+  "python_version": "REPLACE_WITH_VERSION",
+  "os": "REPLACE_WITH_OS",
+  "tool_versions": {
+    "slither": "REPLACE_OR_NA",
+    "foundry": "REPLACE_OR_NA",
+    "hardhat": "REPLACE_OR_NA",
+    "node": "REPLACE_OR_NA"
+  },
+  "repo_sha": "REPLACE_WITH_REPO_SHA",
+  "branch": "REPLACE_WITH_BRANCH",
+  "scope_hashes": {
+    "contracts/CouncilGovernanceV25.sol": "REPLACE_WITH_SHA256",
+    "contracts/ChallengePolicyModuleV25.sol": "REPLACE_WITH_SHA256",
+    "contracts/ThresholdNetworkAdapterV25.sol": "REPLACE_WITH_SHA256",
+    "contracts/SignedAttestationVerifierV25.sol": "REPLACE_WITH_SHA256",
+    "backend/app/main.py": "REPLACE_WITH_SHA256",
+    "backend/app/indexer.py": "REPLACE_WITH_SHA256",
+    "backend/app/schemas.py": "REPLACE_WITH_SHA256"
+  },
+  "allowed_human_interventions": [
+    "budget approval",
+    "policy clarification",
+    "exception handling only"
+  ]
+}

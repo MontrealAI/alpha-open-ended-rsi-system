@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alpha-nova-seeds.local/schemas/v2.8/assay_bundle.schema.json",
+  "title": "Assay Bundle",
+  "type": "object",
+  "required": ["cheap", "mid", "expensive"],
+  "properties": {
+    "cheap": {"type": "array", "items": {"type": "string"}},
+    "mid": {"type": "array", "items": {"type": "string"}},
+    "expensive": {"type": "array", "items": {"type": "string"}}
+  }
+}

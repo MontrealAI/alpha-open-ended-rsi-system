@@ -1,0 +1,1 @@
+Claim: one completed mandate created a frozen capability package that materially improved the next adjacent mandate under control conditions (synthetic local demo).

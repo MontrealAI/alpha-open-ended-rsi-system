@@ -1,0 +1,122 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "seedId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "parentSeedId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "SeedDrafted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "seedId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "SeedSealed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "seedId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "reviewer",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint96",
+        "name": "weight",
+        "type": "uint96"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum NovaSeedRegistryV25.ReviewDecision",
+        "name": "decision",
+        "type": "uint8"
+      }
+    ],
+    "name": "ReviewSubmitted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "seedId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "SeedGreenlit",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "seedId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "SeedQuarantined",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "seedId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "sovereignPackageHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "sovereignContract",
+        "type": "address"
+      }
+    ],
+    "name": "SovereignRegistered",
+    "type": "event"
+  }
+]

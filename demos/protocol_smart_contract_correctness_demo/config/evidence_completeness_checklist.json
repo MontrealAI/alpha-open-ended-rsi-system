@@ -1,0 +1,9 @@
+[
+  "code_pointer",
+  "issue_statement",
+  "broken_invariant_or_state_path",
+  "reproduction_artifact",
+  "severity_rationale",
+  "suggested_fix",
+  "traceability_to_scope"
+]

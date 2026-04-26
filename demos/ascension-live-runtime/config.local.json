@@ -1,0 +1,19 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "release_posture": "v2.8.0-rc.7",
+  "mode": "local-devnet-bounded",
+  "claim_boundary": "Bounded local/devnet runtime only. Not audited, not mainnet-safe, not real external-market proof.",
+  "seed": 2807,
+  "base_timestamp": "2026-04-24T00:00:00Z",
+  "selected_wedge": "protocol-smart-contract-correctness",
+  "agent_profiles": [
+    "fast_low_cost",
+    "evidence_heavy",
+    "balanced"
+  ],
+  "validator_profiles": [
+    "validator-alpha",
+    "validator-beta"
+  ],
+  "bounty_unit": "LOCAL_CREDIT"
+}

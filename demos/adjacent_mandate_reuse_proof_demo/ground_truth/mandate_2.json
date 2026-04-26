@@ -1,0 +1,35 @@
+{
+  "mandate": "Mandate 2 \u2014 adjacent protocol-assurance review under control and treatment conditions",
+  "issues": [
+    {
+      "contract": "AdjudicationEscrow.sol",
+      "function": "release",
+      "issue_type": "proofless_settlement",
+      "severity": "high"
+    },
+    {
+      "contract": "GovernanceHotSwap.sol",
+      "function": "swapModule",
+      "issue_type": "instant_upgrade",
+      "severity": "high"
+    },
+    {
+      "contract": "EpochTreasury.sol",
+      "function": "claimRefund",
+      "issue_type": "treasury_drift",
+      "severity": "high"
+    },
+    {
+      "contract": "InstantFinalize.sol",
+      "function": "finalize",
+      "issue_type": "no_challenge_window",
+      "severity": "medium"
+    },
+    {
+      "contract": "ValidatorRefunds.sol",
+      "function": "refund",
+      "issue_type": "treasury_drift",
+      "severity": "high"
+    }
+  ]
+}

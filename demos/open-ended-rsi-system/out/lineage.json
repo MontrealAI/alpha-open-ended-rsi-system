@@ -1,0 +1,20 @@
+{
+  "root_genome": "genome-protocol-correctness-v1",
+  "lineage": [
+    {
+      "generation": 0,
+      "package": "capability-pack-g0-v1",
+      "mode": "DISCO"
+    },
+    {
+      "generation": 1,
+      "package": "capability-pack-g0-v1",
+      "mode": "Arnold"
+    },
+    {
+      "generation": 2,
+      "package": "g2-workable-pack-v1",
+      "mode": "DISCO+Arnold"
+    }
+  ]
+}

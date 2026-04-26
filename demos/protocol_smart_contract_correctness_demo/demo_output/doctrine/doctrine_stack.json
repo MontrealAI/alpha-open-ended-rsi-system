@@ -1,0 +1,57 @@
+{
+  "id": "protocol_cybersecurity_doctrine_stack_v1",
+  "title": "Full-Stack Economic Organism Doctrine Stack",
+  "positioning": "Protocol correctness is the first compounding correctness wedge under high-verification conditions.",
+  "first_narrow_organ": "\ud83c\udf31\ud83d\udcab \u03b1-AGI Protocol Cybersecurity Sovereign \ud83d\udd10",
+  "future_seed": "\ud83d\udc51 \u03b1-AGI Cybersecurity Sovereign \ud83d\udd31\u2728",
+  "nation_state_doctrine": "The Full-Stack Economic Organism is governed as a driven nonequilibrium system: capital, compute, and telemetry are converted into proof-bound reusable security capability faster than entropy pressure from uncertainty, adversaries, and coordination loss.",
+  "not_claimed": [
+    "A full cybersecurity sovereign already exists.",
+    "Cybersecurity is solved once and for all.",
+    "The thermodynamic framing is literal physical law.",
+    "Real-world proof is already complete."
+  ],
+  "organism_loop": [
+    "Insight reduces blind search.",
+    "Nova-Seeds generate structured fluctuations.",
+    "MARK applies economic selection pressure.",
+    "AGI Jobs converts candidate work into validated output through identity, proof, settlement, and governance.",
+    "Archive freezes successful fluctuations into reusable structure."
+  ],
+  "phase_transition": {
+    "order_parameter": "Lambda",
+    "consultancy_mode": "Lambda < Lambda_c",
+    "compounding_mode": "Lambda > Lambda_c"
+  },
+  "equation_catalog": {
+    "state_vector": "X(t)=\\big(K,C,D,A,Q,R,\\Sigma\\big)",
+    "resource_flux_input": "J_{\\text{in}}=\\alpha_K \\dot K_{\\text{in}}+\\alpha_C \\dot C_{\\text{in}}+\\alpha_D \\dot D_{\\text{in}}",
+    "resource_flux_split": "J_{\\text{in}}=\\dot W_{\\text{useful}}+\\dot Q_{\\text{diss}}+\\dot U",
+    "resource_flux_useful": "\\dot W_{\\text{useful}} \\approx \\beta_A \\dot A + \\beta_Q \\dot Q + \\beta_R \\dot R_{\\text{validated}}",
+    "free_energy": "\\mathcal G[X]=\\mathcal H[X]-T_{\\text{eff}}\\mathcal S_{\\text{org}}[X]",
+    "free_energy_objective": "\\min \\mathcal G[X]",
+    "free_energy_diff": "d\\mathcal G = d\\mathcal H - T_{\\text{eff}}\\,d\\mathcal S_{\\text{org}} - \\mathcal S_{\\text{org}}\\,dT_{\\text{eff}}",
+    "nonequilibrium_flow": "\\frac{dX}{dt}=F_{\\text{drive}}(X)-F_{\\text{decay}}(X)",
+    "steady_state": "\\left\\langle \\frac{dX}{dt}\\right\\rangle \\approx 0",
+    "nonequilibrium_positive": "J_{\\text{in}}>0,\\qquad \\dot Q_{\\text{diss}}>0,\\qquad \\dot W_{\\text{useful}}>0",
+    "microstate_energy": "E_i = E_i^{\\text{resource}} + E_i^{\\text{error}} + E_i^{\\text{latency}} + E_i^{\\text{governance}} - E_i^{\\text{reuse}}",
+    "microstate_probability": "P_i=\\frac{e^{-E_i/(k_B T_{\\text{eff}})}}{Z}, \\qquad",
+    "partition_function": "Z=\\sum_i e^{-E_i/(k_B T_{\\text{eff}})}",
+    "entropy_balance": "\\frac{d\\mathcal S_{\\text{org}}}{dt}=\\Pi-\\Phi",
+    "viability": "\\Phi \\ge \\Pi",
+    "sovereign_efficiency": "\\eta_{\\text{sovereign}}=\\frac{\\dot W_{\\text{useful}}}{J_{\\text{in}}}",
+    "archive_efficiency": "\\eta_{\\text{archive}}=\\frac{\\dot A_{\\text{reused}}}{J_{\\text{in}}}",
+    "order_parameter": "\\Lambda=\\frac{\\rho_{\\text{reuse}}\\,\\rho_{\\text{validation}}\\,\\rho_{\\text{selection}}}{\\Pi}"
+  },
+  "validation": {
+    "doctrine_docs": [
+      "docs/DOCTRINE_STACK.md",
+      "docs/NATION_STATE_DOCTRINE.md",
+      "docs/THERMODYNAMIC_MODEL.md"
+    ],
+    "required_equation_count": 18,
+    "legacy_bracket_delimiters_present": false,
+    "canonical_math_delimiters": "GitHub markdown $...$ and $$...$$",
+    "validation": "pass"
+  }
+}

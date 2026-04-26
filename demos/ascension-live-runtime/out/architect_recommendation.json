@@ -1,0 +1,15 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "recommendation_id": "architect-001",
+  "next_seed": "seed-indexer-reorg-b",
+  "next_job": "prove-reorg-replay-determinism",
+  "blocked_proof_requirements": [
+    "onchain_event_mirror_for_ascension_runtime"
+  ],
+  "basis": [
+    "archive_lineage",
+    "reservoir_ledger",
+    "validation_round"
+  ],
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

@@ -1,0 +1,29 @@
+{
+  "mandate": "Mandate 1 \u2014 build first reusable protocol-assurance package from a real review batch",
+  "issues": [
+    {
+      "contract": "ProoflessEscrow.sol",
+      "function": "finalize",
+      "issue_type": "proofless_settlement",
+      "severity": "high"
+    },
+    {
+      "contract": "FastUpgradeController.sol",
+      "function": "upgrade",
+      "issue_type": "instant_upgrade",
+      "severity": "high"
+    },
+    {
+      "contract": "BondTreasury.sol",
+      "function": "withdrawBond",
+      "issue_type": "treasury_drift",
+      "severity": "high"
+    },
+    {
+      "contract": "ReviewGate.sol",
+      "function": "settle",
+      "issue_type": "no_challenge_window",
+      "severity": "medium"
+    }
+  ]
+}

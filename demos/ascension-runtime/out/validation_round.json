@@ -1,0 +1,65 @@
+{
+  "round_id": "validation_round_001",
+  "result": "approved",
+  "attestations": [
+    {
+      "job_id": "job_001",
+      "decision": "approved",
+      "checks": {
+        "artifacts_exist": true,
+        "receipt_json_valid": true,
+        "receipt_matches_trusted_input": true,
+        "receipt_integrity_hash_match": true,
+        "receipt_file_hash_match": true,
+        "hashes_match": true,
+        "proof_docket_completeness": true,
+        "claim_boundary_preserved": true,
+        "no_authority_widening": true,
+        "no_fabricated_external_proof": true
+      },
+      "expected_artifact_hashes": {
+        "jobs/job_001_spec.json": "75c0a78bb63898689df96d0510a86625bcd6c50bbf10d379a09c2af78f5ec499",
+        "jobs/job_001_completion.json": "aa5fa06423ec73f29a01be5eb25590c592ffbadfae49216445d8415e43a79158",
+        "jobs/job_001_event_log.json": "e96eec495d652ebb58e8a7252716c1cdf10751ae53eb13cad53ee67161dcbb90"
+      },
+      "artifact_hashes": {
+        "jobs/job_001_spec.json": "75c0a78bb63898689df96d0510a86625bcd6c50bbf10d379a09c2af78f5ec499",
+        "jobs/job_001_completion.json": "aa5fa06423ec73f29a01be5eb25590c592ffbadfae49216445d8415e43a79158",
+        "jobs/job_001_receipt.json": "41c8465bf59070a2df360a94689c35ce053a81d83aa9242d2dcbe04c1d18e442",
+        "jobs/job_001_event_log.json": "e96eec495d652ebb58e8a7252716c1cdf10751ae53eb13cad53ee67161dcbb90"
+      },
+      "missing_artifacts": [],
+      "malformed_artifacts": []
+    },
+    {
+      "job_id": "job_002",
+      "decision": "approved",
+      "checks": {
+        "artifacts_exist": true,
+        "receipt_json_valid": true,
+        "receipt_matches_trusted_input": true,
+        "receipt_integrity_hash_match": true,
+        "receipt_file_hash_match": true,
+        "hashes_match": true,
+        "proof_docket_completeness": true,
+        "claim_boundary_preserved": true,
+        "no_authority_widening": true,
+        "no_fabricated_external_proof": true
+      },
+      "expected_artifact_hashes": {
+        "jobs/job_002_spec.json": "61706a5f3d1fee28d2c0933c3f1f33d530151759f29dd477df2256b328795fec",
+        "jobs/job_002_completion.json": "10807ef51f6a5138ee346e8a3f190c6bba33e999dde6bef124bde7738289f1fa",
+        "jobs/job_002_event_log.json": "836bc8fed50088673fddbde26e2c5990e19998f4db6357f15a3c69b6b37b559a"
+      },
+      "artifact_hashes": {
+        "jobs/job_002_spec.json": "61706a5f3d1fee28d2c0933c3f1f33d530151759f29dd477df2256b328795fec",
+        "jobs/job_002_completion.json": "10807ef51f6a5138ee346e8a3f190c6bba33e999dde6bef124bde7738289f1fa",
+        "jobs/job_002_receipt.json": "dee30b0cac963d8f6acd6e2fcd2469cc6c9555d2f9dc73970e077c7867f569d3",
+        "jobs/job_002_event_log.json": "836bc8fed50088673fddbde26e2c5990e19998f4db6357f15a3c69b6b37b559a"
+      },
+      "missing_artifacts": [],
+      "malformed_artifacts": []
+    }
+  ],
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

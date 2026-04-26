@@ -1,0 +1,7 @@
+{
+  "aoy_uplift": 0.35,
+  "speed_uplift": 0.30,
+  "repair_rework_reduction": 0.40,
+  "evidence_completeness_uplift": 0.20,
+  "package_dependence_rate": 0.30
+}

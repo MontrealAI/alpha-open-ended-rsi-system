@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reservoir Ledger v2.8",
+  "type": "object",
+  "required": [
+    "epoch",
+    "unit",
+    "validated_work_units",
+    "rejected_work_units",
+    "reinvestment_recommendation",
+    "claim_boundary"
+  ]
+}

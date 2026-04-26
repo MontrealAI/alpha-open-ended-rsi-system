@@ -1,0 +1,26 @@
+{
+  "no_value_without_evidence": {
+    "status": "pass",
+    "evidence": [
+      "repo-native probes passing=True",
+      "quality thresholds passing=True",
+      "lineage and scorecard artifacts emitted"
+    ]
+  },
+  "no_autonomy_without_authority": {
+    "status": "pass",
+    "evidence": [
+      "selected domain whitelist-constrained=True",
+      "no authority widening declared=True",
+      "human approval gates preserved in simulated adjudication"
+    ]
+  },
+  "no_settlement_without_validation": {
+    "status": "pass",
+    "evidence": [
+      "all adjudication is synthetic and explicitly labeled",
+      "no external settlement calls",
+      "schema checks passing=True"
+    ]
+  }
+}

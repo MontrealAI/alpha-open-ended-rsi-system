@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sovereign Manifest v2.8",
+  "type": "object",
+  "required": [
+    "runtime_id",
+    "sovereign_id",
+    "archive_policy",
+    "claim_boundary"
+  ]
+}

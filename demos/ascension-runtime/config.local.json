@@ -1,0 +1,6 @@
+{
+  "runtime_id": "ascension-runtime-local-001",
+  "artifact_version": "v2.8.0-rc.7",
+  "mode": "local-devnet",
+  "bounty_unit": "LOCAL_UNIT"
+}

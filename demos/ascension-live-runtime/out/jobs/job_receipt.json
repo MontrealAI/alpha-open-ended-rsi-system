@@ -1,0 +1,11 @@
+{
+  "job_id": "job-001",
+  "receipt_id": "receipt-job-001",
+  "status": "finalized",
+  "validated": true,
+  "bounty_units": 55,
+  "unit": "LOCAL_CREDIT",
+  "validator_round": "validation-001",
+  "council_ruling": "council-001",
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

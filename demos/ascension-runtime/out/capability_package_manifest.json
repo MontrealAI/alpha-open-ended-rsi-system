@@ -1,0 +1,13 @@
+{
+  "packages": [
+    {
+      "id": "capability_pkg_protocol_a",
+      "source": "invariant_library_seed"
+    },
+    {
+      "id": "capability_pkg_invariant_b",
+      "source": "audit_factory_seed"
+    }
+  ],
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

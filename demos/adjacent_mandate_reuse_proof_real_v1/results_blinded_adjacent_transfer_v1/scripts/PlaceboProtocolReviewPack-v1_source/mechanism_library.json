@@ -1,0 +1,6 @@
+{
+  "description": "Generic protocol-review placeholder with no Mandate 1 derived mechanisms.",
+  "file": "mechanism_library.json",
+  "package": "PlaceboProtocolReviewPack-v1",
+  "status": "PLACEBO_GENERIC_CONTENT"
+}

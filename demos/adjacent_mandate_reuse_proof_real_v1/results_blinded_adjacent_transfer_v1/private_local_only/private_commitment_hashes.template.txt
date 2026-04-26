@@ -1,0 +1,2 @@
+# TEMPLATE
+Generate private_commitment_hashes.txt via commit-private once local private files are filled.

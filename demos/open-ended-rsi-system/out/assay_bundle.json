@@ -1,0 +1,22 @@
+{
+  "simulated": true,
+  "cheap": [
+    "lint/static",
+    "schema validation",
+    "proof completeness",
+    "policy compliance",
+    "diff sanity",
+    "repo-native probe replay"
+  ],
+  "mid": [
+    "targeted integration",
+    "openapi/abi/schema consistency",
+    "operator-usability rubric",
+    "proof-docket completeness"
+  ],
+  "expensive": [
+    "held-out synthetic mandate",
+    "blinded-rubric emulation",
+    "canary replay pack"
+  ]
+}

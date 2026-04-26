@@ -1,0 +1,32 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "sovereign_id": "sovereign-protocol-correctness-001",
+  "seed_id": "seed-protocol-correctness-a",
+  "state": "operating",
+  "authority_scope": [
+    "create_job",
+    "evaluate_submission",
+    "finalize_bounded_receipt"
+  ],
+  "allowed_mandate_families": [
+    "protocol-correctness",
+    "governance-validation"
+  ],
+  "job_creation_policy": {
+    "max_open_jobs": 3,
+    "requires_goal_metric": true
+  },
+  "validator_policy": {
+    "minimum_validators": 1,
+    "council_override": "required_on_dispute"
+  },
+  "settlement_policy": {
+    "unit": "LOCAL_CREDIT",
+    "external_token_transfer": false
+  },
+  "archive_policy": {
+    "hash_link_required": true,
+    "lineage_write_required": true
+  },
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

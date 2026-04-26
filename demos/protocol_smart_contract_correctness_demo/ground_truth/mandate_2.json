@@ -1,0 +1,23 @@
+{
+  "mandate_id": "mandate_2_threshold_attestation_correctness",
+  "issues": [
+    {
+      "contract": "ThresholdNetworkAdapterV25Fixture.sol",
+      "function": "releaseEscrow",
+      "issue_type": "proofless_settlement",
+      "severity": "high"
+    },
+    {
+      "contract": "SignedAttestationVerifierV25Fixture.sol",
+      "function": "finalizeAttestation",
+      "issue_type": "no_challenge_window",
+      "severity": "medium"
+    },
+    {
+      "contract": "SignedAttestationVerifierV25Fixture.sol",
+      "function": "withdrawBond",
+      "issue_type": "treasury_drift",
+      "severity": "high"
+    }
+  ]
+}

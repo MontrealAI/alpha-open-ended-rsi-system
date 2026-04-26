@@ -1,0 +1,115 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "mode": "local-devnet-bounded",
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims.",
+  "layers": [
+    {
+      "layer": "Insight",
+      "status": "implemented",
+      "evidence_artifact": "out/insight_packet.json",
+      "result": "pass",
+      "next_required_proof": "Add on-chain insight event mirror",
+      "risk_level": "medium",
+      "claim_boundary": "local-devnet-only"
+    },
+    {
+      "layer": "Nova-Seeds",
+      "status": "implemented",
+      "evidence_artifact": "out/nova_seed_registry_snapshot.json",
+      "result": "pass",
+      "next_required_proof": "Add contract-backed registry roundtrip",
+      "risk_level": "medium",
+      "claim_boundary": "local-devnet-only"
+    },
+    {
+      "layer": "MARK",
+      "status": "implemented",
+      "evidence_artifact": "out/mark_selection_report.json",
+      "result": "pass",
+      "next_required_proof": "Add devnet event indexing parity",
+      "risk_level": "medium",
+      "claim_boundary": "local-devnet-only"
+    },
+    {
+      "layer": "Sovereign",
+      "status": "implemented",
+      "evidence_artifact": "out/sovereign_manifest.json",
+      "result": "pass",
+      "next_required_proof": "Add contract-state lock proof",
+      "risk_level": "medium",
+      "claim_boundary": "local-devnet-only"
+    },
+    {
+      "layer": "Business",
+      "status": "implemented",
+      "evidence_artifact": "out/business_operating_plan.json",
+      "result": "pass",
+      "next_required_proof": "Add multi-job batch proofs",
+      "risk_level": "low",
+      "claim_boundary": "local-devnet-only"
+    },
+    {
+      "layer": "Marketplace",
+      "status": "implemented",
+      "evidence_artifact": "out/marketplace_round.json",
+      "result": "pass",
+      "next_required_proof": "Integrate escrow test-token fixture",
+      "risk_level": "medium",
+      "claim_boundary": "local-devnet-only"
+    },
+    {
+      "layer": "AGI Jobs",
+      "status": "implemented",
+      "evidence_artifact": "out/jobs/job_receipt.json",
+      "result": "pass",
+      "next_required_proof": "Emit on-chain receipt adapter",
+      "risk_level": "medium",
+      "claim_boundary": "local-devnet-only"
+    },
+    {
+      "layer": "Agents",
+      "status": "implemented",
+      "evidence_artifact": "out/agent_execution_log.json",
+      "result": "pass",
+      "next_required_proof": "Add persistent reputation ledger",
+      "risk_level": "low",
+      "claim_boundary": "local-devnet-only"
+    },
+    {
+      "layer": "Validators / Council",
+      "status": "implemented",
+      "evidence_artifact": "out/validation_round.json",
+      "result": "pass",
+      "next_required_proof": "Add commit-reveal contract adapter",
+      "risk_level": "medium",
+      "claim_boundary": "local-devnet-only"
+    },
+    {
+      "layer": "Value Reservoir",
+      "status": "implemented",
+      "evidence_artifact": "out/reservoir_ledger.json",
+      "result": "pass",
+      "next_required_proof": "Add deterministic tokenized local settlement",
+      "risk_level": "medium",
+      "claim_boundary": "local-devnet-only"
+    },
+    {
+      "layer": "Architect",
+      "status": "implemented",
+      "evidence_artifact": "out/architect_recommendation.json",
+      "result": "pass",
+      "next_required_proof": "Add recommendation performance backtest",
+      "risk_level": "low",
+      "claim_boundary": "local-devnet-only"
+    },
+    {
+      "layer": "Archive",
+      "status": "implemented",
+      "evidence_artifact": "out/archive_lineage.json",
+      "result": "pass",
+      "next_required_proof": "Add lineage merkle root export",
+      "risk_level": "medium",
+      "claim_boundary": "local-devnet-only"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "invariant_library_seed",
+  "version": "v2.8.0-rc.7",
+  "thesis": "Grow reusable invariant suites for contract families.",
+  "target_mandate_family": "verification",
+  "fusionplan_summary": "Curate invariant templates + schema-linked outputs",
+  "expected_artifact_types": [
+    "invariant suite",
+    "coverage report"
+  ],
+  "success_metrics": [
+    "invariant reuse >= 0.6",
+    "false-positive rate <= 0.1"
+  ],
+  "proof_burden": "medium",
+  "settlement_condition": "validated invariant pack",
+  "governance_gate": "no claim widening",
+  "mutation_axes": [
+    "depth",
+    "cross-protocol applicability"
+  ],
+  "lineage_parent_ids": [
+    "audit_factory_seed"
+  ],
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

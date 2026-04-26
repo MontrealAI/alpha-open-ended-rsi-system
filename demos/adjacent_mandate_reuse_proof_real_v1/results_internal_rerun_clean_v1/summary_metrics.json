@@ -1,0 +1,97 @@
+{
+  "experiment_id": "adjacent-reuse-rerun-clean-v1",
+  "repo": "MontrealAI/alpha-nova-seeds",
+  "repo_sha": "97907b70d86f44a5a3f31f71828a9360fd1f6744",
+  "package": {
+    "name": "GovernanceValidationPack-v1",
+    "package_hash": "0f1a9a8a3dfd785cc58c6b96936c891bfb3301bb1ecf8330f95c81c3358a193d",
+    "classes": [
+      "OBJECT_EXISTENCE_AND_ACTIVE_BINDING",
+      "DISTINCT_ACTOR_AND_WEIGHT_BINDING",
+      "NONCE_BACKED_UNIQUE_IDENTITY",
+      "EVENT_STATE_REPLAY_SURFACE_COMPLETENESS"
+    ]
+  },
+  "scope": {
+    "mandate_1": [
+      "contracts/CouncilGovernanceV25.sol",
+      "contracts/ChallengePolicyModuleV25.sol"
+    ],
+    "pass_a": [
+      "contracts/ThresholdNetworkAdapterV25.sol",
+      "contracts/SignedAttestationVerifierV25.sol"
+    ],
+    "pass_b": [
+      "contracts/NovaSeedRegistryV25.sol",
+      "contracts/NovaSeedWorkflowAdapterV25.sol"
+    ]
+  },
+  "control": {
+    "cost_units": 24.0,
+    "accepted_count": 4,
+    "usefulness_points": 10.0,
+    "aoy": 0.4166666666666667,
+    "time_to_first_accepted_output": 1.6,
+    "avg_rework": 2.0,
+    "evidence_completeness": 0.6666666666666667,
+    "safety_incidents": 0,
+    "unsupported_claims": 0,
+    "hallucinated_references": 0,
+    "package_dependence": 0.0
+  },
+  "treatment": {
+    "cost_units": 24.0,
+    "accepted_count": 8,
+    "usefulness_points": 18.0,
+    "aoy": 0.75,
+    "time_to_first_accepted_output": 0.9,
+    "avg_rework": 1.0,
+    "evidence_completeness": 0.9583333333333334,
+    "safety_incidents": 0,
+    "unsupported_claims": 0,
+    "hallucinated_references": 0,
+    "package_dependence": 0.75
+  },
+  "comparisons": {
+    "aoy_uplift": 0.8,
+    "speed_uplift": 0.4375,
+    "rework_reduction": 0.5,
+    "evidence_completeness_uplift": 0.4375,
+    "package_dependence": 0.75,
+    "no_safety_regression_gate_passed": true
+  },
+  "passes": {
+    "pass_a": "PASS",
+    "pass_b": "PASS",
+    "combined": "PASS"
+  },
+  "best_practice_alignment": {
+    "repo_sha_pinned": true,
+    "answer_keys_frozen_before_each_pass": true,
+    "package_frozen_before_both_passes": true,
+    "same_rubric_budget_cost_model_across_lanes": true,
+    "blinded_output_ids_used": true,
+    "intervention_log_kept": true,
+    "independent_blinded_reviewers": false,
+    "parallel_lanes": false,
+    "external_stopwatch_timing": false
+  },
+  "claim_boundary": {
+    "supported": "A frozen capability package materially improved adjacent correctness review across two adjacent mandate pairs inside the protocol-and-smart-contract correctness wedge under a fixed internal rubric.",
+    "not_supported": [
+      "public proof that AGI Alpha is already fully proven as a compounding substrate",
+      "proof that the broader cybersecurity sovereign is already proven in real-world operation",
+      "independent blinded replication",
+      "final security assurance or production-final evidence"
+    ]
+  },
+  "rsi_interpretation": {
+    "answer": "Yes, in a bounded sense.",
+    "preferred_terms": [
+      "bounded recursive self-improvement",
+      "recursive capability accumulation",
+      "externally-governed recursive improvement"
+    ],
+    "not_claimed": "unconstrained autonomous self-redesign or open-ended RSI"
+  }
+}

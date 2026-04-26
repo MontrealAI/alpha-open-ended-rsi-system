@@ -1,0 +1,64 @@
+{
+  "id": "ProtocolCybersecurityPack-v1",
+  "legacy_aliases": [
+    "ProtocolAssurancePack-v1"
+  ],
+  "type": "sector_level_stepping_stone",
+  "contains_sub_pack": "GovernanceValidationPack-v1",
+  "scope": [
+    "governance_dispute_correctness",
+    "threshold_attestation_correctness"
+  ],
+  "portable_components": {
+    "ontology": [
+      "instant_upgrade",
+      "no_challenge_window",
+      "proofless_settlement",
+      "treasury_drift"
+    ],
+    "invariant_library": {
+      "proofless_settlement": "Value release requires explicit validated proof and authority checks.",
+      "instant_upgrade": "Upgrade authority requires delay/timelock and visible governance intent.",
+      "treasury_drift": "Accounting state must reconcile prior to value movement.",
+      "no_challenge_window": "Post-approval settlement requires challenge window expiry."
+    },
+    "workflow_template": [
+      "enumerate value-moving functions",
+      "map authority and proof checks",
+      "test challenge-window semantics",
+      "trace accounting consistency",
+      "emit release-gate packet"
+    ],
+    "query_bundle": [
+      "call{value:",
+      "transfer(",
+      "swapImplementation",
+      "upgrade",
+      "readyAt",
+      "approvedAt",
+      "challengePeriod",
+      "locked"
+    ],
+    "mechanism_library": {
+      "proofless_settlement": "Value release requires explicit validated proof and authority checks.",
+      "instant_upgrade": "Upgrade authority requires delay/timelock and visible governance intent.",
+      "treasury_drift": "Accounting state must reconcile prior to value movement.",
+      "no_challenge_window": "Post-approval settlement requires challenge window expiry."
+    },
+    "release_gate_packet": {
+      "required": [
+        "accepted findings with repro",
+        "evidence completeness >= 0.9",
+        "unsupported claim rate <= 0.1",
+        "scope traceability"
+      ]
+    },
+    "skill_wrapper": {
+      "name": "protocol_cybersecurity_invariant_lane",
+      "mode": "deterministic",
+      "notes": "Synthetic local wrapper for replayable mandate review"
+    }
+  },
+  "promotion_rationale": "Promoted after deterministic mandate-1 win and reusable artifact quality.",
+  "package_hash": "6156b08893dbc919edde510f4feb541777194f302fac29ca9b8007ab6c8ffe5a"
+}

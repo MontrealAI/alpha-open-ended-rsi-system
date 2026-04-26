@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Archive Lineage v2.8",
+  "type": "object",
+  "required": [
+    "seed_lineage",
+    "claim_boundary"
+  ]
+}

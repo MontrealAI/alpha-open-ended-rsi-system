@@ -1,0 +1,6 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "selected_agent": "agent-evidence",
+  "execution": "completed",
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

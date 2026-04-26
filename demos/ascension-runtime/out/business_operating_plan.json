@@ -1,0 +1,18 @@
+{
+  "runtime_id": "ascension-runtime-local-001",
+  "business_id": "business-protocol-correctness-001",
+  "sovereign_id": "alpha-agi-protocol-cybersecurity-sovereign",
+  "mandate_selection": [
+    "protocol-correctness",
+    "invariant-expansion"
+  ],
+  "job_definitions": [
+    "job_001",
+    "job_002"
+  ],
+  "agent_assignment_plan": "competitive bidding with deterministic scoring",
+  "validation_plan": "artifact-hash + claim-boundary + authority checks",
+  "proof_docket_plan": "per-job machine-readable receipts and attestations",
+  "settlement_receipt_plan": "placeholder units after approval only",
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

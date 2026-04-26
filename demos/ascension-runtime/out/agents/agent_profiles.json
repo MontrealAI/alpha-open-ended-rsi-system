@@ -1,0 +1,23 @@
+{
+  "agents": [
+    {
+      "agent_id": "fast_low_cost",
+      "cost_bias": 0.9,
+      "evidence_bias": 0.6,
+      "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+    },
+    {
+      "agent_id": "evidence_heavy",
+      "cost_bias": 0.6,
+      "evidence_bias": 0.95,
+      "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+    },
+    {
+      "agent_id": "balanced",
+      "cost_bias": 0.75,
+      "evidence_bias": 0.8,
+      "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+    }
+  ],
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

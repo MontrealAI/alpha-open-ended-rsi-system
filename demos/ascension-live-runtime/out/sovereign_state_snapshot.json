@@ -1,0 +1,6 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "sovereign_id": "sovereign-protocol-correctness-001",
+  "state": "operating",
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

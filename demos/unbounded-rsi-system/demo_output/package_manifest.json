@@ -1,0 +1,42 @@
+{
+  "package_version": "v1",
+  "frozen_sub_pack": {
+    "id": "GovernanceValidationPack-v1",
+    "type": "frozen_sub_pack",
+    "derived_from": [
+      "demos/protocol_smart_contract_correctness_demo/contracts/mandate_1/CouncilGovernanceV25Fixture.sol",
+      "demos/protocol_smart_contract_correctness_demo/contracts/mandate_1/ChallengePolicyModuleV25Fixture.sol",
+      "demos/protocol_smart_contract_correctness_demo/parent_business/protocol_cybersecurity_studio.json",
+      "demos/protocol_smart_contract_correctness_demo/ground_truth/mandate_1.json"
+    ],
+    "promoted_functions": [
+      "governance_dispute_fixture_mapping",
+      "replayable_review_checklist",
+      "deterministic_evidence_index"
+    ]
+  },
+  "promoted_pack": {
+    "id": "ProtocolCybersecurityPack-v1",
+    "type": "promoted_stepping_stone_pack",
+    "depends_on": "GovernanceValidationPack-v1",
+    "adjacent_target": "threshold_attestation_correctness",
+    "governance_freeze": {
+      "frozen": true,
+      "immutability_scope": "demo-run"
+    }
+  },
+  "source_contract_artifacts": [
+    {
+      "path": "demos/protocol_smart_contract_correctness_demo/contracts/mandate_2/ThresholdNetworkAdapterV25Fixture.sol",
+      "sha256": "a0106204242e76d7e1c00568a42dc126495ae5a65fd02ec91dd46f85383d52cd"
+    },
+    {
+      "path": "demos/protocol_smart_contract_correctness_demo/contracts/mandate_2/SignedAttestationVerifierV25Fixture.sol",
+      "sha256": "4e8b4c1697282babb66f0b015fcd4720ad6b2d074fba677ab664a255a47bc037"
+    },
+    {
+      "path": "demos/protocol_smart_contract_correctness_demo/ground_truth/mandate_2.json",
+      "sha256": "76e7f1fe2636e0cb6e6996a510207ed3aa97bc9cf03a3962c4e4f80f133d7940"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "runtime_id": "ascension-runtime-local-001",
+  "sovereign_id": "alpha-agi-protocol-cybersecurity-sovereign",
+  "state": "formed",
+  "selected_seed_bundle": [
+    "invariant_library_seed",
+    "audit_factory_seed"
+  ],
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

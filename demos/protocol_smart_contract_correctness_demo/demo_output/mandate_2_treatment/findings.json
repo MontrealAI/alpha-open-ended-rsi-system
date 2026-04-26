@@ -1,0 +1,128 @@
+{
+  "seed": "invariant_library",
+  "accepted_findings": [
+    {
+      "contract": "SignedAttestationVerifierV25Fixture.sol",
+      "function": "finalizeAttestation",
+      "issue_type": "no_challenge_window",
+      "severity": "medium",
+      "issue_statement": "no_challenge_window detected in finalizeAttestation.",
+      "code_pointer": "SignedAttestationVerifierV25Fixture.sol:L13",
+      "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+      "reproduction_artifact": "deterministic_trace::SignedAttestationVerifierV25Fixture.sol::finalizeAttestation",
+      "severity_rationale": "Funds or control can move before proper validation guardrails.",
+      "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+      "traceability_to_scope": "mandate_2_threshold_attestation_correctness",
+      "uses_release_gate_recommendation": true,
+      "includes_harness_artifact": true,
+      "discovery_step": 4,
+      "unsupported_claim": false,
+      "severity_inflation": false,
+      "package_dependencies": [
+        "ontology",
+        "invariant_library",
+        "workflow_template",
+        "query_bundle",
+        "mechanism_library",
+        "release_gate_packet",
+        "skill_wrapper"
+      ]
+    },
+    {
+      "contract": "SignedAttestationVerifierV25Fixture.sol",
+      "function": "withdrawBond",
+      "issue_type": "treasury_drift",
+      "severity": "high",
+      "issue_statement": "treasury_drift detected in withdrawBond.",
+      "code_pointer": "SignedAttestationVerifierV25Fixture.sol:L20",
+      "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+      "reproduction_artifact": "deterministic_trace::SignedAttestationVerifierV25Fixture.sol::withdrawBond",
+      "severity_rationale": "Funds or control can move before proper validation guardrails.",
+      "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+      "traceability_to_scope": "mandate_2_threshold_attestation_correctness",
+      "uses_release_gate_recommendation": true,
+      "includes_harness_artifact": true,
+      "discovery_step": 5,
+      "unsupported_claim": false,
+      "severity_inflation": false,
+      "package_dependencies": [
+        "ontology",
+        "invariant_library",
+        "workflow_template",
+        "query_bundle",
+        "mechanism_library",
+        "release_gate_packet",
+        "skill_wrapper"
+      ]
+    },
+    {
+      "contract": "ThresholdNetworkAdapterV25Fixture.sol",
+      "function": "releaseEscrow",
+      "issue_type": "proofless_settlement",
+      "severity": "high",
+      "issue_statement": "proofless_settlement detected in releaseEscrow.",
+      "code_pointer": "ThresholdNetworkAdapterV25Fixture.sol:L15",
+      "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+      "reproduction_artifact": "deterministic_trace::ThresholdNetworkAdapterV25Fixture.sol::releaseEscrow",
+      "severity_rationale": "Funds or control can move before proper validation guardrails.",
+      "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+      "traceability_to_scope": "mandate_2_threshold_attestation_correctness",
+      "uses_release_gate_recommendation": true,
+      "includes_harness_artifact": true,
+      "discovery_step": 7,
+      "unsupported_claim": false,
+      "severity_inflation": false,
+      "package_dependencies": [
+        "ontology",
+        "invariant_library",
+        "workflow_template",
+        "query_bundle",
+        "mechanism_library",
+        "release_gate_packet",
+        "skill_wrapper"
+      ]
+    }
+  ],
+  "rejected_findings": [
+    {
+      "contract": "ThresholdNetworkAdapterV25Fixture.sol",
+      "function": "releaseEscrow",
+      "issue_type": "no_challenge_window",
+      "severity": "medium",
+      "issue_statement": "no_challenge_window detected in releaseEscrow.",
+      "code_pointer": "ThresholdNetworkAdapterV25Fixture.sol:L15",
+      "broken_invariant_or_state_path": "Value movement must be gated by validated authority and challenge semantics.",
+      "reproduction_artifact": "deterministic_trace::ThresholdNetworkAdapterV25Fixture.sol::releaseEscrow",
+      "severity_rationale": "Funds or control can move before proper validation guardrails.",
+      "suggested_fix": "Add release-gate precondition checks and explicit challenge/proof barriers.",
+      "traceability_to_scope": "mandate_2_threshold_attestation_correctness",
+      "uses_release_gate_recommendation": true,
+      "includes_harness_artifact": true,
+      "discovery_step": 6,
+      "unsupported_claim": false,
+      "severity_inflation": false,
+      "package_dependencies": [
+        "ontology",
+        "invariant_library",
+        "workflow_template",
+        "query_bundle",
+        "mechanism_library",
+        "release_gate_packet",
+        "skill_wrapper"
+      ]
+    }
+  ],
+  "metrics": {
+    "accepted_usefulness_points": 25,
+    "accepted_count": 3,
+    "time_to_first_accepted_output": 4,
+    "repair_rework": 0.0,
+    "evidence_completeness": 1.0,
+    "unsupported_claim_rate": 0.0,
+    "severity_inflation_count": 0,
+    "packageable_artifact_quality": 1.0,
+    "aoy": 1.667,
+    "package_dependence_rate": 1.0
+  },
+  "lane": "treatment"
+}

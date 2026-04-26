@@ -1,0 +1,12 @@
+{
+  "job_id": "job_001",
+  "selected_agent": "evidence_heavy",
+  "status": "completed",
+  "proof_docket": [
+    "jobs/job_001_spec.json",
+    "jobs/job_001_completion.json",
+    "jobs/job_001_event_log.json",
+    "jobs/job_001_receipt.json"
+  ],
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

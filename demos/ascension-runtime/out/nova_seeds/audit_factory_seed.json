@@ -1,0 +1,25 @@
+{
+  "id": "audit_factory_seed",
+  "version": "v2.8.0-rc.7",
+  "thesis": "Automate protocol audit setup with deterministic evidence dockets.",
+  "target_mandate_family": "protocol-correctness",
+  "fusionplan_summary": "Static checks + deterministic repro package + review dossier",
+  "expected_artifact_types": [
+    "audit report",
+    "invariant checklist",
+    "receipt"
+  ],
+  "success_metrics": [
+    "high-severity issues reproduced",
+    "receipt completeness >= 0.95"
+  ],
+  "proof_burden": "high",
+  "settlement_condition": "validator approval and council ratification",
+  "governance_gate": "authority-scope lock",
+  "mutation_axes": [
+    "toolchain depth",
+    "proof docket strictness"
+  ],
+  "lineage_parent_ids": [],
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

@@ -1,0 +1,73 @@
+{
+  "experiment_id": "adjacent-mandate-reuse-real-v1-blinded-adjacent-transfer",
+  "repo": "MontrealAI/alpha-nova-seeds",
+  "repo_sha": "REPLACE_WITH_REPO_SHA",
+  "branch": "REPLACE_WITH_BRANCH",
+  "target_path": "demos/adjacent_mandate_reuse_proof_real_v1",
+  "execution_results_path": "demos/adjacent_mandate_reuse_proof_real_v1/results_blinded_adjacent_transfer_v1",
+  "vertical": "protocol-and-smart-contract-correctness",
+  "publication_rule": "publish_result_whether_pass_or_fail",
+  "stopping_rule": "stop_after_stage_a_if_any_threshold_fails_or_if_human_blinded_inputs_missing",
+  "mandate_1": {
+    "name": "Governance / dispute correctness",
+    "scope": [
+      "contracts/CouncilGovernanceV25.sol",
+      "contracts/ChallengePolicyModuleV25.sol"
+    ],
+    "goal": "Produce GovernanceValidationPack-v1"
+  },
+  "mandate_2": {
+    "name": "Threshold / attestation correctness",
+    "scope": [
+      "contracts/ThresholdNetworkAdapterV25.sol",
+      "contracts/SignedAttestationVerifierV25.sol"
+    ],
+    "goal": "Measure adjacent-mandate reuse under blinded control vs treatment"
+  },
+  "mandate_3": {
+    "name": "Backend / API correctness",
+    "scope": [
+      "backend/app/main.py",
+      "backend/app/indexer.py",
+      "backend/app/schemas.py"
+    ],
+    "goal": "Conditional Stage B cross-domain transfer test",
+    "status": "conditional_on_real_stage_a_pass"
+  },
+  "out_of_scope_issue_types": [
+    "non-deterministic cosmetic refactors",
+    "out-of-scope architecture redesign",
+    "claims beyond protocol-correctness wedge"
+  ],
+  "allowed_tools_and_commands": [
+    "local shell tooling only",
+    "repo-native scripts and tests",
+    "scorecard helper: python3 demos/adjacent_mandate_reuse_proof_real_v1/07_scripts/calculate_q2_scorecard.py --scorecard-dir demos/adjacent_mandate_reuse_proof_real_v1/results_blinded_adjacent_transfer_v1/scorecard_outputs"
+  ],
+  "reviewer_blinding": {
+    "operator_kits": ["Kit Blue", "Kit Gold"],
+    "reviewer_packet_labels": ["Lane Blue", "Lane Gold"],
+    "blinding_officer_must_be_separate_from_review_and_scoring": true,
+    "leakage_questions_required": true
+  },
+  "control_and_treatment_parallel": true,
+  "human_intervention_logging_required": true,
+  "wall_clock_budget_per_lane_minutes": 180,
+  "compute_budget_per_lane": {
+    "machine_class": "same-machine-class-required",
+    "max_test_runs": "set-by-sponsor-before-run",
+    "max_command_count": "set-by-sponsor-before-run",
+    "network": "disallowed"
+  },
+  "intervention_policy": "log all exceptions in intervention log; symmetry across lanes required",
+  "reviewer_rubric": "demos/adjacent_mandate_reuse_proof_real_v1/03_review/reviewer_form_mandate_2_control.template.md and reviewer_form_mandate_2_treatment.template.md (normalized blinded packets)",
+  "pass_thresholds": {
+    "aoy_uplift_min_pct": 35,
+    "speed_uplift_min_pct": 30,
+    "rework_reduction_min_pct": 40,
+    "evidence_completeness_uplift_min_pct": 20,
+    "safety_regression_allowed": false,
+    "package_dependence_min_pct": 30
+  },
+  "freeze_time_utc": "REPLACE_WITH_ISO8601"
+}

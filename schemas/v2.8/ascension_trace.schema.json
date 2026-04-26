@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ascension Trace Matrix Row v2.8",
+  "type": "object",
+  "required": [
+    "layer",
+    "public_role",
+    "repo_role",
+    "artifact",
+    "current_implementation",
+    "status_class",
+    "evidence_status_note"
+  ]
+}

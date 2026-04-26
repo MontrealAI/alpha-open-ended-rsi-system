@@ -1,0 +1,100 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "events": [
+    {
+      "event_id": "evt-009",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "JobCreated",
+      "payload": {
+        "job_id": "job-001",
+        "sovereign_id": "sovereign-protocol-correctness-001"
+      },
+      "payload_sha256": "107ba01a49d48ca313f856fbe60ad9ebbafcabfcf31fe08a51426c826d1c2d99"
+    },
+    {
+      "event_id": "evt-010",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "AgentApplied",
+      "payload": {
+        "job_id": "job-001",
+        "agent_id": "agent-fast",
+        "score": 0.59
+      },
+      "payload_sha256": "47c90812bcc5c12bd4ce07d132c8ab42993cafd52ef35455d7d20e2273c8596a"
+    },
+    {
+      "event_id": "evt-011",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "AgentApplied",
+      "payload": {
+        "job_id": "job-001",
+        "agent_id": "agent-evidence",
+        "score": 0.76
+      },
+      "payload_sha256": "23503e2c420043fecd1c04cce9e01a9bce66f0f743ee228902c6e36579e02517"
+    },
+    {
+      "event_id": "evt-012",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "AgentApplied",
+      "payload": {
+        "job_id": "job-001",
+        "agent_id": "agent-balanced",
+        "score": 0.68
+      },
+      "payload_sha256": "56e33a73e25079a307313278173f22a17c2b17996354dfefb69a5a0b54fd0b0c"
+    },
+    {
+      "event_id": "evt-013",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "AgentSelected",
+      "payload": {
+        "job_id": "job-001",
+        "agent_id": "agent-evidence"
+      },
+      "payload_sha256": "9ab5537a50e1898e49d8dfb92d590d4292146b771e20422b68eb43aae14c6dcc"
+    },
+    {
+      "event_id": "evt-014",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "CompletionRequested",
+      "payload": {
+        "job_id": "job-001",
+        "agent_id": "agent-evidence"
+      },
+      "payload_sha256": "9ab5537a50e1898e49d8dfb92d590d4292146b771e20422b68eb43aae14c6dcc"
+    },
+    {
+      "event_id": "evt-015",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "ValidationSubmitted",
+      "payload": {
+        "job_id": "job-001",
+        "round_id": "validation-001",
+        "result": "approved"
+      },
+      "payload_sha256": "47384222beabf4eea63abf17b00b6556ae48dc1697e1474eddce9d6b8519bee2"
+    },
+    {
+      "event_id": "evt-016",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "JobFinalized",
+      "payload": {
+        "job_id": "job-001",
+        "receipt_id": "receipt-job-001"
+      },
+      "payload_sha256": "3b66b3221e3ca123e2708105c9bf39f69cf772307b9dcaf1badabe26f7c68c7a"
+    },
+    {
+      "event_id": "evt-017",
+      "timestamp": "2026-04-24T00:00:00Z",
+      "event_type": "ReservoirCredited",
+      "payload": {
+        "job_id": "job-001",
+        "credited": 55
+      },
+      "payload_sha256": "da4dc760c898d81985199881aae17d620c00c2f5122b58a8e5282cce48f6d691"
+    }
+  ],
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

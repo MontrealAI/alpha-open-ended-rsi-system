@@ -1,0 +1,33 @@
+{
+  "runtime_id": "ascension-runtime-local-001",
+  "book_id": "mark-local-book-001",
+  "simulated_orders": [
+    {
+      "seed_id": "invariant_library_seed",
+      "alloc_units": 58,
+      "unit": "LOCAL_UNIT"
+    },
+    {
+      "seed_id": "audit_factory_seed",
+      "alloc_units": 57,
+      "unit": "LOCAL_UNIT"
+    },
+    {
+      "seed_id": "fuzz_harness_seed",
+      "alloc_units": 54,
+      "unit": "LOCAL_UNIT"
+    },
+    {
+      "seed_id": "governance_parameter_simulator_seed",
+      "alloc_units": 53,
+      "unit": "LOCAL_UNIT"
+    },
+    {
+      "seed_id": "exploit_replay_seed",
+      "alloc_units": 49,
+      "unit": "LOCAL_UNIT"
+    }
+  ],
+  "status": "simulation only; no live price discovery",
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

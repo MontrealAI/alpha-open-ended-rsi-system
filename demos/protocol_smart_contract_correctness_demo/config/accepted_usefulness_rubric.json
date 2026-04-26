@@ -1,0 +1,7 @@
+{
+  "accepted_high_with_repro": 5,
+  "accepted_medium_with_repro": 3,
+  "accepted_low": 1,
+  "accepted_invariant_or_fuzz_harness": 2,
+  "accepted_release_gate_recommendation": 2
+}

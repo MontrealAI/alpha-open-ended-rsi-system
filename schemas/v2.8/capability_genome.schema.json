@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alpha-nova-seeds.local/schemas/v2.8/capability_genome.schema.json",
+  "title": "Capability Genome",
+  "type": "object",
+  "required": ["id", "release_target", "reactive_intermediate", "authority_scope", "assets"],
+  "properties": {
+    "id": {"type": "string"},
+    "release_target": {"type": "string"},
+    "reactive_intermediate": {
+      "type": "object",
+      "required": ["type", "description"],
+      "properties": {
+        "type": {"type": "string"},
+        "description": {"type": "string"}
+      }
+    },
+    "authority_scope": {"type": "object"},
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    }
+  }
+}

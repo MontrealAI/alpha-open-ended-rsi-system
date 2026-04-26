@@ -1,0 +1,43 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": true, "internalType": "uint64", "name": "termId", "type": "uint64"}
+    ],
+    "name": "TermOpened",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": true, "internalType": "uint64", "name": "termId", "type": "uint64"},
+      {"indexed": true, "internalType": "uint32", "name": "seatId", "type": "uint32"},
+      {"indexed": false, "internalType": "address", "name": "occupant", "type": "address"},
+      {"indexed": false, "internalType": "uint96", "name": "weight", "type": "uint96"}
+    ],
+    "name": "SeatAssigned",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": true, "internalType": "bytes32", "name": "challengeId", "type": "bytes32"},
+      {"indexed": true, "internalType": "uint64", "name": "termId", "type": "uint64"},
+      {"indexed": true, "internalType": "uint32", "name": "seatId", "type": "uint32"},
+      {"indexed": false, "internalType": "address", "name": "challenger", "type": "address"},
+      {"indexed": false, "internalType": "bytes32", "name": "reasonHash", "type": "bytes32"},
+      {"indexed": false, "internalType": "uint256", "name": "bond", "type": "uint256"}
+    ],
+    "name": "ChallengeOpened",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": true, "internalType": "bytes32", "name": "challengeId", "type": "bytes32"},
+      {"indexed": false, "internalType": "bool", "name": "upheld", "type": "bool"}
+    ],
+    "name": "ChallengeResolved",
+    "type": "event"
+  }
+]

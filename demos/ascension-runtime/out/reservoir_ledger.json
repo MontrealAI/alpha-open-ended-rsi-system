@@ -1,0 +1,26 @@
+{
+  "epoch": "reservoir_epoch_001",
+  "unit": "LOCAL_UNIT",
+  "validated_work_units": [
+    {
+      "job_id": "job_001",
+      "units": 60
+    },
+    {
+      "job_id": "job_002",
+      "units": 45
+    }
+  ],
+  "rejected_work_units": [],
+  "archive_contribution": {
+    "units": 20,
+    "basis": "validated receipts"
+  },
+  "simulated_fee_burn": {
+    "fee_units": 3,
+    "burn_units": 1
+  },
+  "reinvestment_recommendation": "allocate to invariant_library_seed mutation",
+  "status": "local accounting, not real token economy",
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

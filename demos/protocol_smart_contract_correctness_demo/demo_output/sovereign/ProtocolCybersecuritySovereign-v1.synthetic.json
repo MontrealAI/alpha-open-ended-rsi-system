@@ -1,0 +1,30 @@
+{
+  "id": "ProtocolCybersecuritySovereign-v1.synthetic.json",
+  "legacy_aliases": [
+    "ProtocolAssuranceSovereign-v1.synthetic.json"
+  ],
+  "type": "synthetic_sovereign_artifact",
+  "status": "emitted",
+  "depends_on": "ProtocolCybersecurityPack-v1",
+  "package_hash": "6156b08893dbc919edde510f4feb541777194f302fac29ca9b8007ab6c8ffe5a",
+  "constitutional_order": [
+    "identity",
+    "proof",
+    "settlement",
+    "governance"
+  ],
+  "invariant": [
+    "no value without evidence",
+    "no autonomy without authority",
+    "no settlement without validation"
+  ],
+  "timestamp": "2026-01-01T00:00:00Z",
+  "positioning": "First narrow, high-verification production organ and compounding correctness sovereign form in synthetic demo context.",
+  "future_seed": "Seed of a future broader \u03b1-AGI Cybersecurity Sovereign.",
+  "not_claimed": [
+    "This does NOT prove that a full cybersecurity sovereign already exists.",
+    "This does NOT claim cybersecurity is solved once and for all.",
+    "This does NOT claim thermodynamic framing is literal physical law."
+  ],
+  "disclaimer": "Synthetic local demo artifact; not a real-world proof."
+}

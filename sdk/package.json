@@ -1,0 +1,20 @@
+{
+  "name": "alpha-nova-seeds-v26-sdk",
+  "private": true,
+  "version": "2.6.0-rc.1",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@lit-protocol/auth": "^8.0.0",
+    "@lit-protocol/lit-client": "^8.0.0",
+    "@nucypher/taco": "latest",
+    "@nucypher/taco-auth": "latest",
+    "ethers": "^5.7.2",
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

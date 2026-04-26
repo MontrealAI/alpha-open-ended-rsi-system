@@ -1,0 +1,73 @@
+{
+  "demo_id": "open-ended-rsi-system",
+  "release_target": "v2.8.0-rc.2",
+  "deterministic_timestamp": "2026-04-22T00:00:00+00:00",
+  "seed": 2802,
+  "candidate_pool_size": 48,
+  "neighborhood_size": 24,
+  "frontier_whitelist": [
+    "backend_api_correctness",
+    "sdk_typed_attestation_payload_correctness",
+    "schema_migration_integrity",
+    "proof_docket_synthesis",
+    "release_provenance_operator_automation",
+    "dashboard_provenance_evidence_surface_correctness"
+  ],
+  "repo_native_probes": [
+    {
+      "id": "protocol_wedge_replay_assert",
+      "scope": "real mandate 1 wedge replay",
+      "cmd": [
+        "python3",
+        "demos/protocol_smart_contract_correctness_demo/run_demo.py",
+        "--assert"
+      ]
+    },
+    {
+      "id": "demo_link_integrity",
+      "scope": "demo ladder",
+      "cmd": [
+        "python3",
+        "scripts/check_demo_links.py"
+      ]
+    },
+    {
+      "id": "doctrine_consistency",
+      "scope": "doctrine and claim boundary",
+      "cmd": [
+        "python3",
+        "scripts/check_doctrine_consistency.py"
+      ]
+    },
+    {
+      "id": "math_markdown_consistency",
+      "scope": "equation rendering checks",
+      "cmd": [
+        "python3",
+        "scripts/check_math_markdown.py"
+      ]
+    },
+    {
+      "id": "release_surface_posture",
+      "scope": "README/AGENTS/RELEASES active RC coherence",
+      "cmd": [
+        "python3",
+        "scripts/check_release_surface_posture.py"
+      ]
+    }
+  ],
+  "authority_scope": {
+    "may": [
+      "mutate packages",
+      "choose approved assays",
+      "select next mandate from whitelist",
+      "schedule bounded synthetic experiments"
+    ],
+    "may_not": [
+      "widen authority scope",
+      "settle real value",
+      "self-promote to production",
+      "rewrite repo claim boundary"
+    ]
+  }
+}

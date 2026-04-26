@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MARK Selection Report v2.8",
+  "type": "object",
+  "required": [
+    "runtime_id",
+    "selected_seed",
+    "ranked",
+    "allocation_simulation",
+    "claim_boundary"
+  ]
+}

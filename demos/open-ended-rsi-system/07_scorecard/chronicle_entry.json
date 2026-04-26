@@ -1,0 +1,17 @@
+{
+  "entry_id": "chronicle-open-ended-rsi-v1",
+  "release_target": "v2.8.0-rc.2",
+  "trajectory": "bounded_to_expanding_to_increasingly_autonomous",
+  "generation_order": [
+    0,
+    1,
+    2
+  ],
+  "frozen_package_id": "capability-pack-g0-v1",
+  "selected_frontier_domain": "backend_api_correctness",
+  "safety_gates_expected": [
+    "no_value_without_evidence",
+    "no_autonomy_without_authority",
+    "no_settlement_without_validation"
+  ]
+}

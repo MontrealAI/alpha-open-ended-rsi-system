@@ -1,0 +1,7 @@
+{
+  "job_id": "job-001",
+  "agent_id": "agent-fast",
+  "strategy": "fast_low_cost",
+  "bid_cost": 12,
+  "bid_score": 0.59
+}

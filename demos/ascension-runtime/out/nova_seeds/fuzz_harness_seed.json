@@ -1,0 +1,27 @@
+{
+  "id": "fuzz_harness_seed",
+  "version": "v2.8.0-rc.7",
+  "thesis": "Operationalize deterministic fuzz harnesses for replayable bug discovery.",
+  "target_mandate_family": "testing",
+  "fusionplan_summary": "Harness templates + replay corpus + minimization receipts",
+  "expected_artifact_types": [
+    "harness",
+    "repro cases",
+    "run log"
+  ],
+  "success_metrics": [
+    "repro determinism == 1.0",
+    "new edge paths discovered"
+  ],
+  "proof_burden": "medium",
+  "settlement_condition": "validator confirms replay",
+  "governance_gate": "bounded authority",
+  "mutation_axes": [
+    "input generators",
+    "coverage strategy"
+  ],
+  "lineage_parent_ids": [
+    "invariant_library_seed"
+  ],
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

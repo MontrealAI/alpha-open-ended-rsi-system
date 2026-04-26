@@ -1,0 +1,31 @@
+{
+  "runtime_id": "ascension-live-runtime-local-v1",
+  "round_id": "validation-001",
+  "job_id": "job-001",
+  "attestations": [
+    {
+      "round_id": "validation-001",
+      "job_id": "job-001",
+      "validator_id": "validator-alpha",
+      "checks": {
+        "artifacts_exist": true,
+        "hashes_match": true,
+        "proof_docket_completeness": true,
+        "authority_scope_preserved": true,
+        "claim_boundary_preserved": true,
+        "no_fabricated_external_proof": true
+      },
+      "artifact_hashes": {
+        "insight_packet.json": "a4d73d03f640d0f7ba27d42f42703b2000c22f81520f4c646e0ec19ea0dfd15e",
+        "mark_selection_report.json": "2e7020808cb289efbe6e0dc4fb7e90376673429065c9bc15baeaaf95172d40ad",
+        "sovereign_manifest.json": "daa954fc9cecba079bc3baf0c99ae48128c247087cc8dc832cf8e3ac33508e23",
+        "jobs/job_spec.json": "475e305b53c54e4cb90f88e5ae9a74f152174d3ab93b131bdbbec996c2de39f5",
+        "jobs/job_completion.json": "5318387c4f6ce6544e54e3d94df88edf363c2a06abef9ef7b68deb86c69a8f8e"
+      },
+      "decision": "approved",
+      "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+    }
+  ],
+  "result": "approved",
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

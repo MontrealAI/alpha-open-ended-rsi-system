@@ -1,0 +1,11 @@
+{
+  "ruling_id": "council_ruling_001",
+  "result": "approve",
+  "approved_jobs": [
+    "job_001",
+    "job_002"
+  ],
+  "rejected_jobs": [],
+  "quarantined_jobs": [],
+  "claim_boundary": "The repository now contains a bounded local/devnet Minimum Viable Ascension Runtime that demonstrates the Ascension organism's proof-first economic loop. It does not claim completed live Ascension or mainnet production readiness."
+}

@@ -1,0 +1,134 @@
+<!doctype html>
+<html><head><meta charset='utf-8'><title>Protocol Correctness Flagship Demo</title>
+<style>
+body{font-family:Inter,Arial,sans-serif;background:#091224;color:#dbe4f3;margin:0;padding:28px;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto}
+.card{background:#101a2f;border:1px solid #2f405d;border-radius:14px;padding:18px;margin-bottom:16px;box-shadow:0 2px 16px rgba(2,6,23,.25)}
+h1,h2,h3{margin:0 0 12px 0} small{color:#9fb0cb}
+table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid #2f405d;padding:8px;text-align:left;vertical-align:top}
+.pass{color:#34d399;font-weight:700}.fail{color:#f87171;font-weight:700}
+.kpi{font-size:1.1rem;font-weight:700}
+.badge{display:inline-block;padding:4px 10px;border:1px solid #4d6284;border-radius:999px;background:#182642;margin-right:8px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+pre{white-space:pre-wrap;background:#0a162c;padding:10px;border-radius:10px;border:1px solid #2f405d;overflow:auto}
+ul{margin:0;padding-left:18px}
+.subtle{color:#9fb0cb}
+.kv{display:grid;grid-template-columns:190px 1fr;gap:8px 12px}
+.kv div{padding:5px 0;border-bottom:1px dashed #2b3b58}
+.kv div:nth-child(odd){font-weight:600;color:#b8c8e0}
+@media (max-width: 980px){.grid,.tri{grid-template-columns:1fr} .kv{grid-template-columns:1fr}}
+</style></head><body><div class='wrap'>
+<div class='card'>
+<span class='badge'>Flagship synthetic wedge demo</span>
+<span class='badge'>v2.8.0-rc.1 candidate surface</span>
+<h1>Protocol + Smart-Contract Correctness</h1>
+<small>Front-door wedge explanation: sector → parent business → seeds → assay → frozen package → adjacent scorecard → sovereign gate.</small>
+<p><strong>Status:</strong> synthetic, local, replayable, falsifiable; not a real-world proof pack and not an audited final deployment.</p>
+</div>
+<div class='card tri'>
+<div>
+<h3>Flagship synthetic wedge</h3>
+<p class='subtle'>Current page and report bundle.</p>
+<code>demos/protocol_smart_contract_correctness_demo/</code>
+</div>
+<div>
+<h3>Compact synthetic adjacent proof</h3>
+<p class='subtle'>Minimal replay of adjacent mandate control vs treatment.</p>
+<code>demos/adjacent_mandate_reuse_proof_demo/</code>
+</div>
+<div>
+<h3>Real-world experiment pack</h3>
+<p class='subtle'>Templates, runbook, and scorecard process for controlled execution.</p>
+<code>demos/adjacent_mandate_reuse_proof_real_v1/</code>
+</div>
+</div>
+<div class='card'>
+<h2>Doctrine stack in one view</h2>
+<p><strong>First narrow organ:</strong> 🌱💫 α-AGI Protocol Cybersecurity Sovereign 🔐.</p>
+<p><strong>Future seed:</strong> 👑 α-AGI Cybersecurity Sovereign 🔱✨.</p>
+<p><strong>Not claimed:</strong> full cybersecurity sovereign already exists; cybersecurity is solved once and for all; thermodynamic framing is literal physical law.</p>
+<p><strong>Organism loop:</strong> Insight → Nova-Seeds → MARK → AGI Jobs (identity/proof/settlement/governance) → Archive (reusable capability and entropy pressure reduction).</p>
+<pre>X(t)=\big(K,C,D,A,Q,R,\Sigma\big)
+\mathcal G[X]=\mathcal H[X]-T_{eff}\mathcal S_{org}[X]
+\Lambda=\frac{\rho_{reuse}\,\rho_{validation}\,\rho_{selection}}{\Pi}</pre>
+</div>
+<div class='card'>
+<h2>Why this sector is first</h2>
+<ul>
+<li>Objective and replayable failure classes</li>
+<li>Fast operator review cycles</li>
+<li>Reusable primitives (invariants, query bundles, release gates)</li>
+<li>Commercially legible fixed-scope mandate model</li>
+</ul>
+<p><strong>Parent business:</strong> Protocol Cybersecurity Studio</p>
+<p><strong>Constitutional order:</strong> identity → proof → settlement → governance</p>
+<p><strong>Invariant:</strong> no value without evidence; no autonomy without authority; no settlement without validation.</p>
+</div>
+<div class='card'>
+<h2>Five sibling Nova-Seeds</h2>
+<table><tr><th>Seed</th><th>Mutation thesis</th><th>Operator workflow delta</th></tr>
+<tr><td>audit_factory</td><td>Maximize breadth-first issue harvesting with strict triage templates.</td><td>Front-load contract surface enumeration and standardized triage queues.</td></tr><tr><td>exploit_replay</td><td>Map known exploit families onto current contracts to rapidly test inherited failure modes.</td><td>Run exploit-pattern replay passes before bespoke analysis.</td></tr><tr><td>fuzz_harness</td><td>Use seeded property fuzzing to find edge-case transition failures quickly.</td><td>Generate deterministic fuzz harnesses before manual deep-dive.</td></tr><tr><td>governance_parameter_simulator</td><td>Stress governance outcomes under parameter shifts (quorum, challenge windows, role thresholds).</td><td>Run deterministic parameter sweep before line-level issue extraction.</td></tr><tr><td>invariant_library</td><td>Start from reusable governance and settlement invariants, then map code paths against them.</td><td>Require each finding to link to broken invariant and state-transition path.</td></tr>
+</table>
+</div>
+<div class='card'>
+<h2>Mandate 1 (governance/dispute correctness) assay winner: invariant_library</h2>
+<p>Fixtures: <code>CouncilGovernanceV25Fixture.sol</code>, <code>ChallengePolicyModuleV25Fixture.sol</code></p>
+<table><tr><th>Seed</th><th>AUP</th><th>First accepted</th><th>Rework</th><th>Evidence</th><th>Unsupported rate</th><th>Package quality</th></tr>
+<tr><td>audit_factory</td><td>15</td><td>9</td><td>0.667</td><td>0.714</td><td>0.2</td><td>0.68</td></tr><tr><td>exploit_replay</td><td>12</td><td>10</td><td>0.5</td><td>0.786</td><td>0.333</td><td>0.62</td></tr><tr><td>fuzz_harness</td><td>23</td><td>9</td><td>0.333</td><td>0.857</td><td>0.0</td><td>0.72</td></tr><tr><td>governance_parameter_simulator</td><td>10</td><td>12</td><td>0.5</td><td>0.786</td><td>0.0</td><td>0.76</td></tr><tr><td>invariant_library</td><td>32</td><td>6</td><td>0.25</td><td>0.893</td><td>0.0</td><td>0.93</td></tr>
+</table>
+<p>Frozen sub-pack: <code>GovernanceValidationPack-v1</code> → promoted stepping stone: <code>ProtocolCybersecurityPack-v1</code> (legacy alias: <code>ProtocolAssurancePack-v1</code>).</p>
+</div>
+<div class='card'>
+<h2>Winner selection key (deterministic)</h2>
+<div class='kv'>
+<div>1</div><div>Accepted usefulness points (higher)</div>
+<div>2</div><div>Time to first accepted output (lower)</div>
+<div>3</div><div>Repair/rework ratio (lower)</div>
+<div>4</div><div>Evidence completeness (higher)</div>
+<div>5</div><div>Unsupported claim rate (lower)</div>
+<div>6</div><div>Severity inflation count (lower)</div>
+<div>7</div><div>Packageable artifact quality (higher)</div>
+</div>
+</div>
+<div class='card grid'>
+<div>
+<h2>Mandate 2 Control</h2>
+<p>AOY: <span class='kpi'>1.067</span></p>
+<p>Time to first accepted: 6</p>
+<p>Repair/rework: 0.5</p>
+<p>Evidence completeness: 0.786</p>
+</div>
+<div>
+<h2>Mandate 2 Treatment</h2>
+<p>AOY: <span class='kpi'>1.667</span></p>
+<p>Time to first accepted: 4</p>
+<p>Repair/rework: 0.0</p>
+<p>Evidence completeness: 1.0</p>
+<p>Package dependence: 1.0</p>
+</div>
+</div>
+<div class='card'>
+<h2>Adjacent-mandate threshold scorecard (strict)</h2>
+<ul>
+<li>AOY uplift: 56.2% (threshold ≥ 35.0%)</li>
+<li>Speed uplift: 33.3% (threshold ≥ 30.0%)</li>
+<li>Repair/rework reduction: 100.0% (threshold ≥ 40.0%)</li>
+<li>Evidence completeness uplift: 27.2% (threshold ≥ 20.0%)</li>
+<li>Safety regression: NO (must be NO)</li>
+<li>Package dependence rate: 100.0% (threshold ≥ 30.0%)</li>
+</ul>
+<p>Ruling: <span class='pass'>PASS</span></p>
+<p>Sovereign artifact/ruling emitted: <code>ProtocolCybersecuritySovereign-v1.synthetic.json</code></p><p><strong>Interpretation:</strong> PASS indicates the first narrow production organ and compounding correctness sovereign form in synthetic context; it is not proof that the broader cybersecurity sovereign already exists.</p>
+</div>
+<div class='card'>
+<h2>Operator artifact map + next actions</h2>
+<ul>
+<li><code>demo_output/scorecard/adjacent_mandate_scorecard.json</code></li>
+<li><code>demo_output/scorecard/release_gate_packet.json</code></li>
+<li><code>demo_output/proof_docket/proof_docket.json</code></li>
+<li><code>demo_output/proof_docket/governance_ruling.json</code></li>
+<li><code>demo_output/sovereign/ProtocolCybersecuritySovereign-v1.synthetic.json</code></li>
+</ul><p><strong>Next:</strong> run real-world controlled experiment pack for external validity evidence.</p>
+</div>
+</div></body></html>

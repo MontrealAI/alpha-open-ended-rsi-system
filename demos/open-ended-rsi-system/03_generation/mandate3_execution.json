@@ -1,0 +1,27 @@
+{
+  "mandate_id": "mandate_3",
+  "domain": "backend_api_correctness",
+  "autonomous_selector": "whitelist_bounded_weighted_frontier_ranker_v1",
+  "simulated": true,
+  "offline_only": true,
+  "steps": [
+    {
+      "step": 1,
+      "mode": "DISCO",
+      "action": "discover first workable package from selected domain reactive intermediate",
+      "status": "pass"
+    },
+    {
+      "step": 2,
+      "mode": "Arnold",
+      "action": "run one local mutation round with deterministic neighborhood scoring",
+      "status": "pass"
+    },
+    {
+      "step": 3,
+      "mode": "Assay cascade",
+      "action": "run cheap -> mid -> expensive synthetic assay pipeline",
+      "status": "pass"
+    }
+  ]
+}

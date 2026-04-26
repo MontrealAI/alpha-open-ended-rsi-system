@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Nova Seed Packet v2.8",
+  "type": "object",
+  "required": [
+    "runtime_id",
+    "seed_id",
+    "state",
+    "fusion_plan",
+    "proof_requirements",
+    "promotion_criteria",
+    "claim_boundary"
+  ]
+}

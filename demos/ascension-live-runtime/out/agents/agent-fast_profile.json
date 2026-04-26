@@ -1,0 +1,7 @@
+{
+  "agent_id": "agent-fast",
+  "strategy": "fast_low_cost",
+  "base_cost": 12,
+  "evidence_strength": 0.71,
+  "claim_boundary": "Bounded local/devnet demonstration with deterministic artifacts. No audited-final, no mainnet, no real external-market settlement claims."
+}

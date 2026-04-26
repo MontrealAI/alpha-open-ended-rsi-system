@@ -1,0 +1,52 @@
+{
+  "id": "protocol_cybersecurity_studio",
+  "title": "Protocol Cybersecurity Studio",
+  "legacy_aliases": [
+    "protocol_assurance_studio",
+    "Protocol Assurance Studio"
+  ],
+  "sector": "protocol_and_smart_contract_correctness",
+  "customer_type": [
+    "protocol foundations",
+    "governance councils",
+    "release managers",
+    "security-conscious DAOs"
+  ],
+  "problem_purchased": "Buyers purchase release-gate confidence on value-moving protocol paths before shipping governance and settlement changes.",
+  "scope_type": "fixed-scope release-critical correctness mandates (2-4 contracts)",
+  "mandate_families": [
+    "governance_dispute_correctness",
+    "threshold_attestation_correctness",
+    "treasury_release_gate_correctness"
+  ],
+  "review_posture": "evidence-first adversarial review with replayable repro artifacts",
+  "pricing_mode_illustrative": "fixed mandate fee + severity-weighted bonus for accepted replayable findings",
+  "release_gate_positioning": "block release until mandate packet meets declared evidence and safety thresholds",
+  "what_gets_archived": [
+    "accepted finding packets",
+    "invariant templates",
+    "fuzz harness seeds",
+    "release-gate checklists",
+    "scope-to-evidence trace maps"
+  ],
+  "why_archive_compounds": "Each accepted packet hardens ontology, query bundles, and evidence templates, reducing future time-to-first-accepted output while maintaining safety.",
+  "why_this_is_first_wedge": [
+    "objective failure classes",
+    "replayable review artifacts",
+    "fast operator adjudication",
+    "commercially legible fixed-scope buying motion",
+    "high reusable primitive density"
+  ],
+  "sovereign_candidate_path": "When adjacent mandates repeatedly pass strict thresholds with explicit package dependence and no safety regression, the archive graduates toward Protocol Cybersecurity Sovereign candidacy.",
+  "synthetic_disclaimer": "This artifact is synthetic and illustrative for local replay.",
+  "full_stack_organism": [
+    "Insight",
+    "Nova-Seeds",
+    "MARK",
+    "AGI Jobs (identity, proof, settlement, governance)",
+    "Archive"
+  ],
+  "first_narrow_organ": "\u03b1-AGI Protocol Cybersecurity Sovereign",
+  "future_seed": "\u03b1-AGI Cybersecurity Sovereign",
+  "doctrine_boundary": "This positions protocol cybersecurity as the first narrow high-verification organ and seed for broader future capability; it does not claim full cybersecurity sovereignty already exists."
+}

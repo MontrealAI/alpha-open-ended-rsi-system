@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Architect Runtime Recommendation v2.8",
+  "type": "object",
+  "required": [
+    "recommendation_id",
+    "inputs",
+    "next_loop_recommendations",
+    "status",
+    "claim_boundary"
+  ]
+}

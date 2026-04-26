@@ -1,0 +1,10 @@
+# Default owners
+* @MontrealAI/core-maintainers
+
+# Domain owners
+/contracts/ @MontrealAI/contracts
+/backend/ @MontrealAI/backend
+/dashboard/ @MontrealAI/operator-ui
+/sdk/ @MontrealAI/sdk
+/docs/ @MontrealAI/release-engineering
+/.github/workflows/ @MontrealAI/release-engineering

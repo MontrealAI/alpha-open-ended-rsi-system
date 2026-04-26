@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alpha-nova-seeds.local/schemas/v2.8/lineage.schema.json",
+  "title": "Lineage",
+  "type": "object",
+  "required": ["root_genome", "lineage"],
+  "properties": {
+    "root_genome": {"type": "string"},
+    "lineage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["generation", "package", "mode"],
+        "properties": {
+          "generation": {"type": "integer", "minimum": 0},
+          "package": {"type": "string"},
+          "mode": {"type": "string"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "release": {
+    "project": "alpha-nova-seeds",
+    "target_version": "v2.6.0-rc.1",
+    "source_public_release": "v2.5",
+    "git_commit": "REPLACE_WITH_COMMIT_SHA",
+    "network": "mainnet",
+    "chain_id": 1,
+    "date_utc": "REPLACE_WITH_UTC_TIMESTAMP"
+  },
+  "posture": {
+    "mode": "operator_reviewed_fail_closed",
+    "deploy_paused": true,
+    "enable_public_rounds": false,
+    "allow_open_reviewer_enrollment": false,
+    "require_multisig_handoff_before_activation": true,
+    "require_post_deploy_review": true,
+    "write_manifest": true,
+    "write_postcheck_report": true,
+    "write_operator_handoff": true
+  },
+  "rpc": {
+    "primary_url_env": "MAINNET_RPC_URL",
+    "secondary_url_env": "MAINNET_RPC_URL_SECONDARY",
+    "fork_url_env": "MAINNET_FORK_RPC_URL"
+  },
+  "accounts": {
+    "deployer_private_key_env": "DEPLOYER_PRIVATE_KEY",
+    "owner": "0x0000000000000000000000000000000000000000",
+    "admin_multisig": "0x0000000000000000000000000000000000000000",
+    "pauser": "0x0000000000000000000000000000000000000000",
+    "emergency_guardian": "0x0000000000000000000000000000000000000000",
+    "treasury": "0x0000000000000000000000000000000000000000",
+    "reviewer_rewards_treasury": "0x0000000000000000000000000000000000000000",
+    "council_admin": "0x0000000000000000000000000000000000000000"
+  },
+  "verification": {
+    "etherscan_api_key_env": "ETHERSCAN_API_KEY",
+    "verify_after_deploy": true,
+    "publish_build_info": true,
+    "publish_checksums": true,
+    "publish_attestations": true,
+    "publish_sbom": true
+  },
+  "external_dependencies": {
+    "agialpha_token": "0x0000000000000000000000000000000000000000",
+    "agi_job_manager": "0x0000000000000000000000000000000000000000",
+    "ens_registry": "0x0000000000000000000000000000000000000000",
+    "name_wrapper": "0x0000000000000000000000000000000000000000",
+    "public_resolver": "0x0000000000000000000000000000000000000000",
+    "registry_root_node": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "alpha_env_root_node": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "alpha_agent_root_node": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "alpha_node_root_node": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "alpha_club_root_node": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "deployment": {
+    "workspace": "contracts",
+    "toolchain": "hardhat3_ignition",
+    "manifest_dir": "contracts/deployments/mainnet",
+    "artifacts_dir": "contracts/artifacts",
+    "build_info_dir": "contracts/artifacts/build-info",
+    "modules": {
+      "nova_seed_registry": {
+        "enabled": true,
+        "contract_name": "REPLACE_WITH_ACTUAL_CONTRACT_NAME_AFTER_REPO_SCAN",
+        "owner": "0x0000000000000000000000000000000000000000",
+        "paused": true,
+        "base_uri": "ipfs://REPLACE_WITH_BASE_CID/",
+        "registry_node": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "threshold_attestor": {
+        "enabled": true,
+        "contract_name": "REPLACE_WITH_ACTUAL_CONTRACT_NAME_AFTER_REPO_SCAN",
+        "owner": "0x0000000000000000000000000000000000000000",
+        "paused": true,
+        "committee_threshold": 5,
+        "committee_size": 9,
+        "round_commit_window_seconds": 86400,
+        "round_reveal_window_seconds": 86400,
+        "max_ciphertext_bytes": 131072,
+        "max_payload_hashes_per_round": 64
+      },
+      "reviewer_stake_vault": {
+        "enabled": true,
+        "contract_name": "REPLACE_WITH_ACTUAL_CONTRACT_NAME_AFTER_REPO_SCAN",
+        "owner": "0x0000000000000000000000000000000000000000",
+        "paused": true,
+        "staking_token": "0x0000000000000000000000000000000000000000",
+        "min_reviewer_stake_wei": "100000000000000000000",
+        "max_reviewer_stake_wei": "100000000000000000000000",
+        "slash_bps": 5000,
+        "reward_pool_treasury": "0x0000000000000000000000000000000000000000"
+      },
+      "council_seats": {
+        "enabled": true,
+        "contract_name": "REPLACE_WITH_ACTUAL_CONTRACT_NAME_AFTER_REPO_SCAN",
+        "owner": "0x0000000000000000000000000000000000000000",
+        "paused": true,
+        "seat_count": 9,
+        "activation_delay_seconds": 172800,
+        "cooling_off_seconds": 604800,
+        "max_concurrent_suspended": 3
+      },
+      "challenge_policy": {
+        "enabled": true,
+        "contract_name": "REPLACE_WITH_ACTUAL_CONTRACT_NAME_AFTER_REPO_SCAN",
+        "owner": "0x0000000000000000000000000000000000000000",
+        "paused": true,
+        "challenge_bond_wei": "5000000000000000000",
+        "challenge_window_seconds": 172800,
+        "dispute_window_seconds": 604800
+      }
+    }
+  },
+  "initial_governance": {
+    "reviewer_allowlist_only": true,
+    "council_allowlist_only": true,
+    "seat_nomination_open": false,
+    "open_seed_minting": false,
+    "open_sovereign_promotion": false
+  },
+  "operator_review_checklist": {
+    "require_owner_snapshot": true,
+    "require_pause_snapshot": true,
+    "require_threshold_snapshot": true,
+    "require_role_snapshot": true,
+    "require_verification_links": true
+  },
+  "ens_publication": {
+    "enabled": false,
+    "publish_text_records": false,
+    "seed_registry_name": "REPLACE_WITH_OPTIONAL_ENS_NAME",
+    "metadata_gateway_url": "https://REPLACE_WITH_GATEWAY.example"
+  }
+}
