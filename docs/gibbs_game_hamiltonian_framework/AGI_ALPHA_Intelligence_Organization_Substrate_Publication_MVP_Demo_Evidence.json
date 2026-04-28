@@ -1,0 +1,156 @@
+{
+  "job": {
+    "id": "toy-software-repair-001",
+    "family": "software",
+    "objective": "Fix calculator.divide so that it performs division while preserving zero-division behavior.",
+    "repo_path": "/mnt/data/AGI_ALPHA_mvp_publication/mvp_reference/benchmarks/repos/toy_math",
+    "constraints": [
+      "Return a minimal patch",
+      "Do not remove tests",
+      "Do not change public API"
+    ],
+    "success_cmd": "pytest -q",
+    "risk": "low",
+    "budget_tokens": 80000,
+    "allowed_tools": [
+      "run_tests",
+      "read_file",
+      "write_patch",
+      "search_repo"
+    ]
+  },
+  "selected_agents": [
+    "planner.v0",
+    "coder.v0",
+    "tester.v0",
+    "validator.v0"
+  ],
+  "rejected_agents": [],
+  "trace": [
+    {
+      "ts": 1777292645.3502202,
+      "agent_id": "planner.v0",
+      "kind": "plan",
+      "payload": {
+        "text": "Inspect calculator.divide, produce the smallest patch, then run pytest.",
+        "hamiltonian_score": 2.4630000000000005
+      }
+    },
+    {
+      "ts": 1777292645.3502307,
+      "agent_id": "coder.v0",
+      "kind": "patch_proposed",
+      "payload": {
+        "diff": "diff --git a/calculator.py b/calculator.py\nindex 2b8df17..c59a18e 100644\n--- a/calculator.py\n+++ b/calculator.py\n@@ -3,4 +3,4 @@ def add(a, b):\n def divide(a, b):\n     if b == 0:\n         raise ZeroDivisionError(\"division by zero\")\n-    return a * b  # BUG: should divide\n+    return a / b\n"
+      }
+    },
+    {
+      "ts": 1777292645.3624215,
+      "agent_id": "coder.v0",
+      "kind": "patch_apply",
+      "payload": {
+        "ok": true,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "ts": 1777292650.6916173,
+      "agent_id": "tester.v0",
+      "kind": "tests",
+      "payload": {
+        "ok": true,
+        "stdout": "..                                                                       [100%]\n2 passed in 0.25s\n",
+        "stderr": "",
+        "seconds": 5.329149484634399
+      }
+    },
+    {
+      "ts": 1777292650.6917377,
+      "agent_id": "validator.v0",
+      "kind": "validation",
+      "payload": {
+        "accepted": true,
+        "score": 1.0,
+        "tests_passed": true,
+        "policy_ok": true,
+        "critical_violation": false,
+        "report": "..                                                                       [100%]\n2 passed in 0.25s"
+      }
+    }
+  ],
+  "artifact": {
+    "patch": "diff --git a/calculator.py b/calculator.py\nindex 2b8df17..c59a18e 100644\n--- a/calculator.py\n+++ b/calculator.py\n@@ -3,4 +3,4 @@ def add(a, b):\n def divide(a, b):\n     if b == 0:\n         raise ZeroDivisionError(\"division by zero\")\n-    return a * b  # BUG: should divide\n+    return a / b\n",
+    "test_result": {
+      "ok": true,
+      "stdout": "..                                                                       [100%]\n2 passed in 0.25s\n",
+      "stderr": "",
+      "seconds": 5.329149484634399
+    }
+  },
+  "validation": {
+    "accepted": true,
+    "score": 1.0,
+    "tests_passed": true,
+    "policy_ok": true,
+    "critical_violation": false,
+    "report": "..                                                                       [100%]\n2 passed in 0.25s"
+  },
+  "cost": {
+    "tokens": 0,
+    "tool_calls": 2,
+    "wall_seconds": 5.341580629348755,
+    "human_minutes": 0.0,
+    "dollars": 0.0
+  },
+  "safety_ledger": [
+    {
+      "critical_violation": false,
+      "policy_ok": true
+    }
+  ],
+  "settlement": {
+    "planner.v0": {
+      "old_reputation": 0.62,
+      "new_reputation": 0.67,
+      "reward": 1.0
+    },
+    "coder.v0": {
+      "old_reputation": 0.72,
+      "new_reputation": 0.79,
+      "reward": 1.02
+    },
+    "tester.v0": {
+      "old_reputation": 0.67,
+      "new_reputation": 0.7200000000000001,
+      "reward": 1.0
+    },
+    "validator.v0": {
+      "old_reputation": 0.8,
+      "new_reputation": 0.8700000000000001,
+      "reward": 1.02
+    }
+  },
+  "planning_record": {
+    "planner": "ProofZero MVP stub",
+    "latent_state": "z0_demo",
+    "search_policy": "deterministic validator-aware bounded action selection",
+    "search_value": 1.0,
+    "critical_safety_violations": 0
+  },
+  "evidence_reanalyze": {
+    "reanalyzed": false,
+    "reason": "single MVP demonstration trace; future benchmark cycles use reanalyze"
+  },
+  "sovereign_evolutionary_agent_economy_demo": {
+    "status": "scaffolded",
+    "D_SEAE_fields_present": true,
+    "experiments": [
+      "sandbox_agent_economy",
+      "task_definition_curriculum",
+      "lineage_metaproductivity",
+      "dynamic_verifiable_evolution"
+    ],
+    "critical_safety_violations": 0
+  }
+}
