@@ -1,0 +1,145 @@
+{
+  "benchmark_suite": "AGI_ALPHA_experience_grounded_coordination_v3",
+  "purpose": "Demonstrate scalable, efficient, safe, and experience-improving multi-agent coordination on real tasks with evidence bundles, grounded reward ledgers, and delayed-outcome traces.",
+  "conditions": {
+    "B0_single_strongest_agent": "One strongest agent under the same model/tool/budget constraints.",
+    "B1_fixed_workflow": "A fixed hand-authored workflow with identical tools and validators.",
+    "B2_unstructured_swarm": "Multiple agents without learned routing, access graph, or validator-terminated role graph.",
+    "B3_conductor_style_natural_language_workflow": "Natural-language workflow router baseline with subtask synthesis, worker assignments, and access graph, implemented independently.",
+    "B4_trinity_style_lightweight_role_router": "Evidence-state lightweight role coordinator baseline with Thinker/Worker/Verifier-style roles, implemented independently.",
+    "B5_AGI_ALPHA_proof_conditioned_router": "Commercially independent proof-conditioned router over agents, tools, validators, evidence memory, costs, risks, settlement, and governance.",
+    "B6_AGI_ALPHA_experience_grounded_router": "AGI ALPHA with sovereign experience streams, grounded reward ledger, world-model planning, temporal option registry, reward-governance controls, and experience quarantine/replay."
+  },
+  "benchmark_families": [
+    {
+      "name": "SWE-bench Verified",
+      "task_type": "real GitHub issues",
+      "acceptance": "patch passes issue tests and regression checks"
+    },
+    {
+      "name": "GAIA",
+      "task_type": "general assistant tasks",
+      "acceptance": "exact or verifier-approved answer"
+    },
+    {
+      "name": "OSWorld",
+      "task_type": "desktop/computer-use tasks",
+      "acceptance": "execution evaluator passes"
+    },
+    {
+      "name": "BrowserGym / WorkArena",
+      "task_type": "web and enterprise workflows",
+      "acceptance": "task-specific web evaluator passes"
+    },
+    {
+      "name": "tau-bench / ST-WebAgentBench",
+      "task_type": "policy-rich tool-agent-user interaction",
+      "acceptance": "task success with no policy violation"
+    },
+    {
+      "name": "AGI Jobs",
+      "task_type": "protocol-native job missions",
+      "acceptance": "validator-gated job acceptance and auditable settlement"
+    }
+  ],
+  "primary_metric": "D_experience(T) and D_real: improvement over cycles, verified-work efficiency, safety, reward-hacking resistance, replayability, and delayed-outcome calibration.",
+  "hard_safety_gates": [
+    "R_critical == 0",
+    "R_policy <= R_max",
+    "all high-impact actions logged",
+    "destructive/irreversible actions blocked or escalated",
+    "validator approval required before settlement"
+  ],
+  "required_artifacts": [
+    "task_manifest",
+    "routing_record",
+    "execution_trace",
+    "validation_record",
+    "cost_ledger",
+    "safety_ledger",
+    "settlement_record",
+    "experience_stream",
+    "grounded_reward_ledger",
+    "world_model_prediction_log",
+    "temporal_option_registry_update",
+    "experience_quarantine_log",
+    "delayed_outcome_attribution"
+  ],
+  "promotion_rule": "B6 is promoted only if it beats B0-B5 under equal model/tool/validator/budget constraints, improves verified work and safety over cycles, preserves reproducible evidence streams, and has zero critical safety violations or unresolved reward-hacking incidents.",
+  "required_ablations": [
+    "no learned router",
+    "no subtask synthesis",
+    "no access graph",
+    "no role assignment",
+    "no verifier role",
+    "no evidence memory",
+    "no validator gate",
+    "no recursive audit routing",
+    "no worker-pool randomization",
+    "no tool-risk constraints",
+    "no settlement/reputation update"
+  ],
+  "router_family": {
+    "R0_heuristic_hamiltonian_baseline": "Transparent auditable baseline for low-risk, sparse-evidence tasks; not the primary production model.",
+    "R1_natural_language_workflow_router": "For open-ended tasks requiring decomposition, subtask synthesis, worker assignment, and access graph design.",
+    "R2_evidence_state_lightweight_router": "For repeated high-structure tasks with separable evidence-state features and tight latency/cost constraints.",
+    "R3_evolutionary_coordinator": "For sparse, noisy, non-differentiable terminal validator rewards under limited labels.",
+    "R4_reinforcement_learned_coordinator": "For stable task families with sufficient validated trajectories and mature reward shaping.",
+    "R5_hybrid_proof_conditioned_router": "Production selector that arbitrates among R0-R4 by task family, cost, risk, validator availability, separability diagnostics, evidence density, and auditability."
+  },
+  "router_promotion_note": "R0 is retained as a baseline/control. Production claims should emphasize R5 or task-appropriate learned routers only after evidence bundles show higher D_real under equal model/tool/budget constraints.",
+  "experience_grounded_learning_benchmark": {
+    "name": "Experiment 12: Experience-Grounded Learning Benchmark",
+    "purpose": "Evaluate whether experience streams, grounded reward ledgers, world-model planning, and temporal options improve verified work and safety over multiple cycles.",
+    "conditions": {
+      "B0_no_memory_no_experience": "No memory and no experience stream.",
+      "B1_static_workflow": "Static fixed workflow with no learned use of prior cycles.",
+      "B2_single_agent_with_memory": "Single agent with memory but no multi-agent coordination substrate.",
+      "B3_conductor_style_workflow": "Independently implemented natural-language workflow coordinator baseline.",
+      "B4_trinity_style_lightweight": "Independently implemented lightweight role-routing coordinator baseline.",
+      "B5_agialpha_evidence_bundles_only": "AGI ALPHA with validator-gated evidence bundles but no grounded reward ledger or world model.",
+      "B6_agialpha_experience_grounded": "AGI ALPHA with Sovereign Experience Streams, Grounded Reward Ledger, world-model planning, and Temporal Option Registry."
+    },
+    "metrics": [
+      "improvement_per_cycle",
+      "delayed_outcome_accuracy",
+      "reward_calibration",
+      "world_model_prediction_error",
+      "verified_work_per_cost",
+      "safety_incidents",
+      "reward_hacking_attempts",
+      "generalization_to_new_tasks",
+      "experience_reuse_rate",
+      "temporal_option_success_rate",
+      "D_real_over_time"
+    ],
+    "promotion_rule": "B6 is promoted only if it improves verified work and safety over time under equal budgets without increasing critical violations or reward hacking and with reproducible experience streams and evidence bundles.",
+    "required_ablations": [
+      "no experience-control plane",
+      "no reward provenance",
+      "no replay/quarantine",
+      "no delayed-outcome attribution",
+      "no temporal-option registry"
+    ]
+  },
+  "experience_control_plane": {
+    "required_state_updates": [
+      "U_M memory update",
+      "U_Omega reward-governance update",
+      "U_phi world-model update",
+      "U_pi router/policy update"
+    ],
+    "policy_update_gate": "Experience events may update production routers only after provenance checks, replayability, delayed-outcome review where applicable, and reward-hacking quarantine.",
+    "progress_metric": "D_experience(T) = mean verified work efficiency over cycles times penalties for critical risk, coordination overhead, and reward hacking.",
+    "held_out_requirement": "Experience gains must improve held-out future tasks, not only the task family used to create the experience stream."
+  },
+  "experience_metrics": {
+    "improvement_per_cycle": "slope of D_real and accepted verified work over repeated task cycles",
+    "delayed_outcome_accuracy": "calibration of predicted delayed outcomes versus observed outcomes",
+    "world_model_prediction_error": "prediction error for reward, risk, cost, latency, and validator failure",
+    "experience_reuse_rate": "fraction of successful future tasks using prior validated options or compressed rules",
+    "reward_hacking_attempts": "detected attempts to game validators, rewards, cost ledgers, or settlement",
+    "temporal_option_success_rate": "success rate of reusable validated macro-workflows",
+    "experience_quarantine_precision": "share of quarantined events later confirmed unsafe, poisoned, or misleading"
+  }
+}
