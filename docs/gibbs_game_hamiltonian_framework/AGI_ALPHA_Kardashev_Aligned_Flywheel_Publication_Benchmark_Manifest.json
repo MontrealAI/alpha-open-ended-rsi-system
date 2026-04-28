@@ -1,0 +1,496 @@
+{
+  "benchmark_suite": "AGI_ALPHA_kardashev_aligned_flywheel_v1",
+  "purpose": "Demonstrate whether AGI ALPHA can convert model capability into governed machine labor, verified invention, reusable capability, capital formation, infrastructure, compute, science, useful energy, and stronger future machine labor under equal-budget baselines, evidence bundles, external validators, process-integrity checks, subversion-resistant validation, cost/risk ledgers, delayed outcomes, and independent audits.",
+  "conditions": {
+    "B0_single_strongest_agent": "One strongest agent under the same model/tool/budget constraints.",
+    "B1_fixed_workflow": "A fixed hand-authored workflow with identical tools and validators.",
+    "B2_unstructured_swarm": "Multiple agents without learned routing, access graph, or validator-terminated role graph.",
+    "B3_conductor_style_natural_language_workflow": "Natural-language workflow router baseline with subtask synthesis, worker assignments, and access graph, implemented independently.",
+    "B4_trinity_style_lightweight_role_router": "Evidence-state lightweight role coordinator baseline with Thinker/Worker/Verifier-style roles, implemented independently.",
+    "B5_AGI_ALPHA_proof_conditioned_router": "Commercially independent proof-conditioned router over agents, tools, validators, evidence memory, costs, risks, settlement, and governance.",
+    "B6_AGI_ALPHA_experience_grounded_router": "AGI ALPHA with sovereign experience streams, grounded reward ledger, world-model planning, temporal option registry, reward-governance controls, and experience quarantine/replay.",
+    "B7_AGI_ALPHA_proofzero_planner": "AGI ALPHA with Proof-Equivalent Organizational Models, Latent Evidence Dynamics, Validator-Aware Tree Planning, Search-Improved Routing, Evidence Reanalyze, and Cost-Risk-Value Backup.",
+    "B8_AGI_ALPHA_sovereign_evolutionary_agent_economy": "AGI ALPHA with permeability-gated sandbox markets, validator-bound curriculum foundry, lineage metaproductivity, artifact frontier database, mission-weighted settlement, and dynamic verifiable learning.",
+    "B9_full_kardashev_aligned_flywheel": "Full AGI ALPHA with subversion-resistant validation, process-resolved validation, proof-native workbench, capability package library, diversity-preserving frontier, tiered validator council, agent economy simulation sandbox, value-capture/reinvestment layer, and K2_proxy/D_civ+ reporting."
+  },
+  "benchmark_families": [
+    {
+      "name": "SWE-bench Verified",
+      "task_type": "real GitHub issues",
+      "acceptance": "patch passes issue tests and regression checks"
+    },
+    {
+      "name": "GAIA",
+      "task_type": "general assistant tasks",
+      "acceptance": "exact or verifier-approved answer"
+    },
+    {
+      "name": "OSWorld",
+      "task_type": "desktop/computer-use tasks",
+      "acceptance": "execution evaluator passes"
+    },
+    {
+      "name": "BrowserGym / WorkArena",
+      "task_type": "web and enterprise workflows",
+      "acceptance": "task-specific web evaluator passes"
+    },
+    {
+      "name": "tau-bench / ST-WebAgentBench",
+      "task_type": "policy-rich tool-agent-user interaction",
+      "acceptance": "task success with no policy violation"
+    },
+    {
+      "name": "AGI Jobs",
+      "task_type": "protocol-native job missions",
+      "acceptance": "validator-gated job acceptance and auditable settlement"
+    }
+  ],
+  "primary_metric": "D_civ+, K2_proxy, D_real, verified work per dollar/token/hour, reusable capability creation, capital formation proxy K_gain, reinvestment efficiency eta_reinvest, process integrity, subversion catch rate, archive diversity, and zero-critical-violation safety.",
+  "hard_safety_gates": [
+    "R_critical == 0",
+    "R_policy <= R_max",
+    "all high-impact actions logged",
+    "destructive/irreversible actions blocked or escalated",
+    "validator approval required before settlement"
+  ],
+  "required_artifacts": [
+    "experience_quarantine_log",
+    "experience_stream",
+    "cost_risk_value_backup_log",
+    "temporal_option_registry_update",
+    "search_policy_log",
+    "task_manifest",
+    "world_model_prediction_log",
+    "latent_work_state_log",
+    "grounded_reward_ledger",
+    "delayed_outcome_attribution",
+    "planning_trace",
+    "reanalyze_report",
+    "settlement_record",
+    "cost_ledger",
+    "routing_record",
+    "safety_ledger",
+    "execution_trace",
+    "validation_record",
+    "planning_depth_curve",
+    "latent_work_state_trace",
+    "bounded_hypothetical_work_search_tree",
+    "proofzero_prediction_heads",
+    "search_policy_and_value",
+    "cost_risk_value_backup_trace",
+    "evidence_reanalyze_log",
+    "search_policy_improvement_report",
+    "planning_depth_scaling_curve",
+    "latent_state_diagnostics_report",
+    "model_free_vs_model_based_comparison",
+    "value_capture_ledger",
+    "reinvestment_policy_record",
+    "capital_to_compute_to_energy_ledger",
+    "strategic_capability_asset_map",
+    "process_resolved_evidence_validation",
+    "subversion_resistance_report",
+    "action_reason_trace_contract",
+    "capability_package_registry_update",
+    "diversity_preserving_artifact_frontier_update",
+    "tiered_validator_council_record",
+    "agent_economy_simulation_sandbox_report",
+    "D_civ_plus_report",
+    "K2_proxy_report",
+    "K_gain_report",
+    "eta_reinvest_report"
+  ],
+  "promotion_rule": "The full Kardashev-aligned flywheel condition is promoted only if it produces more reusable verified capability than every baseline under equal budgets, with zero critical safety violations, reproducible evidence bundles, higher process integrity, better subversion resistance, stronger capability reuse, measurable capital/reinvestment gains, lower long-run cost per verified output, and measurable improvement over repeated cycles. If it wins by relaxing validators, hiding human labor, ignoring delayed outcomes, increasing systemic risk, producing unreplayable traces, or increasing harmful concentration, the claim is rejected.",
+  "required_ablations": [
+    "no learned router",
+    "no subtask synthesis",
+    "no access graph",
+    "no role assignment",
+    "no verifier role",
+    "no evidence memory",
+    "no validator gate",
+    "no recursive audit routing",
+    "no worker-pool randomization",
+    "no tool-risk constraints",
+    "no settlement/reputation update"
+  ],
+  "router_family": {
+    "R0_heuristic_hamiltonian_baseline": "Transparent auditable baseline for low-risk, sparse-evidence tasks; not the primary production model.",
+    "R1_natural_language_workflow_router": "For open-ended tasks requiring decomposition, subtask synthesis, worker assignment, and access graph design.",
+    "R2_evidence_state_lightweight_router": "For repeated high-structure tasks with separable evidence-state features and tight latency/cost constraints.",
+    "R3_evolutionary_coordinator": "For sparse, noisy, non-differentiable terminal validator rewards under limited labels.",
+    "R4_reinforcement_learned_coordinator": "For stable task families with sufficient validated trajectories and mature reward shaping.",
+    "R5_hybrid_proof_conditioned_router": "Production selector that arbitrates among R0-R4 by task family, cost, risk, validator availability, separability diagnostics, evidence density, and auditability."
+  },
+  "router_promotion_note": "R0 is retained as a baseline/control. Production claims should emphasize R5 or task-appropriate learned routers only after evidence bundles show higher D_real under equal model/tool/budget constraints.",
+  "experience_grounded_learning_benchmark": {
+    "name": "Experiment 12: Experience-Grounded Learning Benchmark",
+    "purpose": "Evaluate whether experience streams, grounded reward ledgers, world-model planning, and temporal options improve verified work and safety over multiple cycles.",
+    "conditions": {
+      "B0_no_memory_no_experience": "No memory and no experience stream.",
+      "B1_static_workflow": "Static fixed workflow with no learned use of prior cycles.",
+      "B2_single_agent_with_memory": "Single agent with memory but no multi-agent coordination substrate.",
+      "B3_conductor_style_workflow": "Independently implemented natural-language workflow coordinator baseline.",
+      "B4_trinity_style_lightweight": "Independently implemented lightweight role-routing coordinator baseline.",
+      "B5_agialpha_evidence_bundles_only": "AGI ALPHA with validator-gated evidence bundles but no grounded reward ledger or world model.",
+      "B6_agialpha_experience_grounded": "AGI ALPHA with Sovereign Experience Streams, Grounded Reward Ledger, world-model planning, and Temporal Option Registry."
+    },
+    "metrics": [
+      "improvement_per_cycle",
+      "delayed_outcome_accuracy",
+      "reward_calibration",
+      "world_model_prediction_error",
+      "verified_work_per_cost",
+      "safety_incidents",
+      "reward_hacking_attempts",
+      "generalization_to_new_tasks",
+      "experience_reuse_rate",
+      "temporal_option_success_rate",
+      "D_real_over_time"
+    ],
+    "promotion_rule": "B6 is promoted only if it improves verified work and safety over time under equal budgets without increasing critical violations or reward hacking and with reproducible experience streams and evidence bundles.",
+    "required_ablations": [
+      "no experience-control plane",
+      "no reward provenance",
+      "no replay/quarantine",
+      "no delayed-outcome attribution",
+      "no temporal-option registry"
+    ]
+  },
+  "experience_control_plane": {
+    "required_state_updates": [
+      "U_M memory update",
+      "U_Omega reward-governance update",
+      "U_phi world-model update",
+      "U_pi router/policy update"
+    ],
+    "policy_update_gate": "Experience events may update production routers only after provenance checks, replayability, delayed-outcome review where applicable, and reward-hacking quarantine.",
+    "progress_metric": "D_experience(T) = mean verified work efficiency over cycles times penalties for critical risk, coordination overhead, and reward hacking.",
+    "held_out_requirement": "Experience gains must improve held-out future tasks, not only the task family used to create the experience stream."
+  },
+  "experience_metrics": {
+    "improvement_per_cycle": "slope of D_real and accepted verified work over repeated task cycles",
+    "delayed_outcome_accuracy": "calibration of predicted delayed outcomes versus observed outcomes",
+    "world_model_prediction_error": "prediction error for reward, risk, cost, latency, and validator failure",
+    "experience_reuse_rate": "fraction of successful future tasks using prior validated options or compressed rules",
+    "reward_hacking_attempts": "detected attempts to game validators, rewards, cost ledgers, or settlement",
+    "temporal_option_success_rate": "success rate of reusable validated macro-workflows",
+    "experience_quarantine_precision": "share of quarantined events later confirmed unsafe, poisoned, or misleading"
+  },
+  "planning_with_learned_organizational_models_benchmark": {
+    "name": "Experiment 13: Planning with Learned Organizational Models Benchmark",
+    "purpose": "Evaluate whether a commercially independent ProofZero planner improves routing through value-relevant latent evidence dynamics and validator-aware bounded tree search.",
+    "conditions": {
+      "B0_single_strongest_agent": "One strongest agent under equal model/tool/budget constraints.",
+      "B1_fixed_workflow": "A fixed hand-authored workflow with identical tools and validators.",
+      "B2_heuristic_hamiltonian_router": "Transparent R0 Hamiltonian/free-energy baseline.",
+      "B3_learned_router_without_search": "Learned router with no tree search over organizational actions.",
+      "B4_learned_world_model_without_tree_search": "Latent evidence dynamics and prediction heads without bounded tree planning.",
+      "B5_proofzero_planner": "AGI ALPHA-native ProofZero planner with validator-aware bounded tree search, cost-risk-value backup, and Evidence Reanalyze."
+    },
+    "tasks": [
+      "SWE-bench Verified",
+      "GAIA",
+      "BrowserGym",
+      "OSWorld",
+      "WorkArena",
+      "tau-bench",
+      "scientific workflow tasks",
+      "AGI Jobs protocol-native tasks"
+    ],
+    "metrics": [
+      "verified_work_per_dollar",
+      "verified_work_per_token",
+      "verified_work_per_hour",
+      "validator_precision_recall",
+      "false_acceptance",
+      "critical_safety_violations",
+      "planning_depth_scaling",
+      "reanalyze_gain",
+      "delayed_outcome_prediction_error",
+      "cost_risk_value_calibration",
+      "evidence_bundle_reproducibility",
+      "D_real"
+    ],
+    "promotion_rule": "B5 is promoted only if it beats B0-B4 under equal model/tool/validator/budget constraints, improves with planning depth up to a measurable plateau, improves from Evidence Reanalyze without reward hacking, and records zero critical safety violations.",
+    "required_ablations": [
+      "no_latent_evidence_dynamics",
+      "no_validator_aware_tree_planning",
+      "no_search_improved_routing_target",
+      "no_cost_risk_value_backup",
+      "no_evidence_reanalyze",
+      "no_quarantine_before_reanalyze",
+      "no_tool_permission_constraint",
+      "no_delayed_outcome_target",
+      "no_validator_risk_head",
+      "no_budgeted_search_depth_schedule"
+    ]
+  },
+  "proofzero_planning_layer": {
+    "model_interface": {
+      "representation": "z0 = H_theta(e_t)",
+      "dynamics": "r_k, z_k = G_theta(z_{k-1}, a_k)",
+      "prediction": "p_k, v_k, q_k = F_theta(z_k)"
+    },
+    "organizational_actions": [
+      "delegate",
+      "retrieve",
+      "code",
+      "test",
+      "validate",
+      "escalate",
+      "stop",
+      "quarantine",
+      "settle"
+    ],
+    "search_constraints": [
+      "tool_permissions",
+      "budget",
+      "risk_class",
+      "validator_availability",
+      "stopping_rule",
+      "escalation_rule"
+    ],
+    "outputs": [
+      "pi_search",
+      "nu_search",
+      "selected_action",
+      "planning_trace",
+      "cost_risk_value_backup"
+    ],
+    "commercial_independence": "MuZero is cited only as prior-art inspiration for value-relevant learned planning; AGI ALPHA uses its own planning substrate over evidence states, validators, tools, ledgers, settlement, memory, governance, and proof."
+  },
+  "proofzero_planning_benchmark": {
+    "metrics": [
+      "verified_work_per_dollar",
+      "verified_work_per_token",
+      "verified_work_per_hour",
+      "validator_precision_recall",
+      "false_acceptance_rate",
+      "critical_safety_violations",
+      "search_policy_improvement_delta_search",
+      "planning_depth_scaling_D_real_K",
+      "plateau_depth",
+      "evidence_reanalyze_gain",
+      "delayed_outcome_prediction_error",
+      "cost_risk_value_calibration",
+      "latent_state_decision_predictiveness",
+      "latent_state_compression_efficiency",
+      "latent_state_calibration",
+      "latent_state_safety_probeability",
+      "evidence_bundle_reproducibility"
+    ],
+    "promotion_rule": "B5 is promoted only if it beats B0-B4 under equal model/tool/validator/budget constraints, demonstrates Delta_search > 0 against the base router, improves with planning depth up to a measurable plateau, improves from Evidence Reanalyze without reward hacking, passes latent-state diagnostics, and records zero critical safety violations.",
+    "required_ablations": [
+      "no_latent_organizational_model",
+      "no_tree_search",
+      "no_search_policy_training_target",
+      "no_validator_risk_head",
+      "no_cost_risk_value_backup",
+      "no_evidence_reanalyze",
+      "no_delayed_outcome_targets",
+      "no_planning_depth_scaling",
+      "no_latent_state_diagnostics",
+      "no_tool_permission_constraints",
+      "no_quarantine_replay_gate"
+    ],
+    "sota_patch": {
+      "policy_improvement_metric": "Delta_search = E[J_C(pi_search|e)-J_C(pi_base|e)]",
+      "planning_depth_rule": "Report D_real(K) versus depth/simulation budget and promote only with improvement to plateau, not unbounded cost or risk.",
+      "model_class_comparison": "B3 learned-router-no-search is model-free coordination; B4 learned-world-model-no-search is model-based prediction; B5 ProofZero is model-plus-search.",
+      "latent_state_diagnostics": [
+        "decision_predictiveness",
+        "search_utility",
+        "compression_efficiency",
+        "separability_calibration",
+        "safety_probeability"
+      ]
+    }
+  },
+  "sovereign_evolutionary_agent_economy": {
+    "state": "X_t=(agents,jobs,tools,validators,markets,credentials,artifacts,curricula,lineages,reward_ledgers,governance)",
+    "actions": [
+      "generate_synthetic_task",
+      "route_job",
+      "launch_auction",
+      "allocate_compute",
+      "mutate_workflow",
+      "evaluate_descendant",
+      "add_artifact_to_frontier",
+      "train_router",
+      "quarantine_trace",
+      "settle_payment",
+      "adjust_market_permeability"
+    ],
+    "score": "D_SEAE = verified_work_per_cost * safety * fairness_anti_collusion * permeability_control * lineage_metaproductivity_gain * test_time_learning_gain * anti_reward_hacking",
+    "hard_gate": "any critical safety violation sets promotion score to zero"
+  },
+  "experiments_14_to_17": {
+    "Experiment_14_Sandbox_Agent_Economy": {
+      "baselines": [
+        "B0 no market",
+        "B1 unstructured agent market",
+        "B2 fixed-price job market",
+        "B3 auction-based market",
+        "B4 mission-weighted market",
+        "B5 AGI ALPHA permeability-gated sovereign market"
+      ],
+      "metrics": [
+        "verified_work_per_cost",
+        "allocation_fairness",
+        "collusion_rate",
+        "sybil_resistance",
+        "market_volatility",
+        "high_frequency_negotiation_risk",
+        "settlement_accuracy",
+        "trust_reputation_calibration",
+        "human_override_rate",
+        "mission_progress"
+      ]
+    },
+    "Experiment_15_Task_Definition_Curriculum": {
+      "baselines": [
+        "B0 human tasks only",
+        "B1 random synthetic tasks",
+        "B2 synthetic tasks without difficulty adaptation",
+        "B3 difficulty bands",
+        "B4 high-potential sample selection",
+        "B5 AGI ALPHA validator-bound task foundry"
+      ],
+      "metrics": [
+        "improvement_per_generated_task",
+        "validator_pass_rate",
+        "held_out_generalization",
+        "synthetic_task_diversity",
+        "reward_hacking",
+        "false_acceptance",
+        "curriculum_usefulness"
+      ]
+    },
+    "Experiment_16_Lineage_Metaproductivity": {
+      "baselines": [
+        "B0 immediate score",
+        "B1 cost-adjusted score",
+        "B2 descendant average score",
+        "B3 AGI ALPHA LMP with safety/cost/generalization constraints"
+      ],
+      "metrics": [
+        "best_descendant_verified_value",
+        "lineage_safety",
+        "transfer_to_new_tasks",
+        "cost_per_improvement",
+        "stagnation_rate",
+        "reward_hacking",
+        "lineage_diversity",
+        "lmp_performance_correlation"
+      ]
+    },
+    "Experiment_17_Dynamic_Verifiable_Evolution": {
+      "baselines": [
+        "B0 inference-only evolution",
+        "B1 static RL",
+        "B2 dynamic environment without artifact DB",
+        "B3 dynamic environment with artifact DB",
+        "B4 lazy-stagnation penalty",
+        "B5 AGI ALPHA test-time internalization loop"
+      ],
+      "metrics": [
+        "best_verified_artifact",
+        "time_to_improvement",
+        "transfer_to_unseen_tasks",
+        "artifact_diversity",
+        "database_reuse_rate",
+        "validator_failure_rate",
+        "reward_shaping_stability",
+        "cost_per_frontier_gain"
+      ]
+    }
+  },
+  "source_inspiration_boundary": {
+    "commercial_independence": "Virtual Agent Economies, Synthetic Data RL, Huxley-Goedel Machine, and ThetaEvolve are prior-art context only; no code, figures, prompts, pseudocode, model weights, datasets, hyperparameters, exact recipes, implementation details, or benchmark-specific tricks are copied.",
+    "seae_requirement": "Promotion requires equal-budget real-task evidence bundles with zero critical safety violations."
+  },
+  "civilizational_value_compounding_benchmark": {
+    "experiment": "Experiment 18: Civilizational Value Compounding Benchmark",
+    "objective": "Test whether AGI ALPHA creates reusable verified capabilities that improve future work and compound into infrastructure, science, compute, useful energy, and lower long-run cost per verified output.",
+    "conditions": {
+      "B0": "single strongest model",
+      "B1": "fixed workflow",
+      "B2": "unstructured swarm",
+      "B3": "learned coordinator without settlement",
+      "B4": "experience-grounded router without market layer",
+      "B5": "ProofZero planner without SEAE",
+      "B6": "full AGI ALPHA sovereign evolutionary economy"
+    },
+    "task_families": [
+      "software systems reducing operational cost",
+      "scientific workflows with validated hypotheses or designs",
+      "infrastructure planning for energy/compute/logistics/robotics/labs",
+      "market-design tasks for allocation/auction/settlement/reputation/risk",
+      "agent-improvement tasks scored by lineage metaproductivity",
+      "synthetic curricula that generate harder future work"
+    ],
+    "metrics": [
+      "verified work per dollar/token/hour",
+      "reusable capability creation rate",
+      "lineage metaproductivity",
+      "improvement over cycles",
+      "evidence-bundle reproducibility",
+      "long-run cost reduction",
+      "delayed outcome accuracy",
+      "safety incidents",
+      "reward hacking attempts",
+      "market instability/collusion",
+      "compute/energy/infrastructure/science capacity contribution",
+      "D_civ"
+    ],
+    "promotion_rule": "Promote B6 only if it produces more reusable verified capability than every baseline under equal budgets while maintaining zero critical safety violations, reproducible evidence bundles, lower long-run cost per verified output, and measurable improvement over repeated cycles."
+  },
+  "kardashev_aligned_flywheel_stress_test": {
+    "name": "Experiment 27: Full-Stack Kardashev-Aligned Flywheel Stress Test",
+    "hypothesis": "Full AGI ALPHA produces more reusable, safe, diverse, validator-gated, process-integral, subversion-resistant, compounding capability than ablated variants and improves capital, compute, infrastructure, science, or useful-energy proxies.",
+    "conditions": [
+      "B0 single strongest model",
+      "B1 fixed workflow",
+      "B2 unstructured swarm",
+      "B3 learned coordinator",
+      "B4 experience-grounded router",
+      "B5 ProofZero planner",
+      "B6 SEAE without subversion/process/diversity/value-capture additions",
+      "B7 full AGI ALPHA"
+    ],
+    "task_families": [
+      "software systems",
+      "scientific workflows",
+      "infrastructure planning",
+      "market design",
+      "agent improvement",
+      "synthetic curriculum",
+      "energy-adjacent tasks",
+      "capital-allocation tasks"
+    ],
+    "metrics": [
+      "verified work per dollar/token/hour",
+      "reusable capability creation rate",
+      "K_gain",
+      "eta_reinvest",
+      "compute capacity gain",
+      "useful-energy/infrastructure contribution",
+      "scientific throughput",
+      "process integrity",
+      "subversion catch rate",
+      "false acceptance",
+      "safety incidents",
+      "lineage metaproductivity",
+      "archive diversity",
+      "capability reuse rate",
+      "cost reduction over cycles",
+      "delayed outcome accuracy",
+      "market stability",
+      "collusion/Sybil resistance",
+      "human escalation rate",
+      "evidence-bundle reproducibility",
+      "D_civ+",
+      "K2_proxy"
+    ]
+  }
+}
