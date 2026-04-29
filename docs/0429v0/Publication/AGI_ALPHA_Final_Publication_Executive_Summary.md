@@ -1,0 +1,3 @@
+# Executive summary
+
+AGI ALPHA proposes a scalable substrate for intelligence organizations. The Transformer made intelligence scalable inside models; AGI ALPHA aims to make intelligence scalable across governed institutions of agents, jobs, validators, tools, memory, markets, settlement, governance, and reinvestment. Its purpose is to convert model capability into verified machine labor, verified labor into reusable invention, reusable invention into capital and infrastructure, and expanded infrastructure into stronger future work. This is an architecture and evidence program, not a claim of achieved AGI, ASI, empirical SOTA, or civilization-scale capability.

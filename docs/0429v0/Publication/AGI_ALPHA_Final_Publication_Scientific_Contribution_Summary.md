@@ -1,0 +1,3 @@
+# Scientific contribution summary
+
+The paper defines AGI ALPHA as a proof-bearing, validator-gated, RSI-governed substrate for scalable intelligence organizations. Its contribution is a mechanism-bound synthesis: learned coordination determines who should think, act, verify, and stop; experience streams convert action into training substrate; value-relevant planning searches abstract work states; validated search anchors generation to external proof; open-ended and AI-generating methods produce new tasks, environments, agents, and workflows; market mechanisms allocate resources; and RSI makes recursive improvement deterministic, replayable, baseline-comparative, and dossier-governed.
