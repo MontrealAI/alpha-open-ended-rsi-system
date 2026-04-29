@@ -1,0 +1,735 @@
+{
+  "task_manifest": {
+    "task_id": "",
+    "benchmark_family": "",
+    "objective": "",
+    "constraints": [],
+    "success_criteria": [],
+    "risk_class": "",
+    "budget": {
+      "max_tokens": null,
+      "max_wall_time_sec": null,
+      "max_tool_cost_usd": null
+    },
+    "curriculum_generator": {
+      "easier_variants": [],
+      "harder_variants": [],
+      "adversarial_variants": [],
+      "decomposed_subtasks": [],
+      "withheld_validators": []
+    }
+  },
+  "routing_record": {
+    "condition": "B0|B1|B2|B3|B4|B5|B6",
+    "selected_agents": [],
+    "role_assignments": {},
+    "budgets": {},
+    "hamiltonian_score": null,
+    "rejected_coalitions": [],
+    "router_family": "R0|R1|R2|R3|R4|R5",
+    "experience_inputs": {
+      "experience_stream_refs": [],
+      "world_model_version": null,
+      "reward_policy_version": null,
+      "temporal_options_available": []
+    },
+    "planning_inputs": {
+      "proofzero_model_version": null,
+      "planning_depth": null,
+      "search_budget": null,
+      "latent_evidence_state_ref": null,
+      "search_constraints": [
+        "tool_permissions",
+        "budget",
+        "risk_class",
+        "validator_availability",
+        "stopping_rule",
+        "escalation_rule"
+      ]
+    }
+  },
+  "execution_trace": {
+    "prompts_hashes": [],
+    "tool_calls": [],
+    "files_touched": [],
+    "browser_actions": [],
+    "api_calls": [],
+    "timestamps": []
+  },
+  "validation_record": {
+    "tests_run": [],
+    "policy_checks": [],
+    "red_team_checks": [],
+    "validator_decisions": [],
+    "accepted": false
+  },
+  "cost_ledger": {
+    "tokens": null,
+    "wall_time_sec": null,
+    "tool_cost_usd": null,
+    "compute_time_sec": null,
+    "human_review_min": null
+  },
+  "safety_ledger": {
+    "blocked_actions": [],
+    "policy_violations": [],
+    "rollbacks": [],
+    "human_escalations": [],
+    "incidents": []
+  },
+  "settlement_record": {
+    "reward": null,
+    "reputation_update": {},
+    "counterfactual_contribution": {},
+    "memory_updates": []
+  },
+  "experience_stream": [
+    {
+      "event_id": "",
+      "s_t": "",
+      "a_t": "",
+      "o_t_plus_1": "",
+      "r_t": null,
+      "v_t": "",
+      "c_t": {},
+      "rho_t": {},
+      "m_t": {},
+      "provenance": [],
+      "replay_hash": ""
+    }
+  ],
+  "grounded_reward_ledger": {
+    "reward_version": null,
+    "signals": [],
+    "delayed_outcomes": [],
+    "validator_reward_separation": true,
+    "reward_provenance": [],
+    "reward_hacking_checks": [],
+    "reward_policy_weights": {}
+  },
+  "world_model_predictions": [
+    {
+      "model_version": "",
+      "predicted_reward": null,
+      "predicted_risk": null,
+      "predicted_cost": null,
+      "predicted_validator_failure": null,
+      "observed_outcome": null,
+      "error": null
+    }
+  ],
+  "temporal_options_used": [
+    {
+      "option_id": "",
+      "initiation_conditions": "",
+      "validator": "",
+      "termination_condition": "",
+      "risk_class": "",
+      "evidence_history_refs": [],
+      "success": null
+    }
+  ],
+  "experience_quarantine": {
+    "status": "not_required",
+    "reason": null,
+    "replay_required": false
+  },
+  "experience_control_plane_update": {
+    "memory_update": {
+      "applied": false,
+      "summary": "",
+      "provenance_refs": []
+    },
+    "reward_governance_update": {
+      "applied": false,
+      "reward_version_before": "",
+      "reward_version_after": "",
+      "justification": ""
+    },
+    "world_model_update": {
+      "applied": false,
+      "model_version_before": "",
+      "model_version_after": "",
+      "calibration_check": ""
+    },
+    "router_policy_update": {
+      "applied": false,
+      "router_version_before": "",
+      "router_version_after": "",
+      "promotion_gate_passed": false
+    },
+    "quarantine_status": {
+      "quarantined": false,
+      "reason": "",
+      "replay_required": false,
+      "cleared_by": ""
+    },
+    "planning_model_update": {
+      "applied": false,
+      "model_version_before": "",
+      "model_version_after": "",
+      "calibration_check": "",
+      "safety_cost_head_check": ""
+    }
+  },
+  "delayed_outcome_attribution": {
+    "observed_after_sec": null,
+    "outcomes": [],
+    "attributed_agents": {},
+    "attributed_tools": {},
+    "policy_update_refs": []
+  },
+  "experience_promotion_gate": {
+    "allowed_to_update_production_router": false,
+    "required_checks": [
+      "provenance_ok",
+      "replay_ok",
+      "validator_ok",
+      "reward_hacking_check_ok",
+      "delayed_outcome_check_ok",
+      "risk_ok",
+      "planning_depth_plateau_ok",
+      "reanalyze_ok",
+      "cost_risk_value_calibration_ok",
+      "no_validator_exploit"
+    ],
+    "decision": ""
+  },
+  "planning_record": {
+    "evidence_state_id": "e_t hash or ID",
+    "latent_work_state_trace": [],
+    "candidate_organizational_actions": [
+      "delegate",
+      "retrieve",
+      "code",
+      "test",
+      "validate",
+      "escalate",
+      "stop",
+      "quarantine",
+      "settle"
+    ],
+    "search_constraints": {
+      "tool_permissions": [],
+      "budget": null,
+      "risk_class": null,
+      "validator_availability": [],
+      "stopping_rule": null,
+      "escalation_rule": null
+    },
+    "predicted_heads": {
+      "reward": null,
+      "policy": null,
+      "verified_value": null,
+      "validator_cost_safety": null
+    },
+    "search_policy": null,
+    "search_value": null,
+    "cost_risk_value_backup_trace": [],
+    "selected_bounded_action": null,
+    "evidence_reanalyze_log": []
+  },
+  "evidence_reanalyze": {
+    "reanalyzed": false,
+    "reanalyze_model_version": null,
+    "previous_router_version": null,
+    "new_router_targets": {},
+    "new_value_targets": {},
+    "new_validator_risk_targets": {},
+    "reanalyze_gain": null,
+    "provenance_preserved": true,
+    "quarantine_required": false,
+    "quarantine_reason": null
+  },
+  "proofzero_planning_record": {
+    "search_policy_improvement": {
+      "base_router_policy_id": null,
+      "search_policy_id": null,
+      "delta_search": null,
+      "constraints": [
+        "budget",
+        "tools",
+        "validators",
+        "risk",
+        "settlement",
+        "escalation"
+      ],
+      "accepted_as_training_target": false
+    },
+    "planning_depth_scaling": {
+      "depth_values": [],
+      "D_real_by_depth": [],
+      "plateau_depth": null,
+      "safety_incidents_by_depth": [],
+      "latency_by_depth": []
+    },
+    "latent_state_diagnostics": {
+      "decision_predictiveness": null,
+      "search_utility": null,
+      "compression_efficiency": null,
+      "separability_calibration": null,
+      "safety_probeability": null,
+      "deployable": false
+    }
+  },
+  "sovereign_evolutionary_agent_economy": {
+    "market_record": {
+      "market_type": "job|capability|validator|compute|mission",
+      "permeability_level": null,
+      "auction_type": null,
+      "mission_weight": null,
+      "stress_index": null
+    },
+    "credential_record": {
+      "agent_credentials": [],
+      "proof_of_control_boundary": null,
+      "capability_attestations": []
+    },
+    "curriculum_record": {
+      "task_definition_seed": null,
+      "difficulty_band": null,
+      "pass_rate": null,
+      "held_out_validator_refs": [],
+      "synthetic_update_allowed": false
+    },
+    "lineage_record": {
+      "ancestor_id": null,
+      "descendant_ids": [],
+      "lineage_metaproductivity": null,
+      "safety_cost_generalization_constraints": []
+    },
+    "artifact_frontier_record": {
+      "artifact_id": null,
+      "validator_score": null,
+      "cost_ledger": null,
+      "safety_ledger": null,
+      "lineage_pointer": null,
+      "replay_path": null
+    },
+    "D_SEAE": {
+      "verified_work_per_cost": null,
+      "safety_factor": null,
+      "fairness_anti_collusion_factor": null,
+      "permeability_control_factor": null,
+      "lineage_metaproductivity_gain": null,
+      "test_time_learning_gain": null,
+      "reward_hacking_penalty": null
+    },
+    "market_permeability_state": {
+      "boundary_level": null,
+      "risk_class": null,
+      "external_settlement_allowed": false
+    },
+    "task_curriculum_record": {
+      "generator_id": null,
+      "difficulty_band": null,
+      "held_out_validator_anchor": null
+    },
+    "lineage_metaproductivity_record": {
+      "ancestor_id": null,
+      "descendant_ids": [],
+      "lmp_estimate": null,
+      "safety_adjusted": null
+    },
+    "anti_reward_hacking_record": {
+      "detected": false,
+      "quarantine_status": null,
+      "independent_validator_review": null
+    }
+  },
+  "civilizational_value_to_energy_flywheel": {
+    "verified_work_units": [],
+    "reusable_capabilities_created": [],
+    "capital_or_cost_savings_evidence": [],
+    "infrastructure_or_science_outputs": [],
+    "compute_or_energy_capacity_contribution": [],
+    "D_civ_components": {
+      "W_verified": null,
+      "M_reusability": null,
+      "L_metaproductivity": null,
+      "G_governance": null,
+      "E_energy_gain": null,
+      "C_compute": null,
+      "C_coordination": null,
+      "C_capital": null,
+      "R_safety": null,
+      "R_legal": null,
+      "R_market": null
+    },
+    "delayed_outcome_measurements": [],
+    "promotion_gate": "accepted only if reusable verified capability compounds without critical safety violations, unreplayable traces, reward hacking, or uncontrolled market risk"
+  },
+  "civilizational_flywheel": {
+    "D_civ_plus": null,
+    "K2_proxy": null,
+    "K_gain": null,
+    "eta_reinvest": null,
+    "value_capture_ledger": [],
+    "capital_to_compute_to_energy_ledger": [],
+    "reinvestment_policy_record": {},
+    "strategic_capability_asset_map": {},
+    "capability_monetization_boundary": {},
+    "invention_reserve_update": [],
+    "useful_energy_capacity_delta": null,
+    "useful_compute_capacity_delta": null,
+    "scientific_throughput_delta": null,
+    "infrastructure_productivity_delta": null
+  },
+  "process_integrity": {
+    "process_resolved_steps": [],
+    "tool_call_proofs": [],
+    "handoff_records": [],
+    "rollback_points": [],
+    "process_integrity_score": null
+  },
+  "subversion_resistance": {
+    "adversarial_reviews": [],
+    "monitor_reports": [],
+    "anomaly_scores": [],
+    "quarantined_traces": [],
+    "hidden_failure_checks": [],
+    "subversion_catch_rate": null
+  },
+  "artifact_frontier": {
+    "capability_packages_created": [],
+    "archive_niches": [],
+    "diversity_score": null,
+    "reuse_rate": null,
+    "lineage_pointer": ""
+  },
+  "agent_economy_simulation": {
+    "market_stress_index": null,
+    "collusion_rate": null,
+    "sybil_resistance_score": null,
+    "permeability_level": null,
+    "human_override_rate": null
+  },
+  "agiet_namespace": {
+    "agent_names": [],
+    "node_names": [],
+    "club_names": [],
+    "environment_root": "",
+    "registry_version": "",
+    "recognized_aliases": [],
+    "namespace_risk": null,
+    "N_low_entropy": null,
+    "authority_compliance": false
+  },
+  "proof_bundle": {
+    "JobSpec": {},
+    "PolicyContext": {},
+    "EnvPins": {},
+    "ContainerDigest": "",
+    "SBOM": {},
+    "DependencyPins": {},
+    "Seeds": [],
+    "InputHashes": [],
+    "OutputHashes": [],
+    "Logs": [],
+    "Traces": [],
+    "MeteringTelemetry": {},
+    "WorkerSignature": "",
+    "NodeSignature": "",
+    "ValidatorCommitments": [],
+    "ValidatorReveals": [],
+    "DisputeRecord": {},
+    "ReplayResult": {},
+    "SettlementReceipt": {},
+    "ChroniclePointer": "",
+    "generatedObject": {
+      "objectType": "",
+      "generatorAgent": "",
+      "parentArchiveEntries": [],
+      "noveltyScore": null,
+      "interestingnessScore": null,
+      "learnabilityScore": null,
+      "safetyReview": null,
+      "replayPath": null,
+      "validatorSet": [],
+      "lineagePointer": null,
+      "registryStatus": ""
+    }
+  },
+  "commit_reveal_validation": {
+    "commit_phase": [],
+    "reveal_phase": [],
+    "dispute_phase": {},
+    "dispute_window_closed": false,
+    "validator_commit_reveal_clear": false
+  },
+  "alpha_work_units": {
+    "hardware_normalized_metering": null,
+    "difficulty_tier": null,
+    "quality_score": null,
+    "SLO_score": null,
+    "validator_confidence": null,
+    "policy_pass": false,
+    "accepted": false,
+    "alpha_wu": 0,
+    "alpha_wu_per_dollar": null,
+    "alpha_wu_per_watt": null,
+    "alpha_wu_per_safety_risk": null
+  },
+  "agialpha_node_runtime": {
+    "worker_nodes": [],
+    "validator_nodes": [],
+    "sentinel_nodes": [],
+    "signed_telemetry": [],
+    "container_digests": [],
+    "fail_closed_events": [],
+    "key_rotation_events": [],
+    "incident_playbooks_used": []
+  },
+  "metrics": {
+    "D_namespace": null,
+    "D_proof_settlement": null,
+    "D_real_AGI_Eth": null,
+    "D_civ_pp": null,
+    "K2_proxy": null,
+    "D_evidence_docket": {
+      "replay_pass_rate": null,
+      "proof_bundle_completeness": null,
+      "baseline_comparison_validity": null,
+      "validator_report_completeness": null,
+      "cost_risk_ledger_completeness": null,
+      "independent_reproduction_success": null
+    }
+  },
+  "settlement_invariants": {
+    "ProofBundleReplayable": false,
+    "SLOPass": false,
+    "PolicyPass": false,
+    "NoCriticalViolation": false,
+    "NoProofBundleNoSettlement": true,
+    "NoReplayNoSettlement": true,
+    "NoAuthorityNoAutonomy": true
+  },
+  "open_ended_work_generation": {
+    "generated_object": {
+      "object_id": "",
+      "object_type": "task|environment|agent_design|workflow|validator|tool_contract|market_mechanism|proof_template|curriculum|temporal_option|capability_package",
+      "agiet_scoped_identity": "",
+      "registry_status": "unofficial|quarantined|recognized|retired",
+      "generator_agent": "",
+      "parent_archive_entries": [],
+      "syntax_valid": false,
+      "sandbox_safe": false,
+      "validator_bound": false,
+      "replayable": false,
+      "interesting": false,
+      "learnable": false,
+      "non_redundant": false,
+      "risk_bounded": false,
+      "produces_or_improves_verified_work": false
+    },
+    "mission_foundry": {
+      "novelty_score": null,
+      "interestingness_score": null,
+      "learnability_score": null,
+      "strategic_value_score": null,
+      "flywheel_contribution_score": null,
+      "post_generation_proof_filter": "pending|accepted|rejected|quarantined"
+    },
+    "environment_as_proof_code": {
+      "code_hash": "",
+      "container_digest": "",
+      "dependency_pins": [],
+      "deterministic_seeds": [],
+      "success_predicates": [],
+      "rollback_path": "",
+      "proof_bundle_exported": false
+    },
+    "agentic_system_design_forge": {
+      "candidate_design_hash": "",
+      "role_graph": {},
+      "workflow_policy": {},
+      "tool_contracts": [],
+      "validator_structure": {},
+      "settlement_strategy": {},
+      "held_out_evaluation": {},
+      "transfer_results": {}
+    },
+    "absolute_anchor_self_play": {
+      "proposer": "",
+      "solver": "",
+      "validator": "",
+      "work_triplets": [],
+      "deduction_tasks": [],
+      "abduction_tasks": [],
+      "induction_tasks": [],
+      "anti_untethering_checks": []
+    },
+    "D_open_report": {
+      "verified_novelty": null,
+      "learnability": null,
+      "interestingness": null,
+      "transferability": null,
+      "reusability": null,
+      "lineage_metaproductivity": null,
+      "proof_replayability": null,
+      "flywheel_contribution": null,
+      "risk_terms": {}
+    },
+    "production_update_gate": {
+      "allowed": false,
+      "required_checks": [
+        "validation",
+        "replay",
+        "held_out_checks",
+        "anti_reward_hacking_review",
+        "safety_filters",
+        "provenance_preserving_evidence_bundle",
+        "namespace_recognition"
+      ],
+      "decision": ""
+    }
+  },
+  "montrealai_github_evidence_corpus": {
+    "reported_contributions_last_year": 30627,
+    "source_profile_url": "https://github.com/MontrealAI",
+    "counting_rule_note": "GitHub contribution graphs have specific visibility/counting rules; contribution count is an activity signal, not a proof of output quality.",
+    "repositories": [
+      {
+        "name": "AGI-Alpha-Agent-v0",
+        "role": "meta-agentic cognition",
+        "url": "https://github.com/MontrealAI/AGI-Alpha-Agent-v0",
+        "commit_count_observed": 9768
+      },
+      {
+        "name": "AGIJobsv0",
+        "role": "work OS",
+        "url": "https://github.com/MontrealAI/AGIJobsv0",
+        "commit_count_observed": 7059
+      },
+      {
+        "name": "AGIJobManager",
+        "role": "escrowed work agreements",
+        "url": "https://github.com/MontrealAI/AGIJobManager",
+        "commit_count_observed": 1082
+      },
+      {
+        "name": "AGIJobManagerPrime",
+        "role": "prime settlement protocol",
+        "url": "https://github.com/MontrealAI/AGIJobManagerPrime",
+        "commit_count_observed": 408
+      },
+      {
+        "name": "AGI-Alpha-Node-v0",
+        "role": "runtime infrastructure",
+        "url": "https://github.com/MontrealAI/AGI-Alpha-Node-v0",
+        "commit_count_observed": 1121
+      },
+      {
+        "name": "alpha-nova-seeds",
+        "role": "proof-first release posture",
+        "url": "https://github.com/MontrealAI/alpha-nova-seeds",
+        "commit_count_observed": 261
+      },
+      {
+        "name": "alpha-open-ended-rsi-system",
+        "role": "open-ended RSI layer",
+        "url": "https://github.com/MontrealAI/alpha-open-ended-rsi-system",
+        "commit_count_observed": 5
+      }
+    ]
+  },
+  "evidence_docket": {
+    "manifest": null,
+    "claims_matrix": [],
+    "environment": {},
+    "benchmark_tasks": [],
+    "baselines": {},
+    "agialpha_runs": [],
+    "proof_bundles": [],
+    "replay_logs": [],
+    "cost_ledgers": [],
+    "safety_ledgers": [],
+    "validator_reports": [],
+    "alpha_wu_calibration": {},
+    "summary_tables": [],
+    "independent_reproduction": {
+      "reviewer": null,
+      "reproduced": null,
+      "notes": ""
+    }
+  },
+  "market_governed_invention": {
+    "mandate": {
+      "mandate_id": null,
+      "goal": null,
+      "budget": null,
+      "policy_hash": null,
+      "descriptor_schema_hash": null,
+      "scoring_rubric_hash": null,
+      "safety_policy_hash": null,
+      "validator_policy_hash": null,
+      "promotion_thresholds": null,
+      "reinvestment_policy": null
+    },
+    "mandate_epoch": {
+      "epoch_id": null,
+      "receipt_root": null,
+      "payout_root": null,
+      "archive_delta_root": null,
+      "quarantine_root": null,
+      "validator_attestation_bundle": null,
+      "challenge_window": null,
+      "metadata_uri": null
+    },
+    "microjob_receipts": {
+      "job_types": [
+        "PROPOSE",
+        "CAUSALIZE",
+        "SCORE_FAST",
+        "SCORE_LCM",
+        "NOVELTY",
+        "REDTEAM",
+        "ARCHIVE_INSERT",
+        "VALIDATE_REPLAY",
+        "PROMOTE_CANDIDATE",
+        "PACKAGE_CAPABILITY",
+        "UPDATE_INSIGHT_SIGNAL"
+      ],
+      "receipt_hashes": [],
+      "replay_status": null
+    },
+    "qd_archive": {
+      "descriptor_schema": [],
+      "new_cells": 0,
+      "upgraded_cells": 0,
+      "archive_delta_hash": null,
+      "quarantined_artifacts": []
+    },
+    "causal_substrate": {
+      "causal_slice_hashes": [],
+      "mechanism_checks": [],
+      "side_effect_scans": [],
+      "active_deepening_records": []
+    },
+    "openclaw_review": {
+      "sponsor_actions": [],
+      "reviewer_actions": [],
+      "operator_actions": [],
+      "approved_promotions": [],
+      "blocked_promotions": []
+    },
+    "nettinghouse": {
+      "receipt_root": null,
+      "payout_root": null,
+      "archive_delta_root": null,
+      "quarantine_root": null,
+      "challenge_records": []
+    },
+    "alpha_foundry_mandate_facility": {
+      "coverage_ratio": null,
+      "throttle_state": null,
+      "pricing_assumptions": {},
+      "utility_token_boundary_acknowledged": true
+    },
+    "insight_signals": {
+      "stepping_stones": [],
+      "sector_scores": [],
+      "delayed_outcome_checks": []
+    }
+  }
+}
